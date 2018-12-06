@@ -1,0 +1,19 @@
+/*** Typography's generics ****/
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $font-family-main;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $black;
+    font-size: 16px;
+    font-weight: 300;
+}
+
+
+/*** End - Typography's generics ****/
+
+@import "_headings.scss";

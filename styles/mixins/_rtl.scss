@@ -1,0 +1,5 @@
+@mixin withRTL() {
+  :global(.rtl), :global([dir='rtl']) {
+    @content
+  }
+}

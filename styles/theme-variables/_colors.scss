@@ -1,0 +1,35 @@
+/*** Colors ***/
+
+$white: #fff;
+$black: #000;
+$lightBlack: #292929;
+$red: #7e0404;
+$blue: #1990fc;
+$lightPurple: #3F51B5;
+$green: #009688;
+$grey: $lightBlack;
+
+$white3Opacity: rgba(255, 255, 255, .3);
+$white6Opacity: rgba(255, 255, 255, .6);
+$white7Opacity: rgba(255, 255, 255, .7);
+$white8Opacity: rgba(255, 255, 255, .8);
+
+$black6Opacity: rgba(0, 0, 0, .6);
+$black8Opacity: rgba(0, 0, 0, .8);
+$blackBootstrapInsetShadow: rgba(0, 0, 0, .075);
+
+$grey46Opacity: rgba($grey, 0.46);
+
+$theme: $blue;
+$theme8Opacity: rgba($theme, 0.8);
+
+$clickable: $theme;
+$clickable-hover-active: $lightPurple;
+
+/*** Applied Colors ***/
+
+$primary: $blue;
+$secondary: $lightPurple;
+$accent: $green;
+
+/*** End - Colors ***/

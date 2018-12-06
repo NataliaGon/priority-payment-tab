@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Demo Example 1`] = `
+<div
+  className="storyBookContainer"
+>
+  <div>
+    <h1
+      className="helloWorld"
+    >
+      Hello World!
+    </h1>
+    <button
+      className="ant-btn ant-btn-primary"
+      onClick={[Function]}
+      type="button"
+    >
+      <span>
+        Hello
+      </span>
+    </button>
+  </div>
+</div>
+`;
