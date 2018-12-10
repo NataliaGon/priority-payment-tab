@@ -1,7 +1,7 @@
 # Styling
 
 ## Technology
-1. We use `SCSS` with `CSSModules`, both comes out of the box in the build process.
+1. We use `SCSS` with [`CSSModules`](https://github.com/css-modules/css-modules), both comes out of the box in the build process.
 
 ## Conventions
 
@@ -18,7 +18,7 @@ for Example: $red in `_colors.scss`.
 
 ### Classes
 1. Stick to the Component name, when naming classes. e.g. a class for `Dropdown` should be `dropdown` and not `select`.
-2. class names `dash-separated`.
+2. class names should be `camelCase`.
 
 
 ## Best practices

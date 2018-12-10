@@ -1,7 +1,7 @@
 import React from "react";
 import { storiesOf } from "@storybook/react";
 
-import Button from "../../src/components/Button";
+import { Button } from "../../src/components";
 //import * as markdown from '../../src/Button/Button.md';
 import StoryBookContainer from "../../src/storybook/StoryBookContainer/StoryBookContainer";
 import RTLContainer from "../../src/storybook/RTLContainer/RTLContainer";

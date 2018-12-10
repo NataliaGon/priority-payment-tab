@@ -52,6 +52,11 @@ priority-style-react
 2. *xxxProps*: If the component is wrapping another component (or native DOM element) and its props is needed - pass it with the convention of xxxProps. for example inputProps tooltipProps, etc..
 3. *dataHook*: Every component should accept a `dataHook` property which is applied as a `data-hook` attribute on the component's root element. This attribute is use as a selector in tests. A component can extend `WixComponent` in order to be a pure component and have the `dataHook` prop applied automatically.
 
+## Implementation
+
+1. Use `classnames` library in order to apply dependent css class names.
+2. Use function components for stateless UI components and class components for rich state-full components.
+
 ## Documentation
 
 1. **IMPORTANT** Add `ComponentNameProps` interface to each component and document each property with a `/** */` comment on above.
