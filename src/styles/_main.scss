@@ -3,16 +3,13 @@
  */
 
 // Reset CSS
-@import "core/reset";
+@import "reset";
 
 // Variables declarations
-@import "core/vars";
-
-// Global Mixins
-@import "mixins/mixins";
-
-// General & Generic Styles
-@import "core/core";
+@import "vars";
 
 // Typography configuration
-@import "typography/typography";
+@import "typography";
+
+// Element Skins
+@import "./elements/elements";

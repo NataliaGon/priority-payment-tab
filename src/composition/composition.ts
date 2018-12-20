@@ -5,6 +5,9 @@ export interface ComponentState { }
 
 export class ComponentBaseProperties implements ComponentProperties {
     componentClasses?: string[];
+    text?: string;
+    draggable?: boolean;
+    clickable?: boolean;
 }
 
 export class ComponentBaseState implements ComponentState {
@@ -21,4 +24,8 @@ export class ComponentBase<ComponentProperties, ComponentState> extends React.Co
     constructor(properties: ComponentProperties, state?: ComponentState) {
         super(properties, state);
     }
+
+    focusRef: {
+        focus: () => void;
+    } | undefined;
 }

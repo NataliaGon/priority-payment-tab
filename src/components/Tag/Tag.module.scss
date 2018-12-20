@@ -5,8 +5,7 @@
     flex-flow: row nowrap;
     justify-content: flex-start;
     padding: 13px 5px;
-    height: 55px;
-    color: $black;
+    color: $grey;
 
     .checkBoxElement {
         height: 26px;
@@ -16,9 +15,7 @@
     }
 
     .textElement {
-        @include text($font-size-regular, $font-weight-regular, $black);
-
-        line-height: 55px;
+        font-size: 22px;
     }
 }
 
@@ -45,7 +42,3 @@
 .extraLarge {
     font-size: 2.8rem;
 }
-
-// @include withRTL {
-//     .element {}
-// }

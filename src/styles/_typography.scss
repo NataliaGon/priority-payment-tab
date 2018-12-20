@@ -1,0 +1,44 @@
+html {
+    font-size: $font-size-base;
+}
+
+body {
+    font-family: $font-family-main;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $black;
+    font-size: $font-size-regular;
+    font-weight: $font-weight-regular;
+}
+
+// mixings
+
+@mixin text($size, $weight, $color) {
+    font-family: $font-family-main;
+    font-size: $size;
+    color: $color;
+}
+
+@mixin text-medium($color) {
+    @include text($font-size-medium, $font-weight-regular, $color);
+
+    line-height: $font-size-medium;
+}
+
+@mixin withRTL {
+    :global(.rtl), :global([dir='rtl']) {
+        @content;
+    }
+}
+
+// end mixings
+
+/*** Headings ****/
+
+h1 {
+    font-family: $font-family-serif;
+    font-size: $font-size-large;
+    color: $blue;
+}
+
+/*** End - Headings ****/

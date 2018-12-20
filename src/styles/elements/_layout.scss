@@ -1,0 +1,43 @@
+.layout {
+    &-panel {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-between;
+
+        &-1column > * {
+            flex: 0 100%;
+        }
+
+        &-2columns > * {
+            flex: 0 50%;
+        }
+    }
+
+    &-halign {
+        &-left {
+            justify-content: flex-end;
+        }
+
+        &-right {
+            justify-content: flex-start;
+        }
+
+        &-center {
+            justify-content: center;
+        }
+    }
+
+    &-valign {
+        &-top {
+            align-items: flex-start;
+        }
+
+        &-bottom {
+            align-items: flex-end;
+        }
+
+        &-center {
+            align-items: center;
+        }
+    }
+}
