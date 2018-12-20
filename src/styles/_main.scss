@@ -1,0 +1,18 @@
+/*
+ * Global styles.
+ */
+
+// Reset CSS
+@import "core/reset";
+
+// Variables declarations
+@import "core/vars";
+
+// Global Mixins
+@import "mixins/mixins";
+
+// General & Generic Styles
+@import "core/core";
+
+// Typography configuration
+@import "typography/typography";

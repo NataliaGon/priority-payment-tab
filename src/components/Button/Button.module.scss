@@ -1,0 +1,20 @@
+//@import "../../../styles/main";
+
+.button {
+    //background-color: $blue;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+
+    &:hover {
+        //background-color: $lightPurple
+   
+    }
+}
+
+// @include withRTL {
+//     .button {
+//         //background-color: $red;
+
+//     }
+// }

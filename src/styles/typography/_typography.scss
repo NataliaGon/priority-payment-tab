@@ -1,0 +1,15 @@
+html {
+    font-size: $font-size-base;
+}
+
+body {
+    font-family: $font-family-main;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $black;
+    font-size: $font-size-regular;
+    font-weight: $font-weight-regular;
+}
+
+@import "headings";
+@import "paragraphs";

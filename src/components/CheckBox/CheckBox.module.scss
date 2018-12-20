@@ -1,0 +1,48 @@
+@import "../../styles/style.scss";
+
+.component {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    padding: 13px 5px;
+    color: $grey;
+
+    .checkBoxElement {
+        height: 26px;
+        width: 28px;
+        line-height: 26px;
+        font-size: 24px;
+    }
+
+    .textElement {
+        font-size: 22px;
+    }
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.small {
+    font-size: 1.2rem;
+}
+
+.medium {
+    font-size: 1.4rem;
+}
+
+.large {
+    font-size: 2.2rem;
+}
+
+.extraLarge {
+    font-size: 2.8rem;
+}
+
+// @include withRTL {
+//     .element {}
+// }
