@@ -1,0 +1,20 @@
+@import "../../../styles/main.scss";
+
+.component {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    padding: 13px 5px;
+    color: $grey;
+
+    .checkBoxElement {
+        height: 26px;
+        width: 28px;
+        line-height: 26px;
+        font-size: 24px;
+    }
+
+    .textElement {
+        @include text($font-size-small, $font-weight-regular, $grey);
+    }
+}

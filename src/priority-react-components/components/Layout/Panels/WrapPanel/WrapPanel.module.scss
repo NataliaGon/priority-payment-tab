@@ -1,0 +1,15 @@
+@import "../../../../styles/main.scss";
+
+.component {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background-color: transparent;
+
+    & > * {
+        flex: 0 50%;
+    }
+}
