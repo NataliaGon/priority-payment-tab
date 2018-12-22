@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './styles/style.scss';
-import { SidePanel, StackPanel, RowPanel } from './priority-react-components/components/Layout';
+import { SidePanel, StackPanel, RowPanel, Container } from './priority-react-components/components/Layout';
 import Title from './priority-react-components/components/Text/Title';
 import CheckBox from './priority-react-components/components/Inputs/CheckBox';
 import Label from './priority-react-components/components/Text/Label';
@@ -11,8 +11,16 @@ class App extends Component {
     return (
       <div className="App">
         <SidePanel>
-          <StackPanel skin="light">
+          <StackPanel skin="header">
             <Title text="Advanced Search"></Title>
+            <RowPanel alignItems="space-between">
+              <Container>
+                <Label text="New Search" />
+              </Container>
+              <Container>
+                <Label textHref="#" text="Help"></Label>
+              </Container>
+            </RowPanel>
           </StackPanel>
           <StackPanel>
             <RowPanel alignItems="flex-start">
