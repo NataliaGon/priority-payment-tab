@@ -12,7 +12,7 @@ interface CheckBoxState extends ComponentBaseState {
 
 export default class CheckBox extends ComponentBase<CheckBoxProperties, CheckBoxState> {
   public render() {
-    const elementClasses = classNames(styles.component, this.props.componentClasses, this.props.skin);
+    const elementClasses = classNames(styles.component, this.props.componentClasses);
     const checkBoxElementClasses = classNames(styles.checkBoxElement);
 
     const textElementClasses = classNames(styles.textElement);

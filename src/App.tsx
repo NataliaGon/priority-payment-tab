@@ -4,12 +4,15 @@ import { SidePanel, StackPanel, RowPanel } from './priority-react-components/com
 import Title from './priority-react-components/components/Text/Title';
 import CheckBox from './priority-react-components/components/Inputs/CheckBox';
 import Label from './priority-react-components/components/Text/Label';
+import Button from './priority-react-components/components/Inputs/Button';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <SidePanel>
+          <Button skin="default" />
+          <Button skin="Stroke" />
           <StackPanel>
             <Title text="Advanced Search"></Title>
           </StackPanel>

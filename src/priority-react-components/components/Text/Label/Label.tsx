@@ -13,7 +13,7 @@ interface LabelState extends ComponentBaseState {
 
 export default class Label extends ComponentBase<LabelProperties, LabelState> {
   public render() {
-    const elementClasses = classNames(styles.component, this.props.componentClasses, this.props.skin);
+    const elementClasses = classNames(styles.component, this.props.componentClasses);
 
     return (
       <div className={elementClasses}>

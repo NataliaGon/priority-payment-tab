@@ -14,7 +14,7 @@ interface StackPanelState extends ComponentBaseState {
 export class StackPanel extends ComponentBase<StackPanelProperties, StackPanelState> {
   public render() {
 
-    const componentClasses = classNames(styles.component, this.props.componentClasses, this.props.skin);
+    const componentClasses = classNames(styles.component, this.props.componentClasses);
     return (
       <div className={componentClasses} >{this.props.children}</div>
     );

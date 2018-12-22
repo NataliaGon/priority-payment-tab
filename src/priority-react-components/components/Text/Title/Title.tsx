@@ -12,7 +12,7 @@ interface TitleState extends ComponentBaseState {
 
 export default class Title extends ComponentBase<TitleProperties, TitleState> {
   public render() {
-    const componentClasses = classNames(styles.component, this.props.componentClasses, this.props.skin);
+    const componentClasses = classNames(styles.component, this.props.componentClasses);
 
     return (
       <h1 className={componentClasses}>{this.props.text}</h1>

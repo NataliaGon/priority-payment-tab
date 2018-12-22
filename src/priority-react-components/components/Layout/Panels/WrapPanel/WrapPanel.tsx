@@ -14,7 +14,7 @@ interface WrapPanelState extends ComponentBaseState {
 export class WrapPanel extends ComponentBase<WrapPanelProperties, WrapPanelState> {
   public render() {
 
-    const componentClasses = classNames(styles.component, this.props.componentClasses, this.props.skin);
+    const componentClasses = classNames(styles.component, this.props.componentClasses);
     return (
       <div className={componentClasses} >{this.props.children}</div>
     );

@@ -6,7 +6,7 @@ export class ComponentBaseProperties {
     componentClasses?: string[];
     text?: string;
     draggable?: boolean = false;
-    skin?: ComponentBaseSkin = "default";
+    //skin?: ComponentBaseSkin | any = "default";
 }
 
 export class ComponentAnimatedProperties extends ComponentBaseProperties {

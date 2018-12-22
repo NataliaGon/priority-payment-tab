@@ -12,7 +12,7 @@ interface RowPanelState extends ComponentBaseState {
 
 export class RowPanel extends ComponentBase<RowPanelProperties, RowPanelState> {
   public render() {
-    const componentClasses = classNames(styles.component, this.props.componentClasses, this.props.skin);
+    const componentClasses = classNames(styles.component, this.props.componentClasses);
     return (
       <div className={componentClasses}>{this.props.children}</div>
     );

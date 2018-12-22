@@ -13,7 +13,7 @@ interface TagState extends ComponentBaseState {
 export default class Tag extends ComponentBase<TagProperties, TagState> {
   public render() {
 
-    const elementClasses = classNames(styles.component, this.props.componentClasses, this.props.skin);
+    const elementClasses = classNames(styles.component, this.props.componentClasses);
 
     return (
       <div className={elementClasses}>
