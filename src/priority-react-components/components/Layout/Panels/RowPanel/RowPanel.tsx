@@ -3,7 +3,10 @@ import classNames from 'classnames';
 import styles from "./RowPanel.module.scss";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../base-classes";
 
-interface RowPanelProperties extends ComponentBaseProperties {
+type AlignItems = "flex-start" | "flex-end" | "space-between";
+
+class RowPanelProperties extends ComponentBaseProperties {
+  alignItems?: AlignItems = "space-between";
 }
 
 interface RowPanelState extends ComponentBaseState {
@@ -12,7 +15,14 @@ interface RowPanelState extends ComponentBaseState {
 
 export class RowPanel extends ComponentBase<RowPanelProperties, RowPanelState> {
   public render() {
-    const componentClasses = classNames(styles.component, this.props.componentClasses);
+
+    let alignItemsClass = "";
+    if (this.props.alignItems) {
+      alignItemsClass = styles[this.props.alignItems];
+    }
+
+    const componentClasses = classNames(styles.component, this.props.componentClasses, alignItemsClass);
+
     return (
       <div className={componentClasses}>{this.props.children}</div>
     );

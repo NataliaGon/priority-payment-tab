@@ -3,7 +3,8 @@ import classNames from 'classnames';
 import styles from "./CheckBox.module.scss";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../base-classes";
 
-interface CheckBoxProperties extends ComponentBaseProperties {
+class CheckBoxProperties extends ComponentBaseProperties {
+  checked?: boolean = false;
 }
 
 interface CheckBoxState extends ComponentBaseState {
@@ -12,15 +13,16 @@ interface CheckBoxState extends ComponentBaseState {
 
 export default class CheckBox extends ComponentBase<CheckBoxProperties, CheckBoxState> {
   public render() {
-    const elementClasses = classNames(styles.component, this.props.componentClasses);
-    const checkBoxElementClasses = classNames(styles.checkBoxElement);
 
-    const textElementClasses = classNames(styles.textElement);
+    let stateClass = "";
+    if (this.props.checked) {
+      stateClass = styles.checked;
+    }
+
+    const elementClasses = classNames(styles.component, this.props.componentClasses, stateClass);
+
     return (
-      <div className={elementClasses}>
-        <div className={checkBoxElementClasses}></div>
-        <div className={textElementClasses}>{this.props.text}</div>
-      </div>
+      <span className={elementClasses}></span>
     );
   }
 }

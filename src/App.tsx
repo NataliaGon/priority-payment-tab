@@ -11,13 +11,17 @@ class App extends Component {
     return (
       <div className="App">
         <SidePanel>
-
-          <StackPanel skin="header">
+          <StackPanel skin="light">
             <Title text="Advanced Search"></Title>
           </StackPanel>
           <StackPanel>
-            <CheckBox text="Case Sensitive" />
-            <Label text="Sort table by rearranging filter order with drag and drop"></Label>
+            <RowPanel alignItems="flex-start">
+              <CheckBox />
+              <Label text="Case Sensitive" />
+            </RowPanel>
+            <RowPanel alignItems="space-between">
+              <Label text="Sort table by rearranging filter order with drag and drop"></Label>
+            </RowPanel>
           </StackPanel>
           <StackPanel>
             <RowPanel>
