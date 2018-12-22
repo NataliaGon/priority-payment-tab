@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import classNames from "classnames";
+// import classNames from "classnames";
 // import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBaseSkin } from "../../../base-classes";
 import Icon from "../../Icon";
 import "./customerName.scss";
@@ -17,13 +17,33 @@ import "./customerName.scss";
 
 export default class customerName extends React.Component {
   state = {
-    isOpen: false
+    isOpen: false,
+
   };
   DropDownToggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
+  renderOption=()=>{
+    const optionsArray=['Volvo', 'Saab', 'Mercedes', 'Audi']
+    if (optionsArray.length) {
+      return (
+        <ul className="songs-container">
+          {optionsArray.map(option=> (
+            <li className="options-to-choose" onClick={this.optionChoosed}>
+           {option}
+            </li>
+            // <Song key={option.id}/>
+          ))}
+        </ul>
+      );
+    }
+  }
+  optionChoosed=()=>{
+
+  }
   public render() {
     let classForDropDownIcon;
+    
     if (this.state.isOpen) {
       classForDropDownIcon = "icon-icon-arrow_drop_up";
     } else {
@@ -41,10 +61,7 @@ export default class customerName extends React.Component {
             </div>
           </div>
           <div className={dropDownOptionsClass}>
-            <span className="options-to-choose">Volvo</span>
-            <span className="options-to-choose">Saab</span>
-            <span className="options-to-choose">Mercedes</span>
-            <span className="options-to-choose">Audi</span>
+            {this.renderOption()}
           </div>
           <select className="input-big" />
         </div>
