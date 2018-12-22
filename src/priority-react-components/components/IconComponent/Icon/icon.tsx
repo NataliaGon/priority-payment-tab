@@ -18,7 +18,7 @@ export default class Icon extends ComponentBase<IconProperties, IconState> {
   public render() {
     const skinClass = this.props.skin == "default" ? styles.default : styles.stroke;
 
-    const iconClass = classNames(styles.component, this.props.componentClasses, skinClass)
+    const iconClass = classNames(styles.component,  skinClass)
     return (
       <span className={iconClass} onClick={this.props.onClick}></span>
     );

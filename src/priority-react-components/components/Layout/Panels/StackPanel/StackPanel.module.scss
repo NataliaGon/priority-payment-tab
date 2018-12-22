@@ -3,10 +3,17 @@
 .component {
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-flow: column;
+    justify-content: flex-start;
     align-items: center;
     padding: 20px 30px;
+
+    & > * {
+        width: 100%;
+    }
+}
+
+.transparent {
     background-color: transparent;
 }
 
@@ -20,6 +27,13 @@
 
 .light {
     background-color: $silver;
+    border: 1px solid $light-stroke;
+
+    &:hover,
+    &.selected {
+        background-color: $white;
+        border: 1px solid $blue;
+    }
 }
 
 .dark {

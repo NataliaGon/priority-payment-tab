@@ -9,7 +9,6 @@ type StackPanelDirection = "horizontal";
 type StackPanelSkin = "default" | "header" | "light" | "dark";
 
 class StackPanelProperties extends ComponentBaseProperties {
-  direction?: StackPanelDirection = "horizontal";
   skin?: StackPanelSkin = "default";
 }
 
