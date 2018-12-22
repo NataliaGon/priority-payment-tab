@@ -11,9 +11,8 @@ class App extends Component {
     return (
       <div className="App">
         <SidePanel>
-          <Button skin="default" />
-          <Button skin="Stroke" />
-          <StackPanel>
+
+          <StackPanel skin="header">
             <Title text="Advanced Search"></Title>
           </StackPanel>
           <StackPanel>

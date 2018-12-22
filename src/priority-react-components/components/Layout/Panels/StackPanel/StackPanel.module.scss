@@ -8,8 +8,20 @@
     align-items: center;
     padding: 20px 30px;
     background-color: transparent;
+}
 
-    & > * {
-        flex: 0 50%;
-    }
+.default {
+    background-color: $white;
+}
+
+.header {
+    background-color: $silver;
+}
+
+.light {
+    background-color: $silver;
+}
+
+.dark {
+    background-color: $dark;
 }
