@@ -5,6 +5,7 @@ import Title from './priority-react-components/components/Text/Title';
 import CheckBox from './priority-react-components/components/Inputs/CheckBox';
 import Label from './priority-react-components/components/Text/Label';
 import Button from './priority-react-components/components/Inputs/Button';
+// import Icon  from './priority-react-components/components/iconComponent/icon';
 
 class App extends Component {
   render() {
