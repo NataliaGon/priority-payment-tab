@@ -1,5 +1,30 @@
 @import "../../../styles/main.scss";
 
 .component {
-    &:hover {}
+    height: 30px;
+    width: 140px;
+    border-radius: 3px;
+    box-shadow: 0 5px 15px 0 rgba(0, 173, 238, 0.15);
+    letter-spacing: 0;  
+    font-family: "Roboto-bold", sans-serif;
+    font-size: 14px;
+    &:hover {
+        background: linear-gradient(248deg, #00adee, rgba(0, 173, 238, 0.7));
+    }
 }
+.default{
+    background-color: #00adee;
+    color: white;
+}
+.stroke{
+    background-color: white;
+    border: solid 1px #00adee;
+    color: #00adee;
+}
+.active {
+    background: #2e4049;
+  }
+  .disabled {
+    background: #d6dddf;
+    opacity: 0.3;
+  }

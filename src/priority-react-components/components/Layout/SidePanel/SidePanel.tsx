@@ -5,6 +5,8 @@ import { keyCodes } from '../../../constants';
 import styles from './SidePanel.module.scss';
 import { ComponentBaseState, ComponentAnimatedProperties, ComponentBase } from '../../../base-classes';
 
+
+
 interface SidePanelState extends ComponentBaseState {
 	open: boolean
 }

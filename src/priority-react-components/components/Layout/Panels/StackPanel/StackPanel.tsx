@@ -3,6 +3,8 @@ import classNames from 'classnames';
 import styles from "./StackPanel.module.scss";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../base-classes";
 
+
+
 type StackPanelDirection = "horizontal";
 type StackPanelSkin = "default" | "header" | "light" | "dark";
 
