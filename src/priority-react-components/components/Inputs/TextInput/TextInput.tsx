@@ -11,7 +11,7 @@ interface TextInputState extends ComponentBaseState {
 
 }
 
-export default class TextInputElement extends ComponentBase<TextInputProperties, TextInputState> {
+export default class TextInput extends ComponentBase<TextInputProperties, TextInputState> {
   public render() {
 
     const elementClasses = classNames(styles.component, this.props.componentClasses);

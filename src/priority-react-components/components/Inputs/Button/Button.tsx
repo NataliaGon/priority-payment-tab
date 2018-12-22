@@ -4,7 +4,7 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBa
 
 import styles from "./Button.module.scss";
 
-type ButtonSkin = ComponentBaseSkin | "Stroke" | "StrokeIcon";
+type ButtonSkin = ComponentBaseSkin | "Stroke" | "RoundStrokeIcon";
 
 class ButtonProperties extends ComponentBaseProperties {
   skin?: ButtonSkin = "default";
@@ -18,7 +18,7 @@ interface ButtonState extends ComponentBaseState {
 export default class Button extends ComponentBase<ButtonProperties, ButtonState> {
 
   public render() {
-    const skinClass = this.props.skin == "default" ? styles.default : styles.stroke;
+    const skinClass = styles[this.props.skin ? this.props.skin : ""];
 
     const buttonClass = classNames(styles.component, this.props.componentClasses, skinClass)
 

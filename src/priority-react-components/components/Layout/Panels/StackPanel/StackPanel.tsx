@@ -6,7 +6,7 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../.
 
 
 type StackPanelDirection = "horizontal";
-type StackPanelSkin = "default" | "header" | "light" | "dark";
+type StackPanelSkin = "default" | "header" | "light" | "dark" | "padded-panel";
 
 class StackPanelProperties extends ComponentBaseProperties {
   skin?: StackPanelSkin = "default";

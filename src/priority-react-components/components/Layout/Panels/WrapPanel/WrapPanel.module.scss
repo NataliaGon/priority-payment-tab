@@ -3,13 +3,40 @@
 .component {
     width: 100%;
     display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    flex-flow: column;
+    justify-content: flex-start;
     align-items: center;
     padding: 20px 30px;
-    background-color: transparent;
 
     & > * {
-        flex: 0 50%;
+        width: 100%;
     }
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.default {
+    background-color: $white;
+}
+
+.header {
+    background-color: $silver;
+}
+
+.light {
+    background-color: $silver;
+    border: 1px solid $light-stroke;
+    padding: 15px 20px;
+
+    &:hover,
+    &.selected {
+        background-color: $white;
+        border: 1px solid $blue;
+    }
+}
+
+.dark {
+    background-color: $dark;
 }

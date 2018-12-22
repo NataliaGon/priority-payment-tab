@@ -1,22 +1,19 @@
-.component{
+.component {
     position: absolute;
-    top:-5px;
-    left:-5px;
-    border-radius:50px;
+    top: -5px;
+    left: -5px;
+    border-radius: 50px;
     min-width: 15px;
     height: 15px;
-    background-color: #00adee; 
+    background-color: #00adee;
     color: white;
     font-size: 12px;
     font-family: 'Roboto';
     display: flex;
     justify-content: center;
     align-items: center;
-   
-    
 }
-.component span{
-// padding-left: 5px;
-//     padding-right: 5px;
- padding: 2.5px;
+
+.component span {
+    padding: 2.5px;
 }
