@@ -29,7 +29,7 @@ export default class customerName extends React.Component {
     } else {
       classForDropDownIcon = "icon-icon-arrow_drop_down";
     }
-    const dropDownOptionsClass = "options-wrapper " + (this.state.isOpen ? "" : "drop-down-hide");
+    const dropDownOptionsClass = "options-wrapper " + (this.state.isOpen ? "box-shadow" : "drop-down-hide");
 
     return (
       <div className="container-for-drop-down">
