@@ -4,7 +4,7 @@ import styles from "./StackPanel.module.scss";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../base-classes";
 
 
-interface StackPanelProperties extends ComponentBaseProperties {
+class StackPanelProperties extends ComponentBaseProperties {
 }
 
 interface StackPanelState extends ComponentBaseState {

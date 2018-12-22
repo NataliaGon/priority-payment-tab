@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <SidePanel  >
+        <SidePanel>
           <StackPanel>
             <Title text="Advanced Search"></Title>
           </StackPanel>
