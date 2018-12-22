@@ -9,6 +9,7 @@ import Icon from './priority-react-components/components/Icon';
 import DropDown from './priority-react-components/components/Inputs/DropDown';
 import TextInput from './priority-react-components/components/Inputs/TextInput/TextInput';
 import Tag from './priority-react-components/components/Tag';
+import CustomerName from './priority-react-components/components/Inputs/CustomerName/customerName';
 
 class App extends Component {
   render() {
@@ -39,7 +40,7 @@ class App extends Component {
               </Container>
               <Label text="Sort table by rearranging filter order with drag and drop"></Label>
             </RowPanel>
-            <StackPanel skin="light">
+            {/* <StackPanel skin="light">
               <RowPanel><Label text="Customer No." /></RowPanel>
               <RowPanel>
                 <DropDown></DropDown>
@@ -49,8 +50,8 @@ class App extends Component {
                 <Tag text="test" />
                 <Tag text="test" />
               </WrapPanel>
-            </StackPanel>
-            <StackPanel skin="light">
+            </StackPanel> */}
+            {/* <StackPanel skin="light">
               <RowPanel><Label text="Customer No." /></RowPanel>
               <RowPanel>
                 <DropDown></DropDown>
@@ -60,8 +61,9 @@ class App extends Component {
                 <Tag text="test" />
                 <Tag text="test" />
               </WrapPanel>
-            </StackPanel>
+            </StackPanel> */}
           </StackPanel>
+          <CustomerName/>
         </SidePanel>
       </div>
     );
