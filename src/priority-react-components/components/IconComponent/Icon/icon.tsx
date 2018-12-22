@@ -4,11 +4,12 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBa
 
 import styles from "./icon.module.scss";
 
-type IconSkin = ComponentBaseSkin | "Stroke" | "StrokeIcon";
+
 
 class IconProperties extends ComponentBaseState {
-    skin?: IconSkin = "default";
-    onClick?: () => void;
+  skin?: string;
+  fontIconClass?: string;
+  onClick?: () => void;
 }
 interface IconState extends ComponentBaseState {
 
@@ -16,9 +17,7 @@ interface IconState extends ComponentBaseState {
 export default class Icon extends ComponentBase<IconProperties, IconState> {
 
   public render() {
-    const skinClass = this.props.skin == "default" ? styles.default : styles.stroke;
-
-    const iconClass = classNames(styles.component,  skinClass)
+    const iconClass = classNames(styles.component, this.props.fontIconClass)
     return (
       <span className={iconClass} onClick={this.props.onClick}></span>
     );
