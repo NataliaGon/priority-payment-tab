@@ -21,6 +21,7 @@ export default class Button extends ComponentBase<ButtonProperties, ButtonState>
     const skinClass = this.props.skin == "default" ? styles.default : styles.stroke;
 
     const buttonClass = classNames(styles.component, this.props.componentClasses, skinClass)
+
     return (
       <button className={buttonClass} onClick={this.props.onClick}>{this.props.children}</button>
     );

@@ -6,6 +6,7 @@ import CheckBox from './priority-react-components/components/Inputs/CheckBox';
 import Label from './priority-react-components/components/Text/Label';
 import Button from './priority-react-components/components/Inputs/Button';
 import Icon from './priority-react-components/components/IconComponent/Icon/icon';
+import DropDown from './priority-react-components/components/Inputs/DropDown';
 // import Icon  from './priority-react-components/components/iconComponent/icon';
 
 class App extends Component {
@@ -37,6 +38,8 @@ class App extends Component {
           <StackPanel>
             <RowPanel>
               <Label text="Customer Name"></Label>
+              <DropDown></DropDown>
+              <Button skin="default"><Icon fontIconClass="icon-icon-edit" />Test</Button>
             </RowPanel>
           </StackPanel>
         </SidePanel>

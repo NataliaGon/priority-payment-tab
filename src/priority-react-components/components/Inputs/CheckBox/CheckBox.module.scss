@@ -1,14 +1,27 @@
 @import "../../../styles/main.scss";
 
 .component {
-    height: 26px;
-    width: 28px;
-    line-height: 26px;
-    font-size: 24px;
-}
+    font-family: $font-family-icons;
+    color: $grey;
+    height: 2rem;
+    width: 2rem;
+    font-size: 2rem;
+    border: 1px solid rgba(120, 142, 151, 0.3);
+    border-radius: 0.2rem;
 
-.checked {
-    &:before {
-        content: "V";
+    &.checked {
+        &:before {
+            content: "\e911";
+        }
+    }
+
+    &:hover {
+        color: $blue;
+        border-color: $blue;
+    }
+
+    &.disabled {
+        background-color: $disabled-grey;
+        border-color: $disabled-grey;
     }
 }
