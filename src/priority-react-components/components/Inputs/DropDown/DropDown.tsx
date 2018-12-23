@@ -44,20 +44,6 @@ export default class DropDown extends ComponentBase<DropDownProperties, DropDown
     }
   };
 
-  // renderResults = () => {
-  //   if (this.state.results.length) {
-  //     return (
-  //       <ul>
-  //         {this.state.results.map(resalt => (
-  //           <li key={resalt} className="dropDownResult">
-  //             {resalt}
-  //           </li>
-  //         ))}
-  //       </ul>
-  //     );
-  //   }
-  // };
-
   optionSelected() {
     this.dropDownToggle();
   }
@@ -90,9 +76,6 @@ export default class DropDown extends ComponentBase<DropDownProperties, DropDown
           {/* <select className={styles.inputBig} /> */}
         </div>
 
-        {/* <div className="drop-down-results-container">
-          {this.renderResults()}
-        </div> */}
       </div >
     );
   }
