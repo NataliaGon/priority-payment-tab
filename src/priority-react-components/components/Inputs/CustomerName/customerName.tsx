@@ -47,7 +47,7 @@ export default class customerName extends React.Component {
       );
     }
   };
-  renderRelalts = () => {
+  renderResalts = () => {
     if (this.state.resalts.length) {
       return (
         <ul>
@@ -90,7 +90,7 @@ export default class customerName extends React.Component {
         </div>
         <div className="drop-down-resalts-container">
           {/* <span className="drop-down-resalt">Stormie Hansford</span> */}
-          {this.renderRelalts()}
+          {this.renderResalts()}
         </div>
       </div>
     );
