@@ -68,11 +68,14 @@ export default class DropDown extends ComponentBase<DropDownProperties, DropDown
       <div className={styles.containerForDropDown}>
         <div className={styles.dropDownElements}>
           <div className={styles.inputSmall} onClick={this.dropDownToggle}>
-            <div className={dropDownOptionsClasses}>{this.renderOptions()}</div>
-            <div className={styles.dropDownIconWrapper}>
-              <Icon fontIconClass={classForDropDownIcon} />
-            </div>
+            
           </div>
+          <div className={dropDownOptionsClasses}>
+            {this.renderOptions()}
+            <div className={styles.dropDownIconWrapper}>
+            <Icon fontIconClass={classForDropDownIcon} />
+            </div>
+            </div>
           {/* <select className={styles.inputBig} /> */}
         </div>
 

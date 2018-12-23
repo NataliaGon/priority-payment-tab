@@ -18,12 +18,14 @@ interface DropDownItemState extends ComponentBaseState {
 
 export default class DropDownItem extends ComponentBase<DropDownItemProperties, DropDownItemState> {
   public render() {
-
+    
     const elementClasses = classNames(styles.component, this.props.componentClasses);
 
     return (
       <li className={elementClasses} onClick={this.props.onClick}>
-        <Icon fontIconClass={this.props.iconName} textColor={this.state && this.state.selected ? "blue" : "grey"} />
+        <Icon fontIconClass="icon-search-between-v4"
+        // {this.props.iconName}
+         textColor={this.state && this.state.selected ? "blue" : "grey"} />
         <Label skin="regular">{this.props.children}</Label>
         {this.props.displayValue ? <Label skin="small">{this.props.value}</Label> : ""}
       </li>
