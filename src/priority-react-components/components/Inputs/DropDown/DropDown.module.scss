@@ -1,15 +1,12 @@
 @import "../../../styles/vars.scss";
 
-.component {}
-
+.component {
+  
+}
 .dropDownElements {
-    // display: flex;
-    // flex-flow: column nowrap;
-    // align-items: center;
     height: 43px;
     position: relative;
 }
-
 .inputSmall {
     height: 30px;
     border-radius: $input-border-radius;
@@ -17,15 +14,11 @@
     z-index: 3;
     position: absolute;
     width: 140px;
-    margin-left: 5px;
 }
-
 .optionsWrapper {
     background: $white;
-    // display: flex;
-    // flex-direction: column;
     position: absolute;
-    width:150px;
+    width:140px;
 }
 
 .inputBig {
@@ -38,7 +31,6 @@
     right: 10px;
     background: white;
 }
-
 .dropDownResult {
     height: 30px;
     background: #6e818a;
@@ -49,18 +41,19 @@
     border-radius: $input-border-radius;
     position: relative;
 }
-
 .dropDownResultsContainer {
     margin-top: 5px;
 }
-
 .dropDownHide {
     overflow: hidden;
     height: 30px;
 }
-
 .boxShadow {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    width:150px;
+    margin-left: -5px;
+    margin-top: -5px;
+    padding-top: 5px;
 }
 .drop-down_icon-wrapper{
     position: absolute;
@@ -72,4 +65,10 @@
     position: absolute;
     top: 0;
     right: 0;
+}
+.borderColorBlue{
+    border: 1px solid $blue;
+}
+.ul:first-child{
+    color:$blue;
 }

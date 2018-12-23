@@ -15,6 +15,8 @@ import DropDownItem from './priority-react-components/components/Inputs/DropDown
 
 class App extends Component {
   render() {
+  
+   
     return (
       <div className="App">
         <SidePanel>
@@ -46,6 +48,9 @@ class App extends Component {
               <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
             </RowPanel>
 
+
+
+
             <StackPanel skin="light">
               <RowPanel>
                 <Label skin="regular-high-contrast">Customer No.</Label>
@@ -56,6 +61,10 @@ class App extends Component {
                   <DropDownItem key={2} iconName="icon-search-contains-v2" value="1">Search Between</DropDownItem>
                 </DropDown>
                 {/* <TextInput></TextInput> */}
+                <DropDown>
+                  <DropDownItem key={1} iconName="icon-search-equal" value="1">Search Between</DropDownItem>
+                  <DropDownItem key={2} iconName="icon-search-contains-v2" value="1">Search Between</DropDownItem>
+                </DropDown>
               </RowPanel>
               <WrapPanel>
                 <Tag text="test" />
@@ -63,6 +72,9 @@ class App extends Component {
               </WrapPanel>
             </StackPanel>
           </StackPanel>
+
+
+
           <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
             <RowPanel alignItems="space-between" >
               <Container>

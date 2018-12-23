@@ -1,8 +1,10 @@
 @import "../../../../styles/vars.scss";
 
 .component {
-    // height: 40px;
-    // line-height: 40px;
-    padding: 0 15px;
+    margin: 2px 7px;
     display: flex;
+    &:hover {
+        background-color: rgb(181, 216, 233);
+
+   }
 }
