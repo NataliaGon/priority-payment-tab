@@ -14,6 +14,8 @@ $disabled-grey: #d6dddf;
 
 $light-stroke: #e2eaf1;
 
+$tag-background-grey: #6e818a;
+
 $white3Opacity: rgba(255, 255, 255, 0.3);
 $white6Opacity: rgba(255, 255, 255, 0.6);
 $white7Opacity: rgba(255, 255, 255, 0.7);
@@ -42,6 +44,7 @@ $font-size-base: 62.5%;
 $font-size-large: 2.8rem;
 $font-size-medium: 2.2rem;
 $font-size-regular: 1.4rem;
+$font-size-smaller: 1.3rem;
 $font-size-small: 1.2rem;
 
 /*** End - Font Size ***/
@@ -54,6 +57,12 @@ $font-weight-bold: 700;
 
 /*** End - Font Weight ***/
 
-// Background skins
+// Inputs
+$input-border-radius: 3px;
+$input-border-grey: #bfd0d7;
 
-// End Background skins
+// End Inputs
+
+@mixin border($color) {
+    border: 1px solid $color;
+}

@@ -3,10 +3,11 @@ import classNames from 'classnames';
 import styles from "./Container.module.scss";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../base-classes";
 
-type AlignItems = "flex-start" | "flex-end" | "space-between";
+type AlignItems = "flexStart" | "flexEnd" | "spaceBetween";
 
 class ContainerProperties extends ComponentBaseProperties {
-  alignItems?: AlignItems = "space-between";
+  width?: string;
+  alignItems?: AlignItems;
 }
 
 interface ContainerState extends ComponentBaseState {
@@ -16,10 +17,20 @@ interface ContainerState extends ComponentBaseState {
 export class Container extends ComponentBase<ContainerProperties, ContainerState> {
   public render() {
 
-    const componentClasses = classNames(styles.component, this.props.componentClasses);
+    let alignItemsClass = "";
 
+    if (this.props.alignItems) {
+      alignItemsClass = styles[this.props.alignItems];
+    }
+
+    const componentClasses = classNames(styles.component, this.props.componentClasses, alignItemsClass);
+
+    let inlineStyle = {};
+    if (this.props.width) {
+      inlineStyle = { width: this.props.width }
+    }
     return (
-      <div className={componentClasses}>{this.props.children}</div>
+      <div className={componentClasses} style={inlineStyle}>{this.props.children}</div>
     );
   }
 }

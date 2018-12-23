@@ -2,6 +2,8 @@ import * as React from "react";
 import classNames from 'classnames';
 import styles from "./Tag.module.scss";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../base-classes";
+import Icon from "../Icon";
+import Label from "../Text/Label";
 
 interface TagProperties extends ComponentBaseProperties {
 }
@@ -17,7 +19,7 @@ export default class Tag extends ComponentBase<TagProperties, TagState> {
 
     return (
       <div className={elementClasses}>
-        <div>{this.props.text}</div>
+        <Label textColor="white">{this.props.text}</Label><Icon fontIconClass="icon-icon-close-small" textColor="white" />
       </div>
     );
   }

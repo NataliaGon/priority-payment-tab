@@ -13,18 +13,6 @@ body {
 
 // mixings
 
-@mixin text($size, $weight, $color) {
-    font-family: $font-family-main;
-    font-size: $size;
-    color: $color;
-}
-
-@mixin text-medium($color) {
-    @include text($font-size-medium, $font-weight-regular, $color);
-
-    line-height: $font-size-medium;
-}
-
 @mixin withRTL {
     :global(.rtl), :global([dir='rtl']) {
         @content;
@@ -33,12 +21,56 @@ body {
 
 // end mixings
 
-/*** Headings ****/
+// Text
 
-h1 {
-    font-family: $font-family-serif;
-    font-size: $font-size-large;
-    color: $blue;
+.text-color {
+    &-grey, &-grey:before {
+        color: $grey;
+    }
+
+    &-blue, &-blue:before {
+        color: $blue !important;
+    }
+
+    &-black, &-black:before {
+        color: $black;
+    }
+
+    &-white, &-white:before {
+        color: $white;
+    }
 }
 
-/*** End - Headings ****/
+.text-size {
+    &-large {
+        font-size: $font-size-large;
+    }
+
+    &-medium {
+        font-size: $font-size-medium;
+    }
+
+    &-regular {
+        font-size: $font-size-regular;
+    }
+
+    &-small {
+        font-size: $font-size-small;
+    }
+}
+
+.font-family {
+    &-serif {
+        font-family: $font-family-serif;
+    }
+
+    &-regular {
+        font-family: $font-family-main;
+    }
+
+    &-icons {
+        font-family: $font-family-icons;
+    }
+}
+
+// end Text

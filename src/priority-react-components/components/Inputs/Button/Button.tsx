@@ -4,10 +4,12 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBa
 
 import styles from "./Button.module.scss";
 
-type ButtonSkin = ComponentBaseSkin | "Stroke" | "RoundStrokeIcon";
+type ButtonSkin = "regular" | "stroke" | "roundStrokeIcon";
+type ButtonWidth = "regularFixed" | "fullWidth" | "ccontentWidth";
 
-class ButtonProperties extends ComponentBaseProperties {
-  skin?: ButtonSkin = "default";
+interface ButtonProperties extends ComponentBaseProperties {
+  skin?: ButtonSkin;
+  width?: ButtonWidth;
   onClick?: () => void;
 }
 
@@ -19,8 +21,11 @@ export default class Button extends ComponentBase<ButtonProperties, ButtonState>
 
   public render() {
     const skinClass = styles[this.props.skin ? this.props.skin : ""];
+    const widthClass = styles[this.props.width ? this.props.width : ""];
 
-    const buttonClass = classNames(styles.component, this.props.componentClasses, skinClass)
+    const darkThemeClass = styles.darkTheme;
+
+    const buttonClass = classNames(styles.component, this.props.componentClasses, skinClass, widthClass, darkThemeClass);
 
     return (
       <button className={buttonClass} onClick={this.props.onClick}>{this.props.children}</button>

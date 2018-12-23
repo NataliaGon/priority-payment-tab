@@ -5,8 +5,8 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../.
 
 type AlignItems = "flex-start" | "flex-end" | "space-between";
 
-class RowPanelProperties extends ComponentBaseProperties {
-  alignItems?: AlignItems = "space-between";
+interface RowPanelProperties extends ComponentBaseProperties {
+  alignItems?: AlignItems;
 }
 
 interface RowPanelState extends ComponentBaseState {
@@ -14,6 +14,7 @@ interface RowPanelState extends ComponentBaseState {
 }
 
 export class RowPanel extends ComponentBase<RowPanelProperties, RowPanelState> {
+
   public render() {
 
     let alignItemsClass = "";

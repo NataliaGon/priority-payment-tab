@@ -1,4 +1,4 @@
-@import "../../../../styles/main.scss";
+@import "../../../../styles/vars";
 
 .component {
     width: 100%;
@@ -6,7 +6,7 @@
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px 30px;
+    padding: 0 30px;
 
     & > * {
         width: 100%;
@@ -23,12 +23,14 @@
 
 .header {
     background-color: $silver;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
 
 .light {
     background-color: $silver;
     border: 1px solid $light-stroke;
-    padding: 15px 20px;
+    padding: 0 20px 10px;
 
     &:hover,
     &.selected {
@@ -39,6 +41,7 @@
 
 .dark {
     background-color: $dark;
+    padding: 30px;
 }
 
 .padded-panel {
