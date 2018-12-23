@@ -3,9 +3,9 @@
 .component {}
 
 .dropDownElements {
-    display: flex;
-    flex-flow: column nowrap;
-    align-items: center;
+    // display: flex;
+    // flex-flow: column nowrap;
+    // align-items: center;
     height: 43px;
     position: relative;
 }
@@ -13,19 +13,19 @@
 .inputSmall {
     height: 30px;
     border-radius: $input-border-radius;
-
     @include border($input-border-grey);
-
-    //z-index: 3;
-    display: flex;
-    justify-content: flex-end;
+    z-index: 3;
+    position: absolute;
+    width: 140px;
+    margin-left: 5px;
 }
 
 .optionsWrapper {
     background: $white;
-    display: flex;
-    flex-direction: column;
-    position: relative;
+    // display: flex;
+    // flex-direction: column;
+    position: absolute;
+    width:150px;
 }
 
 .inputBig {
@@ -33,7 +33,9 @@
     height: 30px;
     border: 1px solid #bfd0d7;
     border-radius: $input-border-radius;
-    margin-left: 180px;
+    // margin-left: 180px;
+    position: absolute;
+    right: 10px;
     background: white;
 }
 
@@ -54,8 +56,20 @@
 
 .dropDownHide {
     overflow: hidden;
+    height: 30px;
 }
 
 .boxShadow {
     box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}
+.drop-down_icon-wrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+}
+.dropDownIconWrapper{
+    position: absolute;
+    top: 0;
+    right: 0;
 }
