@@ -26,7 +26,7 @@ class App extends Component {
             </RowPanel>
             <RowPanel>
               <Container>
-                <Icon fontIconClass="icon-icon-filter-big" ></Icon>
+                <Icon fontIconClass="icon-icon-filter-big" counterValue={5}></Icon>
                 <Label skin="large">New Search</Label>
               </Container>
               <Container>
