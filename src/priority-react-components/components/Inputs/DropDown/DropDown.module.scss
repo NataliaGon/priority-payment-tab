@@ -1,16 +1,61 @@
-@import "../../../styles/main.scss";
+@import "../../../styles/vars.scss";
 
-.component {
-    height: 26px;
-    width: 28px;
-    line-height: 26px;
-    font-size: 24px;
+.component {}
 
+.dropDownElements {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    height: 43px;
+    position: relative;
 }
 
-.checked {
-    &:before {
-        content: "V";
-    }
+.inputSmall {
+    height: 30px;
+    border-radius: $input-border-radius;
+
+    @include border($input-border-grey);
+
+    //z-index: 3;
+    display: flex;
+    justify-content: flex-end;
 }
 
+.optionsWrapper {
+    background: $white;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.inputBig {
+    width: 360px;
+    height: 30px;
+    border: 1px solid #bfd0d7;
+    border-radius: $input-border-radius;
+    margin-left: 180px;
+    background: white;
+}
+
+.dropDownResult {
+    height: 30px;
+    background: #6e818a;
+    color: white;
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: $input-border-radius;
+    position: relative;
+}
+
+.dropDownResultsContainer {
+    margin-top: 5px;
+}
+
+.dropDownHide {
+    overflow: hidden;
+}
+
+.boxShadow {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+}

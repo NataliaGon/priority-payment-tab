@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import './styles/style.scss';
 import { SidePanel, StackPanel, RowPanel, Container, WrapPanel } from './priority-react-components/components/Layout';
 import Title from './priority-react-components/components/Text/Title';
 import CheckBox from './priority-react-components/components/Inputs/CheckBox';
@@ -10,60 +9,71 @@ import DropDown from './priority-react-components/components/Inputs/DropDown';
 import TextInput from './priority-react-components/components/Inputs/TextInput/TextInput';
 import Tag from './priority-react-components/components/Tag';
 import CustomerName from './priority-react-components/components/Inputs/CustomerName/customerName';
+import DropDownItem from './priority-react-components/components/Inputs/DropDown/DropDownItem/DropDownItem';
+
+
 
 class App extends Component {
   render() {
     return (
       <div className="App">
         <SidePanel>
+
           <StackPanel skin="header">
-            <RowPanel alignItems="space-between">
-              <Title text="Advanced Search"></Title>
-              <Button skin="RoundStrokeIcon"><Icon fontIconClass="icon-icon-long-arrow-left" /></Button>
+            <RowPanel>
+              <Title>Advanced Search</Title>
+              <Button skin="roundStrokeIcon"><Icon textColor="blue" fontIconClass="icon-icon-long-arrow-left" /></Button>
             </RowPanel>
-            <RowPanel alignItems="space-between">
+            <RowPanel>
               <Container>
-                <Icon fontIconClass="icon-icon-filter-big" ></Icon>
-                <Label text="New Search" />
+                <Icon fontIconClass="icon-icon-filter-big" counterValue={5}></Icon>
+                <Label skin="large">New Search</Label>
               </Container>
               <Container>
                 <Icon fontIconClass="icon-question-circle" ></Icon>
-                <Label textHref="#" text="Help"></Label>
+                <Label textHref="#">Help</Label>
               </Container>
             </RowPanel>
           </StackPanel>
-          <StackPanel skin="padded-panel">
+
+          <StackPanel>
+
             <RowPanel alignItems="space-between">
               <Container>
                 <CheckBox />
-                <Label text="Case Sensitive"></Label>
+                <Label skin="regular-high-contrast">Case Sensitive</Label>
               </Container>
-              <Label text="Sort table by rearranging filter order with drag and drop"></Label>
+              <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
             </RowPanel>
-            {/* <StackPanel skin="light">
-              <RowPanel><Label text="Customer No." /></RowPanel>
+
+            <StackPanel skin="light">
               <RowPanel>
-                <DropDown></DropDown>
-                <TextInput></TextInput>
+                <Label skin="regular-high-contrast">Customer No.</Label>
+              </RowPanel>
+              <RowPanel>
+                <DropDown>
+                  <DropDownItem key={1} iconName="icon-search-equal" value="1">Search Between</DropDownItem>
+                  <DropDownItem key={2} iconName="icon-search-contains-v2" value="1">Search Between</DropDownItem>
+                </DropDown>
               </RowPanel>
               <WrapPanel>
                 <Tag text="test" />
                 <Tag text="test" />
               </WrapPanel>
-            </StackPanel> */}
-            {/* <StackPanel skin="light">
-              <RowPanel><Label text="Customer No." /></RowPanel>
-              <RowPanel>
-                <DropDown></DropDown>
-                <TextInput></TextInput>
-              </RowPanel>
-              <WrapPanel>
-                <Tag text="test" />
-                <Tag text="test" />
-              </WrapPanel>
-            </StackPanel> */}
+            </StackPanel>
           </StackPanel>
-          <CustomerName/>
+          <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
+            <RowPanel alignItems="space-between" >
+              <Container>
+                <Icon fontIconClass="icon-icon---clear-search" />
+                <Label skin="regular-high-contrast">Clear Search</Label>
+              </Container>
+              <Container width="250px" alignItems="spaceBetween">
+                <Button skin="stroke" width="regularFixed">Save</Button>
+                <Button skin="regular" width="regularFixed">Apply</Button>
+              </Container>
+            </RowPanel>
+          </StackPanel>
         </SidePanel>
       </div>
     );

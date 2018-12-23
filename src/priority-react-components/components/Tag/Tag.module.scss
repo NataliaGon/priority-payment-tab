@@ -1,44 +1,15 @@
-@import "../../styles/main.scss";
+@import "../../styles/vars";
 
 .component {
     display: flex;
     flex-flow: row nowrap;
-    justify-content: flex-start;
-    padding: 13px 5px;
-    color: $grey;
-
-    .checkBoxElement {
-        height: 26px;
-        width: 28px;
-        line-height: 26px;
-        font-size: 24px;
-    }
-
-    .textElement {
-        font-size: 22px;
-    }
-}
-
-.left {
-    justify-content: flex-start;
-}
-
-.right {
     justify-content: flex-end;
-}
-
-.small {
-    font-size: 1.2rem;
-}
-
-.medium {
-    font-size: 1.4rem;
-}
-
-.large {
-    font-size: 2.2rem;
-}
-
-.extraLarge {
-    font-size: 2.8rem;
+    padding: 5px 0 5px 10px;
+    height: 30px;
+    color: $white;
+    background-color: $tag-background-grey;
+    font-weight: $font-weight-bold;
+    border-radius: $input-border-radius;
+    font-size: $font-size-regular;
+    align-items: center;
 }

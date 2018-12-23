@@ -1,28 +1,17 @@
 import * as React from "react";
-// import uuid from uuid;
-// import classNames from "classnames";
-// import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBaseSkin } from "../../../base-classes";
 import Icon from "../../Icon";
 import "./customerName.scss";
-
-// type customerNameSkin = ComponentBaseSkin | "Stroke" | "RoundStrokeIcon";
-
-// class customerNameProperties extends ComponentBaseProperties {
-
-// }
-
-// interface customerNameState extends ComponentBaseState {
-
-// }
 
 export default class customerName extends React.Component {
   state = {
     isOpen: false,
     resalts: ["test"]
   };
+
   DropDownToggle = () => {
     this.setState({ isOpen: !this.state.isOpen });
   };
+
   renderOption = () => {
     const optionsArray = [
       { name: "Volvo" },
@@ -30,6 +19,7 @@ export default class customerName extends React.Component {
       { name: "Mercedes" },
       { name: "Audi" }
     ];
+
     // const classForOption = "options-wrapper " + (this.state.isOpen ? "box-shadow" : "drop-down-hide");
     if (optionsArray.length) {
       return (
@@ -60,6 +50,7 @@ export default class customerName extends React.Component {
       );
     }
   };
+
   optionChoosed() {
     // console.log(e);
     this.DropDownToggle();

@@ -1,19 +1,33 @@
-@import "../../../styles/main.scss";
+@import "../../../styles/vars";
 
 .component {
     height: 30px;
     border-radius: 3px;
     box-shadow: 0 5px 15px 0 rgba(0, 173, 238, 0.15);
-    letter-spacing: 0;
-    font-family: "Roboto-bold", sans-serif;
     font-size: 14px;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
         background: linear-gradient(248deg, #00adee, rgba(0, 173, 238, 0.7));
     }
 }
 
-.default {
+.regularFixed {
+    width: 120px;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.contentWidth {
+    width: unset;
+}
+
+.regular {
     background-color: #00adee;
     color: white;
 }
@@ -24,11 +38,12 @@
     color: #00adee;
 }
 
-.RoundStrokeIcon {
+.roundStrokeIcon {
     width: 30px;
     border-radius: 50%;
     color: $blue;
-    border: 1px solid $blue;
+    border: 2px solid $blue;
+    justify-content: center;
 }
 
 .active {
@@ -38,4 +53,15 @@
 .disabled {
     background: #d6dddf;
     opacity: 0.3;
+}
+
+.darkTheme {
+    &.component {
+        height: 40px;
+        font-weight: $font-weight-bold;
+    }
+
+    &.roundStrokeIcon {
+        height: 30px;
+    }
 }

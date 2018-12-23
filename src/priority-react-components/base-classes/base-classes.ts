@@ -1,12 +1,24 @@
 import React from "react";
+import classNames from "classnames";
 
 export type ComponentBaseSkin = "default";
+export type TextSize = "large" | "medium" | "regular" | "small";
+export type TextColor = "black" | "grey" | "blue" | "white";
+export type FontFamily = "regular" | "serif" | "icons";
+
+export class DefaultTextProperties {
+    textSize: TextSize = "regular";
+    textColor: TextColor = "grey";
+    fontFamily: FontFamily = "regular";
+}
 
 export class ComponentBaseProperties {
     componentClasses?: string[];
     text?: string;
-    draggable?: boolean = false;
-    //skin?: ComponentBaseSkin | any = "default";
+    textSize?: TextSize;
+    textColor?: TextColor;
+    fontFamily?: FontFamily;
+    draggable?: boolean;
 }
 
 export class ComponentAnimatedProperties extends ComponentBaseProperties {
@@ -19,6 +31,7 @@ export class ComponentBaseState {
 }
 
 export class ComponentBase<ComponentBaseProperties, ComponentBaseState> extends React.Component<ComponentBaseProperties, ComponentBaseState, any> {
+
     constructor(properties: ComponentBaseProperties, state?: ComponentBaseState) {
         super(properties, state);
     }
@@ -26,4 +39,12 @@ export class ComponentBase<ComponentBaseProperties, ComponentBaseState> extends 
     focusRef: {
         focus: () => void;
     } | undefined;
+
+    protected defaultProperties = function (): any {
+        return new DefaultTextProperties();
+    }
+}
+
+export enum PriorityFontIcon {
+
 }

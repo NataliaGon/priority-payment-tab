@@ -1,49 +1,99 @@
 import * as React from "react";
-import classNames from "classnames";
 import styles from "./DropDown.module.scss";
-import {
-  ComponentBaseProperties,
-  ComponentBaseState,
-  ComponentBase
-} from "../../../base-classes";
+import classNames from 'classnames';
+import Icon from "../../Icon";
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../base-classes";
 
-class DropDownProperties extends ComponentBaseProperties {
-  checked?: boolean = false;
+import DropDownItem from "./DropDownItem/DropDownItem";
+
+export interface DropDownProperties extends ComponentBaseProperties {
+  multiSelect?: boolean;
 }
 
-interface DropDownState extends ComponentBaseState {}
+export interface DropDownState extends ComponentBaseState {
+  dropDownOptions: DropDownItem[];
+  isOpen: boolean;
+  results: string[];
+}
 
-export default class DropDown extends ComponentBase<
-  DropDownProperties,
-  DropDownState
-> {
-  public render() {
-    let stateClass = "";
-    if (this.props.checked) {
-      stateClass = styles.checked;
+export default class DropDown extends ComponentBase<DropDownProperties, DropDownState> {
+
+  dropDownToggle = () => {
+    this.setState({ isOpen: !(this.state && this.state.isOpen) });
+  };
+
+  renderOptions = () => {
+
+    const dropDownOptions = this.state && this.state.dropDownOptions ? this.state.dropDownOptions : this.props.children;
+
+    console.log(dropDownOptions);
+
+    if (dropDownOptions && Array.isArray(dropDownOptions)) {
+      return (
+        <ul>
+          {dropDownOptions.map(option => (
+            <DropDownItem
+              iconName={option.iconName}
+              value={option.value}
+              displayValue={option.displayValue ? true : false} key={option.name}
+              onClick={e => this.optionSelected()}>{option.props.children}
+            </DropDownItem>
+          ))}
+        </ul>
+      );
     }
+  };
 
-    const elementClasses = classNames(
-      styles.component,
-      this.props.componentClasses,
-      stateClass
-    );
+  // renderResults = () => {
+  //   if (this.state.results.length) {
+  //     return (
+  //       <ul>
+  //         {this.state.results.map(resalt => (
+  //           <li key={resalt} className="dropDownResult">
+  //             {resalt}
+  //           </li>
+  //         ))}
+  //       </ul>
+  //     );
+  //   }
+  // };
+
+  optionSelected() {
+    this.dropDownToggle();
+  }
+
+  public render() {
+
+    let classForDropDownIcon;
+
+    if (this.state && this.state.isOpen) {
+      classForDropDownIcon = "icon-icon-arrow_drop_up";
+    } else {
+      classForDropDownIcon = "icon-icon-arrow_drop_down";
+    }
+    const dropDownVisibilityClass = (this.state && this.state.isOpen) ? styles.boxShadow : styles.dropDownHide;
+    const dropDownOptionsClass = styles.optionsWrapper;
+
+    const dropDownOptionsClasses = classNames(dropDownVisibilityClass, dropDownOptionsClass);
+
+    console.log(dropDownOptionsClasses);
 
     return (
-      <div className="container-for-drop-down">
-        <span></span>
-        <select className={elementClasses}>
-          <option value="volvo">Volvo</option>
-          <option value="saab">Saab</option>
-          <option value="mercedes">Mercedes</option>
-          <option value="audi">Audi</option>
-        </select>
-        <div></div>
-        <div></div>
-        <div></div>
-        <input type="text" />
-        <div></div>
-      </div>
+      <div className={styles.containerForDropDown}>
+        <div className={styles.dropDownElements}>
+          <div className={styles.inputSmall} onClick={this.dropDownToggle}>
+            <div className={dropDownOptionsClasses}>{this.renderOptions()}</div>
+            <div className={styles.dropDownIconWrapper}>
+              <Icon fontIconClass={classForDropDownIcon} />
+            </div>
+          </div>
+          {/* <select className={styles.inputBig} /> */}
+        </div>
+
+        {/* <div className="drop-down-results-container">
+          {this.renderResults()}
+        </div> */}
+      </div >
     );
   }
 }
