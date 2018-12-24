@@ -15,8 +15,8 @@ import DropDownItem from './priority-react-components/components/Inputs/DropDown
 
 class App extends Component {
   render() {
-  
-   
+
+
     return (
       <div className="App">
         <SidePanel>
@@ -48,9 +48,6 @@ class App extends Component {
               <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
             </RowPanel>
 
-
-
-
             <StackPanel skin="light">
               <RowPanel>
                 <Label skin="regular-high-contrast">Customer No.</Label>
@@ -72,8 +69,6 @@ class App extends Component {
               </WrapPanel>
             </StackPanel>
           </StackPanel>
-
-
 
           <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
             <RowPanel alignItems="space-between" >

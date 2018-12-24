@@ -27,8 +27,10 @@ export default class Icon extends ComponentBase<IconProperties, IconState> {
     if (this.props.textColor) {
       textColorClass = "text-color-" + this.props.textColor;
     }
+
     const iconClass = classNames(styles.component, this.props.fontIconClass, textColorClass);
     const iconCounter = this.state && this.state.counterValue ? <IconCounter count={this.state.counterValue} /> : null;
+
     return (
       <div className={iconClass}>{iconCounter}</div>
     )

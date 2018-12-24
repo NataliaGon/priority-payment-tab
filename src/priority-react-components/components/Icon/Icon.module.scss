@@ -3,7 +3,9 @@
 .component, .component:before {
     width: 2.4rem;
     height: 2.4rem;
-    position: relative;
+
+    //position: relative;
     font-size: 2.4rem;
+    line-height: 2.4rem;
     color: $grey;
 }
