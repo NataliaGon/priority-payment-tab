@@ -12,23 +12,14 @@
   @include border($input-border-grey);
   z-index: 3;
   position: absolute;
-  width: 140px;
+  width: 150px;
+  box-sizing: border-box;
 }
 .optionsWrapper {
   background: $white;
   position: absolute;
-  width: 140px;
+  width: 150px;
 }
-
-// .inputBig {
-//   width: 360px;
-//   height: 30px;
-//   border: 1px solid #bfd0d7;
-//   border-radius: $input-border-radius;
-//   position: absolute;
-//   right: 10px;
-//   background: white;
-// }
 .dropDownResult {
   height: 30px;
   background: #6e818a;
@@ -45,13 +36,15 @@
 .dropDownHide {
   overflow: hidden;
   height: 30px;
+  border-radius: $input-border-radius;
 }
 .boxShadow {
   box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-  width: 150px;
+  width: 160px;
   margin-left: -5px;
   margin-top: -5px;
   padding: 5px;
+  border-radius: $input-border-radius;
 }
 .drop-down_icon-wrapper {
   position: absolute;

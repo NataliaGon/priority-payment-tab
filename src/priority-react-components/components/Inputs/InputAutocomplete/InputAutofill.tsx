@@ -23,7 +23,6 @@ export default class LineInput extends ComponentBase<
     return (
       <div className={styles.component}>
          <Autocomplete> 
-         {/* <input className={styles.input}  type="email"/> */}
          </Autocomplete>
       </div>
     );

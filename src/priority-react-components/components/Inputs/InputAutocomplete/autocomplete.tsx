@@ -13,7 +13,7 @@ export default class Autocomplete extends Component {
 
 render(){
     return(
-      <input className={styles.input} type="email"/>
+      <input className={styles.input} placeholder ="Name" name="name" type="email"/>
     );
 }
 }
