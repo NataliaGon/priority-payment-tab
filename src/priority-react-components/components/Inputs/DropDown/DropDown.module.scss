@@ -20,16 +20,15 @@
   width: 140px;
 }
 
-.inputBig {
-  width: 360px;
-  height: 30px;
-  border: 1px solid #bfd0d7;
-  border-radius: $input-border-radius;
-  // margin-left: 180px;
-  position: absolute;
-  right: 10px;
-  background: white;
-}
+// .inputBig {
+//   width: 360px;
+//   height: 30px;
+//   border: 1px solid #bfd0d7;
+//   border-radius: $input-border-radius;
+//   position: absolute;
+//   right: 10px;
+//   background: white;
+// }
 .dropDownResult {
   height: 30px;
   background: #6e818a;
@@ -52,7 +51,7 @@
   width: 150px;
   margin-left: -5px;
   margin-top: -5px;
-  padding-top: 5px;
+  padding: 5px;
 }
 .drop-down_icon-wrapper {
   position: absolute;
