@@ -1,0 +1,12 @@
+@import "../../../styles/vars";
+.component{
+    width:360px;
+    height: 30px;
+    @include border($input-border-grey);
+    border-radius: $input-border-radius;
+    margin-top: -12px;////have to change 
+}
+.input{
+    width:100%;
+    height: 100%;
+}

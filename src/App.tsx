@@ -11,7 +11,7 @@ import Tag from './priority-react-components/components/Tag';
 import CustomerName from './priority-react-components/components/Inputs/CustomerName/customerName';
 import DropDownItem from './priority-react-components/components/Inputs/DropDown/DropDownItem/DropDownItem';
 import LineInput from './priority-react-components/components/Inputs/LineInput/lineInput';
-
+import InputAutofill from './priority-react-components/components/Inputs/InputAutofill/InputAutofill';
 
 class App extends Component {
   render() {
@@ -88,11 +88,7 @@ class App extends Component {
                   <DropDownItem key={1} iconName="icon-search-equal" value="1">Between</DropDownItem>
                   <DropDownItem key={2} iconName="icon-search-contains-v2" value="1">Between</DropDownItem>
                 </DropDown>
-                {/* <TextInput></TextInput> */}
-                {/* <DropDown>
-                  <DropDownItem key={1} iconName="icon-search-equal" value="1">Search Between</DropDownItem>
-                  <DropDownItem key={2} iconName="icon-search-contains-v2" value="1">Search Between</DropDownItem>
-                </DropDown> */}
+                <InputAutofill/>
               </RowPanel>
               <WrapPanel>
                 <Tag text="test" />
