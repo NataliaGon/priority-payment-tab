@@ -61,10 +61,10 @@ class App extends Component {
                   <DropDownItem key={2} iconName="icon-search-contains-v2" value="1">Search Between</DropDownItem>
                 </DropDown>
                 {/* <TextInput></TextInput> */}
-                <DropDown>
+                {/* <DropDown>
                   <DropDownItem key={1} iconName="icon-search-equal" value="1">Search Between</DropDownItem>
                   <DropDownItem key={2} iconName="icon-search-contains-v2" value="1">Search Between</DropDownItem>
-                </DropDown>
+                </DropDown> */}
               </RowPanel>
               <WrapPanel>
                 <Tag text="test" />
