@@ -57,8 +57,8 @@ class App extends Component {
               </RowPanel>
               <RowPanel>
                 <DropDown>
-                  <DropDownItem key={1} iconName="icon-search-equal" value="1">Search Between</DropDownItem>
-                  <DropDownItem key={2} iconName="icon-search-contains-v2" value="1">Search Between</DropDownItem>
+                  <DropDownItem key={1} iconName="icon-search-equal" value="1">Between</DropDownItem>
+                  <DropDownItem key={2} iconName="icon-search-contains-v2" value="1">Between</DropDownItem>
                 </DropDown>
                 {/* <TextInput></TextInput> */}
                 {/* <DropDown>

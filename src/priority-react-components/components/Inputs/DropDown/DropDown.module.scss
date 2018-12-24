@@ -74,8 +74,11 @@
   }
 }
 .ul li:first-child  {
+    height: 27px;
     &:hover {
       background-color:$white;
     }
 }
-  
+.ul li:nth-child(2){
+margin-top: 11px;
+}  

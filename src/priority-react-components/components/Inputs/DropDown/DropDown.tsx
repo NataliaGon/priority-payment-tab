@@ -39,7 +39,8 @@ export default class DropDown extends ComponentBase<
     if (dropDownOptions && Array.isArray(dropDownOptions)) {
       return (
         <ul className={styles.ul}>
-          {dropDownOptions.map(option => (
+          {dropDownOptions.map((option)=> (
+          
             <DropDownItem
               iconName={option.iconName}
               value={option.value}
