@@ -12,6 +12,7 @@ import DropDownItem from "./DropDownItem/DropDownItem";
 
 export interface DropDownProperties extends ComponentBaseProperties {
   multiSelect?: boolean;
+  IconTextColor?:string;
 }
 
 export interface DropDownState extends ComponentBaseState {
@@ -62,11 +63,19 @@ export default class DropDown extends ComponentBase<
 
   public render() {
     let classForDropDownIcon;
-
+    let IconTextColor;
+    let IconOptionsClass;
     if (this.state && this.state.isOpen) {
+      IconOptionsClass = styles.active;
       classForDropDownIcon = "icon-icon-arrow_drop_up";
+      IconTextColor="grey"
+      const IconClasses = classNames(
+        classForDropDownIcon,
+        IconOptionsClass
+      );
     } else {
       classForDropDownIcon = "icon-icon-arrow_drop_down";
+      IconTextColor="blue"
     }
     const dropDownVisibilityClass =
       this.state && this.state.isOpen ? styles.boxShadow : styles.dropDownHide;
@@ -87,11 +96,10 @@ export default class DropDown extends ComponentBase<
         <div className={styles.dropDownElements}>
           <div className={smallInputOptionsClasses} onClick={this.dropDownToggle}>
             <div className={styles.dropDownIconWrapper}>
-              <Icon fontIconClass={classForDropDownIcon} />
+              <Icon  fontIconClass={classForDropDownIcon} />
             </div>
           </div>
           <div className={dropDownOptionsClasses}>{this.renderOptions()}</div>
-          {/* <select className={styles.inputBig} /> */}
         </div>
       </div>
     );
