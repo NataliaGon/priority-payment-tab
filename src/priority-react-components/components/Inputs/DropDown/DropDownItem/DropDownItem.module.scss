@@ -1,8 +1,11 @@
 @import "../../../../styles/vars.scss";
 
 .component {
+    margin: 2px 7px;
     display: flex;
-    height: 30px;
-    align-items: center;
-    justify-content: flex-start;
+
+    //     &:hover {
+    //         background-color: rgb(181, 216, 233);
+
+    //    }
 }
