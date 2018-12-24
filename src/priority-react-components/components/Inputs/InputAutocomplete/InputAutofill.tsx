@@ -2,6 +2,7 @@ import * as React from "react";
 import classNames from "classnames";
 import Icon from "../../Icon";
 import styles from "./InputAutofill.module.scss";
+import Autocomplete from "./autocomplete";
 import {
   ComponentBaseProperties,
   ComponentBaseState,
@@ -21,9 +22,9 @@ export default class LineInput extends ComponentBase<
   public render() {
     return (
       <div className={styles.component}>
-        <input className={styles.input}  type="email"
-        //  autocomplete="on"
-         />
+         <Autocomplete> 
+         {/* <input className={styles.input}  type="email"/> */}
+         </Autocomplete>
       </div>
     );
   }

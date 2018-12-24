@@ -11,7 +11,7 @@ import Tag from './priority-react-components/components/Tag';
 import CustomerName from './priority-react-components/components/Inputs/CustomerName/customerName';
 import DropDownItem from './priority-react-components/components/Inputs/DropDown/DropDownItem/DropDownItem';
 import LineInput from './priority-react-components/components/Inputs/LineInput/lineInput';
-import InputAutofill from './priority-react-components/components/Inputs/InputAutofill/InputAutofill';
+import InputAutofill from './priority-react-components/components/Inputs/InputAutocomplete/InputAutofill';
 
 class App extends Component {
   render() {
