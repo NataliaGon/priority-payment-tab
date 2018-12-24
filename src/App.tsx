@@ -10,7 +10,7 @@ import TextInput from './priority-react-components/components/Inputs/TextInput/T
 import Tag from './priority-react-components/components/Tag';
 import CustomerName from './priority-react-components/components/Inputs/CustomerName/customerName';
 import DropDownItem from './priority-react-components/components/Inputs/DropDown/DropDownItem/DropDownItem';
-
+import LineInput from './priority-react-components/components/Inputs/LineInput/lineInput';
 
 
 class App extends Component {
@@ -39,7 +39,35 @@ class App extends Component {
           </StackPanel>
 
           <StackPanel>
+            <RowPanel alignItems="space-between">
+              <Container>
+                <CheckBox />
+                <Label skin="regular-high-contrast">Case Sensitive</Label>
+              </Container>
+              <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
+            </RowPanel>
+            </StackPanel>
 
+          <StackPanel  skin="header">
+            <RowPanel>
+              <Title>Advanced Search</Title>
+              <Button skin="roundStrokeIcon"><Icon textColor="blue" fontIconClass="icon-icon-long-arrow-left" /></Button>
+            </RowPanel>
+            <RowPanel>
+              <Container>
+                <Icon fontIconClass="icon-icon-filter-big" counterValue={5}></Icon>
+                <Label skin="large">New Search</Label>
+              </Container>
+              <Container>
+                <Icon fontIconClass="icon-question-circle" ></Icon>
+                <Label textHref="#">Help</Label>
+              </Container>
+              <LineInput/>
+            </RowPanel>
+          </StackPanel>
+
+
+          <StackPanel>
             <RowPanel alignItems="space-between">
               <Container>
                 <CheckBox />
