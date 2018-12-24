@@ -20,10 +20,8 @@ export interface DropDownState extends ComponentBaseState {
   results: string[];
 }
 
-export default class DropDown extends ComponentBase<
-  DropDownProperties,
-  DropDownState
-> {
+export default class DropDown extends ComponentBase<DropDownProperties, DropDownState> {
+
   dropDownToggle = () => {
     this.setState({ isOpen: !(this.state && this.state.isOpen) });
   };
@@ -46,8 +44,7 @@ export default class DropDown extends ComponentBase<
               value={option.value}
               displayValue={option.displayValue ? true : false}
               key={option.name}
-              onClick={e => this.optionSelected()}
-            >
+              onClick={e => this.optionSelected()}>
               {option.props.children}
             </DropDownItem>
           ))}
@@ -68,12 +65,11 @@ export default class DropDown extends ComponentBase<
     } else {
       classForDropDownIcon = "icon-icon-arrow_drop_down";
     }
-    const dropDownVisibilityClass =
-      this.state && this.state.isOpen ? styles.boxShadow : styles.dropDownHide;
-    const smallInputVisibilityClass =
-      this.state && this.state.isOpen ? styles.borderColorBlue: '';  
+    const dropDownVisibilityClass = this.state && this.state.isOpen ? styles.boxShadow : styles.dropDownHide;
+    const smallInputVisibilityClass = this.state && this.state.isOpen ? styles.borderColorBlue : '';
     const dropDownOptionsClass = styles.optionsWrapper;
-    const smallInputOptionsClass = styles.inputSmall; 
+    const smallInputOptionsClass = styles.inputSmall;
+
     const dropDownOptionsClasses = classNames(
       dropDownVisibilityClass,
       dropDownOptionsClass
@@ -82,6 +78,7 @@ export default class DropDown extends ComponentBase<
       smallInputVisibilityClass,
       smallInputOptionsClass
     );
+
     return (
       <div className={styles.containerForDropDown}>
         <div className={styles.dropDownElements}>
@@ -91,7 +88,6 @@ export default class DropDown extends ComponentBase<
             </div>
           </div>
           <div className={dropDownOptionsClasses}>{this.renderOptions()}</div>
-          {/* <select className={styles.inputBig} /> */}
         </div>
       </div>
     );
