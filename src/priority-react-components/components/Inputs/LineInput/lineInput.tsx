@@ -19,6 +19,7 @@ export default class LineInput extends ComponentBase<
   public render() {
     return (
       <div className={styles.component}>
+      <input className={styles.input} type="text"/>
         <button className={styles.iconDoneWrapper}>
           <Icon textColor="white" fontIconClass="icon-icon-done" />
         </button>
