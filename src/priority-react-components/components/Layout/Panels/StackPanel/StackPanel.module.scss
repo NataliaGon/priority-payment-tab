@@ -7,6 +7,8 @@
     justify-content: flex-start;
     align-items: center;
     padding: 0 30px;
+    position: relative;
+    
 
     & > * {
         width: 100%;
@@ -25,6 +27,7 @@
     background-color: $silver;
     padding-top: 15px;
     padding-bottom: 15px;
+    height: 114px;
 }
 
 .light {
