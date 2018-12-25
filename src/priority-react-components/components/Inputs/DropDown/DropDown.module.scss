@@ -1,80 +1,95 @@
 @import "../../../styles/vars.scss";
 
-.component {
-}
+// .component {}
+
 .dropDownElements {
-  height: 43px;
-  position: relative;
+    height: 43px;
+    position: relative;
 }
+
 .inputSmall {
-  height: 30px;
-  border-radius: $input-border-radius;
-  @include border($input-border-grey);
-  z-index: 3;
-  position: absolute;
-  width: 150px;
-  box-sizing: border-box;
+    height: 30px;
+    border-radius: $input-border-radius;
+
+    @include border($input-border-grey);
+
+    z-index: 3;
+    position: absolute;
+    width: 140px;
 }
+
 .optionsWrapper {
-  background: $white;
-  position: absolute;
-  width: 150px;
+    background: $white;
+    position: absolute;
+    width: 140px;
 }
+
+.inputBig {
+    width: 360px;
+    height: 30px;
+    border: 1px solid #bfd0d7;
+    border-radius: $input-border-radius;
+    position: absolute;
+    right: 10px;
+    background: white;
+}
+
 .dropDownResult {
-  height: 30px;
-  background: #6e818a;
-  color: white;
-  display: inline-block;
-  line-height: 30px;
-  padding: 0 10px;
-  border-radius: $input-border-radius;
-  position: relative;
+    height: 30px;
+    background: #6e818a;
+    color: white;
+    display: inline-block;
+    line-height: 30px;
+    padding: 0 10px;
+    border-radius: $input-border-radius;
+    position: relative;
 }
+
 .dropDownResultsContainer {
-  margin-top: 5px;
+    margin-top: 5px;
 }
+
 .dropDownHide {
-  overflow: hidden;
-  height: 30px;
-  border-radius: $input-border-radius;
+    overflow: hidden;
+    height: 30px;
 }
+
 .boxShadow {
-  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
-  width: 160px;
-  margin-left: -5px;
-  margin-top: -5px;
-  padding: 5px;
-  border-radius: $input-border-radius;
-  z-index: 2;
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    width: 150px;
+    margin-left: -5px;
+    margin-top: -5px;
+    padding-top: 5px;
 }
+
 .drop-down_icon-wrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
-  background: white;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
 }
+
 .dropDownIconWrapper {
-  position: absolute;
-  top: 0;
-  right: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
+
 .borderColorBlue {
-  border: 1px solid $blue;
+    border: 1px solid $blue;
 }
+
 .ul li {
-  &:hover {
-    background-color: #D9F6F9;
-  }
+    &:hover {
+        background-color: rgb(181, 216, 233);
+    }
 }
 .ul li:first-child  {
     height: 27px;
     &:hover {
-      background-color:$white;
+        background-color: $white;
     }
 }
 .ul li:nth-child(2){
 margin-top: 11px;
 }  
-.active{
-  color:$blue;
-}
