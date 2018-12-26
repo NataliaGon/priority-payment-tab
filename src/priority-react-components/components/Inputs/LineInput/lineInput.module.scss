@@ -21,4 +21,18 @@
     font-size: $font-size-medium;
     color: $grey;
     font-weight: 600;
+    display:none;
+}
+.span{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    font-size: $font-size-medium;
+    color: $grey;
+}
+.displayNone{
+    display: none;
+}
+.displayBlock{
+    display: block;
 }

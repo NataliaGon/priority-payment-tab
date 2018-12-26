@@ -34,7 +34,7 @@ export default class Select extends ComponentBase<SelectProperties, SelectState>
         ? this.state.dropDownOptions
         : this.props.children;
 
-    console.log(dropDownOptions);
+  
 
     if (dropDownOptions && Array.isArray(dropDownOptions)) {
       return (
