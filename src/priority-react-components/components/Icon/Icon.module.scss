@@ -1,9 +1,8 @@
 @import "../../styles/vars";
 
-.component, .component:before {
+.component {
     width: 2.4rem;
     height: 2.4rem;
     font-size: 2.4rem;
-    color: $grey;
     position: relative;
 }

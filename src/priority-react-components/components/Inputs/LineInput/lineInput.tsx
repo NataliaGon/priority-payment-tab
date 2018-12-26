@@ -1,8 +1,5 @@
 import * as React from "react";
-import classNames from "classnames";
-
 import Icon from "../../Icon";
-import PropTypes from "prop-types";
 import styles from "./lineInput.module.scss";
 
 import {
@@ -10,24 +7,20 @@ import {
   ComponentBaseState,
   ComponentBase
 } from "../../../base-classes";
+import { PriorityIcon } from "../../../base-classes/PriorityIcon";
 
-class LineInputProperties extends ComponentBaseProperties {}
+class LineInputProperties extends ComponentBaseProperties { }
 
-interface LineInputState extends ComponentBaseState {}
+interface LineInputState extends ComponentBaseState { }
 
-export default class LineInput extends ComponentBase<
-  LineInputProperties,
-  LineInputState
-> {
+export default class LineInput extends ComponentBase<LineInputProperties, LineInputState> {
   public render() {
     return (
       <div className={styles.component}>
-      {/* <input className={styles.input} type="text" defaultValue="text"/> */}
-   
         <button className={styles.iconDoneWrapper}>
-          <Icon textColor="white" fontIconClass="icon-icon-done" />
+          <Icon iconColor="white" icon={PriorityIcon.done} />
         </button>
-        <Icon fontIconClass="icon-icon-close-small" />
+        <Icon icon={PriorityIcon.closeSmall} />
       </div>
     );
   }

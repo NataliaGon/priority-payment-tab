@@ -1,9 +1,9 @@
 import React from "react";
-import classNames from "classnames";
 
 export type ComponentBaseSkin = "default";
 export type TextSize = "large" | "medium" | "regular" | "small";
 export type TextColor = "black" | "grey" | "blue" | "white";
+export type IconColor = TextColor | "";
 export type FontFamily = "regular" | "serif" | "icons";
 
 export class DefaultTextProperties {
@@ -19,12 +19,6 @@ export class ComponentBaseProperties {
     textColor?: TextColor;
     fontFamily?: FontFamily;
     draggable?: boolean;
-}
-
-export class ComponentAnimatedProperties extends ComponentBaseProperties {
-    transitionName?: string;
-    transitionEnterTimeout?: number;
-    transitionLeaveTimeout?: number;
 }
 
 export class ComponentBaseState {
@@ -45,6 +39,8 @@ export class ComponentBase<ComponentBaseProperties, ComponentBaseState> extends 
     }
 }
 
-export enum PriorityFontIcon {
-
+export class ComponentAnimatedProperties extends ComponentBaseProperties {
+    transitionName?: string;
+    transitionEnterTimeout?: number;
+    transitionLeaveTimeout?: number;
 }

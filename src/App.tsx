@@ -5,13 +5,12 @@ import CheckBox from './priority-react-components/components/Inputs/CheckBox';
 import Label from './priority-react-components/components/Text/Label';
 import Button from './priority-react-components/components/Inputs/Button';
 import Icon from './priority-react-components/components/Icon';
-import DropDown from './priority-react-components/components/Inputs/DropDown';
-import TextInput from './priority-react-components/components/Inputs/TextInput/TextInput';
 import Tag from './priority-react-components/components/Tag';
-import CustomerName from './priority-react-components/components/Inputs/CustomerName/customerName';
-import DropDownItem from './priority-react-components/components/Inputs/DropDown/DropDownItem/DropDownItem';
 import LineInput from './priority-react-components/components/Inputs/LineInput/lineInput';
 import InputAutofill from './priority-react-components/components/Inputs/InputAutocomplete/InputAutofill';
+import { PriorityIcon } from './priority-react-components/base-classes/PriorityIcon';
+import Select from './priority-react-components/components/Inputs/Select';
+import OptionItem from './priority-react-components/components/Inputs/Select/OptionItem/OptionItem';
 
 class App extends Component {
   render() {
@@ -24,15 +23,15 @@ class App extends Component {
           <StackPanel skin="header">
             <RowPanel>
               <Title>Advanced Search</Title>
-              <Button skin="roundStrokeIcon"><Icon textColor="blue" fontIconClass="icon-icon-long-arrow-left" /></Button>
+              <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
             </RowPanel>
             <RowPanel>
               <Container>
-                <Icon fontIconClass="icon-icon-filter-big" counterValue={5}></Icon>
+                <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
                 <Label skin="large">New Search</Label>
               </Container>
               <Container>
-                <Icon fontIconClass="icon-question-circle" ></Icon>
+                <Icon icon={PriorityIcon.questionCircle} ></Icon>
                 <Label textHref="#">Help</Label>
               </Container>
             </RowPanel>
@@ -46,23 +45,23 @@ class App extends Component {
               </Container>
               <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
             </RowPanel>
-            </StackPanel>
+          </StackPanel>
 
-          <StackPanel  skin="header">
+          <StackPanel skin="header">
             <RowPanel>
               <Title>Advanced Search</Title>
-              <Button skin="roundStrokeIcon"><Icon textColor="blue" fontIconClass="icon-icon-long-arrow-left" /></Button>
+              <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
             </RowPanel>
             <RowPanel>
               <Container>
-                <Icon fontIconClass="icon-icon-filter-big" counterValue={5}></Icon>
+                <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
                 <Label skin="large">New Search</Label>
               </Container>
               <Container>
-                <Icon fontIconClass="icon-question-circle" ></Icon>
+                <Icon icon={PriorityIcon.questionCircle} ></Icon>
                 <Label textHref="#">Help</Label>
               </Container>
-              <LineInput/>
+              <LineInput />
             </RowPanel>
           </StackPanel>
 
@@ -81,11 +80,11 @@ class App extends Component {
                 <Label skin="regular-high-contrast">Customer No.</Label>
               </RowPanel>
               <RowPanel>
-                <DropDown>
-                  <DropDownItem key={1} iconName="icon-search-equal" value="1">Between</DropDownItem>
-                  <DropDownItem key={2} iconName="icon-search-contains-v2" value="1">Between</DropDownItem>
-                </DropDown>
-                <InputAutofill/>
+                <Select>
+                  <OptionItem key={1} iconName="icon-search-equal" value="1">Between</OptionItem>
+                  <OptionItem key={2} iconName="icon-search-contains-v2" value="1">Between</OptionItem>
+                </Select>
+                <InputAutofill />
               </RowPanel>
               <WrapPanel>
                 <Tag text="test" />
@@ -97,7 +96,7 @@ class App extends Component {
           <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
             <RowPanel alignItems="space-between" >
               <Container>
-                <Icon fontIconClass="icon-icon---clear-search" />
+                <Icon icon={PriorityIcon.clear} />
                 <Label skin="regular-high-contrast">Clear Search</Label>
               </Container>
               <Container width="250px" alignItems="spaceBetween">

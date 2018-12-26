@@ -1,21 +1,26 @@
 import * as React from "react";
 import classNames from 'classnames';
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, DefaultTextProperties } from "../../base-classes";
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, DefaultTextProperties, IconColor } from "../../base-classes";
 
 import styles from "./Icon.module.scss";
 import IconCounter from "./IconCounter/IconCounter";
+import { PriorityIcon } from "../../base-classes/PriorityIcon";
 
 interface IconProperties extends ComponentBaseProperties {
-  fontIconClass?: string;
+  icon?: PriorityIcon;
+  iconColor?: IconColor;
   counterValue?: number;
 }
+
 interface IconState extends ComponentBaseState {
   counterValue?: number;
 }
+
 export default class Icon extends ComponentBase<IconProperties, IconState> {
 
   constructor(properties: IconProperties, state: IconState) {
     super(properties, state);
+
     if (properties.counterValue) {
       this.setState({ counterValue: properties.counterValue });
     }
@@ -23,12 +28,13 @@ export default class Icon extends ComponentBase<IconProperties, IconState> {
 
   public render() {
 
-    let textColorClass = "";
-    if (this.props.textColor) {
-      textColorClass = "text-color-" + this.props.textColor;
+    let iconColorClass = "icon-color-grey";
+
+    if (this.props.iconColor) {
+      iconColorClass = "icon-color-" + this.props.iconColor;
     }
 
-    const iconClass = classNames(styles.component, this.props.fontIconClass, textColorClass);
+    const iconClass = classNames(styles.component, this.props.icon, iconColorClass);
     const iconCounter = this.state && this.state.counterValue ? <IconCounter count={this.state.counterValue} /> : null;
 
     return (

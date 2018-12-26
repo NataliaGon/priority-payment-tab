@@ -74,3 +74,24 @@ body {
 }
 
 // end Text
+
+// Icons
+.icon-color {
+    &-grey, &-grey:before {
+        color: $grey;
+    }
+
+    &-blue, &-blue:before {
+        color: $blue !important;
+    }
+
+    &-black, &-black:before {
+        color: $black;
+    }
+
+    &-white, &-white:before {
+        color: $white;
+    }
+}
+
+// End Icons

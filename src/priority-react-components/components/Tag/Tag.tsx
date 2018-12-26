@@ -4,6 +4,7 @@ import styles from "./Tag.module.scss";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../base-classes";
 import Icon from "../Icon";
 import Label from "../Text/Label";
+import { PriorityIcon } from "../../base-classes/PriorityIcon";
 
 interface TagProperties extends ComponentBaseProperties {
 }
@@ -19,7 +20,7 @@ export default class Tag extends ComponentBase<TagProperties, TagState> {
 
     return (
       <div className={elementClasses}>
-        <Label textColor="white">{this.props.text}</Label><Icon fontIconClass="icon-icon-close-small" textColor="white" />
+        <Label textColor="white">{this.props.text}</Label><Icon icon={PriorityIcon.closeSmall} iconColor="white" />
       </div>
     );
   }
