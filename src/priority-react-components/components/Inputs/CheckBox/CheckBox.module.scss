@@ -6,7 +6,7 @@
     height: 2rem;
     width: 2rem;
     font-size: 2rem;
-    border: 1px solid rgba(120, 142, 151, 0.3);
+    border: 1px solid $boxShadow-brown-light;
     border-radius: 0.2rem;
 
     &.checked {

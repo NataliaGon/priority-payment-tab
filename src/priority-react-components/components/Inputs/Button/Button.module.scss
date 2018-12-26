@@ -3,7 +3,7 @@
 .component {
     height: 30px;
     border-radius: 3px;
-    box-shadow: 0 5px 15px 0 rgba(0, 173, 238, 0.15);
+    box-shadow: 0 5px 15px 0 $boxShadow-brown;
     font-size: 14px;
     display: flex;
     flex-flow: row nowrap;
@@ -24,14 +24,14 @@
 }
 
 .regular {
-    background-color: #00adee;
-    color: white;
+    background-color: $blue;
+    color:$white;
 }
 
 .stroke {
-    background-color: white;
-    border: solid 1px #00adee;
-    color: #00adee;
+    background-color: $white;
+    border: solid 1px $blue;
+    color: $blue;
 }
 
 .roundStrokeIcon {
@@ -43,11 +43,11 @@
 }
 
 .active {
-    background: #2e4049;
+    background: $dark;
 }
 
 .disabled {
-    background: #d6dddf;
+    background: $disabled-grey;
     opacity: 0.3;
 }
 

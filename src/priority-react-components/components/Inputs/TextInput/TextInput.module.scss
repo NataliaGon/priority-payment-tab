@@ -26,7 +26,7 @@ body {
     .option {
         padding: 1em;
         cursor: pointer;
-        background-color: #485761;
+        background-color: $background-color-dark-grey;
 
         &:not(.active) {
             display: none;
@@ -40,7 +40,7 @@ body {
         width: 24em;
 
         &:before, &:after {
-            border-color: #fff;
+            border-color: $white;
         }
 
         &:before {
@@ -52,7 +52,7 @@ body {
         }
 
         .option {
-            color: #fff;
+            color: $white;
             display: block;
         }
     }

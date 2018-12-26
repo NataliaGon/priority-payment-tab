@@ -55,7 +55,6 @@ class App extends Component {
             <RowPanel>
               <Container>
                 <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
-                <Label skin="large">New Search</Label>
               </Container>
               <Container>
                 <Icon icon={PriorityIcon.questionCircle} ></Icon>

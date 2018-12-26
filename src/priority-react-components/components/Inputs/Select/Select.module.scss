@@ -27,8 +27,8 @@
 
 .dropDownResult {
     height: 30px;
-    background: #6e818a;
-    color: white;
+    background:$tag-background-grey;
+    color: $white;
     display: inline-block;
     line-height: 30px;
     padding: 0 10px;
@@ -47,7 +47,7 @@
 }
 
 .boxShadow {
-    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 10px 20px 0 $boxShadow-brown-dark;
     width: 160px;
     margin-left: -5px;
     margin-top: -5px;
@@ -60,7 +60,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    background: white;
+    background: $white;
 }
 
 .dropDownIconWrapper {
@@ -75,7 +75,7 @@
 
 .ul li {
     &:hover {
-        background-color: #D9F6F9;
+        background-color: $background-color-blue;
     }
 }
 
