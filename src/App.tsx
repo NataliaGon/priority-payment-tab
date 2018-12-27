@@ -7,12 +7,12 @@ import Button from './priority-react-components/components/Inputs/Button';
 import Icon from './priority-react-components/components/Icon';
 import Tag from './priority-react-components/components/Tag';
 import LineInput from './priority-react-components/components/Inputs/LineInput/lineInput';
-import InputAutofill from './priority-react-components/components/Inputs/InputAutocomplete/InputAutofill';
+import Autocomplete from './priority-react-components/components/Inputs/InputAutocomplete/autocomplete';
 import { PriorityIcon } from './priority-react-components/base-classes/PriorityIcon';
 import {InputValue} from "./priority-react-components/base-classes/inputsValue";
 import Select from './priority-react-components/components/Inputs/Select';
 import OptionItem from './priority-react-components/components/Inputs/Select/OptionItem/OptionItem';
-
+import {suggestions} from "./priority-react-components/constants/suggestionsAutofill";
 class App extends Component {
   render() {
 
@@ -84,7 +84,7 @@ class App extends Component {
                   <OptionItem key={1} iconName="icon-search-equal" value="1">Between</OptionItem>
                   <OptionItem key={2} iconName="icon-search-contains-v2" value="1">Between</OptionItem>
                 </Select>
-                <InputAutofill />
+                <Autocomplete suggestions={suggestions} className=""/>
               </RowPanel>
               <WrapPanel>
                 <Tag text="test" />
