@@ -1,6 +1,4 @@
-const keyCodes = {
-    ESC : 27,
+export const keyCodes = {
+    ESC: 27,
     ENTER: 13
 };
-
-export default keyCodes;

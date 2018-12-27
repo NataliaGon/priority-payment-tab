@@ -1,0 +1,97 @@
+html {
+    font-size: $font-size-base;
+}
+
+body {
+    font-family: $font-family-main;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $black;
+    font-size: $font-size-regular;
+    font-weight: $font-weight-regular;
+}
+
+// mixings
+
+@mixin withRTL {
+    :global(.rtl), :global([dir='rtl']) {
+        @content;
+    }
+}
+
+// end mixings
+
+// Text
+
+.text-color {
+    &-grey, &-grey:before {
+        color: $grey;
+    }
+
+    &-blue, &-blue:before {
+        color: $blue !important;
+    }
+
+    &-black, &-black:before {
+        color: $black;
+    }
+
+    &-white, &-white:before {
+        color: $white;
+    }
+}
+
+.text-size {
+    &-large {
+        font-size: $font-size-large;
+    }
+
+    &-medium {
+        font-size: $font-size-medium;
+    }
+
+    &-regular {
+        font-size: $font-size-regular;
+    }
+
+    &-small {
+        font-size: $font-size-small;
+    }
+}
+
+.font-family {
+    &-serif {
+        font-family: $font-family-serif;
+    }
+
+    &-regular {
+        font-family: $font-family-main;
+    }
+
+    &-icons {
+        font-family: $font-family-icons;
+    }
+}
+
+// end Text
+
+// Icons
+.icon-color {
+    &-grey, &-grey:before {
+        color: $grey;
+    }
+
+    &-blue, &-blue:before {
+        color: $blue !important;
+    }
+
+    &-black, &-black:before {
+        color: $black;
+    }
+
+    &-white, &-white:before {
+        color: $white;
+    }
+}
+
+// End Icons
