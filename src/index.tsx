@@ -1,4 +1,4 @@
-import './styles/main.scss'
+import './styles/main.scss';
 
 export * from './components/Text';
 export * from './components/Icon';
