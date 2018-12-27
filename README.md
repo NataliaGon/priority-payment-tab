@@ -18,12 +18,13 @@ The storybook is structured accordingly. For example:
 ```
 It contains common examples and use cases, accompanied by explanation how and when to use the components.
 
-## Development - StoryBook
+## Development
 
 1.  Run `npm install` from the project's root directory to install the dependencies.
-2.  Run `npm start` and start hacking your project.
+2.  Run `npm start` to build library in watch mode.
+3.  `cd example` and run `npm istall` and `npm start` to run the example app consuming the library.
 
-## Build - Storybook
+## Build
 
 1.  Run `npm build` to build your project.
 2.  Deploy the build folder to AWS.
