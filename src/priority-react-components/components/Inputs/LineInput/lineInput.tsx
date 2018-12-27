@@ -1,8 +1,7 @@
 import * as React from "react";
-import classNames from "classnames";
 import Icon from "../../Icon";
 import styles from "./lineInput.module.scss";
-import Label from "../../Text/Label";
+
 
 import {
   ComponentBaseProperties,
@@ -11,10 +10,13 @@ import {
 } from "../../../base-classes";
 import { PriorityIcon } from "../../../base-classes/PriorityIcon";
 
-class LineInputProperties extends ComponentBaseProperties {}
+class LineInputProperties extends ComponentBaseProperties {
+  value?:string
+}
 
 interface LineInputState extends ComponentBaseState {
-  showInput: boolean;
+  onChange?: (e: any) => void;
+  value?:string;
 }
 
 export default class LineInput extends ComponentBase<
@@ -23,38 +25,29 @@ export default class LineInput extends ComponentBase<
 > {
   constructor(properties: LineInputProperties, state: LineInputState) {
     super(properties, state);
-
     this.state = {
-      showInput: false
-    };
+      value:''
   }
-  SpanInpitToggle = () => {
-    this.setState({ showInput: !(this.state && this.state.showInput) });
-  };
+
+}
+
+handleInputChange=(e: { target: { value: any; }; })=>{
+if (e.target.value){
+  this.setState({value:e.target.value})
+}
+}
   public render() {
-    let SpanClasses;
-
-    let inputClasses;
-
-    if (this.state.showInput) {
-      SpanClasses = classNames(styles.span, styles.displayNone);
-      inputClasses = classNames(styles.input, styles.displayBlock);
-    } else {
-      SpanClasses = classNames(styles.span);
-      inputClasses = classNames(styles.input);
-    }
-
+    console.log(this.state.value);
+    console.log(this.props.value);
     return (
       <div className={styles.component}>
         <input
           type="text"
-          defaultValue="New Search"
-          onBlur={this.SpanInpitToggle.bind(this)}
-          className={inputClasses}
+          defaultValue={this.props.value}
+          onChange={this.handleInputChange}
+          className={styles.input}
+          autoFocus={true}
         />
-        <span className={SpanClasses} onClick={this.SpanInpitToggle.bind(this)}>
-          New Search
-        </span>
         <button className={styles.iconDoneWrapper}>
           <Icon iconColor="white" icon={PriorityIcon.done} />
         </button>

@@ -18,11 +18,12 @@
 .input{
     width: 100%;
     background: transparent;
-    outline: none;
     font-size: $font-size-medium;
     color: $grey;
     font-weight: 600;
-    display:none;
+    width: 90%;
+    margin-right: 10%;
+    outline: none;
 }
 .span{
     width: 100%;
@@ -31,9 +32,4 @@
     font-size: $font-size-medium;
     color: $grey;
 }
-.displayNone{
-    display: none;
-}
-.displayBlock{
-    display: block;
-}
+

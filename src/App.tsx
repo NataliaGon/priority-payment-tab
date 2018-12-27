@@ -9,6 +9,7 @@ import Tag from './priority-react-components/components/Tag';
 import LineInput from './priority-react-components/components/Inputs/LineInput/lineInput';
 import InputAutofill from './priority-react-components/components/Inputs/InputAutocomplete/InputAutofill';
 import { PriorityIcon } from './priority-react-components/base-classes/PriorityIcon';
+import {InputValue} from "./priority-react-components/base-classes/inputsValue";
 import Select from './priority-react-components/components/Inputs/Select';
 import OptionItem from './priority-react-components/components/Inputs/Select/OptionItem/OptionItem';
 
@@ -60,7 +61,7 @@ class App extends Component {
                 <Icon icon={PriorityIcon.questionCircle} ></Icon>
                 <Label textHref="#">Help</Label>
               </Container>
-              <LineInput />
+              <LineInput value={InputValue.value}/>
             </RowPanel>
           </StackPanel>
 

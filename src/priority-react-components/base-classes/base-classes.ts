@@ -6,6 +6,7 @@ export type TextColor = "black" | "grey" | "blue" | "white";
 export type IconColor = TextColor | "";
 export type FontFamily = "regular" | "serif" | "icons";
 
+
 export class DefaultTextProperties {
     textSize: TextSize = "regular";
     textColor: TextColor = "grey";
