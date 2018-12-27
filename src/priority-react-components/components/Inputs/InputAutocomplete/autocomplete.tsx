@@ -51,14 +51,14 @@ LineInputState
       // Whether or not the suggestion list is shown
       showSuggestions: false,
       // What the user has entered
-      userInput: ""
-
+      userInput: "Search"
+    
     };
   
 
   // Event fired when the input value is changed
   onChange =  (event: React.FormEvent<HTMLInputElement>) => {
-    const value=event.currentTarget.value;
+    let value=event.currentTarget.value;
     const {suggestions} = this.props;
  
     // Filter our suggestions that don't contain the user's input
@@ -66,6 +66,7 @@ LineInputState
 
     suggestion.toLowerCase().indexOf(value.toLowerCase()) > -1
     );
+  
     // Update the user input and filtered suggestions, reset the active
     // suggestion and make sure the suggestions are shown
     this.setState({
@@ -87,7 +88,11 @@ LineInputState
       userInput
     });
   };
-
+  BlurHandle=()=>{
+    if(!this.state.userInput){
+     this.setState({userInput:"Search"});
+    }
+  }
   // Event fired when the user presses a key down
   onKeyDown =(event:React.KeyboardEvent)=>{
     const keyCode = event.keyCode;
@@ -134,7 +139,7 @@ LineInputState
     if (showSuggestions && userInput) {
       if (filteredSuggestions.length) {
         suggestionsListComponent = (
-          <ul className="suggestions">
+          <ul className={styles.ul}>
             {filteredSuggestions.map((suggestion: string, index: number) => {
               let className;
               // Flag the active suggestion with a class
@@ -143,7 +148,7 @@ LineInputState
               }
               return (
                 <li
-                  className={className}
+                  className={styles.suggestion}
                   key={suggestion}
                   onClick={this.onClickHandle}
                 >
@@ -163,15 +168,17 @@ LineInputState
     }
 
     return (
-      <Fragment>
+      <div className={styles.component}>
         <input
           type="text"
           onChange={this.onChange}
           onKeyPress={this.onKeyDown}
           value={userInput}
+          className={styles.input}
+          onBlur={this.BlurHandle}
         />
         {suggestionsListComponent}
-        </Fragment>
+        </div>
     );
   }
 }

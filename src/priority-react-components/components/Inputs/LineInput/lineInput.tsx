@@ -37,8 +37,7 @@ if (e.target.value){
 }
 }
   public render() {
-    console.log(this.state.value);
-    console.log(this.props.value);
+
     return (
       <div className={styles.component}>
         <input
