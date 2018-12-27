@@ -11,7 +11,7 @@ interface TitleState extends ComponentBaseState {
 
 }
 
-export default class Title extends ComponentBase<TitleProperties, TitleState> {
+export class Title extends ComponentBase<TitleProperties, TitleState> {
 
   constructor(properties: TitleProperties, state?: TitleState) {
     super(properties, state);

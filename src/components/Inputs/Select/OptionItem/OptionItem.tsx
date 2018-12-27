@@ -2,8 +2,8 @@ import * as React from "react";
 import classNames from 'classnames';
 import styles from "./OptionItem.module.scss";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../base-classes";
-import Icon from "../../../Icon";
-import Label from "../../../Text/Label";
+import { Icon } from "../../../Icon";
+import { Label } from "../../../Text";
 import { PriorityIcon } from "../../../../base-classes/PriorityIcon";
 
 interface OptionItemProperties extends ComponentBaseProperties {
@@ -17,7 +17,7 @@ interface OptionItemState extends ComponentBaseState {
   selected?: boolean;
 }
 
-export default class OptionItem extends ComponentBase<OptionItemProperties, OptionItemState> {
+export class OptionItem extends ComponentBase<OptionItemProperties, OptionItemState> {
   public render() {
 
     const elementClasses = classNames(styles.component, this.props.componentClasses);

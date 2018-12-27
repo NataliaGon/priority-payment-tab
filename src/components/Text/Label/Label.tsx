@@ -16,7 +16,7 @@ interface LabelState extends ComponentBaseState {
 
 }
 
-export default class Label extends ComponentBase<LabelProperties, LabelState> {
+export class Label extends ComponentBase<LabelProperties, LabelState> {
   public render() {
 
     let skinClass = "";

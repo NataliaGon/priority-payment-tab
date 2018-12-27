@@ -1,14 +1,14 @@
 import * as React from "react";
 import styles from "./Select.module.scss";
 import classNames from "classnames";
-import Icon from "../../Icon";
+import { Icon } from "../../Icon";
 import {
   ComponentBaseProperties,
   ComponentBaseState,
   ComponentBase
 } from "../../../base-classes";
 
-import OptionItem from "./OptionItem/OptionItem";
+import { OptionItem } from "./OptionItem/OptionItem";
 import { PriorityIcon } from "../../../base-classes/PriorityIcon";
 
 export interface SelectProperties extends ComponentBaseProperties {
