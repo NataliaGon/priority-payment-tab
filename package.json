@@ -1,108 +1,61 @@
 {
-  "name": "storybook-starter",
+  "name": "priority-style-react",
   "version": "1.0.0",
-  "description": "This repository contains a storybook starter.",
-  "main": "index.js",
-  "author": "Fadi ABDELMESSIH <fadi.william.ghali@gmail.com> (https://www.levioza.tech/)",
+  "description": "none",
+  "author": "naomipol",
   "license": "MIT",
-  "private": true,
+  "repository": "priority-style-react",
+  "main": "dist/index.js",
+  "module": "dist/index.es.js",
+  "jsnext:main": "dist/index.es.js",
+  "engines": {
+    "node": ">=8",
+    "npm": ">=5"
+  },
   "scripts": {
-    "start": "start-storybook -p 6006",
-    "build": "build-storybook",
-    "test-watch": "jest --watch",
-    "test": "jest --coverage",
-    "report-coverage": "cat ./coverage/lcov.info | codecov",
-    "changelog": "conventional-changelog -i CHANGELOG.md -s -r 0",
-    "precommit": "lint-staged",
-    "commit": "git-cz"
-  },
-  "lint-staged": {
-    "*.{ts,tsx,js,jsx,json,md}": [
-      "prettier --write",
-      "git add -u"
-    ]
-  },
-  "config": {
-    "ghooks": {
-      "commit-msg": "commitlint -e $GIT_PARAMS"
-    },
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "test": "cross-env CI=1 react-scripts-ts test --env=jsdom",
+    "test:watch": "react-scripts-ts test --env=jsdom",
+    "build": "rollup -c",
+    "start": "rollup -c -w",
+    "prepare": "npm run build",
+    "predeploy": "cd example && npm install && npm run build",
+    "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
     "classnames": "^2.2.6",
-    "react": "16.3.2",
-    "react-dom": "16.3.2",
-    "react-test-renderer": "16.3.2",
-    "react-transition-group": "^2.5.0",
+    "react-autocomplete": "^1.8.1",
     "react-custom-scrollbars": "^4.2.1",
-    "react-datepicker": "^1.5.0",
-    "react-onclickoutside": "^6.7.1"
+    "react-transition-group": "^2.5.2"
+  },
+  "peerDependencies": {
+    "prop-types": "^15.5.4",
+    "react": "^15.0.0 || ^16.0.0",
+    "react-dom": "^15.0.0 || ^16.0.0"
   },
   "devDependencies": {
-    "@commitlint/cli": "6.2.0",
-    "@commitlint/config-conventional": "6.1.3",
-    "@storybook/addon-actions": "^3.4.5",
-    "@storybook/addon-links": "^3.4.5",
-    "@storybook/addon-storyshots": "3.4.5",
-    "@storybook/addons": "^3.4.5",
-    "@storybook/react": "3.4.5",
-    "@types/antd": "1.0.0",
-    "@types/jest": "22.2.3",
+    "@svgr/rollup": "^2.4.1",
+    "@types/jest": "^23.1.5",
     "@types/react": "16.3.14",
-    "@types/react-dom": "16.0.5",
-    "@types/react-test-renderer": "16.0.1",
-    "@types/storybook__react": "^4.0.0",
-    "awesome-typescript-loader": "^4.0.0",
-    "babel-core": "6.26.3",
-    "babel-loader": "7.1.4",
-    "babel-plugin-import": "1.7.0",
-    "babel-plugin-transform-remove-console": "6.9.4",
-    "babel-runtime": "^6.0.0",
-    "caniuse-lite": "^1.0.30000697",
-    "codecov": "3.0.2",
-    "conventional-changelog-cli": "1.3.22",
-    "cssnano": "3.10.0",
-    "cz-conventional-changelog": "2.1.0",
-    "file-loader": "1.1.11",
-    "ghooks": "2.0.4",
-    "identity-obj-proxy": "3.0.0",
-    "jest": "22.4.3",
-    "less": "^3.0.0",
-    "less-loader": "4.1.0",
-    "lint-staged": "7.1.0",
-    "markdown-loader": "^4.0.0",
-    "node-sass": "4.9.0",
-    "perfectionist": "2.4.0",
-    "postcss-cssnext": "3.1.0",
-    "postcss-easy-import": "3.0.0",
-    "postcss-flexbugs-fixes": "3.3.1",
-    "postcss-font-magician": "2.1.1",
-    "prettier": "1.12.1",
-    "sass-loader": "7.0.1",
-    "ts-jest": "22.4.6",
-    "typescript": "2.9.1",
-    "url-loader": "1.0.1",
-    "webpack": "^3.9.1"
+    "@types/react-dom": "^16.0.5",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "cross-env": "^5.1.4",
+    "gh-pages": "^1.2.0",
+    "node-sass": "^4.11.0",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-scripts-ts": "^2.16.0",
+    "rollup": "^0.62.0",
+    "rollup-plugin-babel": "^3.0.7",
+    "rollup-plugin-commonjs": "^9.1.3",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-peer-deps-external": "^2.2.0",
+    "rollup-plugin-postcss": "^1.6.2",
+    "rollup-plugin-typescript2": "^0.17.0",
+    "rollup-plugin-url": "^1.4.0",
+    "typescript": "^2.8.3"
   },
-  "jest": {
-    "transform": {
-      ".(ts|tsx)": "<rootDir>/node_modules/ts-jest/preprocessor.js"
-    },
-    "testPathIgnorePatterns": [
-      "/node_modules/",
-      "/lib/"
-    ],
-    "moduleNameMapper": {
-      "\\.(scss|less)$": "identity-obj-proxy"
-    },
-    "testRegex": "(/test/.*|\\.(test|spec))\\.(ts|tsx|js)$",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ]
-  }
+  "files": [
+    "dist"
+  ]
 }
