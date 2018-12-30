@@ -11,10 +11,11 @@ interface OptionItemProperties extends ComponentBaseProperties {
   value?: any;
   displayValue?: boolean;
   onClick?: (e: any) => void;
+  isClicked?:boolean;
 }
 
 interface OptionItemState extends ComponentBaseState {
-  selected?: boolean;
+
 }
 
 export default class OptionItem extends ComponentBase<OptionItemProperties, OptionItemState> {
@@ -24,8 +25,8 @@ export default class OptionItem extends ComponentBase<OptionItemProperties, Opti
 
     return (
       <li className={elementClasses} onClick={this.props.onClick}>
-        <Icon icon={PriorityIcon.operatorSearchBetween} iconColor={this.state && this.state.selected ? "blue" : "grey"} />
-        <Label skin="regular">{this.props.children}</Label>
+        <Icon icon={PriorityIcon.operatorSearchBetween} iconColor={this.props.isClicked ? "blue" : "grey"} />
+        <Label textColor={this.props.isClicked ? "blue" : "grey"} skin="regular">{this.props.children}</Label>
         {this.props.displayValue ? <Label skin="small">{this.props.value}</Label> : ""}
       </li>
     );

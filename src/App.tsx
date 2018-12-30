@@ -9,10 +9,13 @@ import Tag from './priority-react-components/components/Tag';
 import LineInput from './priority-react-components/components/Inputs/LineInput/lineInput';
 import Autocomplete from './priority-react-components/components/Inputs/InputAutocomplete/autocomplete';
 import { PriorityIcon } from './priority-react-components/base-classes/PriorityIcon';
-import {InputValue} from "./priority-react-components/base-classes/inputsValue";
+import {InputValue} from "./priority-react-components/constants/inputsValue";
 import Select from './priority-react-components/components/Inputs/Select';
 import OptionItem from './priority-react-components/components/Inputs/Select/OptionItem/OptionItem';
 import {suggestions} from "./priority-react-components/constants/suggestionsAutofill";
+import {optionDropDown} from'./priority-react-components/constants/optionDropDown';
+
+
 class App extends Component {
   render() {
 
@@ -80,9 +83,8 @@ class App extends Component {
                 <Label skin="regular-high-contrast">Customer No.</Label>
               </RowPanel>
               <RowPanel>
-                <Select>
-                  <OptionItem key={1} iconName="icon-search-equal" value="1">Between</OptionItem>
-                  <OptionItem key={2} iconName="icon-search-contains-v2" value="1">Between</OptionItem>
+                <Select options={optionDropDown}>
+                  
                 </Select>
                 <Autocomplete suggestions={suggestions} className=""/>
               </RowPanel>
