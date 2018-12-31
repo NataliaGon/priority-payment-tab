@@ -1,31 +1,29 @@
 @import "../../../styles/vars";
+@import "../../../styles/mixings";
 
 .component {
     height: 30px;
     border-radius: 3px;
-    box-shadow: 0 5px 15px 0 $boxShadow-brown;
     font-size: 14px;
+    padding: 0 13px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
     justify-content: center;
+    font-weight: $font-weight-bold;
+    font-family: $font-family-main;
 }
 
-.regularFixed {
-    width: 120px;
-}
-
-.fullWidth {
-    width: 100%;
-}
-
-.contentWidth {
-    width: unset;
-}
+// skin
 
 .regular {
     background-color: $blue;
-    color:$white;
+    color: $white;
+    box-shadow: 0 5px 15px 0 $boxShadow-brown;
+
+    &:hover {
+        background: linear-gradient(250deg, #00adee, rgba(0, 173, 238, 0.7))
+    }
 }
 
 .stroke {
@@ -33,19 +31,29 @@
     border: solid 1px $blue;
     color: $blue;
 
-
     &:hover {
-        color: white;
-        background-color: #00adee;
+        color: $white;
+        background: linear-gradient(250deg, #00adee, rgba(0, 173, 238, 0.7));
     }
 }
 
-.roundStrokeIcon {
-    width: 30px;
-    border-radius: 50%;
-    color: $blue;
-    border: 2px solid $blue;
-    justify-content: center;
+.strokeLight {
+    background-color: $white;
+    border: solid 1px $light-gray-stroke;
+    color: $grey;
+
+    .icon {
+        color: $blue;
+    }
+
+    &:hover {
+        border-color: $blue;
+        color: $blue;
+    }
+}
+
+.title .icon {
+    margin-right: 7px;
 }
 
 .active {
@@ -57,13 +65,91 @@
     opacity: 0.3;
 }
 
-.darkTheme {
-    &.component {
-        height: 40px;
-        font-weight: $font-weight-bold;
+// width
+
+.regularFixed {
+    width: auto;
+
+    &.small {
+        min-width: 70px;
     }
 
-    &.roundStrokeIcon {
-        height: 30px;
+    &.medium {
+        min-width: 95px;
+    }
+
+    &.large {
+        min-width: 120px;
     }
 }
+
+.fullWidth {
+    width: 100%;
+}
+
+.contentWidth {
+    width: unset;
+}
+
+.small {
+    height: 20px;
+    font-size: 13px;
+
+    &.square,&.round {
+        width: 20px;
+        min-width: 20px;
+    }
+}
+
+.medium {
+    height: 30px;
+    font-size: 14px;
+
+    &.square,&.round {
+        width: 30px;
+        min-width: 30px;
+    }
+}
+
+.large {
+    height: 40px;
+    font-size: 14px;
+
+    &.square,&.round {
+        width: 40px;
+        min-width: 40px;
+    }
+}
+
+.round {
+    border-radius: 50%;
+    justify-content: center;
+}
+
+.square,.round {
+    padding: 0;
+}
+
+@include withRTL() {
+    .component {
+        font-family: $font-family-main-hebrew;
+    }
+
+    .title .icon {
+        margin-right: 0;
+        margin-left: 7px;
+    }
+ 
+}
+
+
+// .darkTheme {
+//     &.component {
+//         height: 40px;
+//         font-weight: $font-weight-bold;
+//     }
+
+//     &.roundStrokeIcon {
+//         height: 30px;
+//     }
+// }

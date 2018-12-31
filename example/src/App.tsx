@@ -17,7 +17,7 @@ class App extends Component {
           <StackPanel className="header" skin="silver">
             <RowPanel>
               <Title>Advanced Search</Title>
-              <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
+              <Button shape="round" icon={PriorityIcon.arrowLeftLong}></Button>
             </RowPanel>
             <RowPanel>
               <Container>
@@ -45,7 +45,7 @@ class App extends Component {
           <StackPanel  skin="silver">
             <RowPanel>
               <Title>Advanced Search</Title>
-              <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
+              <Button skin="stroke" shape="round" icon={PriorityIcon.arrowLeftLong} />
             </RowPanel>
             <RowPanel>
               <Container>
@@ -57,6 +57,10 @@ class App extends Component {
               </Container>
               <LineInput />
 
+            </RowPanel>
+            <RowPanel>
+            	<Button skin="strokeLight" shape="square" icon={PriorityIcon.edit} />
+            	<Button skin="strokeLight" icon={PriorityIcon.edit}>More</Button>
             </RowPanel>
           </StackPanel>
 
@@ -121,8 +125,8 @@ class App extends Component {
                 <Label skin="regular-high-contrast">Clear Search</Label>
               </Container>
               <Container width="250px" alignItems="spaceBetween">
-                <Button skin="stroke" width="regularFixed">Save</Button>
-                <Button skin="regular" width="regularFixed">Apply</Button>
+                <Button skin="stroke" width="regularFixed" size="large">Save</Button>
+                <Button skin="regular" width="regularFixed" size="large">Apply</Button>
               </Container>
             </RowPanel>
           </StackPanel>

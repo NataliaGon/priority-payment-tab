@@ -1,5 +1,6 @@
 import * as React from "react";
 import classNames from "classnames";
+import { Button } from "../Button/Button";
 import { Icon } from "../../Icon";
 import styles from "./LineInput.module.scss";
 
@@ -54,9 +55,7 @@ export class LineInput extends ComponentBase<
         <span className={SpanClasses} onClick={this.SpanInpitToggle.bind(this)}>
           New Search
         </span>
-        <button className={styles.iconDoneWrapper}>
-          <Icon iconColor="white" icon={PriorityIcon.done} />
-        </button>
+        <Button icon={PriorityIcon.done} shape="round" size="small" />
         <Icon icon={PriorityIcon.closeSmall} />
       </div>
     );
