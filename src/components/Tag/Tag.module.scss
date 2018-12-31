@@ -15,7 +15,6 @@
   
     
     &:hover {
-        color: $white;
-        background-color: $blue;
+        box-shadow: $tag-box-shadow;
     }
 }

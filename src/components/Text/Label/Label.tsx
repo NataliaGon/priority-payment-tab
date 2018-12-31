@@ -10,6 +10,8 @@ interface LabelProperties extends ComponentBaseProperties {
   skin?: LabelSkin;
   labelPadding?: LabelPadding;
   textHref?: string;
+  // textColor?:string;
+  
 }
 
 interface LabelState extends ComponentBaseState {
@@ -36,7 +38,9 @@ export class Label extends ComponentBase<LabelProperties, LabelState> {
 
     let colorClass = "";
     if (this.props.textColor) {
-      colorClass = "text-color-" + this.props.textColor;
+      if (this.props.textColor ==="white"){
+        colorClass=styles.textColorWhite;
+      }
     }
 
     const elementClasses = classNames(styles.component, this.props.componentClasses, skinClass, paddingClass, linkClass, colorClass);

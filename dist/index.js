@@ -138,8 +138,8 @@ var classnames = createCommonjsModule(function (module) {
 }());
 });
 
-var css$1 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Label-module_component__1fQ2J {\n  display: inline-flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.4rem;\n  color: #788e97;\n  padding: 0 1rem; }\n\n.Label-module_href__2JL2M {\n  text-decoration: underline !important;\n  color: #788e97 !important; }\n\n.Label-module_large__17PEw {\n  font-size: 2.2rem;\n  color: #788e97; }\n\n.Label-module_regular__3fzK8 {\n  font-size: 1.4rem;\n  color: #788e97; }\n\n.Label-module_regular-hight-contrast__OoNCI {\n  font-size: 1.4rem;\n  color: #212529; }\n\n.Label-module_small__3_wci {\n  font-size: 1.2rem;\n  color: #212529; }\n\n.Label-module_padding-regular__2tJ52 {\n  padding: 0 0.5rem; }\n\n.Label-module_padding-double__3t0fK {\n  padding: 0 1rem; }\n\n.Label-module_darkTheme__1AJkF.Label-module_regular-hight-contrast__OoNCI {\n  color: #fff; }\n";
-var styles = {"component":"Label-module_component__1fQ2J","href":"Label-module_href__2JL2M","large":"Label-module_large__17PEw","regular":"Label-module_regular__3fzK8","regular-hight-contrast":"Label-module_regular-hight-contrast__OoNCI","small":"Label-module_small__3_wci","padding-regular":"Label-module_padding-regular__2tJ52","padding-double":"Label-module_padding-double__3t0fK","darkTheme":"Label-module_darkTheme__1AJkF"};
+var css$1 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Label-module_component__1fQ2J {\n  display: inline-flex;\n  flex-flow: row nowrap;\n  justify-content: center;\n  align-items: center;\n  font-size: 1.4rem;\n  color: #788e97;\n  padding: 0 1rem; }\n\n.Label-module_href__2JL2M {\n  text-decoration: underline !important;\n  color: #788e97 !important; }\n\n.Label-module_large__17PEw {\n  font-size: 2.2rem;\n  color: #788e97; }\n\n.Label-module_regular__3fzK8 {\n  font-size: 1.4rem;\n  color: #788e97; }\n\n.Label-module_regular-hight-contrast__OoNCI {\n  font-size: 1.4rem;\n  color: #212529; }\n\n.Label-module_small__3_wci {\n  font-size: 1.2rem;\n  color: #212529; }\n\n.Label-module_padding-regular__2tJ52 {\n  padding: 0 0.5rem; }\n\n.Label-module_padding-double__3t0fK {\n  padding: 0 1rem; }\n\n.Label-module_darkTheme__1AJkF.Label-module_regular-hight-contrast__OoNCI {\n  color: #fff; }\n\n.Label-module_textColorWhite__3e38A {\n  color: #fff; }\n";
+var styles = {"component":"Label-module_component__1fQ2J","href":"Label-module_href__2JL2M","large":"Label-module_large__17PEw","regular":"Label-module_regular__3fzK8","regular-hight-contrast":"Label-module_regular-hight-contrast__OoNCI","small":"Label-module_small__3_wci","padding-regular":"Label-module_padding-regular__2tJ52","padding-double":"Label-module_padding-double__3t0fK","darkTheme":"Label-module_darkTheme__1AJkF","textColorWhite":"Label-module_textColorWhite__3e38A"};
 styleInject(css$1);
 
 var DefaultTextProperties = /** @class */ (function () {
@@ -197,7 +197,9 @@ var Label = /** @class */ (function (_super) {
         }
         var colorClass = "";
         if (this.props.textColor) {
-            colorClass = "text-color-" + this.props.textColor;
+            if (this.props.textColor === "white") {
+                colorClass = styles.textColorWhite;
+            }
         }
         var elementClasses = classnames(styles.component, this.props.componentClasses, skinClass, paddingClass, linkClass, colorClass);
         return (this.props.textHref ?
@@ -206,7 +208,6 @@ var Label = /** @class */ (function (_super) {
     };
     return Label;
 }(ComponentBase));
-//# sourceMappingURL=Label.js.map
 
 var css$2 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Title-module_component__3gKg7 {\n  font-family: \"Bree Serif\", serif;\n  font-size: 2.8rem;\n  color: #00adee; }\n";
 var styles$1 = {"component":"Title-module_component__3gKg7"};
@@ -3863,7 +3864,7 @@ var SidePanel = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$g = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Tag-module_component__2Ut0y {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: flex-end;\n  padding: 5px 0 5px 10px;\n  height: 30px;\n  color: #fff;\n  background-color: #6e818a;\n  font-weight: 700;\n  border-radius: 3px;\n  font-size: 1.4rem;\n  align-items: center; }\n  .Tag-module_component__2Ut0y:hover {\n    color: #fff;\n    background-color: #00adee; }\n";
+var css$g = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Tag-module_component__2Ut0y {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: flex-end;\n  padding: 5px 0 5px 10px;\n  height: 30px;\n  color: #fff;\n  background-color: #6e818a;\n  font-weight: 700;\n  border-radius: 3px;\n  font-size: 1.4rem;\n  align-items: center; }\n  .Tag-module_component__2Ut0y:hover {\n    box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5); }\n";
 var styles$h = {"component":"Tag-module_component__2Ut0y"};
 styleInject(css$g);
 
