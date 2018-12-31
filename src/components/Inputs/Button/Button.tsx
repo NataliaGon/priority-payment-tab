@@ -4,7 +4,7 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBa
 
 import styles from "./Button.module.scss";
 
-type ButtonSkin = "regular" | "stroke" | "roundStrokeIcon";
+type ButtonSkin = "regular" | "stroke" | "roundStrokeIcon" | "secondary";
 type ButtonWidth = "regularFixed" | "fullWidth" | "ccontentWidth";
 
 interface ButtonProperties extends ComponentBaseProperties {

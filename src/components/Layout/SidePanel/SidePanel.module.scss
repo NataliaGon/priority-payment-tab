@@ -77,7 +77,7 @@
         background-color: $white;
         width: 25vw;
         min-width: 620px;
-        box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
+        box-shadow: 0 0 50px 0 $boxShadow-brown-dark;
         transition: width 0.8s;
     }
 }

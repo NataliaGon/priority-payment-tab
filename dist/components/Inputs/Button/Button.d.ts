@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../base-classes";
-declare type ButtonSkin = "regular" | "stroke" | "roundStrokeIcon";
+declare type ButtonSkin = "regular" | "stroke" | "roundStrokeIcon" | "secondary";
 declare type ButtonWidth = "regularFixed" | "fullWidth" | "ccontentWidth";
 interface ButtonProperties extends ComponentBaseProperties {
     skin?: ButtonSkin;

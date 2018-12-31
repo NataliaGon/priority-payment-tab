@@ -121,7 +121,7 @@ class App extends Component {
                 <Label skin="regular-high-contrast">Clear Search</Label>
               </Container>
               <Container width="250px" alignItems="spaceBetween">
-                <Button skin="stroke" width="regularFixed">Save</Button>
+                <Button skin="secondary" width="regularFixed">Save</Button>
                 <Button skin="regular" width="regularFixed">Apply</Button>
               </Container>
             </RowPanel>
