@@ -28,10 +28,21 @@ export class Icon extends ComponentBase<IconProperties, IconState> {
 
   public render() {
 
-    let iconColorClass = "icon-color-grey";
+    let iconColorClass = styles.grey;
 
     if (this.props.iconColor) {
-      iconColorClass = "icon-color-" + this.props.iconColor;
+      if (this.props.iconColor === "white") {
+        iconColorClass = styles.white;
+      }
+      if (this.props.iconColor === "blue") {
+        iconColorClass = styles.blue;
+      }
+      if (this.props.iconColor === "black") {
+        iconColorClass = styles.black;
+      }
+      if (this.props.iconColor === "grey") {
+        iconColorClass = styles.grey;
+      }
     }
 
     const iconClass = classNames(styles.component, this.props.icon, iconColorClass);

@@ -36,10 +36,20 @@ export class Label extends ComponentBase<LabelProperties, LabelState> {
       linkClass = styles.href;
     }
 
-    let colorClass = "";
+    let colorClass = "grey";
+  
     if (this.props.textColor) {
-      if (this.props.textColor ==="white"){
-        colorClass=styles.textColorWhite;
+      if (this.props.textColor === "white") {
+        colorClass = styles.white;
+      }
+      if (this.props.textColor === "blue") {
+        colorClass = styles.blue;
+      }
+      if (this.props.textColor === "black") {
+        colorClass = styles.black;
+      }
+      if (this.props.textColor === "grey") {
+        colorClass = styles.grey;
       }
     }
 
