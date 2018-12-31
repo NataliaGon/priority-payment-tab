@@ -1,8 +1,8 @@
 import * as React from "react";
 import classNames from "classnames";
-import Icon from "../../Icon";
+
 import styles from "./InputAutofill.module.scss";
-import Autocomplete from "./autocomplete";
+import Autocomplete from "react-autocomplete";
 import {
   ComponentBaseProperties,
   ComponentBaseState,
@@ -15,15 +15,32 @@ class InputAutoProperties extends ComponentBaseProperties {
 
 interface InputAutoState extends ComponentBaseState {}
 
-export default class LineInput extends ComponentBase<
+export  class AutoFill extends ComponentBase<
   InputAutoProperties,
   InputAutoState
 > {
   public render() {
+    const Autocomplete = require("react-autocomplete") as any;
+    let value=require("react-autocomplete") as any;
     return (
       <div className={styles.component}>
-         <Autocomplete> 
-         </Autocomplete>
+         <Autocomplete
+         getItemValue={(item) => item.label}
+         items={[
+           { label: 'apple' },
+           { label: 'banana' },
+           { label: 'pear' }
+         ]}
+         renderItem={(item, isHighlighted) =>
+           <div style={{ background: isHighlighted ? 'lightgray' : 'white' }}>
+             {item.label}
+           </div>
+         }
+         value={value}
+         onChange={(e) => value = e.target.value}
+         onSelect={(val) => value = val}
+         /> 
+        
       </div>
     );
   }

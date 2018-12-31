@@ -3,7 +3,7 @@ import {
   SidePanel,
   StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select, OptionItem,
-  PriorityIcon
+  PriorityIcon, AutoFill
 } from 'priority-style-react';
 
 
@@ -80,7 +80,7 @@ class App extends Component {
                   <OptionItem key={1} iconName="icon-search-equal" value="1">Between</OptionItem>
                   <OptionItem key={2} iconName="icon-search-contains-v2" value="1">Between</OptionItem>
                 </Select>
-
+                <AutoFill />
               </RowPanel>
               <WrapPanel>
                 <Tag text="test" />

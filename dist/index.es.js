@@ -478,11 +478,42 @@ var Select = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
+var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  margin-top: -12px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97; }\n    .InputAutofill-module_component__MAOAz div input {\n      width: 100%;\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97; }\n    .InputAutofill-module_component__MAOAz div div {\n      left: 0px;\n      width: 356px;\n      z-index: 30;\n      height: auto; }\n      .InputAutofill-module_component__MAOAz div div div {\n        height: 30px;\n        line-height: 30px;\n        width: 100%;\n        padding: 0 10px; }\n        .InputAutofill-module_component__MAOAz div div div:hover {\n          background-color: #D9F6F9; }\n";
+var styles$9 = {"component":"InputAutofill-module_component__MAOAz"};
+styleInject(css$a);
+
+var InputAutoProperties = /** @class */ (function (_super) {
+    __extends(InputAutoProperties, _super);
+    function InputAutoProperties() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return InputAutoProperties;
+}(ComponentBaseProperties));
+var AutoFill = /** @class */ (function (_super) {
+    __extends(AutoFill, _super);
+    function AutoFill() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    AutoFill.prototype.render = function () {
+        var Autocomplete = require("react-autocomplete");
+        var value = require("react-autocomplete");
+        return (createElement("div", { className: styles$9.component },
+            createElement(Autocomplete, { getItemValue: function (item) { return item.label; }, items: [
+                    { label: 'apple' },
+                    { label: 'banana' },
+                    { label: 'pear' }
+                ], renderItem: function (item, isHighlighted) {
+                    return createElement("div", { style: { background: isHighlighted ? 'lightgray' : 'white' } }, item.label);
+                }, value: value, onChange: function (e) { return value = e.target.value; }, onSelect: function (val) { return value = val; } })));
+    };
+    return AutoFill;
+}(ComponentBase));
+
 //# sourceMappingURL=index.js.map
 
-var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.StackPanel-module_component__mRChg {\n  width: 100%;\n  display: flex;\n  flex-flow: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 0 30px;\n  position: relative; }\n  .StackPanel-module_component__mRChg > * {\n    width: 100%; }\n\n.StackPanel-module_transparent__Azr0Q {\n  background-color: transparent; }\n\n.StackPanel-module_default__j2xB8 {\n  background-color: #fff; }\n\n.StackPanel-module_silver__1YQMk {\n  background-color: #ebedee; }\n\n.StackPanel-module_light__3z7gi {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 0 20px 10px; }\n  .StackPanel-module_light__3z7gi:hover, .StackPanel-module_light__3z7gi.StackPanel-module_selected__PgC5l {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.StackPanel-module_dark__2fP6W {\n  background-color: #2e4049;\n  padding: 30px; }\n\n.StackPanel-module_padded-panel__3KL2s {\n  padding: 0 30px; }\n";
-var styles$9 = {"component":"StackPanel-module_component__mRChg","transparent":"StackPanel-module_transparent__Azr0Q","default":"StackPanel-module_default__j2xB8","silver":"StackPanel-module_silver__1YQMk","light":"StackPanel-module_light__3z7gi","selected":"StackPanel-module_selected__PgC5l","dark":"StackPanel-module_dark__2fP6W","padded-panel":"StackPanel-module_padded-panel__3KL2s"};
-styleInject(css$a);
+var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.StackPanel-module_component__mRChg {\n  width: 100%;\n  display: flex;\n  flex-flow: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 0 30px;\n  position: relative; }\n  .StackPanel-module_component__mRChg > * {\n    width: 100%; }\n\n.StackPanel-module_transparent__Azr0Q {\n  background-color: transparent; }\n\n.StackPanel-module_default__j2xB8 {\n  background-color: #fff; }\n\n.StackPanel-module_silver__1YQMk {\n  background-color: #ebedee; }\n\n.StackPanel-module_light__3z7gi {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 0 20px 10px; }\n  .StackPanel-module_light__3z7gi:hover, .StackPanel-module_light__3z7gi.StackPanel-module_selected__PgC5l {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.StackPanel-module_dark__2fP6W {\n  background-color: #2e4049;\n  padding: 30px; }\n\n.StackPanel-module_padded-panel__3KL2s {\n  padding: 0 30px; }\n";
+var styles$a = {"component":"StackPanel-module_component__mRChg","transparent":"StackPanel-module_transparent__Azr0Q","default":"StackPanel-module_default__j2xB8","silver":"StackPanel-module_silver__1YQMk","light":"StackPanel-module_light__3z7gi","selected":"StackPanel-module_selected__PgC5l","dark":"StackPanel-module_dark__2fP6W","padded-panel":"StackPanel-module_padded-panel__3KL2s"};
+styleInject(css$b);
 
 var StackPanelProperties = /** @class */ (function (_super) {
     __extends(StackPanelProperties, _super);
@@ -501,18 +532,18 @@ var StackPanel = /** @class */ (function (_super) {
     StackPanel.prototype.render = function () {
         var skinClass = "";
         if (this.props.skin) {
-            skinClass = styles$9[this.props.skin];
+            skinClass = styles$a[this.props.skin];
         }
-        var componentClasses = classnames(styles$9.component, this.props.componentClasses, skinClass, this.props.className);
+        var componentClasses = classnames(styles$a.component, this.props.componentClasses, skinClass, this.props.className);
         return (createElement("div", { className: componentClasses }, this.props.children));
     };
     return StackPanel;
 }(ComponentBase));
 //# sourceMappingURL=StackPanel.js.map
 
-var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.WrapPanel-module_component__2rpf2 {\n  width: 100%;\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: flex-start;\n  align-items: center; }\n  .WrapPanel-module_component__2rpf2 > * {\n    margin-right: 5px; }\n\n.WrapPanel-module_transparent__2l89A {\n  background-color: transparent; }\n\n.WrapPanel-module_default__1l9n1 {\n  background-color: #fff; }\n\n.WrapPanel-module_header__37qtU {\n  background-color: #ebedee; }\n\n.WrapPanel-module_light__31Dqs {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 15px 20px; }\n  .WrapPanel-module_light__31Dqs:hover, .WrapPanel-module_light__31Dqs.WrapPanel-module_selected__1nLpf {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.WrapPanel-module_dark__1ADC6 {\n  background-color: #2e4049; }\n";
-var styles$a = {"component":"WrapPanel-module_component__2rpf2","transparent":"WrapPanel-module_transparent__2l89A","default":"WrapPanel-module_default__1l9n1","header":"WrapPanel-module_header__37qtU","light":"WrapPanel-module_light__31Dqs","selected":"WrapPanel-module_selected__1nLpf","dark":"WrapPanel-module_dark__1ADC6"};
-styleInject(css$b);
+var css$c = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.WrapPanel-module_component__2rpf2 {\n  width: 100%;\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: flex-start;\n  align-items: center; }\n  .WrapPanel-module_component__2rpf2 > * {\n    margin-right: 5px; }\n\n.WrapPanel-module_transparent__2l89A {\n  background-color: transparent; }\n\n.WrapPanel-module_default__1l9n1 {\n  background-color: #fff; }\n\n.WrapPanel-module_header__37qtU {\n  background-color: #ebedee; }\n\n.WrapPanel-module_light__31Dqs {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 15px 20px; }\n  .WrapPanel-module_light__31Dqs:hover, .WrapPanel-module_light__31Dqs.WrapPanel-module_selected__1nLpf {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.WrapPanel-module_dark__1ADC6 {\n  background-color: #2e4049; }\n";
+var styles$b = {"component":"WrapPanel-module_component__2rpf2","transparent":"WrapPanel-module_transparent__2l89A","default":"WrapPanel-module_default__1l9n1","header":"WrapPanel-module_header__37qtU","light":"WrapPanel-module_light__31Dqs","selected":"WrapPanel-module_selected__1nLpf","dark":"WrapPanel-module_dark__1ADC6"};
+styleInject(css$c);
 
 var WrapPanel = /** @class */ (function (_super) {
     __extends(WrapPanel, _super);
@@ -522,18 +553,18 @@ var WrapPanel = /** @class */ (function (_super) {
     WrapPanel.prototype.render = function () {
         var skinClass = "";
         if (this.props.skin) {
-            skinClass = styles$a[this.props.skin];
+            skinClass = styles$b[this.props.skin];
         }
-        var componentClasses = classnames(styles$a.component, this.props.componentClasses, skinClass);
+        var componentClasses = classnames(styles$b.component, this.props.componentClasses, skinClass);
         return (createElement("div", { className: componentClasses }, this.props.children));
     };
     return WrapPanel;
 }(ComponentBase));
 //# sourceMappingURL=WrapPanel.js.map
 
-var css$c = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.RowPanel-module_component__3wDnh {\n  width: 100%;\n  height: 50px;\n  line-height: 50px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: space-between; }\n\n.RowPanel-module_flex-start__1CNI6 {\n  justify-content: flex-start; }\n\n.RowPanel-module_flex-end__2qD_v {\n  justify-content: flex-end; }\n\n.RowPanel-module_space-between__39IWO {\n  justify-content: space-between; }\n";
-var styles$b = {"component":"RowPanel-module_component__3wDnh","flex-start":"RowPanel-module_flex-start__1CNI6","flex-end":"RowPanel-module_flex-end__2qD_v","space-between":"RowPanel-module_space-between__39IWO"};
-styleInject(css$c);
+var css$d = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.RowPanel-module_component__3wDnh {\n  width: 100%;\n  height: 50px;\n  line-height: 50px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: space-between; }\n\n.RowPanel-module_flex-start__1CNI6 {\n  justify-content: flex-start; }\n\n.RowPanel-module_flex-end__2qD_v {\n  justify-content: flex-end; }\n\n.RowPanel-module_space-between__39IWO {\n  justify-content: space-between; }\n";
+var styles$c = {"component":"RowPanel-module_component__3wDnh","flex-start":"RowPanel-module_flex-start__1CNI6","flex-end":"RowPanel-module_flex-end__2qD_v","space-between":"RowPanel-module_space-between__39IWO"};
+styleInject(css$d);
 
 var RowPanel = /** @class */ (function (_super) {
     __extends(RowPanel, _super);
@@ -543,18 +574,18 @@ var RowPanel = /** @class */ (function (_super) {
     RowPanel.prototype.render = function () {
         var alignItemsClass = "";
         if (this.props.alignItems) {
-            alignItemsClass = styles$b[this.props.alignItems];
+            alignItemsClass = styles$c[this.props.alignItems];
         }
-        var componentClasses = classnames(styles$b.component, this.props.componentClasses, alignItemsClass);
+        var componentClasses = classnames(styles$c.component, this.props.componentClasses, alignItemsClass);
         return (createElement("div", { className: componentClasses }, this.props.children));
     };
     return RowPanel;
 }(ComponentBase));
 //# sourceMappingURL=RowPanel.js.map
 
-var css$d = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.ScrollPanel-module_component__13H2d {\n  height: 100%; }\n\n.ScrollPanel-module_gradient__OvlCl {\n  width: 100%;\n  height: 100px;\n  position: absolute;\n  z-index: 1;\n  bottom: 0px;\n  background-image: linear-gradient(to bottom, transparent, #fff); }\n\n.ScrollPanel-module_scrollArea__3JylI {\n  direction: ltr; }\n\n.ScrollPanel-module_thumbVertical__2WPKQ {\n  background-color: #ebedee;\n  width: 6px !important;\n  border-radius: 3px; }\n";
-var styles$c = {"component":"ScrollPanel-module_component__13H2d","gradient":"ScrollPanel-module_gradient__OvlCl","scrollArea":"ScrollPanel-module_scrollArea__3JylI","thumbVertical":"ScrollPanel-module_thumbVertical__2WPKQ"};
-styleInject(css$d);
+var css$e = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.ScrollPanel-module_component__13H2d {\n  height: 100%; }\n\n.ScrollPanel-module_gradient__OvlCl {\n  width: 100%;\n  height: 100px;\n  position: absolute;\n  z-index: 1;\n  bottom: 0px;\n  background-image: linear-gradient(to bottom, transparent, #fff); }\n\n.ScrollPanel-module_scrollArea__3JylI {\n  direction: ltr; }\n\n.ScrollPanel-module_thumbVertical__2WPKQ {\n  background-color: #ebedee;\n  width: 6px !important;\n  border-radius: 3px; }\n";
+var styles$d = {"component":"ScrollPanel-module_component__13H2d","gradient":"ScrollPanel-module_gradient__OvlCl","scrollArea":"ScrollPanel-module_scrollArea__3JylI","thumbVertical":"ScrollPanel-module_thumbVertical__2WPKQ"};
+styleInject(css$e);
 
 var performanceNow = createCommonjsModule(function (module) {
 // Generated by CoffeeScript 1.12.2
@@ -1016,7 +1047,7 @@ function getInnerHeight(el) {
 
 unwrapExports(getInnerHeight_1);
 
-var styles$d = createCommonjsModule(function (module, exports) {
+var styles$e = createCommonjsModule(function (module, exports) {
 
 Object.defineProperty(exports, "__esModule", {
     value: true
@@ -1089,18 +1120,18 @@ var disableSelectStyleReset = exports.disableSelectStyleReset = {
 };
 });
 
-unwrapExports(styles$d);
-var styles_1 = styles$d.containerStyleDefault;
-var styles_2 = styles$d.containerStyleAutoHeight;
-var styles_3 = styles$d.viewStyleDefault;
-var styles_4 = styles$d.viewStyleAutoHeight;
-var styles_5 = styles$d.viewStyleUniversalInitial;
-var styles_6 = styles$d.trackHorizontalStyleDefault;
-var styles_7 = styles$d.trackVerticalStyleDefault;
-var styles_8 = styles$d.thumbHorizontalStyleDefault;
-var styles_9 = styles$d.thumbVerticalStyleDefault;
-var styles_10 = styles$d.disableSelectStyle;
-var styles_11 = styles$d.disableSelectStyleReset;
+unwrapExports(styles$e);
+var styles_1 = styles$e.containerStyleDefault;
+var styles_2 = styles$e.containerStyleAutoHeight;
+var styles_3 = styles$e.viewStyleDefault;
+var styles_4 = styles$e.viewStyleAutoHeight;
+var styles_5 = styles$e.viewStyleUniversalInitial;
+var styles_6 = styles$e.trackHorizontalStyleDefault;
+var styles_7 = styles$e.trackVerticalStyleDefault;
+var styles_8 = styles$e.thumbHorizontalStyleDefault;
+var styles_9 = styles$e.thumbVerticalStyleDefault;
+var styles_10 = styles$e.disableSelectStyle;
+var styles_11 = styles$e.disableSelectStyleReset;
 
 var defaultRenderElements = createCommonjsModule(function (module, exports) {
 
@@ -1647,7 +1678,7 @@ var Scrollbars = function (_Component) {
     }, {
         key: 'setupDragging',
         value: function setupDragging() {
-            (0, _domCss2["default"])(document.body, styles$d.disableSelectStyle);
+            (0, _domCss2["default"])(document.body, styles$e.disableSelectStyle);
             document.addEventListener('mousemove', this.handleDrag);
             document.addEventListener('mouseup', this.handleDragEnd);
             document.onselectstart = _returnFalse2["default"];
@@ -1655,7 +1686,7 @@ var Scrollbars = function (_Component) {
     }, {
         key: 'teardownDragging',
         value: function teardownDragging() {
-            (0, _domCss2["default"])(document.body, styles$d.disableSelectStyleReset);
+            (0, _domCss2["default"])(document.body, styles$e.disableSelectStyleReset);
             document.removeEventListener('mousemove', this.handleDrag);
             document.removeEventListener('mouseup', this.handleDragEnd);
             document.onselectstart = undefined;
@@ -1885,34 +1916,34 @@ var Scrollbars = function (_Component) {
             var didMountUniversal = this.state.didMountUniversal;
 
 
-            var containerStyle = _extends({}, styles$d.containerStyleDefault, autoHeight && _extends({}, styles$d.containerStyleAutoHeight, {
+            var containerStyle = _extends({}, styles$e.containerStyleDefault, autoHeight && _extends({}, styles$e.containerStyleAutoHeight, {
                 minHeight: autoHeightMin,
                 maxHeight: autoHeightMax
             }), style);
 
-            var viewStyle = _extends({}, styles$d.viewStyleDefault, {
+            var viewStyle = _extends({}, styles$e.viewStyleDefault, {
                 // Hide scrollbars by setting a negative margin
                 marginRight: scrollbarWidth ? -scrollbarWidth : 0,
                 marginBottom: scrollbarWidth ? -scrollbarWidth : 0
-            }, autoHeight && _extends({}, styles$d.viewStyleAutoHeight, {
+            }, autoHeight && _extends({}, styles$e.viewStyleAutoHeight, {
                 // Add scrollbarWidth to autoHeight in order to compensate negative margins
                 minHeight: (0, _isString2["default"])(autoHeightMin) ? 'calc(' + autoHeightMin + ' + ' + scrollbarWidth + 'px)' : autoHeightMin + scrollbarWidth,
                 maxHeight: (0, _isString2["default"])(autoHeightMax) ? 'calc(' + autoHeightMax + ' + ' + scrollbarWidth + 'px)' : autoHeightMax + scrollbarWidth
             }), autoHeight && universal && !didMountUniversal && {
                 minHeight: autoHeightMin,
                 maxHeight: autoHeightMax
-            }, universal && !didMountUniversal && styles$d.viewStyleUniversalInitial);
+            }, universal && !didMountUniversal && styles$e.viewStyleUniversalInitial);
 
             var trackAutoHeightStyle = {
                 transition: 'opacity ' + autoHideDuration + 'ms',
                 opacity: 0
             };
 
-            var trackHorizontalStyle = _extends({}, styles$d.trackHorizontalStyleDefault, autoHide && trackAutoHeightStyle, (!scrollbarWidth || universal && !didMountUniversal) && {
+            var trackHorizontalStyle = _extends({}, styles$e.trackHorizontalStyleDefault, autoHide && trackAutoHeightStyle, (!scrollbarWidth || universal && !didMountUniversal) && {
                 display: 'none'
             });
 
-            var trackVerticalStyle = _extends({}, styles$d.trackVerticalStyleDefault, autoHide && trackAutoHeightStyle, (!scrollbarWidth || universal && !didMountUniversal) && {
+            var trackVerticalStyle = _extends({}, styles$e.trackVerticalStyleDefault, autoHide && trackAutoHeightStyle, (!scrollbarWidth || universal && !didMountUniversal) && {
                 display: 'none'
             });
 
@@ -1922,11 +1953,11 @@ var Scrollbars = function (_Component) {
                     _this7.view = _ref4;
                 } }, children), (0, React__default.cloneElement)(renderTrackHorizontal({ style: trackHorizontalStyle }), { key: 'trackHorizontal', ref: function ref(_ref5) {
                     _this7.trackHorizontal = _ref5;
-                } }, (0, React__default.cloneElement)(renderThumbHorizontal({ style: styles$d.thumbHorizontalStyleDefault }), { ref: function ref(_ref6) {
+                } }, (0, React__default.cloneElement)(renderThumbHorizontal({ style: styles$e.thumbHorizontalStyleDefault }), { ref: function ref(_ref6) {
                     _this7.thumbHorizontal = _ref6;
                 } })), (0, React__default.cloneElement)(renderTrackVertical({ style: trackVerticalStyle }), { key: 'trackVertical', ref: function ref(_ref7) {
                     _this7.trackVertical = _ref7;
-                } }, (0, React__default.cloneElement)(renderThumbVertical({ style: styles$d.thumbVerticalStyleDefault }), { ref: function ref(_ref8) {
+                } }, (0, React__default.cloneElement)(renderThumbVertical({ style: styles$e.thumbVerticalStyleDefault }), { ref: function ref(_ref8) {
                     _this7.thumbVertical = _ref8;
                 } }))]);
         }
@@ -2031,18 +2062,18 @@ var ScrollPanel = /** @class */ (function (_super) {
     ScrollPanel.prototype.render = function () {
         var _this = this;
         var _a = this.props, className = _a.className, autoHeight = _a.autoHeight, autoHeightMax = _a.autoHeightMax, autoHeightMin = _a.autoHeightMin, gradient = _a.gradient, children = _a.children;
-        var scrollClass = classnames(styles$c.scrollArea, className);
-        return (createElement("div", { className: styles$c.component },
-            createElement(lib_1, { ref: function (s) { return _this.scrollbar = s; }, onScroll: gradient && this.checkScroll, autoHeight: autoHeight, autoHeightMax: autoHeightMax, autoHeightMin: autoHeightMin, className: scrollClass, renderThumbVertical: function (props) { return createElement("div", __assign({}, props, { className: styles$c.thumbVertical })); }, autoHide: true }, children),
-            gradient && !this.state.scrolledToEnd && createElement("div", { className: styles$c.gradient })));
+        var scrollClass = classnames(styles$d.scrollArea, className);
+        return (createElement("div", { className: styles$d.component },
+            createElement(lib_1, { ref: function (s) { return _this.scrollbar = s; }, onScroll: gradient && this.checkScroll, autoHeight: autoHeight, autoHeightMax: autoHeightMax, autoHeightMin: autoHeightMin, className: scrollClass, renderThumbVertical: function (props) { return createElement("div", __assign({}, props, { className: styles$d.thumbVertical })); }, autoHide: true }, children),
+            gradient && !this.state.scrolledToEnd && createElement("div", { className: styles$d.gradient })));
     };
     return ScrollPanel;
 }(ComponentBase));
 //# sourceMappingURL=ScrollPanel.js.map
 
-var css$e = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n";
-var styles$f = {"component":"Container-module_component__2uDlo","flexStart":"Container-module_flexStart__2ySvs","flexEnd":"Container-module_flexEnd__1B58j","spaceBetween":"Container-module_spaceBetween__EaTZn"};
-styleInject(css$e);
+var css$f = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n";
+var styles$g = {"component":"Container-module_component__2uDlo","flexStart":"Container-module_flexStart__2ySvs","flexEnd":"Container-module_flexEnd__1B58j","spaceBetween":"Container-module_spaceBetween__EaTZn"};
+styleInject(css$f);
 
 var ContainerProperties = /** @class */ (function (_super) {
     __extends(ContainerProperties, _super);
@@ -2059,9 +2090,9 @@ var Container = /** @class */ (function (_super) {
     Container.prototype.render = function () {
         var alignItemsClass = "";
         if (this.props.alignItems) {
-            alignItemsClass = styles$f[this.props.alignItems];
+            alignItemsClass = styles$g[this.props.alignItems];
         }
-        var componentClasses = classnames(styles$f.component, this.props.componentClasses, alignItemsClass);
+        var componentClasses = classnames(styles$g.component, this.props.componentClasses, alignItemsClass);
         var inlineStyle = {};
         if (this.props.width) {
             inlineStyle = { width: this.props.width };
@@ -3803,9 +3834,9 @@ var keyCodes = {
 
 //# sourceMappingURL=index.js.map
 
-var css$f = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.SidePanel-module_blocker__3mk7f {\n  z-index: 1000001;\n  position: fixed;\n  top: 0;\n  font-size: 1em;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(255, 255, 255, 0.8); }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_enter__2P2sY .SidePanel-module_panel__1qcur {\n    width: 0; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enter__2P2sY .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 0; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enter__2P2sY .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 0; }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_enterActive__25mya .SidePanel-module_panel__1qcur {\n    width: 800px;\n    transition: width 0.5s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enterActive__25mya .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 1;\n      transition: opacity 0.4s linear 0.3s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enterActive__25mya .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 1192px; }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_leave__3aDrT .SidePanel-module_panel__1qcur {\n    width: 800px; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leave__3aDrT .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 1; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leave__3aDrT .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 1192px; }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_leaveActive__3NI4B .SidePanel-module_panel__1qcur {\n    width: 0;\n    transition: width 0.5s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leaveActive__3NI4B .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 0;\n      transition: opacity 0.4s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leaveActive__3NI4B .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 0; }\n  .SidePanel-module_blocker__3mk7f .SidePanel-module_component__1ocql {\n    position: fixed;\n    bottom: 0;\n    left: 0;\n    height: calc(100% - 46px);\n    background-color: #fff;\n    width: 25vw;\n    min-width: 620px;\n    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);\n    transition: width 0.8s; }\n";
-var styles$g = {"blocker":"SidePanel-module_blocker__3mk7f","enter":"SidePanel-module_enter__2P2sY","panel":"SidePanel-module_panel__1qcur","opacity":"SidePanel-module_opacity__1iCfi","wide":"SidePanel-module_wide__5wF2t","enterActive":"SidePanel-module_enterActive__25mya","leave":"SidePanel-module_leave__3aDrT","leaveActive":"SidePanel-module_leaveActive__3NI4B","component":"SidePanel-module_component__1ocql"};
-styleInject(css$f);
+var css$g = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.SidePanel-module_blocker__3mk7f {\n  z-index: 1000001;\n  position: fixed;\n  top: 0;\n  font-size: 1em;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(255, 255, 255, 0.8); }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_enter__2P2sY .SidePanel-module_panel__1qcur {\n    width: 0; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enter__2P2sY .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 0; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enter__2P2sY .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 0; }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_enterActive__25mya .SidePanel-module_panel__1qcur {\n    width: 800px;\n    transition: width 0.5s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enterActive__25mya .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 1;\n      transition: opacity 0.4s linear 0.3s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enterActive__25mya .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 1192px; }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_leave__3aDrT .SidePanel-module_panel__1qcur {\n    width: 800px; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leave__3aDrT .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 1; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leave__3aDrT .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 1192px; }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_leaveActive__3NI4B .SidePanel-module_panel__1qcur {\n    width: 0;\n    transition: width 0.5s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leaveActive__3NI4B .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 0;\n      transition: opacity 0.4s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leaveActive__3NI4B .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 0; }\n  .SidePanel-module_blocker__3mk7f .SidePanel-module_component__1ocql {\n    position: fixed;\n    bottom: 0;\n    left: 0;\n    height: calc(100% - 46px);\n    background-color: #fff;\n    width: 25vw;\n    min-width: 620px;\n    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);\n    transition: width 0.8s; }\n";
+var styles$h = {"blocker":"SidePanel-module_blocker__3mk7f","enter":"SidePanel-module_enter__2P2sY","panel":"SidePanel-module_panel__1qcur","opacity":"SidePanel-module_opacity__1iCfi","wide":"SidePanel-module_wide__5wF2t","enterActive":"SidePanel-module_enterActive__25mya","leave":"SidePanel-module_leave__3aDrT","leaveActive":"SidePanel-module_leaveActive__3NI4B","component":"SidePanel-module_component__1ocql"};
+styleInject(css$g);
 
 var SidePanel = /** @class */ (function (_super) {
     __extends(SidePanel, _super);
@@ -3862,13 +3893,13 @@ var SidePanel = /** @class */ (function (_super) {
         var Content = this.props.content;
         var _a = this.props, _b = _a.transitionName, _c = _a.transitionEnterTimeout, _d = _a.transitionLeaveTimeout;
         var open = this.state.open;
-        var classes = classnames(styles$g.component, this.props.componentClasses);
+        var classes = classnames(styles$h.component, this.props.componentClasses);
         return (createElement(reactTransitionGroup_4, { in: open, key: 'SidePanel', classNames: {
-                enter: styles$g.enter,
-                enterActive: styles$g.enterActive,
-                exit: styles$g.leave,
-                exitActive: styles$g.leaveActive
-            }, timeout: 500, unmountOnExit: true }, function () { return (createElement("div", { className: styles$g.blocker },
+                enter: styles$h.enter,
+                enterActive: styles$h.enterActive,
+                exit: styles$h.leave,
+                exitActive: styles$h.leaveActive
+            }, timeout: 500, unmountOnExit: true }, function () { return (createElement("div", { className: styles$h.blocker },
             createElement("div", { className: classes },
                 Content && createElement(Content, __assign({ open: open, openPanel: _this.open, closePanel: _this.close, hidePanel: _this.hide }, _this.props)),
                 _this.props.children))); }));
@@ -3879,9 +3910,9 @@ var SidePanel = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$g = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Tag-module_component__2Ut0y {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: flex-end;\n  padding: 5px 0 5px 10px;\n  height: 30px;\n  color: #fff;\n  background-color: #6e818a;\n  font-weight: 700;\n  border-radius: 3px;\n  font-size: 1.4rem;\n  align-items: center; }\n  .Tag-module_component__2Ut0y:hover {\n    box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5); }\n";
-var styles$h = {"component":"Tag-module_component__2Ut0y"};
-styleInject(css$g);
+var css$h = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Tag-module_component__2Ut0y {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: flex-end;\n  padding: 5px 0 5px 10px;\n  height: 30px;\n  color: #fff;\n  background-color: #6e818a;\n  font-weight: 700;\n  border-radius: 3px;\n  font-size: 1.4rem;\n  align-items: center; }\n  .Tag-module_component__2Ut0y:hover {\n    box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5); }\n";
+var styles$i = {"component":"Tag-module_component__2Ut0y"};
+styleInject(css$h);
 
 var Tag = /** @class */ (function (_super) {
     __extends(Tag, _super);
@@ -3889,7 +3920,7 @@ var Tag = /** @class */ (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Tag.prototype.render = function () {
-        var elementClasses = classnames(styles$h.component, this.props.componentClasses);
+        var elementClasses = classnames(styles$i.component, this.props.componentClasses);
         return (createElement("div", { className: elementClasses },
             createElement(Label, { textColor: "white" }, this.props.text),
             createElement(Icon, { icon: PriorityIcon.closeSmall, iconColor: "white" })));
@@ -3902,5 +3933,5 @@ var Tag = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-export { Label, Title, Icon, Button, CheckBox, LineInput, Select, OptionItem, StackPanel, WrapPanel, RowPanel, ScrollPanel, Container, SidePanel, Tag, PriorityIcon };
+export { Label, Title, Icon, Button, CheckBox, LineInput, Select, OptionItem, AutoFill, StackPanel, WrapPanel, RowPanel, ScrollPanel, Container, SidePanel, Tag, PriorityIcon };
 //# sourceMappingURL=index.es.js.map

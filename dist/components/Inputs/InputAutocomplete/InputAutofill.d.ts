@@ -5,7 +5,7 @@ declare class InputAutoProperties extends ComponentBaseProperties {
 }
 interface InputAutoState extends ComponentBaseState {
 }
-export default class LineInput extends ComponentBase<InputAutoProperties, InputAutoState> {
+export declare class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState> {
     render(): JSX.Element;
 }
 export {};

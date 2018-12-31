@@ -6,11 +6,10 @@
     border-radius: $input-border-radius;
     margin-top: -12px;////have to change 
     box-sizing: border-box;
-}
-.input{
+
+div{
     width:100%;
     height: 100%;
-    padding: 0 10px;
     font-family: Roboto;
     font-size: 14px;
     font-weight: 500;
@@ -19,10 +18,35 @@
     line-height: 1.21;
     letter-spacing: normal;
     color: $grey;
+
+    input{
+        width:100%;
+        height: 100%;
+        padding: 0 10px;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: italic;
+        font-stretch: normal;
+        line-height: 1.21;
+        letter-spacing: normal;
+        color: $grey;
+    }
+    div{
+        left:0px;
+        width: 356px;
+        z-index: 30;
+        height: auto;
+     div{
+        height: 30px;
+        line-height: 30px;
+        width: 100%;
+        padding: 0 10px;
+        &:hover {
+            background-color: $background-color-blue;
+        }
+     }
+    }
+  
 }
-input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
-input:-webkit-autofill:active  {
-    box-shadow: 0 0 0 30px $white inset;
 }
