@@ -57,19 +57,19 @@ class App extends Component {
                   <Label textHref="#">Help</Label>
                 </Container>
                 <LineInput />
-
               </RowPanel>
             </StackPanel>
 
 
-
-            <RowPanel alignItems="space-between">
-              <Container>
-                <CheckBox />
-                <Label skin="regular-high-contrast">Case Sensitive</Label>
-              </Container>
-              <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
-            </RowPanel>
+            <StackPanel>
+              <RowPanel alignItems="space-between">
+                <Container>
+                  <CheckBox />
+                  <Label skin="regular-high-contrast">Case Sensitive</Label>
+                </Container>
+                <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
+              </RowPanel>
+            </StackPanel>
 
             <StackPanel skin="light">
               <RowPanel>
