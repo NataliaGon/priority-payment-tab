@@ -16,7 +16,7 @@ interface IconState extends ComponentBaseState {
   counterValue?: number;
 }
 
-export class Icon extends ComponentBase<IconProperties, IconState> {
+export  class Icon extends ComponentBase<IconProperties, IconState> {
 
   constructor(properties: IconProperties, state: IconState) {
     super(properties, state);
