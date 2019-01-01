@@ -36,18 +36,15 @@ div{
         outline-width: 1px;
     }
     div{
-        left:0px;
-        width: 356px;
-        z-index: 30;
-        height: auto;
-        padding: 0 10px;
-       
+        
     
      div{
         height: 30px;
         width: 336px;
         margin: 0 10px;
         line-height: 30px;
+        font-style: normal;
+        padding: 0 10px;
        
       
         &:hover {

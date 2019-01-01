@@ -425,29 +425,34 @@ var OptionItem = /** @class */ (function (_super) {
     OptionItem.prototype.render = function () {
         var elementClasses = classnames(styles$8.component, this.props.componentClasses);
         return (React.createElement("li", { className: elementClasses, onClick: this.props.onClick },
-            React.createElement(Icon, { icon: exports.PriorityIcon.operatorSearchBetween, iconColor: this.state && this.state.selected ? "blue" : "grey" }),
-            React.createElement(Label, { skin: "regular" }, this.props.children),
+            React.createElement(Icon, { icon: exports.PriorityIcon.operatorSearchBetween, iconColor: this.props.isClicked ? "blue" : "grey" }),
+            React.createElement(Label, { textColor: this.props.isClicked ? "blue" : "grey", skin: "regular" }, this.props.children),
             this.props.displayValue ? React.createElement(Label, { skin: "small" }, this.props.value) : ""));
     };
     return OptionItem;
 }(ComponentBase));
-//# sourceMappingURL=OptionItem.js.map
 
 var Select = /** @class */ (function (_super) {
     __extends(Select, _super);
     function Select() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.state = {
+            isOpen: false,
+            results: []
+        };
         _this.dropDownToggle = function () {
             _this.setState({ isOpen: !(_this.state && _this.state.isOpen) });
         };
         _this.renderOptions = function () {
-            var dropDownOptions = _this.state && _this.state.dropDownOptions
-                ? _this.state.dropDownOptions
-                : _this.props.children;
-            if (dropDownOptions && Array.isArray(dropDownOptions)) {
-                return (React.createElement("ul", { className: styles$7.ul }, dropDownOptions.map(function (option) { return (React.createElement(OptionItem, { iconName: option.iconName, value: option.value, displayValue: option.displayValue ? true : false, key: option.name, onClick: function (e) { return _this.optionSelected(); } }, option.props.children)); })));
+            var _a = _this.props.options, firstElem = _a[0], restElems = _a.slice(1);
+            if (_this.props.options && Array.isArray(_this.props.options)) {
+                return (React.createElement("ul", { className: styles$7.ul },
+                    React.createElement(OptionItem, { iconName: firstElem.iconName, isClicked: _this.state.isOpen }, firstElem.name),
+                    restElems.map(function (option) { return (React.createElement(OptionItem, { iconName: option.iconName }, option.name)); })));
             }
-            return null;
+            else {
+                return null;
+            }
         };
         return _this;
     }
@@ -475,16 +480,15 @@ var Select = /** @class */ (function (_super) {
             React.createElement("div", { className: styles$7.dropDownElements },
                 React.createElement("div", { className: smallInputOptionsClasses, onClick: this.dropDownToggle },
                     React.createElement("div", { className: styles$7.dropDownIconWrapper },
-                        React.createElement(Icon, { icon: classForDropDownIcon }))),
+                        React.createElement(Icon, { iconColor: this.state.isOpen ? "blue" : "grey", icon: classForDropDownIcon }))),
                 React.createElement("div", { className: dropDownOptionsClasses }, this.renderOptions()))));
     };
     return Select;
 }(ComponentBase));
-//# sourceMappingURL=Select.js.map
 
 //# sourceMappingURL=index.js.map
 
-var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  margin-top: -12px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97;\n    position: relative; }\n    .InputAutofill-module_component__MAOAz div input {\n      width: 100%;\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97;\n      outline-color: #00adee;\n      outline-width: 1px; }\n    .InputAutofill-module_component__MAOAz div div {\n      left: 0px;\n      width: 356px;\n      z-index: 30;\n      height: auto;\n      padding: 0 10px; }\n      .InputAutofill-module_component__MAOAz div div div {\n        height: 30px;\n        width: 336px;\n        margin: 0 10px;\n        line-height: 30px; }\n        .InputAutofill-module_component__MAOAz div div div:hover {\n          background-color: #D9F6F9; }\n";
+var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  margin-top: -12px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97;\n    position: relative; }\n    .InputAutofill-module_component__MAOAz div input {\n      width: 100%;\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97;\n      outline-color: #00adee;\n      outline-width: 1px; }\n    .InputAutofill-module_component__MAOAz div div div {\n      height: 30px;\n      width: 336px;\n      margin: 0 10px;\n      line-height: 30px;\n      font-style: normal;\n      padding: 0 10px; }\n      .InputAutofill-module_component__MAOAz div div div:hover {\n        background-color: #D9F6F9; }\n";
 var styles$9 = {"component":"InputAutofill-module_component__MAOAz"};
 styleInject(css$a);
 
@@ -500,13 +504,25 @@ var AutoFill = /** @class */ (function (_super) {
     function AutoFill() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
-            value: "search"
+            value: "Search"
         };
         return _this;
     }
     AutoFill.prototype.render = function () {
         var _this = this;
         var Autocomplete = require("react-autocomplete");
+        var menuStyle = {
+            borderRadius: '3px',
+            boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
+            background: 'rgba(255, 255, 255)',
+            padding: '2px 0',
+            fontSize: '90%',
+            overflow: 'auto',
+            height: 'auto',
+            position: 'absolute',
+            left: '0',
+            zIndex: '5'
+        };
         return (React.createElement("div", { className: styles$9.component },
             React.createElement(Autocomplete, { items: [
                     { id: 'foo', label: 'foo' },
@@ -516,16 +532,15 @@ var AutoFill = /** @class */ (function (_super) {
                     return React.createElement("div", { key: item.id, style: { backgroundColor: highlighted ? '#D9F6F9' : 'transparent' } }, item.label);
                 }, renderInputComponent: function () {
                     return React.createElement("div", null,
-                        React.createElement("input", { defaultValue: "Search", value: '' }),
+                        React.createElement("input", null),
                         React.createElement("div", null, "bnkp;"));
-                }, 
-                // value={value}
-                // onChange={(e) => value = e.target.value}
-                // onSelect={(val) => value = val}
-                value: this.state.value, onChange: function (e) { return _this.setState({ value: e.target.value }); }, onSelect: function (value) { return _this.setState({ value: value }); } })));
+                }, renderMenu: function (items) {
+                    return React.createElement("div", { style: menuStyle, children: items });
+                }, value: this.state.value, onChange: function (e) { return _this.setState({ value: e.target.value }); }, onSelect: function (value) { return _this.setState({ value: value }); } })));
     };
     return AutoFill;
 }(ComponentBase));
+//# sourceMappingURL=InputAutofill.js.map
 
 //# sourceMappingURL=index.js.map
 

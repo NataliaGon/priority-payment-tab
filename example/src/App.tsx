@@ -5,6 +5,7 @@ import {
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select, OptionItem,
   PriorityIcon, AutoFill
 } from 'priority-style-react';
+import {optionDropDown} from'./optionDropDown';
 
 
 class App extends Component {
@@ -76,11 +77,14 @@ class App extends Component {
                 <Label skin="regular-high-contrast">Customer No.</Label>
               </RowPanel>
               <RowPanel>
-                <Select>
+              <Select options={optionDropDown}>
+                  
+                  </Select>
+                {/* <Select>
                   <OptionItem key={1} iconName="icon-search-equal" value="1">Between</OptionItem>
                   <OptionItem key={2} iconName="icon-search-contains-v2" value="1">Between</OptionItem>
-                </Select>
-                <AutoFill />
+                </Select> */}
+                <AutoFill  />
               </RowPanel>
               <WrapPanel>
                 <Tag text="test" />

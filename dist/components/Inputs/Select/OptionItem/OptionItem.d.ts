@@ -5,6 +5,7 @@ interface OptionItemProperties extends ComponentBaseProperties {
     value?: any;
     displayValue?: boolean;
     onClick?: (e: any) => void;
+    isClicked?: boolean;
 }
 interface OptionItemState extends ComponentBaseState {
     selected?: boolean;

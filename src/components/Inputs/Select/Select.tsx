@@ -14,46 +14,49 @@ import { PriorityIcon } from "../../../base-classes/PriorityIcon";
 export interface SelectProperties extends ComponentBaseProperties {
   multiSelect?: boolean;
   IconTextColor?: string;
+  options: any[];
 }
 
 export interface SelectState extends ComponentBaseState {
-  dropDownOptions: OptionItem[];
   isOpen: boolean;
   results: string[];
 }
 
 export class Select extends ComponentBase<SelectProperties, SelectState> {
 
+  state: SelectState = {
+    isOpen: false,
+    results: []
+  };
+
   dropDownToggle = () => {
     this.setState({ isOpen: !(this.state && this.state.isOpen) });
   };
 
   renderOptions = () => {
-    const dropDownOptions =
-      this.state && this.state.dropDownOptions
-        ? this.state.dropDownOptions
-        : this.props.children;
+    const [firstElem, ...restElems] = this.props.options;
 
-  
-
-    if (dropDownOptions && Array.isArray(dropDownOptions)) {
+    if (this.props.options && Array.isArray(this.props.options)) {
       return (
         <ul className={styles.ul}>
-          {dropDownOptions.map((option) => (
-
+          <OptionItem
+            iconName={firstElem.iconName}
+            isClicked={this.state.isOpen}
+          >
+            {firstElem.name}
+          </OptionItem>
+          {restElems.map(option => (
             <OptionItem
               iconName={option.iconName}
-              value={option.value}
-              displayValue={option.displayValue ? true : false}
-              key={option.name}
-              onClick={e => this.optionSelected()}>
-              {option.props.children}
+            >
+              {option.name}
             </OptionItem>
           ))}
         </ul>
       );
+    }else{
+      return null
     }
-    return null
   };
 
   optionSelected() {
@@ -93,9 +96,12 @@ export class Select extends ComponentBase<SelectProperties, SelectState> {
     return (
       <div className={styles.containerForDropDown}>
         <div className={styles.dropDownElements}>
-          <div className={smallInputOptionsClasses} onClick={this.dropDownToggle}>
+          <div
+            className={smallInputOptionsClasses}
+            onClick={this.dropDownToggle}
+          >
             <div className={styles.dropDownIconWrapper}>
-              <Icon icon={classForDropDownIcon} />
+              <Icon iconColor={this.state.isOpen? "blue":"grey" } icon={classForDropDownIcon} />
             </div>
           </div>
           <div className={dropDownOptionsClasses}>{this.renderOptions()}</div>
