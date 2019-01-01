@@ -3,9 +3,10 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../.
 declare class InputAutoProperties extends ComponentBaseProperties {
 }
 interface InputAutoState extends ComponentBaseState {
-    value?: string;
+    value?: any;
 }
 export declare class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState> {
+    state: InputAutoState;
     render(): JSX.Element;
 }
 export {};

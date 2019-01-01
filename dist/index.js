@@ -6,7 +6,7 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var React = require('react');
 var React__default = _interopDefault(React);
-var require$$0 = _interopDefault(require('prop-types'));
+var propTypes = _interopDefault(require('prop-types'));
 var reactDom = _interopDefault(require('react-dom'));
 
 function styleInject(css, ref) {
@@ -173,6 +173,9 @@ var ComponentAnimatedProperties = /** @class */ (function (_super) {
     }
     return ComponentAnimatedProperties;
 }(ComponentBaseProperties));
+//# sourceMappingURL=base-classes.js.map
+
+//# sourceMappingURL=index.js.map
 
 var Label = /** @class */ (function (_super) {
     __extends(Label, _super);
@@ -214,6 +217,7 @@ var Label = /** @class */ (function (_super) {
     };
     return Label;
 }(ComponentBase));
+//# sourceMappingURL=Label.js.map
 
 var css$2 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Title-module_component__3gKg7 {\n  font-family: \"Bree Serif\", serif;\n  font-size: 2.8rem;\n  color: #00adee; }\n";
 var styles$1 = {"component":"Title-module_component__3gKg7"};
@@ -230,6 +234,9 @@ var Title = /** @class */ (function (_super) {
     };
     return Title;
 }(ComponentBase));
+//# sourceMappingURL=Title.js.map
+
+//# sourceMappingURL=index.js.map
 
 var css$3 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Icon-module_component__rzWUk {\n  width: 2.4rem;\n  height: 2.4rem;\n  font-size: 2.4rem;\n  position: relative; }\n\n.Icon-module_white__3P7zB {\n  color: #fff; }\n\n.Icon-module_blue__1-tpS {\n  color: #00adee; }\n\n.Icon-module_grey__18aQ2 {\n  color: #788e97; }\n\n.Icon-module_black__1tCtr {\n  color: #212529; }\n";
 var styles$2 = {"component":"Icon-module_component__rzWUk","white":"Icon-module_white__3P7zB","blue":"Icon-module_blue__1-tpS","grey":"Icon-module_grey__18aQ2","black":"Icon-module_black__1tCtr"};
@@ -254,6 +261,7 @@ var IconCounter = /** @class */ (function (_super) {
     };
     return IconCounter;
 }(ComponentBase));
+//# sourceMappingURL=IconCounter.js.map
 
 var Icon = /** @class */ (function (_super) {
     __extends(Icon, _super);
@@ -286,6 +294,9 @@ var Icon = /** @class */ (function (_super) {
     };
     return Icon;
 }(ComponentBase));
+//# sourceMappingURL=Icon.js.map
+
+//# sourceMappingURL=index.js.map
 
 var css$5 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Button-module_component__1-G0j {\n  height: 30px;\n  border-radius: 3px;\n  box-shadow: 0 5px 15px 0 rgba(0, 173, 238, 0.15);\n  font-size: 14px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center; }\n\n.Button-module_regularFixed__RUQjA {\n  width: 120px; }\n\n.Button-module_fullWidth__3FZAe {\n  width: 100%; }\n\n.Button-module_contentWidth__2xs3y {\n  width: unset; }\n\n.Button-module_regular__5w0aR {\n  background-color: #00adee;\n  color: #fff; }\n\n.Button-module_secondary__2WKbk {\n  background-color: #60c5bb;\n  color: #fff; }\n\n.Button-module_stroke__2OI22 {\n  background-color: #fff;\n  border: solid 1px #00adee;\n  color: #00adee; }\n  .Button-module_stroke__2OI22:hover {\n    color: #fff;\n    background-color: #00adee; }\n\n.Button-module_roundStrokeIcon__2h9D- {\n  width: 30px;\n  border-radius: 50%;\n  border: 2px solid #00adee;\n  justify-content: center; }\n\n.Button-module_active__2_Pre {\n  background: #2e4049; }\n\n.Button-module_disabled__3qbwx {\n  background: #d6dddf;\n  opacity: 0.3; }\n\n.Button-module_darkTheme__KwnA-.Button-module_component__1-G0j {\n  height: 40px;\n  font-weight: 700; }\n\n.Button-module_darkTheme__KwnA-.Button-module_roundStrokeIcon__2h9D- {\n  height: 30px; }\n";
 var styles$4 = {"component":"Button-module_component__1-G0j","regularFixed":"Button-module_regularFixed__RUQjA","fullWidth":"Button-module_fullWidth__3FZAe","contentWidth":"Button-module_contentWidth__2xs3y","regular":"Button-module_regular__5w0aR","secondary":"Button-module_secondary__2WKbk","stroke":"Button-module_stroke__2OI22","roundStrokeIcon":"Button-module_roundStrokeIcon__2h9D-","active":"Button-module_active__2_Pre","disabled":"Button-module_disabled__3qbwx","darkTheme":"Button-module_darkTheme__KwnA-"};
@@ -305,6 +316,7 @@ var Button = /** @class */ (function (_super) {
     };
     return Button;
 }(ComponentBase));
+//# sourceMappingURL=Button.js.map
 
 var css$6 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.CheckBox-module_component__2pUWa {\n  font-family: \"icomoon\" !important;\n  color: #788e97;\n  height: 2rem;\n  width: 2rem;\n  font-size: 2rem;\n  border: 1px solid rgba(120, 142, 151, 0.3);\n  border-radius: 0.2rem; }\n  .CheckBox-module_component__2pUWa.CheckBox-module_checked__2F1lL:before {\n    content: \"\\E911\"; }\n  .CheckBox-module_component__2pUWa:hover {\n    color: #00adee;\n    border-color: #00adee; }\n  .CheckBox-module_component__2pUWa.CheckBox-module_disabled__pl-s7 {\n    background-color: #d6dddf;\n    border-color: #d6dddf; }\n";
 var styles$5 = {"component":"CheckBox-module_component__2pUWa","checked":"CheckBox-module_checked__2F1lL","disabled":"CheckBox-module_disabled__pl-s7"};
@@ -336,6 +348,7 @@ var CheckBox = /** @class */ (function (_super) {
     };
     return CheckBox;
 }(ComponentBase));
+//# sourceMappingURL=CheckBox.js.map
 
 var css$7 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.LineInput-module_component__25Kb_ {\n  display: flex;\n  justify-content: flex-end;\n  border-bottom: 1px dashed #00adee;\n  padding-bottom: 5px;\n  width: 450px;\n  position: absolute;\n  left: 62px; }\n\n.LineInput-module_iconDoneWrapper__2p5rO {\n  background-color: #00adee;\n  border-radius: 50%; }\n\n.LineInput-module_input__2LLjx {\n  width: 100%;\n  background: transparent;\n  outline: none;\n  font-size: 2.2rem;\n  color: #788e97;\n  display: none; }\n\n.LineInput-module_span__20V4n {\n  width: 100%;\n  background: transparent;\n  outline: none;\n  font-size: 2.2rem;\n  color: #788e97; }\n\n.LineInput-module_displayNone__1b360 {\n  display: none; }\n\n.LineInput-module_displayBlock__37jDg {\n  display: block; }\n";
 var styles$6 = {"component":"LineInput-module_component__25Kb_","iconDoneWrapper":"LineInput-module_iconDoneWrapper__2p5rO","input":"LineInput-module_input__2LLjx","span":"LineInput-module_span__20V4n","displayNone":"LineInput-module_displayNone__1b360","displayBlock":"LineInput-module_displayBlock__37jDg"};
@@ -353,6 +366,7 @@ styleInject(css$7);
     PriorityIcon["arrowDropUp"] = "icon-icon-arrow_drop_up";
     PriorityIcon["arrowDropDown"] = "icon-icon-arrow_drop_down";
 })(exports.PriorityIcon || (exports.PriorityIcon = {}));
+//# sourceMappingURL=PriorityIcon.js.map
 
 var LineInputProperties = /** @class */ (function (_super) {
     __extends(LineInputProperties, _super);
@@ -393,6 +407,7 @@ var LineInput = /** @class */ (function (_super) {
     };
     return LineInput;
 }(ComponentBase));
+//# sourceMappingURL=LineInput.js.map
 
 var css$8 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Select-module_dropDownElements__21ytE {\n  height: 43px;\n  position: relative; }\n\n.Select-module_inputSmall__bBJSK {\n  height: 30px;\n  border-radius: 3px;\n  border: 1px solid #bfd0d7;\n  z-index: 3;\n  position: absolute;\n  width: 150px;\n  box-sizing: border-box; }\n\n.Select-module_optionsWrapper__1Cr8b {\n  background: #fff;\n  position: absolute;\n  width: 150px; }\n\n.Select-module_dropDownResult__4eWkA {\n  height: 30px;\n  background: #6e818a;\n  color: #fff;\n  display: inline-block;\n  line-height: 30px;\n  padding: 0 10px;\n  border-radius: 3px;\n  position: relative; }\n\n.Select-module_dropDownResultsContainer__2Z6Mg {\n  margin-top: 5px; }\n\n.Select-module_dropDownHide__21Dnp {\n  overflow: hidden;\n  height: 30px;\n  border-radius: 3px; }\n\n.Select-module_boxShadow__1YeZR {\n  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);\n  width: 160px;\n  margin-left: -5px;\n  margin-top: -5px;\n  padding: 5px;\n  border-radius: 3px;\n  z-index: 2; }\n\n.Select-module_drop-down_icon-wrapper__3xqih {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: #fff; }\n\n.Select-module_dropDownIconWrapper__3ruHJ {\n  position: absolute;\n  top: 0;\n  right: 0; }\n\n.Select-module_borderColorBlue__2gS6j {\n  border: 1px solid #00adee; }\n\n.Select-module_ul__egZga li:hover {\n  background-color: #D9F6F9; }\n\n.Select-module_ul__egZga li:first-child {\n  height: 27px; }\n  .Select-module_ul__egZga li:first-child:hover {\n    background-color: #fff; }\n\n.Select-module_ul__egZga li:nth-child(2) {\n  margin-top: 11px; }\n\n.Select-module_active__38GJG {\n  color: #00adee; }\n";
 var styles$7 = {"dropDownElements":"Select-module_dropDownElements__21ytE","inputSmall":"Select-module_inputSmall__bBJSK","optionsWrapper":"Select-module_optionsWrapper__1Cr8b","dropDownResult":"Select-module_dropDownResult__4eWkA","dropDownResultsContainer":"Select-module_dropDownResultsContainer__2Z6Mg","dropDownHide":"Select-module_dropDownHide__21Dnp","boxShadow":"Select-module_boxShadow__1YeZR","drop-down_icon-wrapper":"Select-module_drop-down_icon-wrapper__3xqih","dropDownIconWrapper":"Select-module_dropDownIconWrapper__3ruHJ","borderColorBlue":"Select-module_borderColorBlue__2gS6j","ul":"Select-module_ul__egZga","active":"Select-module_active__38GJG"};
@@ -416,6 +431,7 @@ var OptionItem = /** @class */ (function (_super) {
     };
     return OptionItem;
 }(ComponentBase));
+//# sourceMappingURL=OptionItem.js.map
 
 var Select = /** @class */ (function (_super) {
     __extends(Select, _super);
@@ -464,1228 +480,13 @@ var Select = /** @class */ (function (_super) {
     };
     return Select;
 }(ComponentBase));
+//# sourceMappingURL=Select.js.map
 
-var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  margin-top: -12px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97; }\n    .InputAutofill-module_component__MAOAz div input {\n      width: 100%;\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97; }\n    .InputAutofill-module_component__MAOAz div div {\n      left: 0px;\n      width: 356px;\n      z-index: 30;\n      height: auto; }\n      .InputAutofill-module_component__MAOAz div div div {\n        height: 30px;\n        line-height: 30px;\n        width: 100%;\n        padding: 0 10px; }\n        .InputAutofill-module_component__MAOAz div div div:hover {\n          background-color: #D9F6F9; }\n";
+//# sourceMappingURL=index.js.map
+
+var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  margin-top: -12px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97;\n    position: relative; }\n    .InputAutofill-module_component__MAOAz div input {\n      width: 100%;\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97;\n      outline-color: #00adee;\n      outline-width: 1px; }\n    .InputAutofill-module_component__MAOAz div div {\n      left: 0px;\n      width: 356px;\n      z-index: 30;\n      height: auto;\n      padding: 0 10px; }\n      .InputAutofill-module_component__MAOAz div div div {\n        height: 30px;\n        width: 336px;\n        margin: 0 10px;\n        line-height: 30px; }\n        .InputAutofill-module_component__MAOAz div div div:hover {\n          background-color: #D9F6F9; }\n";
 var styles$9 = {"component":"InputAutofill-module_component__MAOAz"};
 styleInject(css$a);
-
-var util = createCommonjsModule(function (module) {
-var RE_NUM = /[\-+]?(?:\d*\.|)\d+(?:[eE][\-+]?\d+|)/.source;
-
-function getClientPosition(elem) {
-  var box, x, y;
-  var doc = elem.ownerDocument;
-  var body = doc.body;
-  var docElem = doc && doc.documentElement;
-  // 根据 GBS 最新数据，A-Grade Browsers 都已支持 getBoundingClientRect 方法，不用再考虑传统的实现方式
-  box = elem.getBoundingClientRect();
-
-  // 注：jQuery 还考虑减去 docElem.clientLeft/clientTop
-  // 但测试发现，这样反而会导致当 html 和 body 有边距/边框样式时，获取的值不正确
-  // 此外，ie6 会忽略 html 的 margin 值，幸运地是没有谁会去设置 html 的 margin
-
-  x = box.left;
-  y = box.top;
-
-  // In IE, most of the time, 2 extra pixels are added to the top and left
-  // due to the implicit 2-pixel inset border.  In IE6/7 quirks mode and
-  // IE6 standards mode, this border can be overridden by setting the
-  // document element's border to zero -- thus, we cannot rely on the
-  // offset always being 2 pixels.
-
-  // In quirks mode, the offset can be determined by querying the body's
-  // clientLeft/clientTop, but in standards mode, it is found by querying
-  // the document element's clientLeft/clientTop.  Since we already called
-  // getClientBoundingRect we have already forced a reflow, so it is not
-  // too expensive just to query them all.
-
-  // ie 下应该减去窗口的边框吧，毕竟默认 absolute 都是相对窗口定位的
-  // 窗口边框标准是设 documentElement ,quirks 时设置 body
-  // 最好禁止在 body 和 html 上边框 ，但 ie < 9 html 默认有 2px ，减去
-  // 但是非 ie 不可能设置窗口边框，body html 也不是窗口 ,ie 可以通过 html,body 设置
-  // 标准 ie 下 docElem.clientTop 就是 border-top
-  // ie7 html 即窗口边框改变不了。永远为 2
-  // 但标准 firefox/chrome/ie9 下 docElem.clientTop 是窗口边框，即使设了 border-top 也为 0
-
-  x -= docElem.clientLeft || body.clientLeft || 0;
-  y -= docElem.clientTop || body.clientTop || 0;
-
-  return {left: x, top: y};
-}
-
-function getScroll(w, top) {
-  var ret = w['page' + (top ? 'Y' : 'X') + 'Offset'];
-  var method = 'scroll' + (top ? 'Top' : 'Left');
-  if (typeof ret !== 'number') {
-    var d = w.document;
-    //ie6,7,8 standard mode
-    ret = d.documentElement[method];
-    if (typeof ret !== 'number') {
-      //quirks mode
-      ret = d.body[method];
-    }
-  }
-  return ret;
-}
-
-function getScrollLeft(w) {
-  return getScroll(w);
-}
-
-function getScrollTop(w) {
-  return getScroll(w, true);
-}
-
-function getOffset(el) {
-  var pos = getClientPosition(el);
-  var doc = el.ownerDocument;
-  var w = doc.defaultView || doc.parentWindow;
-  pos.left += getScrollLeft(w);
-  pos.top += getScrollTop(w);
-  return pos;
-}
-function _getComputedStyle(elem, name, computedStyle) {
-  var val = '';
-  var d = elem.ownerDocument;
-
-  // https://github.com/kissyteam/kissy/issues/61
-  if ((computedStyle = (computedStyle || d.defaultView.getComputedStyle(elem, null)))) {
-    val = computedStyle.getPropertyValue(name) || computedStyle[name];
-  }
-
-  return val;
-}
-
-var _RE_NUM_NO_PX = new RegExp('^(' + RE_NUM + ')(?!px)[a-z%]+$', 'i');
-var RE_POS = /^(top|right|bottom|left)$/,
-  CURRENT_STYLE = 'currentStyle',
-  RUNTIME_STYLE = 'runtimeStyle',
-  LEFT = 'left',
-  PX = 'px';
-
-function _getComputedStyleIE(elem, name) {
-  // currentStyle maybe null
-  // http://msdn.microsoft.com/en-us/library/ms535231.aspx
-  var ret = elem[CURRENT_STYLE] && elem[CURRENT_STYLE][name];
-
-  // 当 width/height 设置为百分比时，通过 pixelLeft 方式转换的 width/height 值
-  // 一开始就处理了! CUSTOM_STYLE.height,CUSTOM_STYLE.width ,cssHook 解决@2011-08-19
-  // 在 ie 下不对，需要直接用 offset 方式
-  // borderWidth 等值也有问题，但考虑到 borderWidth 设为百分比的概率很小，这里就不考虑了
-
-  // From the awesome hack by Dean Edwards
-  // http://erik.eae.net/archives/2007/07/27/18.54.15/#comment-102291
-  // If we're not dealing with a regular pixel number
-  // but a number that has a weird ending, we need to convert it to pixels
-  // exclude left right for relativity
-  if (_RE_NUM_NO_PX.test(ret) && !RE_POS.test(name)) {
-    // Remember the original values
-    var style = elem.style,
-      left = style[LEFT],
-      rsLeft = elem[RUNTIME_STYLE][LEFT];
-
-    // prevent flashing of content
-    elem[RUNTIME_STYLE][LEFT] = elem[CURRENT_STYLE][LEFT];
-
-    // Put in the new values to get a computed value out
-    style[LEFT] = name === 'fontSize' ? '1em' : (ret || 0);
-    ret = style.pixelLeft + PX;
-
-    // Revert the changed values
-    style[LEFT] = left;
-
-    elem[RUNTIME_STYLE][LEFT] = rsLeft;
-  }
-  return ret === '' ? 'auto' : ret;
-}
-
-var getComputedStyleX;
-if (typeof window !== 'undefined') {
-  getComputedStyleX = window.getComputedStyle ? _getComputedStyle : _getComputedStyleIE;
-}
-
-// 设置 elem 相对 elem.ownerDocument 的坐标
-function setOffset(elem, offset) {
-  // set position first, in-case top/left are set even on static elem
-  if (css(elem, 'position') === 'static') {
-    elem.style.position = 'relative';
-  }
-
-  var old = getOffset(elem),
-    ret = {},
-    current, key;
-
-  for (key in offset) {
-    current = parseFloat(css(elem, key)) || 0;
-    ret[key] = current + offset[key] - old[key];
-  }
-  css(elem, ret);
-}
-
-function each(arr, fn) {
-  for (var i = 0; i < arr.length; i++) {
-    fn(arr[i]);
-  }
-}
-
-function isBorderBoxFn(elem) {
-  return getComputedStyleX(elem, 'boxSizing') === 'border-box';
-}
-
-var BOX_MODELS = ['margin', 'border', 'padding'],
-  CONTENT_INDEX = -1,
-  PADDING_INDEX = 2,
-  BORDER_INDEX = 1,
-  MARGIN_INDEX = 0;
-
-function swap(elem, options, callback) {
-  var old = {},
-    style = elem.style,
-    name;
-
-  // Remember the old values, and insert the new ones
-  for (name in options) {
-    old[name] = style[name];
-    style[name] = options[name];
-  }
-
-  callback.call(elem);
-
-  // Revert the old values
-  for (name in options) {
-    style[name] = old[name];
-  }
-}
-
-function getPBMWidth(elem, props, which) {
-  var value = 0, prop, j, i;
-  for (j = 0; j < props.length; j++) {
-    prop = props[j];
-    if (prop) {
-      for (i = 0; i < which.length; i++) {
-        var cssProp;
-        if (prop === 'border') {
-          cssProp = prop + which[i] + 'Width';
-        } else {
-          cssProp = prop + which[i];
-        }
-        value += parseFloat(getComputedStyleX(elem, cssProp)) || 0;
-      }
-    }
-  }
-  return value;
-}
-
-/**
- * A crude way of determining if an object is a window
- * @member util
- */
-function isWindow(obj) {
-  // must use == for ie8
-  /*jshint eqeqeq:false*/
-  return obj != null && obj == obj.window;
-}
-
-var domUtils = {};
-
-each(['Width', 'Height'], function (name) {
-  domUtils['doc' + name] = function (refWin) {
-    var d = refWin.document;
-    return Math.max(
-      //firefox chrome documentElement.scrollHeight< body.scrollHeight
-      //ie standard mode : documentElement.scrollHeight> body.scrollHeight
-      d.documentElement['scroll' + name],
-      //quirks : documentElement.scrollHeight 最大等于可视窗口多一点？
-      d.body['scroll' + name],
-      domUtils['viewport' + name](d));
-  };
-
-  domUtils['viewport' + name] = function (win) {
-    // pc browser includes scrollbar in window.innerWidth
-    var prop = 'client' + name,
-      doc = win.document,
-      body = doc.body,
-      documentElement = doc.documentElement,
-      documentElementProp = documentElement[prop];
-    // 标准模式取 documentElement
-    // backcompat 取 body
-    return doc.compatMode === 'CSS1Compat' && documentElementProp ||
-      body && body[prop] || documentElementProp;
-  };
-});
-
-/*
- 得到元素的大小信息
- @param elem
- @param name
- @param {String} [extra]  'padding' : (css width) + padding
- 'border' : (css width) + padding + border
- 'margin' : (css width) + padding + border + margin
- */
-function getWH(elem, name, extra) {
-  if (isWindow(elem)) {
-    return name === 'width' ? domUtils.viewportWidth(elem) : domUtils.viewportHeight(elem);
-  } else if (elem.nodeType === 9) {
-    return name === 'width' ? domUtils.docWidth(elem) : domUtils.docHeight(elem);
-  }
-  var which = name === 'width' ? ['Left', 'Right'] : ['Top', 'Bottom'],
-    borderBoxValue = name === 'width' ? elem.offsetWidth : elem.offsetHeight;
-  var computedStyle = getComputedStyleX(elem);
-  var isBorderBox = isBorderBoxFn(elem, computedStyle);
-  var cssBoxValue = 0;
-  if (borderBoxValue == null || borderBoxValue <= 0) {
-    borderBoxValue = undefined;
-    // Fall back to computed then un computed css if necessary
-    cssBoxValue = getComputedStyleX(elem, name);
-    if (cssBoxValue == null || (Number(cssBoxValue)) < 0) {
-      cssBoxValue = elem.style[name] || 0;
-    }
-    // Normalize '', auto, and prepare for extra
-    cssBoxValue = parseFloat(cssBoxValue) || 0;
-  }
-  if (extra === undefined) {
-    extra = isBorderBox ? BORDER_INDEX : CONTENT_INDEX;
-  }
-  var borderBoxValueOrIsBorderBox = borderBoxValue !== undefined || isBorderBox;
-  var val = borderBoxValue || cssBoxValue;
-  if (extra === CONTENT_INDEX) {
-    if (borderBoxValueOrIsBorderBox) {
-      return val - getPBMWidth(elem, ['border', 'padding'],
-          which, computedStyle);
-    } else {
-      return cssBoxValue;
-    }
-  } else if (borderBoxValueOrIsBorderBox) {
-    return val + (extra === BORDER_INDEX ? 0 :
-        (extra === PADDING_INDEX ?
-          -getPBMWidth(elem, ['border'], which, computedStyle) :
-          getPBMWidth(elem, ['margin'], which, computedStyle)));
-  } else {
-    return cssBoxValue + getPBMWidth(elem, BOX_MODELS.slice(extra),
-        which, computedStyle);
-  }
-}
-
-var cssShow = {position: 'absolute', visibility: 'hidden', display: 'block'};
-
-// fix #119 : https://github.com/kissyteam/kissy/issues/119
-function getWHIgnoreDisplay(elem) {
-  var val, args = arguments;
-  // in case elem is window
-  // elem.offsetWidth === undefined
-  if (elem.offsetWidth !== 0) {
-    val = getWH.apply(undefined, args);
-  } else {
-    swap(elem, cssShow, function () {
-      val = getWH.apply(undefined, args);
-    });
-  }
-  return val;
-}
-
-each(['width', 'height'], function (name) {
-  var first = name.charAt(0).toUpperCase() + name.slice(1);
-  domUtils['outer' + first] = function (el, includeMargin) {
-    return el && getWHIgnoreDisplay(el, name, includeMargin ? MARGIN_INDEX : BORDER_INDEX);
-  };
-  var which = name === 'width' ? ['Left', 'Right'] : ['Top', 'Bottom'];
-
-  domUtils[name] = function (elem, val) {
-    if (val !== undefined) {
-      if (elem) {
-        var computedStyle = getComputedStyleX(elem);
-        var isBorderBox = isBorderBoxFn(elem);
-        if (isBorderBox) {
-          val += getPBMWidth(elem, ['padding', 'border'], which, computedStyle);
-        }
-        return css(elem, name, val);
-      }
-      return;
-    }
-    return elem && getWHIgnoreDisplay(elem, name, CONTENT_INDEX);
-  };
-});
-
-function css(el, name, value) {
-  if (typeof name === 'object') {
-    for (var i in name) {
-      css(el, i, name[i]);
-    }
-    return;
-  }
-  if (typeof value !== 'undefined') {
-    if (typeof value === 'number') {
-      value = value + 'px';
-    }
-    el.style[name] = value;
-  } else {
-    return getComputedStyleX(el, name);
-  }
-}
-
-function mix(to, from) {
-  for (var i in from) {
-    to[i] = from[i];
-  }
-  return to;
-}
-
-var utils = module.exports = {
-  getWindow: function (node) {
-    var doc = node.ownerDocument || node;
-    return doc.defaultView || doc.parentWindow;
-  },
-  offset: function (el, value) {
-    if (typeof value !== 'undefined') {
-      setOffset(el, value);
-    } else {
-      return getOffset(el);
-    }
-  },
-  isWindow: isWindow,
-  each: each,
-  css: css,
-  clone: function (obj) {
-    var ret = {};
-    for (var i in obj) {
-      ret[i] = obj[i];
-    }
-    var overflow = obj.overflow;
-    if (overflow) {
-      for (i in obj) {
-        ret.overflow[i] = obj.overflow[i];
-      }
-    }
-    return ret;
-  },
-  mix: mix,
-  scrollLeft: function (w, v) {
-    if (isWindow(w)) {
-      if (v === undefined) {
-        return getScrollLeft(w);
-      } else {
-        window.scrollTo(v, getScrollTop(w));
-      }
-    } else {
-      if (v === undefined) {
-        return w.scrollLeft;
-      } else {
-        w.scrollLeft = v;
-      }
-    }
-  },
-  scrollTop: function (w, v) {
-    if (isWindow(w)) {
-      if (v === undefined) {
-        return getScrollTop(w);
-      } else {
-        window.scrollTo(getScrollLeft(w), v);
-      }
-    } else {
-      if (v === undefined) {
-        return w.scrollTop;
-      } else {
-        w.scrollTop = v;
-      }
-    }
-  },
-  merge: function () {
-    var ret = {};
-    for (var i = 0; i < arguments.length; i++) {
-      utils.mix(ret, arguments[i]);
-    }
-    return ret;
-  },
-  viewportWidth: 0,
-  viewportHeight: 0
-};
-
-mix(utils, domUtils);
-});
-var util_1 = util.getWindow;
-var util_2 = util.offset;
-var util_3 = util.isWindow;
-var util_4 = util.each;
-var util_5 = util.css;
-var util_6 = util.clone;
-var util_7 = util.mix;
-var util_8 = util.scrollLeft;
-var util_9 = util.scrollTop;
-var util_10 = util.merge;
-var util_11 = util.viewportWidth;
-var util_12 = util.viewportHeight;
-
-function scrollIntoView(elem, container, config) {
-  config = config || {};
-  // document 归一化到 window
-  if (container.nodeType === 9) {
-    container = util.getWindow(container);
-  }
-
-  var allowHorizontalScroll = config.allowHorizontalScroll;
-  var onlyScrollIfNeeded = config.onlyScrollIfNeeded;
-  var alignWithTop = config.alignWithTop;
-  var alignWithLeft = config.alignWithLeft;
-
-  allowHorizontalScroll = allowHorizontalScroll === undefined ? true : allowHorizontalScroll;
-
-  var isWin = util.isWindow(container);
-  var elemOffset = util.offset(elem);
-  var eh = util.outerHeight(elem);
-  var ew = util.outerWidth(elem);
-  var containerOffset, ch, cw, containerScroll,
-    diffTop, diffBottom, win,
-    winScroll, ww, wh;
-
-  if (isWin) {
-    win = container;
-    wh = util.height(win);
-    ww = util.width(win);
-    winScroll = {
-      left: util.scrollLeft(win),
-      top: util.scrollTop(win)
-    };
-    // elem 相对 container 可视视窗的距离
-    diffTop = {
-      left: elemOffset.left - winScroll.left,
-      top: elemOffset.top - winScroll.top
-    };
-    diffBottom = {
-      left: elemOffset.left + ew - (winScroll.left + ww),
-      top: elemOffset.top + eh - (winScroll.top + wh)
-    };
-    containerScroll = winScroll;
-  } else {
-    containerOffset = util.offset(container);
-    ch = container.clientHeight;
-    cw = container.clientWidth;
-    containerScroll = {
-      left: container.scrollLeft,
-      top: container.scrollTop
-    };
-    // elem 相对 container 可视视窗的距离
-    // 注意边框, offset 是边框到根节点
-    diffTop = {
-      left: elemOffset.left - (containerOffset.left +
-      (parseFloat(util.css(container, 'borderLeftWidth')) || 0)),
-      top: elemOffset.top - (containerOffset.top +
-      (parseFloat(util.css(container, 'borderTopWidth')) || 0))
-    };
-    diffBottom = {
-      left: elemOffset.left + ew -
-      (containerOffset.left + cw +
-      (parseFloat(util.css(container, 'borderRightWidth')) || 0)),
-      top: elemOffset.top + eh -
-      (containerOffset.top + ch +
-      (parseFloat(util.css(container, 'borderBottomWidth')) || 0))
-    };
-  }
-
-  if (diffTop.top < 0 || diffBottom.top > 0) {
-    // 强制向上
-    if (alignWithTop === true) {
-      util.scrollTop(container, containerScroll.top + diffTop.top);
-    } else if (alignWithTop === false) {
-      util.scrollTop(container, containerScroll.top + diffBottom.top);
-    } else {
-      // 自动调整
-      if (diffTop.top < 0) {
-        util.scrollTop(container, containerScroll.top + diffTop.top);
-      } else {
-        util.scrollTop(container, containerScroll.top + diffBottom.top);
-      }
-    }
-  } else {
-    if (!onlyScrollIfNeeded) {
-      alignWithTop = alignWithTop === undefined ? true : !!alignWithTop;
-      if (alignWithTop) {
-        util.scrollTop(container, containerScroll.top + diffTop.top);
-      } else {
-        util.scrollTop(container, containerScroll.top + diffBottom.top);
-      }
-    }
-  }
-
-  if (allowHorizontalScroll) {
-    if (diffTop.left < 0 || diffBottom.left > 0) {
-      // 强制向上
-      if (alignWithLeft === true) {
-        util.scrollLeft(container, containerScroll.left + diffTop.left);
-      } else if (alignWithLeft === false) {
-        util.scrollLeft(container, containerScroll.left + diffBottom.left);
-      } else {
-        // 自动调整
-        if (diffTop.left < 0) {
-          util.scrollLeft(container, containerScroll.left + diffTop.left);
-        } else {
-          util.scrollLeft(container, containerScroll.left + diffBottom.left);
-        }
-      }
-    } else {
-      if (!onlyScrollIfNeeded) {
-        alignWithLeft = alignWithLeft === undefined ? true : !!alignWithLeft;
-        if (alignWithLeft) {
-          util.scrollLeft(container, containerScroll.left + diffTop.left);
-        } else {
-          util.scrollLeft(container, containerScroll.left + diffBottom.left);
-        }
-      }
-    }
-  }
-}
-
-var domScrollIntoView = scrollIntoView;
-
-var domScrollIntoView$1 = domScrollIntoView;
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-
-
-
-var findDOMNode = reactDom.findDOMNode;
-
-
-
-var IMPERATIVE_API = ['blur', 'checkValidity', 'click', 'focus', 'select', 'setCustomValidity', 'setSelectionRange', 'setRangeText'];
-
-function getScrollOffset() {
-  return {
-    x: window.pageXOffset !== undefined ? window.pageXOffset : (document.documentElement || document.body.parentNode || document.body).scrollLeft,
-    y: window.pageYOffset !== undefined ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop
-  };
-}
-
-var Autocomplete = function (_React$Component) {
-  _inherits(Autocomplete, _React$Component);
-
-  function Autocomplete(props) {
-    _classCallCheck(this, Autocomplete);
-
-    var _this = _possibleConstructorReturn(this, (Autocomplete.__proto__ || Object.getPrototypeOf(Autocomplete)).call(this, props));
-
-    _this.state = {
-      isOpen: false,
-      highlightedIndex: null
-    };
-    _this._debugStates = [];
-    _this.ensureHighlightedIndex = _this.ensureHighlightedIndex.bind(_this);
-    _this.exposeAPI = _this.exposeAPI.bind(_this);
-    _this.handleInputFocus = _this.handleInputFocus.bind(_this);
-    _this.handleInputBlur = _this.handleInputBlur.bind(_this);
-    _this.handleChange = _this.handleChange.bind(_this);
-    _this.handleKeyDown = _this.handleKeyDown.bind(_this);
-    _this.handleInputClick = _this.handleInputClick.bind(_this);
-    _this.maybeAutoCompleteText = _this.maybeAutoCompleteText.bind(_this);
-    return _this;
-  }
-
-  _createClass(Autocomplete, [{
-    key: 'componentWillMount',
-    value: function componentWillMount() {
-      // this.refs is frozen, so we need to assign a new object to it
-      this.refs = {};
-      this._ignoreBlur = false;
-      this._ignoreFocus = false;
-      this._scrollOffset = null;
-      this._scrollTimer = null;
-    }
-  }, {
-    key: 'componentWillUnmount',
-    value: function componentWillUnmount() {
-      clearTimeout(this._scrollTimer);
-      this._scrollTimer = null;
-    }
-  }, {
-    key: 'componentWillReceiveProps',
-    value: function componentWillReceiveProps(nextProps) {
-      if (this.state.highlightedIndex !== null) {
-        this.setState(this.ensureHighlightedIndex);
-      }
-      if (nextProps.autoHighlight && (this.props.value !== nextProps.value || this.state.highlightedIndex === null)) {
-        this.setState(this.maybeAutoCompleteText);
-      }
-    }
-  }, {
-    key: 'componentDidMount',
-    value: function componentDidMount() {
-      if (this.isOpen()) {
-        this.setMenuPositions();
-      }
-    }
-  }, {
-    key: 'componentDidUpdate',
-    value: function componentDidUpdate(prevProps, prevState) {
-      if (this.state.isOpen && !prevState.isOpen || 'open' in this.props && this.props.open && !prevProps.open) this.setMenuPositions();
-
-      this.maybeScrollItemIntoView();
-      if (prevState.isOpen !== this.state.isOpen) {
-        this.props.onMenuVisibilityChange(this.state.isOpen);
-      }
-    }
-  }, {
-    key: 'exposeAPI',
-    value: function exposeAPI(el) {
-      var _this2 = this;
-
-      this.refs.input = el;
-      IMPERATIVE_API.forEach(function (ev) {
-        return _this2[ev] = el && el[ev] && el[ev].bind(el);
-      });
-    }
-  }, {
-    key: 'maybeScrollItemIntoView',
-    value: function maybeScrollItemIntoView() {
-      if (this.isOpen() && this.state.highlightedIndex !== null) {
-        var itemNode = this.refs['item-' + this.state.highlightedIndex];
-        var menuNode = this.refs.menu;
-        domScrollIntoView$1(findDOMNode(itemNode), findDOMNode(menuNode), { onlyScrollIfNeeded: true });
-      }
-    }
-  }, {
-    key: 'handleKeyDown',
-    value: function handleKeyDown(event) {
-      if (Autocomplete.keyDownHandlers[event.key]) Autocomplete.keyDownHandlers[event.key].call(this, event);else if (!this.isOpen()) {
-        this.setState({
-          isOpen: true
-        });
-      }
-    }
-  }, {
-    key: 'handleChange',
-    value: function handleChange(event) {
-      this.props.onChange(event, event.target.value);
-    }
-  }, {
-    key: 'getFilteredItems',
-    value: function getFilteredItems(props) {
-      var items = props.items;
-
-      if (props.shouldItemRender) {
-        items = items.filter(function (item) {
-          return props.shouldItemRender(item, props.value);
-        });
-      }
-
-      if (props.sortItems) {
-        items.sort(function (a, b) {
-          return props.sortItems(a, b, props.value);
-        });
-      }
-
-      return items;
-    }
-  }, {
-    key: 'maybeAutoCompleteText',
-    value: function maybeAutoCompleteText(state, props) {
-      var highlightedIndex = state.highlightedIndex;
-      var value = props.value,
-          getItemValue = props.getItemValue;
-
-      var index = highlightedIndex === null ? 0 : highlightedIndex;
-      var items = this.getFilteredItems(props);
-      for (var i = 0; i < items.length; i++) {
-        if (props.isItemSelectable(items[index])) break;
-        index = (index + 1) % items.length;
-      }
-      var matchedItem = items[index] && props.isItemSelectable(items[index]) ? items[index] : null;
-      if (value !== '' && matchedItem) {
-        var itemValue = getItemValue(matchedItem);
-        var itemValueDoesMatch = itemValue.toLowerCase().indexOf(value.toLowerCase()) === 0;
-        if (itemValueDoesMatch) {
-          return { highlightedIndex: index };
-        }
-      }
-      return { highlightedIndex: null };
-    }
-  }, {
-    key: 'ensureHighlightedIndex',
-    value: function ensureHighlightedIndex(state, props) {
-      if (state.highlightedIndex >= this.getFilteredItems(props).length) {
-        return { highlightedIndex: null };
-      }
-    }
-  }, {
-    key: 'setMenuPositions',
-    value: function setMenuPositions() {
-      var node = this.refs.input;
-      var rect = node.getBoundingClientRect();
-      var computedStyle = commonjsGlobal.window.getComputedStyle(node);
-      var marginBottom = parseInt(computedStyle.marginBottom, 10) || 0;
-      var marginLeft = parseInt(computedStyle.marginLeft, 10) || 0;
-      var marginRight = parseInt(computedStyle.marginRight, 10) || 0;
-      this.setState({
-        menuTop: rect.bottom + marginBottom,
-        menuLeft: rect.left + marginLeft,
-        menuWidth: rect.width + marginLeft + marginRight
-      });
-    }
-  }, {
-    key: 'highlightItemFromMouse',
-    value: function highlightItemFromMouse(index) {
-      this.setState({ highlightedIndex: index });
-    }
-  }, {
-    key: 'selectItemFromMouse',
-    value: function selectItemFromMouse(item) {
-      var _this3 = this;
-
-      var value = this.props.getItemValue(item);
-      // The menu will de-render before a mouseLeave event
-      // happens. Clear the flag to release control over focus
-      this.setIgnoreBlur(false);
-      this.setState({
-        isOpen: false,
-        highlightedIndex: null
-      }, function () {
-        _this3.props.onSelect(value, item);
-      });
-    }
-  }, {
-    key: 'setIgnoreBlur',
-    value: function setIgnoreBlur(ignore) {
-      this._ignoreBlur = ignore;
-    }
-  }, {
-    key: 'renderMenu',
-    value: function renderMenu() {
-      var _this4 = this;
-
-      var items = this.getFilteredItems(this.props).map(function (item, index) {
-        var element = _this4.props.renderItem(item, _this4.state.highlightedIndex === index, { cursor: 'default' });
-        return React__default.cloneElement(element, {
-          onMouseEnter: _this4.props.isItemSelectable(item) ? function () {
-            return _this4.highlightItemFromMouse(index);
-          } : null,
-          onClick: _this4.props.isItemSelectable(item) ? function () {
-            return _this4.selectItemFromMouse(item);
-          } : null,
-          ref: function ref(e) {
-            return _this4.refs['item-' + index] = e;
-          }
-        });
-      });
-      var style = {
-        left: this.state.menuLeft,
-        top: this.state.menuTop,
-        minWidth: this.state.menuWidth
-      };
-      var menu = this.props.renderMenu(items, this.props.value, style);
-      return React__default.cloneElement(menu, {
-        ref: function ref(e) {
-          return _this4.refs.menu = e;
-        },
-        // Ignore blur to prevent menu from de-rendering before we can process click
-        onTouchStart: function onTouchStart() {
-          return _this4.setIgnoreBlur(true);
-        },
-        onMouseEnter: function onMouseEnter() {
-          return _this4.setIgnoreBlur(true);
-        },
-        onMouseLeave: function onMouseLeave() {
-          return _this4.setIgnoreBlur(false);
-        }
-      });
-    }
-  }, {
-    key: 'handleInputBlur',
-    value: function handleInputBlur(event) {
-      var _this5 = this;
-
-      if (this._ignoreBlur) {
-        this._ignoreFocus = true;
-        this._scrollOffset = getScrollOffset();
-        this.refs.input.focus();
-        return;
-      }
-      var setStateCallback = void 0;
-      var highlightedIndex = this.state.highlightedIndex;
-
-      if (this.props.selectOnBlur && highlightedIndex !== null) {
-        var items = this.getFilteredItems(this.props);
-        var item = items[highlightedIndex];
-        var value = this.props.getItemValue(item);
-        setStateCallback = function setStateCallback() {
-          return _this5.props.onSelect(value, item);
-        };
-      }
-      this.setState({
-        isOpen: false,
-        highlightedIndex: null
-      }, setStateCallback);
-      var onBlur = this.props.inputProps.onBlur;
-
-      if (onBlur) {
-        onBlur(event);
-      }
-    }
-  }, {
-    key: 'handleInputFocus',
-    value: function handleInputFocus(event) {
-      var _this6 = this;
-
-      if (this._ignoreFocus) {
-        this._ignoreFocus = false;
-        var _scrollOffset = this._scrollOffset,
-            x = _scrollOffset.x,
-            y = _scrollOffset.y;
-
-        this._scrollOffset = null;
-        // Focus will cause the browser to scroll the <input> into view.
-        // This can cause the mouse coords to change, which in turn
-        // could cause a new highlight to happen, cancelling the click
-        // event (when selecting with the mouse)
-        window.scrollTo(x, y);
-        // Some browsers wait until all focus event handlers have been
-        // processed before scrolling the <input> into view, so let's
-        // scroll again on the next tick to ensure we're back to where
-        // the user was before focus was lost. We could do the deferred
-        // scroll only, but that causes a jarring split second jump in
-        // some browsers that scroll before the focus event handlers
-        // are triggered.
-        clearTimeout(this._scrollTimer);
-        this._scrollTimer = setTimeout(function () {
-          _this6._scrollTimer = null;
-          window.scrollTo(x, y);
-        }, 0);
-        return;
-      }
-      this.setState({ isOpen: true });
-      var onFocus = this.props.inputProps.onFocus;
-
-      if (onFocus) {
-        onFocus(event);
-      }
-    }
-  }, {
-    key: 'isInputFocused',
-    value: function isInputFocused() {
-      var el = this.refs.input;
-      return el.ownerDocument && el === el.ownerDocument.activeElement;
-    }
-  }, {
-    key: 'handleInputClick',
-    value: function handleInputClick() {
-      // Input will not be focused if it's disabled
-      if (this.isInputFocused() && !this.isOpen()) this.setState({ isOpen: true });
-    }
-  }, {
-    key: 'composeEventHandlers',
-    value: function composeEventHandlers(internal, external) {
-      return external ? function (e) {
-        internal(e);external(e);
-      } : internal;
-    }
-  }, {
-    key: 'isOpen',
-    value: function isOpen() {
-      return 'open' in this.props ? this.props.open : this.state.isOpen;
-    }
-  }, {
-    key: 'render',
-    value: function render() {
-      if (this.props.debug) {
-        // you don't like it, you love it
-        this._debugStates.push({
-          id: this._debugStates.length,
-          state: this.state
-        });
-      }
-
-      var inputProps = this.props.inputProps;
-
-      var open = this.isOpen();
-      return React__default.createElement(
-        'div',
-        _extends({ style: _extends({}, this.props.wrapperStyle) }, this.props.wrapperProps),
-        this.props.renderInput(_extends({}, inputProps, {
-          role: 'combobox',
-          'aria-autocomplete': 'list',
-          'aria-expanded': open,
-          autoComplete: 'off',
-          ref: this.exposeAPI,
-          onFocus: this.handleInputFocus,
-          onBlur: this.handleInputBlur,
-          onChange: this.handleChange,
-          onKeyDown: this.composeEventHandlers(this.handleKeyDown, inputProps.onKeyDown),
-          onClick: this.composeEventHandlers(this.handleInputClick, inputProps.onClick),
-          value: this.props.value
-        })),
-        open && this.renderMenu(),
-        this.props.debug && React__default.createElement(
-          'pre',
-          { style: { marginLeft: 300 } },
-          JSON.stringify(this._debugStates.slice(Math.max(0, this._debugStates.length - 5), this._debugStates.length), null, 2)
-        )
-      );
-    }
-  }]);
-
-  return Autocomplete;
-}(React__default.Component);
-
-Autocomplete.propTypes = {
-  /**
-   * The items to display in the dropdown menu
-   */
-  items: require$$0.array.isRequired,
-  /**
-   * The value to display in the input field
-   */
-  value: require$$0.any,
-  /**
-   * Arguments: `event: Event, value: String`
-   *
-   * Invoked every time the user changes the input's value.
-   */
-  onChange: require$$0.func,
-  /**
-   * Arguments: `value: String, item: Any`
-   *
-   * Invoked when the user selects an item from the dropdown menu.
-   */
-  onSelect: require$$0.func,
-  /**
-   * Arguments: `item: Any, value: String`
-   *
-   * Invoked for each entry in `items` and its return value is used to
-   * determine whether or not it should be displayed in the dropdown menu.
-   * By default all items are always rendered.
-   */
-  shouldItemRender: require$$0.func,
-  /**
-   * Arguments: `item: Any`
-   *
-   * Invoked when attempting to select an item. The return value is used to
-   * determine whether the item should be selectable or not.
-   * By default all items are selectable.
-   */
-  isItemSelectable: require$$0.func,
-  /**
-   * Arguments: `itemA: Any, itemB: Any, value: String`
-   *
-   * The function which is used to sort `items` before display.
-   */
-  sortItems: require$$0.func,
-  /**
-   * Arguments: `item: Any`
-   *
-   * Used to read the display value from each entry in `items`.
-   */
-  getItemValue: require$$0.func.isRequired,
-  /**
-   * Arguments: `item: Any, isHighlighted: Boolean, styles: Object`
-   *
-   * Invoked for each entry in `items` that also passes `shouldItemRender` to
-   * generate the render tree for each item in the dropdown menu. `styles` is
-   * an optional set of styles that can be applied to improve the look/feel
-   * of the items in the dropdown menu.
-   */
-  renderItem: require$$0.func.isRequired,
-  /**
-   * Arguments: `items: Array<Any>, value: String, styles: Object`
-   *
-   * Invoked to generate the render tree for the dropdown menu. Ensure the
-   * returned tree includes every entry in `items` or else the highlight order
-   * and keyboard navigation logic will break. `styles` will contain
-   * { top, left, minWidth } which are the coordinates of the top-left corner
-   * and the width of the dropdown menu.
-   */
-  renderMenu: require$$0.func,
-  /**
-   * Styles that are applied to the dropdown menu in the default `renderMenu`
-   * implementation. If you override `renderMenu` and you want to use
-   * `menuStyle` you must manually apply them (`this.props.menuStyle`).
-   */
-  menuStyle: require$$0.object,
-  /**
-   * Arguments: `props: Object`
-   *
-   * Invoked to generate the input element. The `props` argument is the result
-   * of merging `props.inputProps` with a selection of props that are required
-   * both for functionality and accessibility. At the very least you need to
-   * apply `props.ref` and all `props.on<event>` event handlers. Failing to do
-   * this will cause `Autocomplete` to behave unexpectedly.
-   */
-  renderInput: require$$0.func,
-  /**
-   * Props passed to `props.renderInput`. By default these props will be
-   * applied to the `<input />` element rendered by `Autocomplete`, unless you
-   * have specified a custom value for `props.renderInput`. Any properties
-   * supported by `HTMLInputElement` can be specified, apart from the
-   * following which are set by `Autocomplete`: value, autoComplete, role,
-   * aria-autocomplete. `inputProps` is commonly used for (but not limited to)
-   * placeholder, event handlers (onFocus, onBlur, etc.), autoFocus, etc..
-   */
-  inputProps: require$$0.object,
-  /**
-   * Props that are applied to the element which wraps the `<input />` and
-   * dropdown menu elements rendered by `Autocomplete`.
-   */
-  wrapperProps: require$$0.object,
-  /**
-   * This is a shorthand for `wrapperProps={{ style: <your styles> }}`.
-   * Note that `wrapperStyle` is applied before `wrapperProps`, so the latter
-   * will win if it contains a `style` entry.
-   */
-  wrapperStyle: require$$0.object,
-  /**
-   * Whether or not to automatically highlight the top match in the dropdown
-   * menu.
-   */
-  autoHighlight: require$$0.bool,
-  /**
-   * Whether or not to automatically select the highlighted item when the
-   * `<input>` loses focus.
-   */
-  selectOnBlur: require$$0.bool,
-  /**
-   * Arguments: `isOpen: Boolean`
-   *
-   * Invoked every time the dropdown menu's visibility changes (i.e. every
-   * time it is displayed/hidden).
-   */
-  onMenuVisibilityChange: require$$0.func,
-  /**
-   * Used to override the internal logic which displays/hides the dropdown
-   * menu. This is useful if you want to force a certain state based on your
-   * UX/business logic. Use it together with `onMenuVisibilityChange` for
-   * fine-grained control over the dropdown menu dynamics.
-   */
-  open: require$$0.bool,
-  debug: require$$0.bool
-};
-Autocomplete.defaultProps = {
-  value: '',
-  wrapperProps: {},
-  wrapperStyle: {
-    display: 'inline-block'
-  },
-  inputProps: {},
-  renderInput: function renderInput(props) {
-    return React__default.createElement('input', props);
-  },
-  onChange: function onChange() {},
-  onSelect: function onSelect() {},
-  isItemSelectable: function isItemSelectable() {
-    return true;
-  },
-  renderMenu: function renderMenu(items, value, style) {
-    return React__default.createElement('div', { style: _extends({}, style, this.menuStyle), children: items });
-  },
-
-  menuStyle: {
-    borderRadius: '3px',
-    boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
-    background: 'rgba(255, 255, 255, 0.9)',
-    padding: '2px 0',
-    fontSize: '90%',
-    position: 'fixed',
-    overflow: 'auto',
-    maxHeight: '50%' },
-  autoHighlight: true,
-  selectOnBlur: false,
-  onMenuVisibilityChange: function onMenuVisibilityChange() {}
-};
-Autocomplete.keyDownHandlers = {
-  ArrowDown: function ArrowDown(event) {
-    event.preventDefault();
-    var items = this.getFilteredItems(this.props);
-    if (!items.length) return;
-    var highlightedIndex = this.state.highlightedIndex;
-
-    var index = highlightedIndex === null ? -1 : highlightedIndex;
-    for (var i = 0; i < items.length; i++) {
-      var p = (index + i + 1) % items.length;
-      if (this.props.isItemSelectable(items[p])) {
-        index = p;
-        break;
-      }
-    }
-    if (index > -1 && index !== highlightedIndex) {
-      this.setState({
-        highlightedIndex: index,
-        isOpen: true
-      });
-    }
-  },
-  ArrowUp: function ArrowUp(event) {
-    event.preventDefault();
-    var items = this.getFilteredItems(this.props);
-    if (!items.length) return;
-    var highlightedIndex = this.state.highlightedIndex;
-
-    var index = highlightedIndex === null ? items.length : highlightedIndex;
-    for (var i = 0; i < items.length; i++) {
-      var p = (index - (1 + i) + items.length) % items.length;
-      if (this.props.isItemSelectable(items[p])) {
-        index = p;
-        break;
-      }
-    }
-    if (index !== items.length) {
-      this.setState({
-        highlightedIndex: index,
-        isOpen: true
-      });
-    }
-  },
-  Enter: function Enter(event) {
-    var _this7 = this;
-
-    // Key code 229 is used for selecting items from character selectors (Pinyin, Kana, etc)
-    if (event.keyCode !== 13) return;
-    // In case the user is currently hovering over the menu
-    this.setIgnoreBlur(false);
-    if (!this.isOpen()) {
-      // menu is closed so there is no selection to accept -> do nothing
-      return;
-    } else if (this.state.highlightedIndex == null) {
-      // input has focus but no menu item is selected + enter is hit -> close the menu, highlight whatever's in input
-      this.setState({
-        isOpen: false
-      }, function () {
-        _this7.refs.input.select();
-      });
-    } else {
-      // text entered + menu item has been highlighted + enter is hit -> update value to that of selected menu item, close the menu
-      event.preventDefault();
-      var item = this.getFilteredItems(this.props)[this.state.highlightedIndex];
-      var value = this.props.getItemValue(item);
-      this.setState({
-        isOpen: false,
-        highlightedIndex: null
-      }, function () {
-        //this.refs.input.focus() // TODO: file issue
-        _this7.refs.input.setSelectionRange(value.length, value.length);
-        _this7.props.onSelect(value, item);
-      });
-    }
-  },
-  Escape: function Escape() {
-    // In case the user is currently hovering over the menu
-    this.setIgnoreBlur(false);
-    this.setState({
-      highlightedIndex: null,
-      isOpen: false
-    });
-  },
-  Tab: function Tab() {
-    // In case the user is currently hovering over the menu
-    this.setIgnoreBlur(false);
-  }
-};
-
-
-var Autocomplete_1 = Autocomplete;
 
 var InputAutoProperties = /** @class */ (function (_super) {
     __extends(InputAutoProperties, _super);
@@ -1697,28 +498,36 @@ var InputAutoProperties = /** @class */ (function (_super) {
 var AutoFill = /** @class */ (function (_super) {
     __extends(AutoFill, _super);
     function AutoFill() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.state = {
+            value: "search"
+        };
+        return _this;
     }
     AutoFill.prototype.render = function () {
         var _this = this;
         var Autocomplete = require("react-autocomplete");
-        this.state = {
-            value: '',
-        };
         return (React.createElement("div", { className: styles$9.component },
-            React.createElement(Autocomplete_1, { items: [
+            React.createElement(Autocomplete, { items: [
                     { id: 'foo', label: 'foo' },
                     { id: 'bar', label: 'bar' },
                     { id: 'baz', label: 'baz' },
                 ], shouldItemRender: function (item, value) { return item.label.toLowerCase().indexOf(value.toLowerCase()) > -1; }, getItemValue: function (item) { return item.label; }, renderItem: function (item, highlighted) {
-                    return React.createElement("div", { key: item.id, style: { backgroundColor: highlighted ? '#eee' : 'transparent' } }, item.label);
+                    return React.createElement("div", { key: item.id, style: { backgroundColor: highlighted ? '#D9F6F9' : 'transparent' } }, item.label);
+                }, renderInputComponent: function () {
+                    return React.createElement("div", null,
+                        React.createElement("input", { defaultValue: "Search", value: '' }),
+                        React.createElement("div", null, "bnkp;"));
                 }, 
-                // renderInput={
-                // }
+                // value={value}
+                // onChange={(e) => value = e.target.value}
+                // onSelect={(val) => value = val}
                 value: this.state.value, onChange: function (e) { return _this.setState({ value: e.target.value }); }, onSelect: function (value) { return _this.setState({ value: value }); } })));
     };
     return AutoFill;
 }(ComponentBase));
+
+//# sourceMappingURL=index.js.map
 
 var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.StackPanel-module_component__mRChg {\n  width: 100%;\n  display: flex;\n  flex-flow: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 0 30px;\n  position: relative; }\n  .StackPanel-module_component__mRChg > * {\n    width: 100%; }\n\n.StackPanel-module_transparent__Azr0Q {\n  background-color: transparent; }\n\n.StackPanel-module_default__j2xB8 {\n  background-color: #fff; }\n\n.StackPanel-module_silver__1YQMk {\n  background-color: #ebedee; }\n\n.StackPanel-module_light__3z7gi {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 0 20px 10px; }\n  .StackPanel-module_light__3z7gi:hover, .StackPanel-module_light__3z7gi.StackPanel-module_selected__PgC5l {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.StackPanel-module_dark__2fP6W {\n  background-color: #2e4049;\n  padding: 30px; }\n\n.StackPanel-module_padded-panel__3KL2s {\n  padding: 0 30px; }\n";
 var styles$a = {"component":"StackPanel-module_component__mRChg","transparent":"StackPanel-module_transparent__Azr0Q","default":"StackPanel-module_default__j2xB8","silver":"StackPanel-module_silver__1YQMk","light":"StackPanel-module_light__3z7gi","selected":"StackPanel-module_selected__PgC5l","dark":"StackPanel-module_dark__2fP6W","padded-panel":"StackPanel-module_padded-panel__3KL2s"};
@@ -1748,6 +557,7 @@ var StackPanel = /** @class */ (function (_super) {
     };
     return StackPanel;
 }(ComponentBase));
+//# sourceMappingURL=StackPanel.js.map
 
 var css$c = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.WrapPanel-module_component__2rpf2 {\n  width: 100%;\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: flex-start;\n  align-items: center; }\n  .WrapPanel-module_component__2rpf2 > * {\n    margin-right: 5px; }\n\n.WrapPanel-module_transparent__2l89A {\n  background-color: transparent; }\n\n.WrapPanel-module_default__1l9n1 {\n  background-color: #fff; }\n\n.WrapPanel-module_header__37qtU {\n  background-color: #ebedee; }\n\n.WrapPanel-module_light__31Dqs {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 15px 20px; }\n  .WrapPanel-module_light__31Dqs:hover, .WrapPanel-module_light__31Dqs.WrapPanel-module_selected__1nLpf {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.WrapPanel-module_dark__1ADC6 {\n  background-color: #2e4049; }\n";
 var styles$b = {"component":"WrapPanel-module_component__2rpf2","transparent":"WrapPanel-module_transparent__2l89A","default":"WrapPanel-module_default__1l9n1","header":"WrapPanel-module_header__37qtU","light":"WrapPanel-module_light__31Dqs","selected":"WrapPanel-module_selected__1nLpf","dark":"WrapPanel-module_dark__1ADC6"};
@@ -1768,6 +578,7 @@ var WrapPanel = /** @class */ (function (_super) {
     };
     return WrapPanel;
 }(ComponentBase));
+//# sourceMappingURL=WrapPanel.js.map
 
 var css$d = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.RowPanel-module_component__3wDnh {\n  width: 100%;\n  height: 50px;\n  line-height: 50px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: space-between; }\n\n.RowPanel-module_flex-start__1CNI6 {\n  justify-content: flex-start; }\n\n.RowPanel-module_flex-end__2qD_v {\n  justify-content: flex-end; }\n\n.RowPanel-module_space-between__39IWO {\n  justify-content: space-between; }\n";
 var styles$c = {"component":"RowPanel-module_component__3wDnh","flex-start":"RowPanel-module_flex-start__1CNI6","flex-end":"RowPanel-module_flex-end__2qD_v","space-between":"RowPanel-module_space-between__39IWO"};
@@ -1788,6 +599,7 @@ var RowPanel = /** @class */ (function (_super) {
     };
     return RowPanel;
 }(ComponentBase));
+//# sourceMappingURL=RowPanel.js.map
 
 var css$e = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.ScrollPanel-module_component__13H2d {\n  height: 100%; }\n\n.ScrollPanel-module_gradient__OvlCl {\n  width: 100%;\n  height: 100px;\n  position: absolute;\n  z-index: 1;\n  bottom: 0px;\n  background-image: linear-gradient(to bottom, transparent, #fff); }\n\n.ScrollPanel-module_scrollArea__3JylI {\n  direction: ltr; }\n\n.ScrollPanel-module_thumbVertical__2WPKQ {\n  background-color: #ebedee;\n  width: 6px !important;\n  border-radius: 3px; }\n";
 var styles$d = {"component":"ScrollPanel-module_component__13H2d","gradient":"ScrollPanel-module_gradient__OvlCl","scrollArea":"ScrollPanel-module_scrollArea__3JylI","thumbVertical":"ScrollPanel-module_thumbVertical__2WPKQ"};
@@ -1829,7 +641,7 @@ var performanceNow = createCommonjsModule(function (module) {
 
 }).call(commonjsGlobal);
 
-
+//# sourceMappingURL=performance-now.js.map
 });
 
 var root = typeof window === 'undefined' ? commonjsGlobal : window
@@ -2447,7 +1259,7 @@ var _domCss2 = _interopRequireDefault(domCss);
 
 
 
-var _propTypes2 = _interopRequireDefault(require$$0);
+var _propTypes2 = _interopRequireDefault(propTypes);
 
 
 
@@ -3275,6 +2087,7 @@ var ScrollPanel = /** @class */ (function (_super) {
     };
     return ScrollPanel;
 }(ComponentBase));
+//# sourceMappingURL=ScrollPanel.js.map
 
 var css$f = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n";
 var styles$g = {"component":"Container-module_component__2uDlo","flexStart":"Container-module_flexStart__2ySvs","flexEnd":"Container-module_flexEnd__1B58j","spaceBetween":"Container-module_spaceBetween__EaTZn"};
@@ -3306,6 +2119,7 @@ var Container = /** @class */ (function (_super) {
     };
     return Container;
 }(ComponentBase));
+//# sourceMappingURL=Container.js.map
 
 var interopRequireDefault = createCommonjsModule(function (module) {
 function _interopRequireDefault(obj) {
@@ -3526,7 +2340,7 @@ exports.__esModule = true;
 exports.transitionTimeout = transitionTimeout;
 exports.classNamesShape = exports.timeoutsShape = void 0;
 
-var _propTypes = _interopRequireDefault(require$$0);
+var _propTypes = _interopRequireDefault(propTypes);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -3581,7 +2395,7 @@ var Transition_1 = createCommonjsModule(function (module, exports) {
 exports.__esModule = true;
 exports.default = exports.EXITING = exports.ENTERED = exports.ENTERING = exports.EXITED = exports.UNMOUNTED = void 0;
 
-var PropTypes$$1 = _interopRequireWildcard(require$$0);
+var PropTypes$$1 = _interopRequireWildcard(propTypes);
 
 var _react = _interopRequireDefault(React__default);
 
@@ -4191,7 +3005,7 @@ var CSSTransition_1 = createCommonjsModule(function (module, exports) {
 exports.__esModule = true;
 exports.default = void 0;
 
-var PropTypes$$1 = _interopRequireWildcard(require$$0);
+var PropTypes$$1 = _interopRequireWildcard(propTypes);
 
 var _addClass = _interopRequireDefault(addClass_1);
 
@@ -4223,7 +3037,7 @@ var removeClass$$1 = function removeClass$$1(node, classes) {
   });
 };
 
-var propTypes = process.env.NODE_ENV !== "production" ? _extends({}, _Transition.default.propTypes, {
+var propTypes$$1 = process.env.NODE_ENV !== "production" ? _extends({}, _Transition.default.propTypes, {
   /**
    * The animation classNames applied to the component as it enters, exits or has finished the transition.
    * A single name can be provided and it will be suffixed for each stage: e.g.
@@ -4478,7 +3292,7 @@ function (_React$Component) {
   return CSSTransition;
 }(_react.default.Component);
 
-CSSTransition.propTypes = process.env.NODE_ENV !== "production" ? propTypes : {};
+CSSTransition.propTypes = process.env.NODE_ENV !== "production" ? propTypes$$1 : {};
 var _default = CSSTransition;
 exports.default = _default;
 module.exports = exports["default"];
@@ -4649,7 +3463,7 @@ var TransitionGroup_1 = createCommonjsModule(function (module, exports) {
 exports.__esModule = true;
 exports.default = void 0;
 
-var _propTypes = _interopRequireDefault(require$$0);
+var _propTypes = _interopRequireDefault(propTypes);
 
 var _react = _interopRequireDefault(React__default);
 
@@ -4673,7 +3487,7 @@ var values = Object.values || function (obj) {
   });
 };
 
-var propTypes = process.env.NODE_ENV !== "production" ? {
+var propTypes$$1 = process.env.NODE_ENV !== "production" ? {
   /**
    * `<TransitionGroup>` renders a `<div>` by default. You can change this
    * behavior by providing a `component` prop.
@@ -4838,7 +3652,7 @@ function (_React$Component) {
 TransitionGroup.childContextTypes = {
   transitionGroup: _propTypes.default.object.isRequired
 };
-TransitionGroup.propTypes = process.env.NODE_ENV !== "production" ? propTypes : {};
+TransitionGroup.propTypes = process.env.NODE_ENV !== "production" ? propTypes$$1 : {};
 TransitionGroup.defaultProps = defaultProps;
 
 var _default = (0, reactLifecyclesCompat_es.polyfill)(TransitionGroup);
@@ -4854,7 +3668,7 @@ var ReplaceTransition_1 = createCommonjsModule(function (module, exports) {
 exports.__esModule = true;
 exports.default = void 0;
 
-var _propTypes = _interopRequireDefault(require$$0);
+var _propTypes = _interopRequireDefault(propTypes);
 
 var _react = _interopRequireDefault(React__default);
 
@@ -4868,7 +3682,7 @@ function _objectWithoutPropertiesLoose(source, excluded) { if (source == null) r
 
 function _inheritsLoose(subClass, superClass) { subClass.prototype = Object.create(superClass.prototype); subClass.prototype.constructor = subClass; subClass.__proto__ = superClass; }
 
-var propTypes = process.env.NODE_ENV !== "production" ? {
+var propTypes$$1 = process.env.NODE_ENV !== "production" ? {
   in: _propTypes.default.bool.isRequired,
   children: function children(props, propName) {
     if (_react.default.Children.count(props[propName]) !== 2) return new Error("\"" + propName + "\" must be exactly two transition components.");
@@ -4996,7 +3810,7 @@ function (_React$Component) {
   return ReplaceTransition;
 }(_react.default.Component);
 
-ReplaceTransition.propTypes = process.env.NODE_ENV !== "production" ? propTypes : {};
+ReplaceTransition.propTypes = process.env.NODE_ENV !== "production" ? propTypes$$1 : {};
 var _default = ReplaceTransition;
 exports.default = _default;
 module.exports = exports["default"];
@@ -5034,6 +3848,9 @@ var keyCodes = {
     ESC: 27,
     ENTER: 13
 };
+//# sourceMappingURL=keyCodes.js.map
+
+//# sourceMappingURL=index.js.map
 
 var css$g = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.SidePanel-module_blocker__3mk7f {\n  z-index: 1000001;\n  position: fixed;\n  top: 0;\n  font-size: 1em;\n  width: 100%;\n  height: 100%;\n  background-color: rgba(255, 255, 255, 0.8); }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_enter__2P2sY .SidePanel-module_panel__1qcur {\n    width: 0; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enter__2P2sY .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 0; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enter__2P2sY .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 0; }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_enterActive__25mya .SidePanel-module_panel__1qcur {\n    width: 800px;\n    transition: width 0.5s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enterActive__25mya .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 1;\n      transition: opacity 0.4s linear 0.3s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_enterActive__25mya .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 1192px; }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_leave__3aDrT .SidePanel-module_panel__1qcur {\n    width: 800px; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leave__3aDrT .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 1; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leave__3aDrT .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 1192px; }\n  .SidePanel-module_blocker__3mk7f.SidePanel-module_leaveActive__3NI4B .SidePanel-module_panel__1qcur {\n    width: 0;\n    transition: width 0.5s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leaveActive__3NI4B .SidePanel-module_panel__1qcur .SidePanel-module_opacity__1iCfi {\n      opacity: 0;\n      transition: opacity 0.4s; }\n    .SidePanel-module_blocker__3mk7f.SidePanel-module_leaveActive__3NI4B .SidePanel-module_panel__1qcur.SidePanel-module_wide__5wF2t {\n      width: 0; }\n  .SidePanel-module_blocker__3mk7f .SidePanel-module_component__1ocql {\n    position: fixed;\n    bottom: 0;\n    left: 0;\n    height: calc(100% - 46px);\n    background-color: #fff;\n    width: 25vw;\n    min-width: 620px;\n    box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);\n    transition: width 0.8s; }\n";
 var styles$h = {"blocker":"SidePanel-module_blocker__3mk7f","enter":"SidePanel-module_enter__2P2sY","panel":"SidePanel-module_panel__1qcur","opacity":"SidePanel-module_opacity__1iCfi","wide":"SidePanel-module_wide__5wF2t","enterActive":"SidePanel-module_enterActive__25mya","leave":"SidePanel-module_leave__3aDrT","leaveActive":"SidePanel-module_leaveActive__3NI4B","component":"SidePanel-module_component__1ocql"};
@@ -5107,6 +3924,9 @@ var SidePanel = /** @class */ (function (_super) {
     };
     return SidePanel;
 }(ComponentBase));
+//# sourceMappingURL=SidePanel.js.map
+
+//# sourceMappingURL=index.js.map
 
 var css$h = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Tag-module_component__2Ut0y {\n  display: flex;\n  flex-flow: row nowrap;\n  justify-content: flex-end;\n  padding: 5px 0 5px 10px;\n  height: 30px;\n  color: #fff;\n  background-color: #6e818a;\n  font-weight: 700;\n  border-radius: 3px;\n  font-size: 1.4rem;\n  align-items: center; }\n  .Tag-module_component__2Ut0y:hover {\n    box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5); }\n";
 var styles$i = {"component":"Tag-module_component__2Ut0y"};
@@ -5125,6 +3945,11 @@ var Tag = /** @class */ (function (_super) {
     };
     return Tag;
 }(ComponentBase));
+//# sourceMappingURL=Tag.js.map
+
+//# sourceMappingURL=index.js.map
+
+//# sourceMappingURL=index.js.map
 
 exports.Label = Label;
 exports.Title = Title;
