@@ -6,11 +6,13 @@ declare class GeneralInputProperties extends ComponentBaseProperties {
 }
 interface GeneralInputState extends ComponentBaseState {
     isButton?: boolean;
+    isFocus?: boolean;
 }
 export declare class GeneralInput extends ComponentBase<GeneralInputProperties, GeneralInputState> {
     state: GeneralInputState;
     HandlerEnter: () => void;
     HandlerMouseLeave: () => void;
+    HandlerFocus: () => void;
     render(): JSX.Element;
 }
 export {};

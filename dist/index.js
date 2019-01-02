@@ -310,7 +310,7 @@ var Icon = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$5 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Button-module_component__1-G0j {\n  height: 30px;\n  border-radius: 3px;\n  box-shadow: 0 5px 15px 0 rgba(0, 173, 238, 0.15);\n  font-size: 14px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center; }\n\n.Button-module_regularFixed__RUQjA {\n  width: 120px; }\n\n.Button-module_fullWidth__3FZAe {\n  width: 100%; }\n\n.Button-module_contentWidth__2xs3y {\n  width: unset; }\n\n.Button-module_regular__5w0aR {\n  background-color: #00adee;\n  color: #fff; }\n\n.Button-module_secondary__2WKbk {\n  background-color: #60c5bb;\n  color: #fff; }\n\n.Button-module_stroke__2OI22 {\n  background-color: #fff;\n  border: solid 1px #00adee;\n  color: #00adee; }\n  .Button-module_stroke__2OI22:hover {\n    color: #fff;\n    background-color: #00adee; }\n\n.Button-module_roundStrokeIcon__2h9D- {\n  width: 30px;\n  border-radius: 50%;\n  border: 2px solid #00adee;\n  justify-content: center; }\n\n.Button-module_active__2_Pre {\n  background: #2e4049; }\n\n.Button-module_disabled__3qbwx {\n  background: #d6dddf;\n  opacity: 0.3; }\n\n.Button-module_darkTheme__KwnA-.Button-module_component__1-G0j {\n  height: 40px;\n  font-weight: 700; }\n\n.Button-module_darkTheme__KwnA-.Button-module_roundStrokeIcon__2h9D- {\n  height: 30px; }\n\n.Button-module_small__1YOJT {\n  height: 14px; }\n";
+var css$5 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Button-module_component__1-G0j {\n  height: 30px;\n  border-radius: 3px;\n  box-shadow: 0 5px 15px 0 rgba(0, 173, 238, 0.15);\n  font-size: 14px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center; }\n\n.Button-module_regularFixed__RUQjA {\n  width: 120px; }\n\n.Button-module_fullWidth__3FZAe {\n  width: 100%; }\n\n.Button-module_contentWidth__2xs3y {\n  width: unset; }\n\n.Button-module_regular__5w0aR {\n  background-color: #00adee;\n  color: #fff; }\n\n.Button-module_secondary__2WKbk {\n  background-color: #60c5bb;\n  color: #fff; }\n\n.Button-module_stroke__2OI22 {\n  background-color: #fff;\n  border: solid 1px #00adee;\n  color: #00adee; }\n  .Button-module_stroke__2OI22:hover {\n    color: #fff;\n    background-color: #00adee; }\n\n.Button-module_roundStrokeIcon__2h9D- {\n  width: 30px;\n  border-radius: 50%;\n  border: 2px solid #00adee;\n  justify-content: center; }\n\n.Button-module_active__2_Pre {\n  background: #2e4049; }\n\n.Button-module_disabled__3qbwx {\n  background: #d6dddf;\n  opacity: 0.3; }\n\n.Button-module_darkTheme__KwnA-.Button-module_component__1-G0j {\n  height: 40px;\n  font-weight: 700; }\n\n.Button-module_darkTheme__KwnA-.Button-module_roundStrokeIcon__2h9D- {\n  height: 30px; }\n\n.Button-module_small__1YOJT {\n  background-color: #00adee;\n  color: #fff; }\n  .Button-module_small__1YOJT.Button-module_component__1-G0j {\n    height: 20px;\n    padding: 0 10px; }\n";
 var styles$4 = {"component":"Button-module_component__1-G0j","regularFixed":"Button-module_regularFixed__RUQjA","fullWidth":"Button-module_fullWidth__3FZAe","contentWidth":"Button-module_contentWidth__2xs3y","regular":"Button-module_regular__5w0aR","secondary":"Button-module_secondary__2WKbk","stroke":"Button-module_stroke__2OI22","roundStrokeIcon":"Button-module_roundStrokeIcon__2h9D-","active":"Button-module_active__2_Pre","disabled":"Button-module_disabled__3qbwx","darkTheme":"Button-module_darkTheme__KwnA-","small":"Button-module_small__1YOJT"};
 styleInject(css$5);
 
@@ -322,6 +322,7 @@ var Button = /** @class */ (function (_super) {
     Button.prototype.render = function () {
         var skinClass = styles$4[this.props.skin ? this.props.skin : ""];
         var widthClass = styles$4[this.props.width ? this.props.width : ""];
+        console.log(this.props.width);
         var darkThemeClass = styles$4.darkTheme;
         var buttonClass = classnames(styles$4.component, this.props.componentClasses, skinClass, widthClass, darkThemeClass);
         return (React.createElement("button", { className: buttonClass, onClick: this.props.onClick }, this.props.children));
@@ -561,7 +562,7 @@ var AutoFill = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=InputAutofill.js.map
 
-var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative;\n  margin-top: -14px; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 20px;\n  top: 0; }\n";
+var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative;\n  margin-top: -14px; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 20px;\n  top: 2px; }\n";
 var styles$a = {"component":"GeneralInput-module_component__330am","input":"GeneralInput-module_input__1avBH","large":"GeneralInput-module_large__1t8F4","medium":"GeneralInput-module_medium__N-uX-","icon":"GeneralInput-module_icon__2-GM9","btn":"GeneralInput-module_btn__2hRkg"};
 styleInject(css$b);
 
@@ -577,13 +578,17 @@ var GeneralInput = /** @class */ (function (_super) {
     function GeneralInput() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
-            isButton: false
+            isButton: false,
+            isFocus: false
         };
         _this.HandlerEnter = function () {
             _this.setState({ isButton: !_this.state.isButton });
         };
         _this.HandlerMouseLeave = function () {
             _this.setState({ isButton: !_this.state.isButton });
+        };
+        _this.HandlerFocus = function () {
+            _this.setState({ isFocus: !_this.state.isFocus });
         };
         return _this;
     }
@@ -592,11 +597,13 @@ var GeneralInput = /** @class */ (function (_super) {
         var btnComponent = this.state.isButton ? React.createElement("div", { className: styles$a.btn },
             React.createElement(Button, { width: "small" }, "Add")) : '';
         var classNamesInput = classnames(styles$a.input, styles$a[this.props.inputWidth]);
+        var iconOptinal = this.state.isFocus ? React.createElement("div", { className: styles$a.iconAny },
+            React.createElement(Icon, { icon: exports.PriorityIcon.done, iconColor: "grey" })) : '';
         return (React.createElement("div", { className: styles$a.component, onMouseEnter: this.HandlerEnter, onMouseLeave: this.HandlerMouseLeave },
-            React.createElement("input", { className: classNamesInput, type: "text" }),
-            React.createElement("div", { className: styles$a.icon },
-                iconComponent,
-                btnComponent)));
+            React.createElement("input", { className: classNamesInput, type: "text", onFocus: this.HandlerFocus }),
+            React.createElement("div", { className: styles$a.icon }, iconComponent),
+            btnComponent,
+            iconOptinal));
     };
     return GeneralInput;
 }(ComponentBase));
