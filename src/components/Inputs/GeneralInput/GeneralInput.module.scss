@@ -1,1 +1,42 @@
 @import "../../../styles/vars";
+
+.component{
+position: relative;
+margin-top: -14px;
+}
+.input{
+    outline-color: #00adee;
+    outline-width: 1px;
+    border: none;
+   
+    &:hover {
+        
+    }
+    &:focus{
+        
+    }
+}
+.large{
+    width: 356px;
+    height: 30px;
+    border: 1px solid #bfd0d7;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.medium{
+    width:150px;
+    height: 30px;
+    border: 1px solid #bfd0d7;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.icon{
+    position: absolute;
+    right: 10px;
+    top:3px;
+}
+.btn{
+    position: absolute;
+    right: 20px;
+    top:0;
+}

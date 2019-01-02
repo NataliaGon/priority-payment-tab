@@ -78,7 +78,7 @@ class App extends Component {
                 </RowPanel>
                 <RowPanel paddingTop={true}>
                   <Select options={optionDropDown} />
-                  <AutoFill />
+                  <GeneralInput inputWidth="large" clearable={true}/>
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />
