@@ -3,7 +3,7 @@ import {
   SidePanel,
   StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select,
-  // GeneralInput,
+  GeneralInput,
   PriorityIcon, AutoFill
 } from 'priority-style-react';
 import { optionDropDown } from './optionDropDown';
@@ -38,14 +38,14 @@ class App extends Component {
               <RowPanel alignItems="space-between">
                 <Container>
                   <CheckBox />
-                  <Label skin="regular-high-contrast">Case Sensitive</Label>
+                  <Label skin="bold">Case Sensitive</Label>
                 </Container>
-                <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
+                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
               </RowPanel>
             </StackPanel>
 
 
-            <StackPanel skin="silver">
+            {/* <StackPanel skin="light">
               <RowPanel>
                 <Title>Advanced Search</Title>
                 <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
@@ -60,52 +60,83 @@ class App extends Component {
                 </Container>
                 <LineInput />
               </RowPanel>
-            </StackPanel>
+            </StackPanel> */}
 
 
-            <StackPanel>
+            {/* <StackPanel>
               <RowPanel alignItems="space-between">
                 <Container>
                   <CheckBox />
-                  <Label skin="regular-high-contrast">Case Sensitive</Label>
+                  <Label skin="bold">Case Sensitive</Label>
                 </Container>
-                <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
+                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
+              </RowPanel>
+            </StackPanel> */}
+
+
+             <StackPanel >
+                <Container ContainerWidth="fullWidth" iconShow={true}>
+                  <RowPanel>
+                    <Label skin="regular-high-contrast">Customer No.</Label>
+                  </RowPanel>
+                  <RowPanel>
+                    <Select options={optionDropDown} />
+                    <AutoFill />
+                  </RowPanel>
+                  <WrapPanel>
+                    <Tag text="test" />
+                    <Tag text="test" />
+                  </WrapPanel>
+                </Container>
+              </StackPanel>
+
+              <StackPanel>
+              <RowPanel alignItems="space-between">
+                <Container>
+                  <CheckBox />
+                  <Label skin="bold">Case Sensitive</Label>
+                </Container>
+                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
               </RowPanel>
             </StackPanel>
+           
+              <StackPanel >
+                <Container ContainerWidth="fullWidthActive" iconShow={true} iconReorder={true}>
+                  <RowPanel>
+                    <Label skin="regular-high-contrast">Customer No.</Label>
+                  </RowPanel>
+                  <RowPanel>
+                    <Select options={optionDropDown} />
+                    <AutoFill />
+                  </RowPanel>
+                  <WrapPanel>
+                    <Tag text="test" />
+                    <Tag text="test" />
+                  </WrapPanel>
+                </Container>
+              </StackPanel>
+           
 
-            <StackPanel skin="light">
-            {/* <Icon icon={PriorityIcon.closeSmall} visibility={true}></Icon> */}
+
+            {/* <StackPanel skin="light">
               <RowPanel>
                 <Label skin="regular-high-contrast">Customer No.</Label>
               </RowPanel>
               <RowPanel>
-                <Select options={optionDropDown}/>
-                <AutoFill />
+
               </RowPanel>
               <WrapPanel>
                 <Tag text="test" />
                 <Tag text="test" />
               </WrapPanel>
             </StackPanel>
+
             <StackPanel skin="light">
               <RowPanel>
                 <Label skin="regular-high-contrast">Customer No.</Label>
               </RowPanel>
               <RowPanel>
-
-
-              </RowPanel>
-              <WrapPanel>
-                <Tag text="test" />
-                <Tag text="test" />
-              </WrapPanel>
-            </StackPanel>
-            <StackPanel skin="light">
-              <RowPanel>
-                <Label skin="regular-high-contrast">Customer No.</Label>
-              </RowPanel>
-              <RowPanel>
-                {/* <GeneralInput/> */}
+                <GeneralInput/>
 
               </RowPanel>
               <WrapPanel>
@@ -121,14 +152,15 @@ class App extends Component {
                   <Icon icon={PriorityIcon.clear} />
                   <Label skin="regular-high-contrast">Clear Search</Label>
                 </Container>
-                <Container width="250px" alignItems="spaceBetween">
+                <Container ContainerWidth="250px" alignItems="spaceBetween">
                   <Button skin="secondary" width="regularFixed">Save</Button>
                   <Button skin="regular" width="regularFixed">Apply</Button>
                 </Container>
               </RowPanel>
             </StackPanel>
-          </ScrollPanel>
-        </SidePanel>
+         */}
+           </ScrollPanel>
+        </SidePanel> 
       </div>
     );
   }

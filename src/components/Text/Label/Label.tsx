@@ -3,15 +3,13 @@ import classNames from 'classnames';
 import styles from "./Label.module.scss";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../base-classes";
 
-type LabelSkin = "large" | "regular" | "regular-high-contrast" | "small";
+type LabelSkin = "large" | "regular" | "regular-high-contrast" | "small" | "bold" | "small-bold";
 type LabelPadding = "regular" | "double";
 
 interface LabelProperties extends ComponentBaseProperties {
   skin?: LabelSkin;
   labelPadding?: LabelPadding;
-  textHref?: string;
-  // textColor?:string;
-  
+  textHref?: string; 
 }
 
 interface LabelState extends ComponentBaseState {

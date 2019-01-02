@@ -4,6 +4,7 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    position: relative;
 }
 
 .flexStart {
@@ -16,4 +17,28 @@
 
 .spaceBetween {
     justify-content: space-between;
+}
+.fullWidth{
+    width:100%;
+    flex-direction: column;
+    // border: 1px solid $blue;
+    background-color: $snow;
+    border-radius:3px; 
+    padding: 10px;
+}
+.fullWidthActive{
+    width:100%;
+    flex-direction: column;
+    border: 1px solid $blue;
+    background-color: #F7FCFE;
+    border-radius:3px; 
+    padding: 10px;
+}
+.regular{
+    width:auto;
+}
+.iconReorder{
+    position: absolute;
+    left:-12px;
+    top:20px;
 }

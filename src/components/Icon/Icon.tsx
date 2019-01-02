@@ -29,9 +29,10 @@ export  class Icon extends ComponentBase<IconProperties, IconState> {
     
   }
   static defaultProps = {
-    visibility:true,
+    visibility:false,
     position:false
   };
+ 
 
   public render() {
 
@@ -52,13 +53,16 @@ export  class Icon extends ComponentBase<IconProperties, IconState> {
       }
     }
 
-    let iconVisibilityClass=styles.display;
-    let iconPositionClass=''
-    if (!this.props.visibility){
-      iconVisibilityClass=styles.displayOnHover;
-    }
+    let iconVisibilityClass="";
+    let iconPositionClass="";
+
+
+  
     if (this.props.position){
-      iconPositionClass=styles.position;
+      iconPositionClass=styles.positionConer;
+    }
+    if (this.props.visibility){
+      iconVisibilityClass=styles.displayOnHover;
     }
     const iconClass = classNames(styles.component, this.props.icon, iconColorClass, iconVisibilityClass, iconPositionClass);
     const iconCounter = this.state && this.state.counterValue ? <IconCounter count={this.state.counterValue} /> : null;

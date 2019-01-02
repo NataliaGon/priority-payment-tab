@@ -21,11 +21,13 @@
 .display{
     display:block;
 }
-.displayOnHover{
+
+.positionConer{
     display:none;
-}
-.position{
     position: absolute;
     right: 5px;
     top:5px;
+}
+.displayOnHover{
+    display: block;
 }

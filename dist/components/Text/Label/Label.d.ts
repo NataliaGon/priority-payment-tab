@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../base-classes";
-declare type LabelSkin = "large" | "regular" | "regular-high-contrast" | "small";
+declare type LabelSkin = "large" | "regular" | "regular-high-contrast" | "small" | "bold" | "small-bold";
 declare type LabelPadding = "regular" | "double";
 interface LabelProperties extends ComponentBaseProperties {
     skin?: LabelSkin;
