@@ -10,6 +10,7 @@ interface IconProperties extends ComponentBaseProperties {
   icon?: PriorityIcon;
   iconColor?: IconColor;
   counterValue?: number;
+  visibility?: boolean;
 }
 
 interface IconState extends ComponentBaseState {
@@ -44,8 +45,8 @@ export  class Icon extends ComponentBase<IconProperties, IconState> {
         iconColorClass = styles.grey;
       }
     }
-
-    const iconClass = classNames(styles.component, this.props.icon, iconColorClass);
+    // const iconVisibilityClass=;
+    const iconClass = classNames(styles.component, this.props.icon, iconColorClass, styles.display);
     const iconCounter = this.state && this.state.counterValue ? <IconCounter count={this.state.counterValue} /> : null;
 
     return (

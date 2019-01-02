@@ -231,8 +231,8 @@ var Title = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$3 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Icon-module_component__rzWUk {\n  width: 2.4rem;\n  height: 2.4rem;\n  font-size: 2.4rem;\n  position: relative; }\n\n.Icon-module_white__3P7zB {\n  color: #fff; }\n\n.Icon-module_blue__1-tpS {\n  color: #00adee; }\n\n.Icon-module_grey__18aQ2 {\n  color: #788e97; }\n\n.Icon-module_black__1tCtr {\n  color: #212529; }\n";
-var styles$2 = {"component":"Icon-module_component__rzWUk","white":"Icon-module_white__3P7zB","blue":"Icon-module_blue__1-tpS","grey":"Icon-module_grey__18aQ2","black":"Icon-module_black__1tCtr"};
+var css$3 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Icon-module_component__rzWUk {\n  width: 2.4rem;\n  height: 2.4rem;\n  font-size: 2.4rem;\n  position: relative; }\n\n.Icon-module_white__3P7zB {\n  color: #fff; }\n\n.Icon-module_blue__1-tpS {\n  color: #00adee; }\n\n.Icon-module_grey__18aQ2 {\n  color: #788e97; }\n\n.Icon-module_black__1tCtr {\n  color: #212529; }\n\n.Icon-module_display__1nxrK {\n  display: none; }\n";
+var styles$2 = {"component":"Icon-module_component__rzWUk","white":"Icon-module_white__3P7zB","blue":"Icon-module_blue__1-tpS","grey":"Icon-module_grey__18aQ2","black":"Icon-module_black__1tCtr","display":"Icon-module_display__1nxrK"};
 styleInject(css$3);
 
 var css$4 = ".IconCounter-module_component__3jDno {\n  position: absolute;\n  top: -5px;\n  left: -5px;\n  border-radius: 50px;\n  min-width: 15px;\n  height: 15px;\n  background-color: #00adee;\n  color: white;\n  font-size: 12px;\n  font-family: 'Roboto';\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.IconCounter-module_component__3jDno span {\n  padding: 2.5px; }\n";
@@ -281,7 +281,8 @@ var Icon = /** @class */ (function (_super) {
                 iconColorClass = styles$2.grey;
             }
         }
-        var iconClass = classnames(styles$2.component, this.props.icon, iconColorClass);
+        // const iconVisibilityClass=;
+        var iconClass = classnames(styles$2.component, this.props.icon, iconColorClass, styles$2.display);
         var iconCounter = this.state && this.state.counterValue ? createElement(IconCounter, { count: this.state.counterValue }) : null;
         return (createElement("div", { className: iconClass }, iconCounter));
     };
@@ -515,11 +516,11 @@ var AutoFill = /** @class */ (function (_super) {
             fontSize: '90%',
             overflow: 'auto',
             height: 'auto',
-            maxHeight: '100px',
             position: 'absolute',
             left: '0',
             zIndex: '5'
         };
+        // const menuStyles: any=styles.menuStyles;
         return (createElement("div", { className: styles$9.component },
             createElement(Autocomplete, { items: [
                     { id: 'foo', label: 'foo' },
@@ -540,6 +541,27 @@ var AutoFill = /** @class */ (function (_super) {
     };
     return AutoFill;
 }(ComponentBase));
+//# sourceMappingURL=InputAutofill.js.map
+
+var GeneralInputProperties = /** @class */ (function (_super) {
+    __extends(GeneralInputProperties, _super);
+    function GeneralInputProperties() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    return GeneralInputProperties;
+}(ComponentBaseProperties));
+var GeneralInput = /** @class */ (function (_super) {
+    __extends(GeneralInput, _super);
+    function GeneralInput() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    GeneralInput.prototype.render = function () {
+        return (createElement("div", null,
+            createElement("input", { type: "text" })));
+    };
+    return GeneralInput;
+}(ComponentBase));
+//# sourceMappingURL=GeneralInput.js.map
 
 //# sourceMappingURL=index.js.map
 
@@ -3965,5 +3987,5 @@ var Tag = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-export { Label, Title, Icon, Button, CheckBox, LineInput, Select, OptionItem, AutoFill, StackPanel, WrapPanel, RowPanel, ScrollPanel, Container, SidePanel, Tag, PriorityIcon };
+export { Label, Title, Icon, Button, CheckBox, LineInput, Select, OptionItem, AutoFill, GeneralInput, StackPanel, WrapPanel, RowPanel, ScrollPanel, Container, SidePanel, Tag, PriorityIcon };
 //# sourceMappingURL=index.es.js.map

@@ -5,6 +5,7 @@ interface IconProperties extends ComponentBaseProperties {
     icon?: PriorityIcon;
     iconColor?: IconColor;
     counterValue?: number;
+    visibility?: boolean;
 }
 interface IconState extends ComponentBaseState {
     counterValue?: number;

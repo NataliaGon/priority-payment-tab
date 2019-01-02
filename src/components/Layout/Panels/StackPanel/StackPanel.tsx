@@ -11,6 +11,7 @@ type StackPanelSkin = "default" | "silver" | "light" | "dark" | "padded-panel";
 class StackPanelProperties extends ComponentBaseProperties {
   skin?: StackPanelSkin = "default";
   className?: string
+ 
 }
 
 interface StackPanelState extends ComponentBaseState {
