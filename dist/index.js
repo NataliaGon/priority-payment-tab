@@ -431,6 +431,7 @@ var OptionItem = /** @class */ (function (_super) {
     };
     return OptionItem;
 }(ComponentBase));
+//# sourceMappingURL=OptionItem.js.map
 
 var Select = /** @class */ (function (_super) {
     __extends(Select, _super);
@@ -485,6 +486,7 @@ var Select = /** @class */ (function (_super) {
     };
     return Select;
 }(ComponentBase));
+//# sourceMappingURL=Select.js.map
 
 //# sourceMappingURL=index.js.map
 
@@ -504,7 +506,7 @@ var AutoFill = /** @class */ (function (_super) {
     function AutoFill() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
-            value: "Search"
+            value: "bar"
         };
         return _this;
     }
@@ -519,6 +521,7 @@ var AutoFill = /** @class */ (function (_super) {
             fontSize: '90%',
             overflow: 'auto',
             height: 'auto',
+            maxHeight: '100px',
             position: 'absolute',
             left: '0',
             zIndex: '5'
@@ -528,6 +531,9 @@ var AutoFill = /** @class */ (function (_super) {
                     { id: 'foo', label: 'foo' },
                     { id: 'bar', label: 'bar' },
                     { id: 'baz', label: 'baz' },
+                    { id: 'fo', label: 'fo' },
+                    { id: 'br', label: 'ba' },
+                    { id: 'bz', label: 'ba' },
                 ], shouldItemRender: function (item, value) { return item.label.toLowerCase().indexOf(value.toLowerCase()) > -1; }, getItemValue: function (item) { return item.label; }, renderItem: function (item, highlighted) {
                     return React.createElement("div", { key: item.id, style: { backgroundColor: highlighted ? '#D9F6F9' : 'transparent' } }, item.label);
                 }, renderInputComponent: function () {
@@ -540,7 +546,6 @@ var AutoFill = /** @class */ (function (_super) {
     };
     return AutoFill;
 }(ComponentBase));
-//# sourceMappingURL=InputAutofill.js.map
 
 //# sourceMappingURL=index.js.map
 

@@ -24,22 +24,12 @@ export class AutoFill extends ComponentBase<
   > {
 
   state: InputAutoState = {
-    value: "Search"
+    value: "bar"
   }
   public render() {
     const Autocomplete = require("react-autocomplete") as any;
-    const menuStyle: any={
-      borderRadius: '3px',
-      boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
-      background: 'rgba(255, 255, 255)',
-      padding: '2px 0',
-      fontSize: '90%',
-      overflow: 'auto',
-      height: 'auto',
-      position: 'absolute',
-      left:'0',
-      zIndex:'5'
-    }
+
+    const menuStyles: any=styles.menuStyles;
     return (
       <div className={styles.component}>
         <Autocomplete
@@ -47,6 +37,9 @@ export class AutoFill extends ComponentBase<
             { id: 'foo', label: 'foo' },
             { id: 'bar', label: 'bar' },
             { id: 'baz', label: 'baz' },
+            { id: 'fo', label: 'fo' },
+            { id: 'br', label: 'ba' },
+            { id: 'bz', label: 'ba' },
           ]}
           shouldItemRender={(item: any, value: any) => item.label.toLowerCase().indexOf(value.toLowerCase()) > -1}
           getItemValue={(item: any) => item.label}
@@ -65,7 +58,7 @@ export class AutoFill extends ComponentBase<
             </div>
           }
           renderMenu={(items: any) =>
-           <div style={ menuStyle } children={items}/>
+           <div style={ menuStyles } children={items}/>
           }
           value={this.state.value}
           onChange={(e: any) => this.setState({ value: e.target.value })}
