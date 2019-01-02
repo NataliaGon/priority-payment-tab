@@ -11,6 +11,7 @@ interface IconProperties extends ComponentBaseProperties {
   iconColor?: IconColor;
   counterValue?: number;
   visibility?: boolean;
+  position?: boolean;
 }
 
 interface IconState extends ComponentBaseState {
@@ -25,7 +26,12 @@ export  class Icon extends ComponentBase<IconProperties, IconState> {
     if (properties.counterValue) {
       this.setState({ counterValue: properties.counterValue });
     }
+    
   }
+  static defaultProps = {
+    visibility:true,
+    position:false
+  };
 
   public render() {
 
@@ -45,8 +51,16 @@ export  class Icon extends ComponentBase<IconProperties, IconState> {
         iconColorClass = styles.grey;
       }
     }
-    // const iconVisibilityClass=;
-    const iconClass = classNames(styles.component, this.props.icon, iconColorClass, styles.display);
+
+    let iconVisibilityClass=styles.display;
+    let iconPositionClass=''
+    if (!this.props.visibility){
+      iconVisibilityClass=styles.displayOnHover;
+    }
+    if (this.props.position){
+      iconPositionClass=styles.position;
+    }
+    const iconClass = classNames(styles.component, this.props.icon, iconColorClass, iconVisibilityClass, iconPositionClass);
     const iconCounter = this.state && this.state.counterValue ? <IconCounter count={this.state.counterValue} /> : null;
 
     return (

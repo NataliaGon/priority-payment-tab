@@ -74,7 +74,7 @@ class App extends Component {
             </StackPanel>
 
             <StackPanel skin="light">
-            <Icon icon={PriorityIcon.closeSmall}></Icon>
+            {/* <Icon icon={PriorityIcon.closeSmall} visibility={true}></Icon> */}
               <RowPanel>
                 <Label skin="regular-high-contrast">Customer No.</Label>
               </RowPanel>

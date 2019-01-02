@@ -238,8 +238,8 @@ var Title = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$3 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Icon-module_component__rzWUk {\n  width: 2.4rem;\n  height: 2.4rem;\n  font-size: 2.4rem;\n  position: relative; }\n\n.Icon-module_white__3P7zB {\n  color: #fff; }\n\n.Icon-module_blue__1-tpS {\n  color: #00adee; }\n\n.Icon-module_grey__18aQ2 {\n  color: #788e97; }\n\n.Icon-module_black__1tCtr {\n  color: #212529; }\n\n.Icon-module_display__1nxrK {\n  display: none; }\n";
-var styles$2 = {"component":"Icon-module_component__rzWUk","white":"Icon-module_white__3P7zB","blue":"Icon-module_blue__1-tpS","grey":"Icon-module_grey__18aQ2","black":"Icon-module_black__1tCtr","display":"Icon-module_display__1nxrK"};
+var css$3 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Icon-module_component__rzWUk {\n  width: 2.4rem;\n  height: 2.4rem;\n  font-size: 2.4rem;\n  position: relative; }\n\n.Icon-module_white__3P7zB {\n  color: #fff; }\n\n.Icon-module_blue__1-tpS {\n  color: #00adee; }\n\n.Icon-module_grey__18aQ2 {\n  color: #788e97; }\n\n.Icon-module_black__1tCtr {\n  color: #212529; }\n\n.Icon-module_display__1nxrK {\n  display: block; }\n\n.Icon-module_displayOnHover__VY9Wq {\n  display: none; }\n\n.Icon-module_position__3oWgN {\n  position: absolute;\n  right: 10px;\n  top: 5px; }\n";
+var styles$2 = {"component":"Icon-module_component__rzWUk","white":"Icon-module_white__3P7zB","blue":"Icon-module_blue__1-tpS","grey":"Icon-module_grey__18aQ2","black":"Icon-module_black__1tCtr","display":"Icon-module_display__1nxrK","displayOnHover":"Icon-module_displayOnHover__VY9Wq","position":"Icon-module_position__3oWgN"};
 styleInject(css$3);
 
 var css$4 = ".IconCounter-module_component__3jDno {\n  position: absolute;\n  top: -5px;\n  left: -5px;\n  border-radius: 50px;\n  min-width: 15px;\n  height: 15px;\n  background-color: #00adee;\n  color: white;\n  font-size: 12px;\n  font-family: 'Roboto';\n  display: flex;\n  justify-content: center;\n  align-items: center; }\n\n.IconCounter-module_component__3jDno span {\n  padding: 2.5px; }\n";
@@ -288,10 +288,21 @@ var Icon = /** @class */ (function (_super) {
                 iconColorClass = styles$2.grey;
             }
         }
-        // const iconVisibilityClass=;
-        var iconClass = classnames(styles$2.component, this.props.icon, iconColorClass, styles$2.display);
+        var iconVisibilityClass = styles$2.display;
+        var iconPositionClass = '';
+        if (!this.props.visibility) {
+            iconVisibilityClass = styles$2.displayOnHover;
+        }
+        if (this.props.position) {
+            iconPositionClass = styles$2.position;
+        }
+        var iconClass = classnames(styles$2.component, this.props.icon, iconColorClass, iconVisibilityClass, iconPositionClass);
         var iconCounter = this.state && this.state.counterValue ? React.createElement(IconCounter, { count: this.state.counterValue }) : null;
         return (React.createElement("div", { className: iconClass }, iconCounter));
+    };
+    Icon.defaultProps = {
+        visibility: true,
+        position: false
     };
     return Icon;
 }(ComponentBase));
@@ -571,7 +582,7 @@ var GeneralInput = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.StackPanel-module_component__mRChg {\n  width: 100%;\n  display: flex;\n  flex-flow: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 0 30px;\n  position: relative; }\n  .StackPanel-module_component__mRChg > * {\n    width: 100%; }\n\n.StackPanel-module_transparent__Azr0Q {\n  background-color: transparent; }\n\n.StackPanel-module_default__j2xB8 {\n  background-color: #fff; }\n\n.StackPanel-module_silver__1YQMk {\n  background-color: #ebedee; }\n\n.StackPanel-module_light__3z7gi {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 0 20px 10px; }\n  .StackPanel-module_light__3z7gi:hover, .StackPanel-module_light__3z7gi.StackPanel-module_selected__PgC5l {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.StackPanel-module_dark__2fP6W {\n  background-color: #2e4049;\n  padding: 30px; }\n\n.StackPanel-module_padded-panel__3KL2s {\n  padding: 0 30px; }\n";
+var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.StackPanel-module_component__mRChg {\n  width: 100%;\n  display: flex;\n  flex-flow: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 0 30px;\n  position: relative; }\n\n.StackPanel-module_transparent__Azr0Q {\n  background-color: transparent; }\n\n.StackPanel-module_default__j2xB8 {\n  background-color: #fff; }\n\n.StackPanel-module_silver__1YQMk {\n  background-color: #ebedee; }\n\n.StackPanel-module_light__3z7gi {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 0 20px 10px; }\n  .StackPanel-module_light__3z7gi:hover, .StackPanel-module_light__3z7gi.StackPanel-module_selected__PgC5l {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.StackPanel-module_dark__2fP6W {\n  background-color: #2e4049;\n  padding: 30px; }\n\n.StackPanel-module_padded-panel__3KL2s {\n  padding: 0 30px; }\n";
 var styles$a = {"component":"StackPanel-module_component__mRChg","transparent":"StackPanel-module_transparent__Azr0Q","default":"StackPanel-module_default__j2xB8","silver":"StackPanel-module_silver__1YQMk","light":"StackPanel-module_light__3z7gi","selected":"StackPanel-module_selected__PgC5l","dark":"StackPanel-module_dark__2fP6W","padded-panel":"StackPanel-module_padded-panel__3KL2s"};
 styleInject(css$b);
 
@@ -587,7 +598,20 @@ var StackPanelProperties = /** @class */ (function (_super) {
 var StackPanel = /** @class */ (function (_super) {
     __extends(StackPanel, _super);
     function StackPanel() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.state = {
+            isHover: false,
+            position: false
+        };
+        _this.HandlerEnter = function () {
+            _this.setState({ isHover: !_this.state.isHover });
+            console.log('hello');
+        };
+        _this.HandlerMouseLeave = function () {
+            _this.setState({ isHover: !_this.state.isHover });
+            console.log('goodbuy');
+        };
+        return _this;
     }
     StackPanel.prototype.render = function () {
         var skinClass = "";
@@ -595,7 +619,9 @@ var StackPanel = /** @class */ (function (_super) {
             skinClass = styles$a[this.props.skin];
         }
         var componentClasses = classnames(styles$a.component, this.props.componentClasses, skinClass, this.props.className);
-        return (React.createElement("div", { className: componentClasses }, this.props.children));
+        return (React.createElement("div", { className: componentClasses, onMouseEnter: this.HandlerEnter, onMouseLeave: this.HandlerMouseLeave },
+            React.createElement(Icon, { icon: exports.PriorityIcon.closeSmall, visibility: this.state.isHover, position: true }),
+            this.props.children));
     };
     return StackPanel;
 }(ComponentBase));

@@ -19,5 +19,13 @@
     color:$black;
 }
 .display{
+    display:block;
+}
+.displayOnHover{
     display:none;
+}
+.position{
+    position: absolute;
+    right: 10px;
+    top:5px;
 }

@@ -6,8 +6,13 @@ declare class StackPanelProperties extends ComponentBaseProperties {
     className?: string;
 }
 interface StackPanelState extends ComponentBaseState {
+    isHover?: boolean;
+    position?: boolean;
 }
 export declare class StackPanel extends ComponentBase<StackPanelProperties, StackPanelState> {
+    state: StackPanelState;
+    HandlerEnter: () => void;
+    HandlerMouseLeave: () => void;
     render(): JSX.Element;
 }
 export {};
