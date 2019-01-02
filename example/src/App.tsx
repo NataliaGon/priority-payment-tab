@@ -45,7 +45,7 @@ class App extends Component {
             </StackPanel>
 
 
-            {/* <StackPanel skin="light">
+             <StackPanel skin="light">
               <RowPanel>
                 <Title>Advanced Search</Title>
                 <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
@@ -60,10 +60,9 @@ class App extends Component {
                 </Container>
                 <LineInput />
               </RowPanel>
-            </StackPanel> */}
+            </StackPanel> 
 
-
-            {/* <StackPanel>
+            <StackPanel>
               <RowPanel alignItems="space-between">
                 <Container>
                   <CheckBox />
@@ -71,7 +70,8 @@ class App extends Component {
                 </Container>
                 <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
               </RowPanel>
-            </StackPanel> */}
+            </StackPanel>
+
 
 
              <StackPanel >
@@ -144,7 +144,16 @@ class App extends Component {
                 <Tag text="test" />
               </WrapPanel>
             </StackPanel>
-
+*/}
+            <StackPanel>
+              <RowPanel alignItems="space-between">
+                <Container>
+                  <CheckBox />
+                  <Label skin="bold">Case Sensitive</Label>
+                </Container>
+                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
+              </RowPanel>
+            </StackPanel>
 
             <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
               <RowPanel alignItems="space-between" >
@@ -158,7 +167,7 @@ class App extends Component {
                 </Container>
               </RowPanel>
             </StackPanel>
-         */}
+         
            </ScrollPanel>
         </SidePanel> 
       </div>
