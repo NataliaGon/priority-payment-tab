@@ -4,7 +4,7 @@ declare type AlignItems = "flexStart" | "flexEnd" | "spaceBetween";
 declare class ContainerProperties extends ComponentBaseProperties {
     ContainerWidth?: string;
     alignItems?: AlignItems;
-    iconShow?: boolean;
+    closable?: boolean;
     iconReorder?: boolean;
 }
 interface ContainerState extends ComponentBaseState {
@@ -14,7 +14,7 @@ interface ContainerState extends ComponentBaseState {
 export declare class Container extends ComponentBase<ContainerProperties, ContainerState> {
     state: ContainerState;
     static defaultProps: {
-        iconShow: boolean;
+        closable: boolean;
     };
     HandlerEnter: () => void;
     HandlerMouseLeave: () => void;

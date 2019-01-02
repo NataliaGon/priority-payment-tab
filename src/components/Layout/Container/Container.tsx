@@ -11,7 +11,7 @@ type ContainerWidth = "regular" | "fullWidth" | "";
 class ContainerProperties extends ComponentBaseProperties {
   ContainerWidth?: string;
   alignItems?: AlignItems;
-  iconShow?:boolean;
+  closable?:boolean;
   iconReorder?:boolean;
 }
 
@@ -26,7 +26,7 @@ state:ContainerState={
   isHover:false
 }
 static defaultProps = {
-  iconShow: false
+  closable: false
 
 };
 
@@ -51,7 +51,7 @@ static defaultProps = {
     
     let icon:any="";
     let iconReord:any="";
-    if (this.props.iconShow){
+    if (this.props.closable){
       icon=<Icon icon={PriorityIcon.closeSmall} visibility={this.state.isHover} position={true}/>
     }
     if (this.props.iconReorder){

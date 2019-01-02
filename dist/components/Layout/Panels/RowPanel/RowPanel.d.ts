@@ -3,6 +3,8 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../.
 declare type AlignItems = "flex-start" | "flex-end" | "space-between";
 interface RowPanelProperties extends ComponentBaseProperties {
     alignItems?: AlignItems;
+    paddingTop?: boolean;
+    paddingBottom?: boolean;
 }
 interface RowPanelState extends ComponentBaseState {
 }

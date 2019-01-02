@@ -503,7 +503,7 @@ var Select = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  margin-top: -12px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97;\n    position: relative; }\n    .InputAutofill-module_component__MAOAz div input {\n      width: 100%;\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97;\n      outline-color: #00adee;\n      outline-width: 1px; }\n    .InputAutofill-module_component__MAOAz div div div {\n      height: 30px;\n      width: 336px;\n      margin: 0 10px;\n      line-height: 30px;\n      font-style: normal;\n      padding: 0 10px; }\n      .InputAutofill-module_component__MAOAz div div div:hover {\n        background-color: #D9F6F9; }\n";
+var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  margin-top: -14px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97;\n    position: relative; }\n    .InputAutofill-module_component__MAOAz div input {\n      width: 100%;\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97;\n      outline-color: #00adee;\n      outline-width: 1px; }\n    .InputAutofill-module_component__MAOAz div div div {\n      height: 30px;\n      width: 336px;\n      margin: 0 10px;\n      line-height: 30px;\n      font-style: normal;\n      padding: 0 10px; }\n      .InputAutofill-module_component__MAOAz div div div:hover {\n        background-color: #D9F6F9; }\n";
 var styles$9 = {"component":"InputAutofill-module_component__MAOAz"};
 styleInject(css$a);
 
@@ -583,7 +583,7 @@ var GeneralInput = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.StackPanel-module_component__mRChg {\n  width: 100%;\n  display: flex;\n  flex-flow: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 0 30px;\n  position: relative; }\n\n.StackPanel-module_transparent__Azr0Q {\n  background-color: transparent; }\n\n.StackPanel-module_default__j2xB8 {\n  background-color: #fff; }\n\n.StackPanel-module_silver__1YQMk {\n  background-color: #ebedee; }\n\n.StackPanel-module_snow__3zPSM {\n  background-color: #f4f6f8; }\n\n.StackPanel-module_light__3z7gi {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 0 20px 10px; }\n  .StackPanel-module_light__3z7gi:hover, .StackPanel-module_light__3z7gi.StackPanel-module_selected__PgC5l {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.StackPanel-module_dark__2fP6W {\n  background-color: #2e4049;\n  padding: 30px; }\n\n.StackPanel-module_padded-panel__3KL2s {\n  padding: 0 30px; }\n";
+var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.StackPanel-module_component__mRChg {\n  width: 100%;\n  display: flex;\n  flex-flow: column;\n  justify-content: flex-start;\n  align-items: center;\n  padding: 0 30px;\n  position: relative; }\n\n.StackPanel-module_transparent__Azr0Q {\n  background-color: transparent; }\n\n.StackPanel-module_default__j2xB8 {\n  background-color: #fff; }\n\n.StackPanel-module_silver__1YQMk {\n  background-color: #ebedee; }\n\n.StackPanel-module_snow__3zPSM {\n  background-color: #f4f6f8; }\n\n.StackPanel-module_light__3z7gi {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1; }\n  .StackPanel-module_light__3z7gi:hover, .StackPanel-module_light__3z7gi.StackPanel-module_selected__PgC5l {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.StackPanel-module_dark__2fP6W {\n  background-color: #2e4049;\n  padding: 30px; }\n\n.StackPanel-module_padded-panel__3KL2s {\n  padding: 0 30px; }\n";
 var styles$a = {"component":"StackPanel-module_component__mRChg","transparent":"StackPanel-module_transparent__Azr0Q","default":"StackPanel-module_default__j2xB8","silver":"StackPanel-module_silver__1YQMk","snow":"StackPanel-module_snow__3zPSM","light":"StackPanel-module_light__3z7gi","selected":"StackPanel-module_selected__PgC5l","dark":"StackPanel-module_dark__2fP6W","padded-panel":"StackPanel-module_padded-panel__3KL2s"};
 styleInject(css$b);
 
@@ -634,8 +634,8 @@ var WrapPanel = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=WrapPanel.js.map
 
-var css$d = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.RowPanel-module_component__3wDnh {\n  width: 100%;\n  height: 50px;\n  line-height: 50px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: space-between; }\n\n.RowPanel-module_flex-start__1CNI6 {\n  justify-content: flex-start; }\n\n.RowPanel-module_flex-end__2qD_v {\n  justify-content: flex-end; }\n\n.RowPanel-module_space-between__39IWO {\n  justify-content: space-between; }\n";
-var styles$c = {"component":"RowPanel-module_component__3wDnh","flex-start":"RowPanel-module_flex-start__1CNI6","flex-end":"RowPanel-module_flex-end__2qD_v","space-between":"RowPanel-module_space-between__39IWO"};
+var css$d = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.RowPanel-module_component__3wDnh {\n  width: 100%;\n  line-height: 100%;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: space-between; }\n\n.RowPanel-module_flex-start__1CNI6 {\n  justify-content: flex-start; }\n\n.RowPanel-module_flex-end__2qD_v {\n  justify-content: flex-end; }\n\n.RowPanel-module_space-between__39IWO {\n  justify-content: space-between; }\n\n.RowPanel-module_topPadding__OuthB {\n  padding-top: 10px; }\n\n.RowPanel-module_bottomPadding__2lpOC {\n  padding-bottom: 10px; }\n";
+var styles$c = {"component":"RowPanel-module_component__3wDnh","flex-start":"RowPanel-module_flex-start__1CNI6","flex-end":"RowPanel-module_flex-end__2qD_v","space-between":"RowPanel-module_space-between__39IWO","topPadding":"RowPanel-module_topPadding__OuthB","bottomPadding":"RowPanel-module_bottomPadding__2lpOC"};
 styleInject(css$d);
 
 var RowPanel = /** @class */ (function (_super) {
@@ -645,10 +645,18 @@ var RowPanel = /** @class */ (function (_super) {
     }
     RowPanel.prototype.render = function () {
         var alignItemsClass = "";
+        var paddingBottomClass = "";
+        var paddingTopClass = "";
         if (this.props.alignItems) {
             alignItemsClass = styles$c[this.props.alignItems];
         }
-        var componentClasses = classnames(styles$c.component, this.props.componentClasses, alignItemsClass);
+        if (this.props.paddingTop) {
+            paddingTopClass = styles$c.topPadding;
+        }
+        if (this.props.paddingBottom) {
+            paddingBottomClass = styles$c.bottomPadding;
+        }
+        var componentClasses = classnames(styles$c.component, this.props.componentClasses, alignItemsClass, paddingTopClass, paddingBottomClass);
         return (React.createElement("div", { className: componentClasses }, this.props.children));
     };
     return RowPanel;
@@ -2143,7 +2151,7 @@ var ScrollPanel = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=ScrollPanel.js.map
 
-var css$f = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  position: relative; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n\n.Container-module_fullWidth__1fHZC {\n  width: 100%;\n  flex-direction: column;\n  background-color: #f4f6f8;\n  border-radius: 3px;\n  padding: 10px; }\n\n.Container-module_fullWidthActive__aUtgg {\n  width: 100%;\n  flex-direction: column;\n  border: 1px solid #00adee;\n  background-color: #F7FCFE;\n  border-radius: 3px;\n  padding: 10px; }\n\n.Container-module_regular__1erHS {\n  width: auto; }\n\n.Container-module_iconReorder__16g_l {\n  position: absolute;\n  left: -12px;\n  top: 10px; }\n";
+var css$f = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  position: relative; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n\n.Container-module_fullWidth__1fHZC {\n  width: 100%;\n  flex-direction: column;\n  background-color: #f4f6f8;\n  border-radius: 3px;\n  padding: 17px 10px 15px; }\n\n.Container-module_fullWidthActive__aUtgg {\n  width: 100%;\n  flex-direction: column;\n  border: 1px solid #00adee;\n  background-color: #F7FCFE;\n  border-radius: 3px;\n  padding: 17px 10px 15px; }\n\n.Container-module_regular__1erHS {\n  width: auto; }\n\n.Container-module_iconReorder__16g_l {\n  position: absolute;\n  left: -12px;\n  top: 12px; }\n";
 var styles$g = {"component":"Container-module_component__2uDlo","flexStart":"Container-module_flexStart__2ySvs","flexEnd":"Container-module_flexEnd__1B58j","spaceBetween":"Container-module_spaceBetween__EaTZn","fullWidth":"Container-module_fullWidth__1fHZC","fullWidthActive":"Container-module_fullWidthActive__aUtgg","regular":"Container-module_regular__1erHS","iconReorder":"Container-module_iconReorder__16g_l"};
 styleInject(css$f);
 
@@ -2180,7 +2188,7 @@ var Container = /** @class */ (function (_super) {
         }
         var icon = "";
         var iconReord = "";
-        if (this.props.iconShow) {
+        if (this.props.closable) {
             icon = React.createElement(Icon, { icon: exports.PriorityIcon.closeSmall, visibility: this.state.isHover, position: true });
         }
         if (this.props.iconReorder) {
@@ -2196,7 +2204,7 @@ var Container = /** @class */ (function (_super) {
             this.props.children));
     };
     Container.defaultProps = {
-        iconShow: false
+        closable: false
     };
     return Container;
 }(ComponentBase));

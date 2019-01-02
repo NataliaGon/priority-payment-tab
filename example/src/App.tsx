@@ -18,11 +18,11 @@ class App extends Component {
         <SidePanel>
           <ScrollPanel gradient>
             <StackPanel className="header" skin="silver">
-              <RowPanel>
+              <RowPanel paddingBottom={true} paddingTop={true}>
                 <Title>Advanced Search</Title>
                 <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
               </RowPanel>
-              <RowPanel>
+              <RowPanel paddingBottom={true} paddingTop={true}>
                 <Container>
                   <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
                   <Label skin="large">New Search</Label>
@@ -35,7 +35,7 @@ class App extends Component {
             </StackPanel>
 
             <StackPanel>
-              <RowPanel alignItems="space-between">
+              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
                 <Container>
                   <CheckBox />
                   <Label skin="bold">Case Sensitive</Label>
@@ -44,13 +44,12 @@ class App extends Component {
               </RowPanel>
             </StackPanel>
 
-
-             <StackPanel skin="light">
-              <RowPanel>
+            <StackPanel skin="light">
+              <RowPanel paddingBottom={true} paddingTop={true}>
                 <Title>Advanced Search</Title>
                 <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
               </RowPanel>
-              <RowPanel>
+              <RowPanel paddingBottom={true} paddingTop={true}>
                 <Container>
                   <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
                 </Container>
@@ -60,10 +59,10 @@ class App extends Component {
                 </Container>
                 <LineInput />
               </RowPanel>
-            </StackPanel> 
+            </StackPanel>
 
             <StackPanel>
-              <RowPanel alignItems="space-between">
+              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
                 <Container>
                   <CheckBox />
                   <Label skin="bold">Case Sensitive</Label>
@@ -72,26 +71,24 @@ class App extends Component {
               </RowPanel>
             </StackPanel>
 
+            <StackPanel >
+              <Container ContainerWidth="fullWidth" >
+                <RowPanel>
+                  <Label skin="regular-high-contrast">Customer No.</Label>
+                </RowPanel>
+                <RowPanel paddingTop={true}>
+                  <Select options={optionDropDown} />
+                  <AutoFill />
+                </RowPanel>
+                <WrapPanel>
+                  <Tag text="test" />
+                  <Tag text="test" />
+                </WrapPanel>
+              </Container>
+            </StackPanel>
 
-
-             <StackPanel >
-                <Container ContainerWidth="fullWidth" iconShow={true}>
-                  <RowPanel>
-                    <Label skin="regular-high-contrast">Customer No.</Label>
-                  </RowPanel>
-                  <RowPanel>
-                    <Select options={optionDropDown} />
-                    <AutoFill />
-                  </RowPanel>
-                  <WrapPanel>
-                    <Tag text="test" />
-                    <Tag text="test" />
-                  </WrapPanel>
-                </Container>
-              </StackPanel>
-
-              <StackPanel>
-              <RowPanel alignItems="space-between">
+            <StackPanel>
+              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
                 <Container>
                   <CheckBox />
                   <Label skin="bold">Case Sensitive</Label>
@@ -99,54 +96,25 @@ class App extends Component {
                 <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
               </RowPanel>
             </StackPanel>
-           
-              <StackPanel >
-                <Container ContainerWidth="fullWidthActive" iconShow={true} iconReorder={true}>
-                  <RowPanel>
-                    <Label skin="regular-high-contrast">Customer No.</Label>
-                  </RowPanel>
-                  <RowPanel>
-                    <Select options={optionDropDown} />
-                    <AutoFill />
-                  </RowPanel>
-                  <WrapPanel>
-                    <Tag text="test" />
-                    <Tag text="test" />
-                  </WrapPanel>
-                </Container>
-              </StackPanel>
-           
 
-
-            {/* <StackPanel skin="light">
-              <RowPanel>
-                <Label skin="regular-high-contrast">Customer No.</Label>
-              </RowPanel>
-              <RowPanel>
-
-              </RowPanel>
-              <WrapPanel>
-                <Tag text="test" />
-                <Tag text="test" />
-              </WrapPanel>
+            <StackPanel >
+              <Container ContainerWidth="fullWidthActive" closable={true} iconReorder={true}>
+                <RowPanel >
+                  <Label skin="regular-high-contrast">Customer No.</Label>
+                </RowPanel>
+                <RowPanel paddingBottom={true} paddingTop={true}>
+                  <Select options={optionDropDown} />
+                  <AutoFill />
+                </RowPanel>
+                <WrapPanel>
+                  <Tag text="test" />
+                  <Tag text="test" />
+                </WrapPanel>
+              </Container>
             </StackPanel>
 
-            <StackPanel skin="light">
-              <RowPanel>
-                <Label skin="regular-high-contrast">Customer No.</Label>
-              </RowPanel>
-              <RowPanel>
-                <GeneralInput/>
-
-              </RowPanel>
-              <WrapPanel>
-                <Tag text="test" />
-                <Tag text="test" />
-              </WrapPanel>
-            </StackPanel>
-*/}
             <StackPanel>
-              <RowPanel alignItems="space-between">
+              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
                 <Container>
                   <CheckBox />
                   <Label skin="bold">Case Sensitive</Label>
@@ -162,14 +130,16 @@ class App extends Component {
                   <Label skin="regular-high-contrast">Clear Search</Label>
                 </Container>
                 <Container ContainerWidth="250px" alignItems="spaceBetween">
-                  <Button skin="secondary" width="regularFixed">Save</Button>
-                  <Button skin="regular" width="regularFixed">Apply</Button>
+                  <WrapPanel>
+                    <Button skin="secondary" width="regularFixed">Save</Button>
+                    <Button skin="regular" width="regularFixed">Apply</Button>
+                  </WrapPanel>
                 </Container>
               </RowPanel>
             </StackPanel>
-         
-           </ScrollPanel>
-        </SidePanel> 
+
+          </ScrollPanel>
+        </SidePanel>
       </div>
     );
   }
