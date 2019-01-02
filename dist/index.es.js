@@ -2137,7 +2137,7 @@ var ScrollPanel = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=ScrollPanel.js.map
 
-var css$f = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  position: relative; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n\n.Container-module_fullWidth__1fHZC {\n  width: 100%;\n  flex-direction: column;\n  background-color: #f4f6f8;\n  border-radius: 3px;\n  padding: 10px; }\n\n.Container-module_fullWidthActive__aUtgg {\n  width: 100%;\n  flex-direction: column;\n  border: 1px solid #00adee;\n  background-color: #F7FCFE;\n  border-radius: 3px;\n  padding: 10px; }\n\n.Container-module_regular__1erHS {\n  width: auto; }\n\n.Container-module_iconReorder__16g_l {\n  position: absolute;\n  left: -12px;\n  top: 20px; }\n";
+var css$f = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  position: relative; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n\n.Container-module_fullWidth__1fHZC {\n  width: 100%;\n  flex-direction: column;\n  background-color: #f4f6f8;\n  border-radius: 3px;\n  padding: 10px; }\n\n.Container-module_fullWidthActive__aUtgg {\n  width: 100%;\n  flex-direction: column;\n  border: 1px solid #00adee;\n  background-color: #F7FCFE;\n  border-radius: 3px;\n  padding: 10px; }\n\n.Container-module_regular__1erHS {\n  width: auto; }\n\n.Container-module_iconReorder__16g_l {\n  position: absolute;\n  left: -12px;\n  top: 10px; }\n";
 var styles$g = {"component":"Container-module_component__2uDlo","flexStart":"Container-module_flexStart__2ySvs","flexEnd":"Container-module_flexEnd__1B58j","spaceBetween":"Container-module_spaceBetween__EaTZn","fullWidth":"Container-module_fullWidth__1fHZC","fullWidthActive":"Container-module_fullWidthActive__aUtgg","regular":"Container-module_regular__1erHS","iconReorder":"Container-module_iconReorder__16g_l"};
 styleInject(css$f);
 
@@ -2180,7 +2180,7 @@ var Container = /** @class */ (function (_super) {
         if (this.props.iconReorder) {
             iconReord =
                 createElement("div", { className: styles$g.iconReorder },
-                    createElement(Icon, { icon: PriorityIcon.iconReorder }));
+                    createElement(Icon, { icon: PriorityIcon.iconReorder, iconColor: "blue" }));
         }
         var componentClasses = classnames(styles$g.component, this.props.componentClasses, alignItemsClass, widthItemsClass);
         var inlineStyle = {};

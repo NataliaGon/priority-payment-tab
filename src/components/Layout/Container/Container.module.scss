@@ -21,7 +21,6 @@
 .fullWidth{
     width:100%;
     flex-direction: column;
-    // border: 1px solid $blue;
     background-color: $snow;
     border-radius:3px; 
     padding: 10px;
@@ -40,5 +39,5 @@
 .iconReorder{
     position: absolute;
     left:-12px;
-    top:20px;
+    top:10px;
 }

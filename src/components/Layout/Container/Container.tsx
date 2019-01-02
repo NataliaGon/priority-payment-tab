@@ -57,7 +57,7 @@ static defaultProps = {
     if (this.props.iconReorder){
       iconReord=
       <div className={styles.iconReorder}>
-      <Icon icon={PriorityIcon.iconReorder}/>
+      <Icon icon={PriorityIcon.iconReorder} iconColor="blue"/>
       </div>
     }
     const componentClasses = classNames(styles.component, this.props.componentClasses, alignItemsClass,widthItemsClass);
