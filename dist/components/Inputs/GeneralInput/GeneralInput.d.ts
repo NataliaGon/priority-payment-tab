@@ -1,11 +1,14 @@
 /// <reference types="react" />
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../base-classes";
+import { PriorityIcon } from '../../../base-classes/PriorityIcon';
 declare class GeneralInputProperties extends ComponentBaseProperties {
     inputWidth?: any;
     clearable?: boolean;
+    isIcon?: boolean;
+    isButton?: boolean;
+    iconName?: PriorityIcon;
 }
 interface GeneralInputState extends ComponentBaseState {
-    isButton?: boolean;
     isFocus?: boolean;
 }
 export declare class GeneralInput extends ComponentBase<GeneralInputProperties, GeneralInputState> {

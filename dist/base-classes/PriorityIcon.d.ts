@@ -9,5 +9,6 @@ export declare enum PriorityIcon {
     closeSmall = "icon-icon-close-small",
     arrowDropUp = "icon-icon-arrow_drop_up",
     arrowDropDown = "icon-icon-arrow_drop_down",
-    iconReorder = "icon-icon-reorder"
+    iconReorder = "icon-icon-reorder",
+    tabsArrow = "icon-icon-tabs-arrow-reg"
 }

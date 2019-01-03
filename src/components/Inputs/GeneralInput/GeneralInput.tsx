@@ -18,10 +18,12 @@ import {Button} from '../Button/Button';
 class GeneralInputProperties extends ComponentBaseProperties {
     inputWidth?: any;
     clearable?:boolean; 
+    isIcon?:boolean; 
+    isButton?:boolean; 
+    iconName?:PriorityIcon;
 }
 
 interface GeneralInputState extends ComponentBaseState {
-    isButton?:boolean;
     isFocus?:boolean
 }
 
@@ -31,32 +33,40 @@ export class GeneralInput extends ComponentBase<
     > {
 
         state:GeneralInputState ={
-            isButton:false,
+            
             isFocus:false
         }
           HandlerEnter = () => {
-            this.setState({ isButton: !this.state.isButton  });
+            this.setState({ 
+
+            });
           }
           HandlerMouseLeave = () => {
-            this.setState({ isButton: !this.state.isButton });
+            this.setState({ 
+
+            });
           }
           HandlerFocus=()=>{
-            this.setState({ isFocus: !this.state.isFocus });
+            this.setState({ 
+
+            });
           }
           HandleOnBlur=()=>{
-            this.setState({ isFocus: !this.state.isFocus });
+            this.setState({ 
+
+            });
           }
           
     public render() {
-       
+        // const iconName=this.props.iconName? this.props.iconName: "" ;
         const iconComponent = this.props.clearable? <Icon icon={PriorityIcon.closeSmall} iconColor="grey" />:'';
-        const btnComponent = this.state.isButton?<div className={styles.btn}><Button width="small">Add</Button></div>:'';
+        const btnComponent = this.props.isButton?<div className={styles.btn}><Button width="small">Add</Button></div>:'';
         const classNamesInput = classNames(styles.input, styles[this.props.inputWidth]);
-        const iconOptinal =this.state.isFocus? <div className={styles.iconOptinal} ><Icon icon={PriorityIcon.done} iconColor="grey" /></div>:'';
+        const iconOptinal =this.props.isIcon? <div className={styles.iconOptinal} ><Icon icon={PriorityIcon.tabsArrow} iconColor="grey" /></div>:'';
         return (
             <div className={styles.component} onMouseEnter={this.HandlerEnter}
             onMouseLeave={this.HandlerMouseLeave} >
-                <input className={classNamesInput} type="text" onBlur={this.HandleOnBlur} onFocus={this.HandlerFocus}/>
+                <input className={classNamesInput} type="text" onBlur={this.HandleOnBlur} onFocus={this.HandlerFocus} defaultValue="03/12/2018"/>
                 <div className={styles.icon}>
                 {iconComponent}
               

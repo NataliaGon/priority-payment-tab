@@ -79,7 +79,7 @@ class App extends Component {
                 </RowPanel>
                 <RowPanel paddingTop={true} paddingBottom={true}>
                   <Select options={optionDropDown} />
-                  <GeneralInput inputWidth="large" clearable={true} />
+                
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />

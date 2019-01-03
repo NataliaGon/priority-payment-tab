@@ -43,9 +43,10 @@ export class Form extends ComponentBase<FormProperties, FormState> {
                     <RowPanel paddingBottom={true} paddingTop={true} >
                         <div className={styles.spaceHolderBig}></div>
                         <div className={styles.spaceHolder}></div>
-                        <GeneralInput inputWidth="small"></GeneralInput>
+                        <GeneralInput inputWidth="small" isIcon={true}></GeneralInput>
                         <div className={styles.spaceHolder}></div>
-                        <GeneralInput inputWidth="small"></GeneralInput>
+                        <GeneralInput inputWidth="small" isIcon={true}>
+                        </GeneralInput>
                     </RowPanel>
                     <RowPanel alignItems="flex-end">
                         <Label>Sort</Label>

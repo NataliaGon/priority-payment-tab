@@ -373,6 +373,7 @@ var PriorityIcon;
     PriorityIcon["arrowDropUp"] = "icon-icon-arrow_drop_up";
     PriorityIcon["arrowDropDown"] = "icon-icon-arrow_drop_down";
     PriorityIcon["iconReorder"] = "icon-icon-reorder";
+    PriorityIcon["tabsArrow"] = "icon-icon-tabs-arrow-reg";
 })(PriorityIcon || (PriorityIcon = {}));
 //# sourceMappingURL=PriorityIcon.js.map
 
@@ -557,7 +558,7 @@ var AutoFill = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=InputAutofill.js.map
 
-var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_small__1288l {\n  width: 130px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 40px;\n  top: 5px; }\n\n.GeneralInput-module_iconOptinal__1cOYx {\n  position: absolute;\n  left: 20px;\n  top: 5px; }\n";
+var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none;\n  font-family: Roboto;\n  font-size: 14px;\n  font-weight: 500;\n  font-stretch: normal;\n  line-height: 1.21;\n  letter-spacing: normal;\n  padding-left: 10px; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_small__1288l {\n  width: 130px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 40px;\n  top: 5px; }\n\n.GeneralInput-module_iconOptinal__1cOYx {\n  position: absolute;\n  right: 5px;\n  top: 5px; }\n";
 var styles$a = {"component":"GeneralInput-module_component__330am","input":"GeneralInput-module_input__1avBH","large":"GeneralInput-module_large__1t8F4","medium":"GeneralInput-module_medium__N-uX-","small":"GeneralInput-module_small__1288l","icon":"GeneralInput-module_icon__2-GM9","btn":"GeneralInput-module_btn__2hRkg","iconOptinal":"GeneralInput-module_iconOptinal__1cOYx"};
 styleInject(css$b);
 
@@ -573,32 +574,32 @@ var GeneralInput = /** @class */ (function (_super) {
     function GeneralInput() {
         var _this = _super !== null && _super.apply(this, arguments) || this;
         _this.state = {
-            isButton: false,
             isFocus: false
         };
         _this.HandlerEnter = function () {
-            _this.setState({ isButton: !_this.state.isButton });
+            _this.setState({});
         };
         _this.HandlerMouseLeave = function () {
-            _this.setState({ isButton: !_this.state.isButton });
+            _this.setState({});
         };
         _this.HandlerFocus = function () {
-            _this.setState({ isFocus: !_this.state.isFocus });
+            _this.setState({});
         };
         _this.HandleOnBlur = function () {
-            _this.setState({ isFocus: !_this.state.isFocus });
+            _this.setState({});
         };
         return _this;
     }
     GeneralInput.prototype.render = function () {
+        // const iconName=this.props.iconName? this.props.iconName: "" ;
         var iconComponent = this.props.clearable ? createElement(Icon, { icon: PriorityIcon.closeSmall, iconColor: "grey" }) : '';
-        var btnComponent = this.state.isButton ? createElement("div", { className: styles$a.btn },
+        var btnComponent = this.props.isButton ? createElement("div", { className: styles$a.btn },
             createElement(Button, { width: "small" }, "Add")) : '';
         var classNamesInput = classnames(styles$a.input, styles$a[this.props.inputWidth]);
-        var iconOptinal = this.state.isFocus ? createElement("div", { className: styles$a.iconOptinal },
-            createElement(Icon, { icon: PriorityIcon.done, iconColor: "grey" })) : '';
+        var iconOptinal = this.props.isIcon ? createElement("div", { className: styles$a.iconOptinal },
+            createElement(Icon, { icon: PriorityIcon.tabsArrow, iconColor: "grey" })) : '';
         return (createElement("div", { className: styles$a.component, onMouseEnter: this.HandlerEnter, onMouseLeave: this.HandlerMouseLeave },
-            createElement("input", { className: classNamesInput, type: "text", onBlur: this.HandleOnBlur, onFocus: this.HandlerFocus }),
+            createElement("input", { className: classNamesInput, type: "text", onBlur: this.HandleOnBlur, onFocus: this.HandlerFocus, defaultValue: "03/12/2018" }),
             createElement("div", { className: styles$a.icon }, iconComponent),
             btnComponent,
             iconOptinal));
@@ -4106,9 +4107,9 @@ var Form = /** @class */ (function (_super) {
                 createElement(RowPanel, { paddingBottom: true, paddingTop: true },
                     createElement("div", { className: styles$k.spaceHolderBig }),
                     createElement("div", { className: styles$k.spaceHolder }),
-                    createElement(GeneralInput, { inputWidth: "small" }),
+                    createElement(GeneralInput, { inputWidth: "small", isIcon: true }),
                     createElement("div", { className: styles$k.spaceHolder }),
-                    createElement(GeneralInput, { inputWidth: "small" })),
+                    createElement(GeneralInput, { inputWidth: "small", isIcon: true })),
                 createElement(RowPanel, { alignItems: "flex-end" },
                     createElement(Label, null, "Sort")))));
     };
