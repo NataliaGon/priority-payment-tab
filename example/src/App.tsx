@@ -99,7 +99,7 @@ class App extends Component {
               <RowPanel alignItems="space-between" >
                 <Container>
                   <Icon icon={PriorityIcon.clear} iconColor="white"/>
-                  <Label skin="regular-high-contrast">Clear Search</Label>
+                  <Label skin="regular-high-contrast" textColor="white">Clear Search</Label>
                 </Container>
                 <Container ContainerWidth="250px" alignItems="spaceBetween">
                   <WrapPanel>

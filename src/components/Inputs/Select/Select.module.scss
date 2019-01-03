@@ -8,25 +8,20 @@
 .dropDownElements {
     height: 30px;
     position: relative;
-    
 }
 
 .inputSmall {
     height: 30px;
     border-radius: $input-border-radius;
-
     @include border($input-border-grey);
-
     z-index: 3;
     position: absolute;
-  
     box-sizing: border-box;
 }
 
 .optionsWrapper {
     background: $white;
     position: absolute;
-    // width: 100%;
 }
 
 .dropDownResult {
@@ -65,7 +60,7 @@
 
 .dropDownIconWrapper {
     position: absolute;
-    top: 0;
+    top: 2px;
     right: 0;
 }
 
