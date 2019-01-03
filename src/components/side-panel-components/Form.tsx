@@ -28,13 +28,13 @@ export class Form extends ComponentBase<FormProperties, FormState> {
                     <RowPanel paddingBottom={true} paddingTop={true} >
                         <Label>Due Date</Label>
                     </RowPanel>
-                    <div className={styles.component}>
+                    <RowPanel paddingBottom={true} paddingTop={true}>
                        <Select options={optionDropDown} />
                         <Label>From</Label>
                         <Select options={optionDropDown} />
                         <Label>To</Label>
                         <Select options={optionDropDown} />
-                    </div>
+                    </RowPanel>
                     <RowPanel paddingBottom={true} paddingTop={true} alignItems="flex-end">
                         <WrapPanel>
                             <GeneralInput inputWidth="medium"></GeneralInput>
