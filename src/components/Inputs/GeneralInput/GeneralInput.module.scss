@@ -2,7 +2,6 @@
 
 .component{
 position: relative;
-margin-top: -14px;
 }
 .input{
     outline-color: #00adee;
@@ -25,6 +24,13 @@ margin-top: -14px;
 }
 .medium{
     width:150px;
+    height: 30px;
+    border: 1px solid #bfd0d7;
+    border-radius: 3px;
+    box-sizing: border-box;
+}
+.small{
+    width:130px;
     height: 30px;
     border: 1px solid #bfd0d7;
     border-radius: 3px;

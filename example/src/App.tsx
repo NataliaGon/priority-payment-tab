@@ -77,7 +77,7 @@ class App extends Component {
                 <RowPanel>
                   <Label skin="regular-high-contrast">Customer No.</Label>
                 </RowPanel>
-                <RowPanel paddingTop={true}>
+                <RowPanel paddingTop={true} paddingBottom={true}>
                   <Select options={optionDropDown} />
                   <GeneralInput inputWidth="large" clearable={true} />
                 </RowPanel>
@@ -99,7 +99,7 @@ class App extends Component {
             </StackPanel>
 
             <StackPanel >
-              <Container ContainerWidth="fullWidthActive" closable={true} iconReorder={true}>
+              <Container ContainerWidth="fullWidthActive" closable={true} draggable={true}>
                 <RowPanel >
                   <Label skin="regular-high-contrast">Customer No.</Label>
                 </RowPanel>

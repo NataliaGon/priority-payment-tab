@@ -12,7 +12,7 @@ class ContainerProperties extends ComponentBaseProperties {
   ContainerWidth?: string;
   alignItems?: AlignItems;
   closable?:boolean;
-  iconReorder?:boolean;
+
 }
 
 interface ContainerState extends ComponentBaseState {
@@ -54,9 +54,9 @@ static defaultProps = {
     if (this.props.closable){
       icon=<Icon icon={PriorityIcon.closeSmall} visibility={this.state.isHover} position={true}/>
     }
-    if (this.props.iconReorder){
+    if (this.props.draggable){
       iconReord=
-      <div className={styles.iconReorder}>
+      <div className={styles.draggable}>
       <Icon icon={PriorityIcon.iconReorder} iconColor="blue"/>
       </div>
     }

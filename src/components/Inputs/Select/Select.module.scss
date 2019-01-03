@@ -6,8 +6,9 @@
 }
 
 .dropDownElements {
-    height: 43px;
+    height: 30px;
     position: relative;
+    
 }
 
 .inputSmall {
@@ -18,14 +19,14 @@
 
     z-index: 3;
     position: absolute;
-    width: 150px;
+  
     box-sizing: border-box;
 }
 
 .optionsWrapper {
     background: $white;
-    position: relative;
-    width: 150px;
+    position: absolute;
+    // width: 100%;
 }
 
 .dropDownResult {
@@ -46,12 +47,13 @@
 
 .boxShadow {
     box-shadow: 0 10px 20px 0 $boxShadow-brown-dark;
-    width: 160px;
+    width: 100%;
     margin-left: -5px;
     margin-top: -5px;
     padding: 5px;
     border-radius: $input-border-radius;
     z-index: 2;
+    box-sizing: content-box;
 }
 
 .drop-down_icon-wrapper {
@@ -91,4 +93,13 @@
 
 .active {
     color: $blue;
+}
+.small{
+    width:130px;
+}
+.medium{
+    width:150px;
+}
+.large{
+    width:360px
 }

@@ -423,8 +423,8 @@ var LineInput = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=LineInput.js.map
 
-var css$8 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Select-module_dropDownElements__21ytE {\n  height: 43px;\n  position: relative; }\n\n.Select-module_inputSmall__bBJSK {\n  height: 30px;\n  border-radius: 3px;\n  border: 1px solid #bfd0d7;\n  z-index: 3;\n  position: absolute;\n  width: 150px;\n  box-sizing: border-box; }\n\n.Select-module_optionsWrapper__1Cr8b {\n  background: #fff;\n  position: relative;\n  width: 150px; }\n\n.Select-module_dropDownResult__4eWkA {\n  height: 30px;\n  background: #6e818a;\n  color: #fff;\n  display: inline-block;\n  line-height: 30px;\n  padding: 0 10px;\n  border-radius: 3px;\n  position: relative; }\n\n.Select-module_dropDownHide__21Dnp {\n  overflow: hidden;\n  height: 30px;\n  border-radius: 3px; }\n\n.Select-module_boxShadow__1YeZR {\n  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);\n  width: 160px;\n  margin-left: -5px;\n  margin-top: -5px;\n  padding: 5px;\n  border-radius: 3px;\n  z-index: 2; }\n\n.Select-module_drop-down_icon-wrapper__3xqih {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: #fff; }\n\n.Select-module_dropDownIconWrapper__3ruHJ {\n  position: absolute;\n  top: 0;\n  right: 0; }\n\n.Select-module_borderColorBlue__2gS6j {\n  border: 1px solid #00adee; }\n\n.Select-module_ul__egZga li:hover {\n  background-color: #D9F6F9; }\n\n.Select-module_ul__egZga li:first-child {\n  height: 27px; }\n  .Select-module_ul__egZga li:first-child:hover {\n    background-color: #fff; }\n\n.Select-module_ul__egZga li:nth-child(2) {\n  margin-top: 11px; }\n\n.Select-module_active__38GJG {\n  color: #00adee; }\n";
-var styles$7 = {"dropDownElements":"Select-module_dropDownElements__21ytE","inputSmall":"Select-module_inputSmall__bBJSK","optionsWrapper":"Select-module_optionsWrapper__1Cr8b","dropDownResult":"Select-module_dropDownResult__4eWkA","dropDownHide":"Select-module_dropDownHide__21Dnp","boxShadow":"Select-module_boxShadow__1YeZR","drop-down_icon-wrapper":"Select-module_drop-down_icon-wrapper__3xqih","dropDownIconWrapper":"Select-module_dropDownIconWrapper__3ruHJ","borderColorBlue":"Select-module_borderColorBlue__2gS6j","ul":"Select-module_ul__egZga","active":"Select-module_active__38GJG"};
+var css$8 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Select-module_dropDownElements__21ytE {\n  height: 30px;\n  position: relative; }\n\n.Select-module_inputSmall__bBJSK {\n  height: 30px;\n  border-radius: 3px;\n  border: 1px solid #bfd0d7;\n  z-index: 3;\n  position: absolute;\n  box-sizing: border-box; }\n\n.Select-module_optionsWrapper__1Cr8b {\n  background: #fff;\n  position: absolute; }\n\n.Select-module_dropDownResult__4eWkA {\n  height: 30px;\n  background: #6e818a;\n  color: #fff;\n  display: inline-block;\n  line-height: 30px;\n  padding: 0 10px;\n  border-radius: 3px;\n  position: relative; }\n\n.Select-module_dropDownHide__21Dnp {\n  overflow: hidden;\n  height: 30px;\n  border-radius: 3px; }\n\n.Select-module_boxShadow__1YeZR {\n  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);\n  width: 100%;\n  margin-left: -5px;\n  margin-top: -5px;\n  padding: 5px;\n  border-radius: 3px;\n  z-index: 2;\n  box-sizing: content-box; }\n\n.Select-module_drop-down_icon-wrapper__3xqih {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: #fff; }\n\n.Select-module_dropDownIconWrapper__3ruHJ {\n  position: absolute;\n  top: 0;\n  right: 0; }\n\n.Select-module_borderColorBlue__2gS6j {\n  border: 1px solid #00adee; }\n\n.Select-module_ul__egZga li:hover {\n  background-color: #D9F6F9; }\n\n.Select-module_ul__egZga li:first-child {\n  height: 27px; }\n  .Select-module_ul__egZga li:first-child:hover {\n    background-color: #fff; }\n\n.Select-module_ul__egZga li:nth-child(2) {\n  margin-top: 11px; }\n\n.Select-module_active__38GJG {\n  color: #00adee; }\n\n.Select-module_small__x5CoJ {\n  width: 130px; }\n\n.Select-module_medium__1IWGm {\n  width: 150px; }\n\n.Select-module_large__1qYsh {\n  width: 360px; }\n";
+var styles$7 = {"dropDownElements":"Select-module_dropDownElements__21ytE","inputSmall":"Select-module_inputSmall__bBJSK","optionsWrapper":"Select-module_optionsWrapper__1Cr8b","dropDownResult":"Select-module_dropDownResult__4eWkA","dropDownHide":"Select-module_dropDownHide__21Dnp","boxShadow":"Select-module_boxShadow__1YeZR","drop-down_icon-wrapper":"Select-module_drop-down_icon-wrapper__3xqih","dropDownIconWrapper":"Select-module_dropDownIconWrapper__3ruHJ","borderColorBlue":"Select-module_borderColorBlue__2gS6j","ul":"Select-module_ul__egZga","active":"Select-module_active__38GJG","small":"Select-module_small__x5CoJ","medium":"Select-module_medium__1IWGm","large":"Select-module_large__1qYsh"};
 styleInject(css$8);
 
 var css$9 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.OptionItem-module_component__23SsC {\n  margin: 2px 7px;\n  display: flex;\n  height: 40px;\n  align-items: center;\n  padding-left: 10px; }\n";
@@ -489,9 +489,11 @@ var Select = /** @class */ (function (_super) {
         var smallInputVisibilityClass = this.state && this.state.isOpen ? styles$7.borderColorBlue : '';
         var dropDownOptionsClass = styles$7.optionsWrapper;
         var smallInputOptionsClass = styles$7.inputSmall;
-        var dropDownOptionsClasses = classnames(dropDownVisibilityClass, dropDownOptionsClass);
-        var smallInputOptionsClasses = classnames(smallInputVisibilityClass, smallInputOptionsClass);
-        return (React.createElement("div", { className: styles$7.dropDownElements },
+        var sizeSelectClass = this.props.width ? styles$7[this.props.width] : styles$7["medium"];
+        var dropDownOptionsClasses = classnames(dropDownVisibilityClass, dropDownOptionsClass, sizeSelectClass);
+        var smallInputOptionsClasses = classnames(smallInputVisibilityClass, smallInputOptionsClass, sizeSelectClass);
+        var dropDownElementsStyles = classnames(styles$7.dropDownElements, sizeSelectClass);
+        return (React.createElement("div", { className: dropDownElementsStyles },
             React.createElement("div", { className: smallInputOptionsClasses, onClick: this.dropDownToggle },
                 React.createElement("div", { className: styles$7.dropDownIconWrapper },
                     React.createElement(Icon, { iconColor: this.state.isOpen ? "blue" : "grey", icon: classForDropDownIcon }))),
@@ -503,7 +505,7 @@ var Select = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  margin-top: -14px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97;\n    position: relative; }\n    .InputAutofill-module_component__MAOAz div input {\n      width: 100%;\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97;\n      outline-color: #00adee;\n      outline-width: 1px; }\n    .InputAutofill-module_component__MAOAz div div div {\n      height: 30px;\n      width: 336px;\n      margin: 0 10px;\n      line-height: 30px;\n      font-style: normal;\n      padding: 0 10px; }\n      .InputAutofill-module_component__MAOAz div div div:hover {\n        background-color: #D9F6F9; }\n";
+var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97;\n    position: relative; }\n    .InputAutofill-module_component__MAOAz div input {\n      width: 100%;\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97;\n      outline-color: #00adee;\n      outline-width: 1px; }\n    .InputAutofill-module_component__MAOAz div div div {\n      height: 30px;\n      width: 336px;\n      margin: 0 10px;\n      line-height: 30px;\n      font-style: normal;\n      padding: 0 10px; }\n      .InputAutofill-module_component__MAOAz div div div:hover {\n        background-color: #D9F6F9; }\n";
 var styles$9 = {"component":"InputAutofill-module_component__MAOAz"};
 styleInject(css$a);
 
@@ -536,7 +538,7 @@ var AutoFill = /** @class */ (function (_super) {
             height: 'auto',
             position: 'absolute',
             left: '0',
-            zIndex: '5'
+            zIndex: '5',
         };
         // const menuStyles: any=styles.menuStyles;
         return (React.createElement("div", { className: styles$9.component },
@@ -561,8 +563,8 @@ var AutoFill = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=InputAutofill.js.map
 
-var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative;\n  margin-top: -14px; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 40px;\n  top: 5px; }\n\n.GeneralInput-module_iconOptinal__1cOYx {\n  position: absolute;\n  left: 20px;\n  top: 5px; }\n";
-var styles$a = {"component":"GeneralInput-module_component__330am","input":"GeneralInput-module_input__1avBH","large":"GeneralInput-module_large__1t8F4","medium":"GeneralInput-module_medium__N-uX-","icon":"GeneralInput-module_icon__2-GM9","btn":"GeneralInput-module_btn__2hRkg","iconOptinal":"GeneralInput-module_iconOptinal__1cOYx"};
+var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_small__1288l {\n  width: 130px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 40px;\n  top: 5px; }\n\n.GeneralInput-module_iconOptinal__1cOYx {\n  position: absolute;\n  left: 20px;\n  top: 5px; }\n";
+var styles$a = {"component":"GeneralInput-module_component__330am","input":"GeneralInput-module_input__1avBH","large":"GeneralInput-module_large__1t8F4","medium":"GeneralInput-module_medium__N-uX-","small":"GeneralInput-module_small__1288l","icon":"GeneralInput-module_icon__2-GM9","btn":"GeneralInput-module_btn__2hRkg","iconOptinal":"GeneralInput-module_iconOptinal__1cOYx"};
 styleInject(css$b);
 
 var GeneralInputProperties = /** @class */ (function (_super) {
@@ -643,7 +645,7 @@ var StackPanel = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=StackPanel.js.map
 
-var css$d = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.WrapPanel-module_component__2rpf2 {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: flex-start;\n  align-items: center; }\n  .WrapPanel-module_component__2rpf2 > * {\n    margin-right: 5px; }\n\n.WrapPanel-module_transparent__2l89A {\n  background-color: transparent; }\n\n.WrapPanel-module_default__1l9n1 {\n  background-color: #fff; }\n\n.WrapPanel-module_header__37qtU {\n  background-color: #ebedee; }\n\n.WrapPanel-module_light__31Dqs {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 15px 20px; }\n  .WrapPanel-module_light__31Dqs:hover, .WrapPanel-module_light__31Dqs.WrapPanel-module_selected__1nLpf {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.WrapPanel-module_dark__1ADC6 {\n  background-color: #2e4049; }\n";
+var css$d = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.WrapPanel-module_component__2rpf2 {\n  display: flex;\n  flex-flow: row wrap;\n  justify-content: flex-start;\n  align-items: center; }\n  .WrapPanel-module_component__2rpf2 > * {\n    margin-right: 5px; }\n  .WrapPanel-module_component__2rpf2 > *:last-child {\n    margin-right: 0; }\n\n.WrapPanel-module_transparent__2l89A {\n  background-color: transparent; }\n\n.WrapPanel-module_default__1l9n1 {\n  background-color: #fff; }\n\n.WrapPanel-module_header__37qtU {\n  background-color: #ebedee; }\n\n.WrapPanel-module_light__31Dqs {\n  background-color: #ebedee;\n  border: 1px solid #e2eaf1;\n  padding: 15px 20px; }\n  .WrapPanel-module_light__31Dqs:hover, .WrapPanel-module_light__31Dqs.WrapPanel-module_selected__1nLpf {\n    background-color: #fff;\n    border: 1px solid #00adee; }\n\n.WrapPanel-module_dark__1ADC6 {\n  background-color: #2e4049; }\n";
 var styles$c = {"component":"WrapPanel-module_component__2rpf2","transparent":"WrapPanel-module_transparent__2l89A","default":"WrapPanel-module_default__1l9n1","header":"WrapPanel-module_header__37qtU","light":"WrapPanel-module_light__31Dqs","selected":"WrapPanel-module_selected__1nLpf","dark":"WrapPanel-module_dark__1ADC6"};
 styleInject(css$d);
 
@@ -2181,8 +2183,8 @@ var ScrollPanel = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=ScrollPanel.js.map
 
-var css$g = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  position: relative; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n\n.Container-module_fullWidth__1fHZC {\n  width: 100%;\n  flex-direction: column;\n  background-color: #f4f6f8;\n  border-radius: 3px;\n  padding: 17px 10px 15px; }\n\n.Container-module_fullWidthActive__aUtgg {\n  width: 100%;\n  flex-direction: column;\n  border: 1px solid #00adee;\n  background-color: #F7FCFE;\n  border-radius: 3px;\n  padding: 17px 10px 15px; }\n\n.Container-module_regular__1erHS {\n  width: auto; }\n\n.Container-module_iconReorder__16g_l {\n  position: absolute;\n  left: -12px;\n  top: 12px; }\n";
-var styles$h = {"component":"Container-module_component__2uDlo","flexStart":"Container-module_flexStart__2ySvs","flexEnd":"Container-module_flexEnd__1B58j","spaceBetween":"Container-module_spaceBetween__EaTZn","fullWidth":"Container-module_fullWidth__1fHZC","fullWidthActive":"Container-module_fullWidthActive__aUtgg","regular":"Container-module_regular__1erHS","iconReorder":"Container-module_iconReorder__16g_l"};
+var css$g = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  position: relative; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n\n.Container-module_fullWidth__1fHZC {\n  width: 100%;\n  flex-direction: column;\n  background-color: #f4f6f8;\n  border-radius: 3px;\n  padding: 17px 10px 15px; }\n\n.Container-module_fullWidthActive__aUtgg {\n  width: 100%;\n  flex-direction: column;\n  border: 1px solid #00adee;\n  background-color: #F7FCFE;\n  border-radius: 3px;\n  padding: 17px 10px 15px; }\n\n.Container-module_regular__1erHS {\n  width: auto; }\n\n.Container-module_draggable__3hzCu {\n  position: absolute;\n  left: -12px;\n  top: 12px; }\n";
+var styles$h = {"component":"Container-module_component__2uDlo","flexStart":"Container-module_flexStart__2ySvs","flexEnd":"Container-module_flexEnd__1B58j","spaceBetween":"Container-module_spaceBetween__EaTZn","fullWidth":"Container-module_fullWidth__1fHZC","fullWidthActive":"Container-module_fullWidthActive__aUtgg","regular":"Container-module_regular__1erHS","draggable":"Container-module_draggable__3hzCu"};
 styleInject(css$g);
 
 var ContainerProperties = /** @class */ (function (_super) {
@@ -2221,9 +2223,9 @@ var Container = /** @class */ (function (_super) {
         if (this.props.closable) {
             icon = React.createElement(Icon, { icon: exports.PriorityIcon.closeSmall, visibility: this.state.isHover, position: true });
         }
-        if (this.props.iconReorder) {
+        if (this.props.draggable) {
             iconReord =
-                React.createElement("div", { className: styles$h.iconReorder },
+                React.createElement("div", { className: styles$h.draggable },
                     React.createElement(Icon, { icon: exports.PriorityIcon.iconReorder, iconColor: "blue" }));
         }
         var componentClasses = classnames(styles$h.component, this.props.componentClasses, alignItemsClass, widthItemsClass);
@@ -4068,6 +4070,10 @@ var Tag = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
+var css$j = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Form-module_component__2aaxD {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  align-items: center; }\n\n.Form-module_spaceHolder__3SJwW {\n  width: 54px;\n  display: flex;\n  justify-content: center; }\n\n.Form-module_spaceHolderBig__1LFJW {\n  width: 150px; }\n";
+var styles$k = {"component":"Form-module_component__2aaxD","spaceHolder":"Form-module_spaceHolder__3SJwW","spaceHolderBig":"Form-module_spaceHolderBig__1LFJW"};
+styleInject(css$j);
+
 var optionDropDown = [{
         iconName: "icon-search-equal",
         name: "Between"
@@ -4093,18 +4099,22 @@ var Form = /** @class */ (function (_super) {
     Form.prototype.render = function () {
         return (React.createElement(StackPanel, null,
             React.createElement(Container, { ContainerWidth: "fullWidth" },
-                React.createElement(RowPanel, { paddingBottom: true, paddingTop: true },
+                React.createElement(RowPanel, { paddingBottom: true },
                     React.createElement(Label, null, "Due Date")),
                 React.createElement(RowPanel, null,
-                    React.createElement(Select, { options: optionDropDown }),
-                    React.createElement(Label, null, "From"),
-                    React.createElement(Select, { options: optionDropDown }),
-                    React.createElement(Label, null, "To"),
-                    React.createElement(Select, { options: optionDropDown })),
-                React.createElement(RowPanel, { paddingBottom: true, paddingTop: true, alignItems: "flex-end" },
-                    React.createElement(WrapPanel, null,
-                        React.createElement(GeneralInput, { inputWidth: "medium" }),
-                        React.createElement(GeneralInput, { inputWidth: "medium" }))),
+                    React.createElement(Select, { options: optionDropDown, width: "medium" }),
+                    React.createElement("div", { className: styles$k.spaceHolder },
+                        React.createElement(Label, null, "From")),
+                    React.createElement(Select, { options: optionDropDown, width: "small" }),
+                    React.createElement("div", { className: styles$k.spaceHolder },
+                        React.createElement(Label, null, "To")),
+                    React.createElement(Select, { options: optionDropDown, width: "small" })),
+                React.createElement(RowPanel, { paddingBottom: true, paddingTop: true },
+                    React.createElement("div", { className: styles$k.spaceHolderBig }),
+                    React.createElement("div", { className: styles$k.spaceHolder }),
+                    React.createElement(GeneralInput, { inputWidth: "small" }),
+                    React.createElement("div", { className: styles$k.spaceHolder }),
+                    React.createElement(GeneralInput, { inputWidth: "small" })),
                 React.createElement(RowPanel, { alignItems: "flex-end" },
                     React.createElement(Label, null, "Sort")))));
     };

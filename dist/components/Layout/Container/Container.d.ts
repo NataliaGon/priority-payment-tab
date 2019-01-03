@@ -5,7 +5,6 @@ declare class ContainerProperties extends ComponentBaseProperties {
     ContainerWidth?: string;
     alignItems?: AlignItems;
     closable?: boolean;
-    iconReorder?: boolean;
 }
 interface ContainerState extends ComponentBaseState {
     isHover?: boolean;

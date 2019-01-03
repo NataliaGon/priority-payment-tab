@@ -1,9 +1,11 @@
 /// <reference types="react" />
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../base-classes";
+declare type selectWidth = "small" | "medium" | "large";
 export interface SelectProperties extends ComponentBaseProperties {
     multiSelect?: boolean;
     IconTextColor?: string;
     options: any[];
+    width?: selectWidth;
 }
 export interface SelectState extends ComponentBaseState {
     isOpen: boolean;
@@ -16,3 +18,4 @@ export declare class Select extends ComponentBase<SelectProperties, SelectState>
     optionSelected(): void;
     render(): JSX.Element;
 }
+export {};

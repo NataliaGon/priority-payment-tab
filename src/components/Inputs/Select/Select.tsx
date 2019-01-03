@@ -11,10 +11,13 @@ import {
 import { OptionItem } from "./OptionItem/OptionItem";
 import { PriorityIcon } from "../../../base-classes/PriorityIcon";
 
+type selectWidth ="small"|"medium"|"large";
+
 export interface SelectProperties extends ComponentBaseProperties {
   multiSelect?: boolean;
   IconTextColor?: string;
   options: any[];
+  width?:selectWidth;
 }
 
 export interface SelectState extends ComponentBaseState {
@@ -83,19 +86,24 @@ export class Select extends ComponentBase<SelectProperties, SelectState> {
     const smallInputVisibilityClass = this.state && this.state.isOpen ? styles.borderColorBlue : '';
     const dropDownOptionsClass = styles.optionsWrapper;
     const smallInputOptionsClass = styles.inputSmall;
-
+    const sizeSelectClass= this.props.width?styles[this.props.width]:styles["medium"];
     const dropDownOptionsClasses = classNames(
       dropDownVisibilityClass,
-      dropDownOptionsClass
+      dropDownOptionsClass,
+      sizeSelectClass
     );
     const smallInputOptionsClasses = classNames(
       smallInputVisibilityClass,
-      smallInputOptionsClass
+      smallInputOptionsClass,
+      sizeSelectClass
     );
-
+   const dropDownElementsStyles=classNames(
+    styles.dropDownElements,sizeSelectClass
+   );
+   
     return (
      
-        <div className={styles.dropDownElements}>
+        <div className={dropDownElementsStyles}>
           <div
             className={smallInputOptionsClasses}
             onClick={this.dropDownToggle}
