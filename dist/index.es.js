@@ -4026,6 +4026,10 @@ var Tag = /** @class */ (function (_super) {
     return Tag;
 }(ComponentBase));
 
+var css$j = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Form-module_component__2aaxD {\n  display: flex;\n  justify-content: space-between; }\n";
+var styles$k = {"component":"Form-module_component__2aaxD"};
+styleInject(css$j);
+
 var optionDropDown = [{
         iconName: "icon-search-equal",
         name: "Between"
@@ -4052,7 +4056,7 @@ var Form = /** @class */ (function (_super) {
             createElement(Container, { ContainerWidth: "fullWidth" },
                 createElement(RowPanel, { paddingBottom: true, paddingTop: true },
                     createElement(Label, null, "Due Date")),
-                createElement(RowPanel, { paddingBottom: true, paddingTop: true, alignItems: "center" },
+                createElement("div", { className: styles$k.component },
                     createElement(Select, { options: optionDropDown }),
                     createElement(Label, null, "From"),
                     createElement(Select, { options: optionDropDown }),
