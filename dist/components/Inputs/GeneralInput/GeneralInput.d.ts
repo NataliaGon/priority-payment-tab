@@ -13,6 +13,7 @@ export declare class GeneralInput extends ComponentBase<GeneralInputProperties, 
     HandlerEnter: () => void;
     HandlerMouseLeave: () => void;
     HandlerFocus: () => void;
+    HandleOnBlur: () => void;
     render(): JSX.Element;
 }
 export {};

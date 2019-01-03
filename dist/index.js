@@ -562,8 +562,8 @@ var AutoFill = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=InputAutofill.js.map
 
-var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative;\n  margin-top: -14px; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 20px;\n  top: 2px; }\n";
-var styles$a = {"component":"GeneralInput-module_component__330am","input":"GeneralInput-module_input__1avBH","large":"GeneralInput-module_large__1t8F4","medium":"GeneralInput-module_medium__N-uX-","icon":"GeneralInput-module_icon__2-GM9","btn":"GeneralInput-module_btn__2hRkg"};
+var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative;\n  margin-top: -14px; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 40px;\n  top: 5px; }\n\n.GeneralInput-module_iconOptinal__1cOYx {\n  position: absolute;\n  left: 20px;\n  top: 5px; }\n";
+var styles$a = {"component":"GeneralInput-module_component__330am","input":"GeneralInput-module_input__1avBH","large":"GeneralInput-module_large__1t8F4","medium":"GeneralInput-module_medium__N-uX-","icon":"GeneralInput-module_icon__2-GM9","btn":"GeneralInput-module_btn__2hRkg","iconOptinal":"GeneralInput-module_iconOptinal__1cOYx"};
 styleInject(css$b);
 
 var GeneralInputProperties = /** @class */ (function (_super) {
@@ -590,6 +590,9 @@ var GeneralInput = /** @class */ (function (_super) {
         _this.HandlerFocus = function () {
             _this.setState({ isFocus: !_this.state.isFocus });
         };
+        _this.HandleOnBlur = function () {
+            _this.setState({ isFocus: !_this.state.isFocus });
+        };
         return _this;
     }
     GeneralInput.prototype.render = function () {
@@ -597,10 +600,10 @@ var GeneralInput = /** @class */ (function (_super) {
         var btnComponent = this.state.isButton ? React.createElement("div", { className: styles$a.btn },
             React.createElement(Button, { width: "small" }, "Add")) : '';
         var classNamesInput = classnames(styles$a.input, styles$a[this.props.inputWidth]);
-        var iconOptinal = this.state.isFocus ? React.createElement("div", { className: styles$a.iconAny },
+        var iconOptinal = this.state.isFocus ? React.createElement("div", { className: styles$a.iconOptinal },
             React.createElement(Icon, { icon: exports.PriorityIcon.done, iconColor: "grey" })) : '';
         return (React.createElement("div", { className: styles$a.component, onMouseEnter: this.HandlerEnter, onMouseLeave: this.HandlerMouseLeave },
-            React.createElement("input", { className: classNamesInput, type: "text", onFocus: this.HandlerFocus }),
+            React.createElement("input", { className: classNamesInput, type: "text", onBlur: this.HandleOnBlur, onFocus: this.HandlerFocus }),
             React.createElement("div", { className: styles$a.icon }, iconComponent),
             btnComponent,
             iconOptinal));
