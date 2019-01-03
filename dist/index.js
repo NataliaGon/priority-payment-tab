@@ -441,7 +441,7 @@ var css$8 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n
 var styles$7 = {"dropDownElements":"Select-module_dropDownElements__21ytE","inputSmall":"Select-module_inputSmall__bBJSK","optionsWrapper":"Select-module_optionsWrapper__1Cr8b","dropDownResult":"Select-module_dropDownResult__4eWkA","dropDownHide":"Select-module_dropDownHide__21Dnp","boxShadow":"Select-module_boxShadow__1YeZR","drop-down_icon-wrapper":"Select-module_drop-down_icon-wrapper__3xqih","dropDownIconWrapper":"Select-module_dropDownIconWrapper__3ruHJ","borderColorBlue":"Select-module_borderColorBlue__2gS6j","ul":"Select-module_ul__egZga","active":"Select-module_active__38GJG","small":"Select-module_small__x5CoJ","medium":"Select-module_medium__1IWGm","large":"Select-module_large__1qYsh"};
 styleInject(css$8);
 
-var css$9 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.OptionItem-module_component__23SsC {\n  margin: 2px 7px;\n  display: flex;\n  height: 40px;\n  align-items: center;\n  padding-left: 10px; }\n";
+var css$9 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.OptionItem-module_component__23SsC {\n  margin: 1px 0;\n  display: flex;\n  height: 40px;\n  align-items: center;\n  padding-left: 10px; }\n";
 var styles$8 = {"component":"OptionItem-module_component__23SsC"};
 styleInject(css$9);
 

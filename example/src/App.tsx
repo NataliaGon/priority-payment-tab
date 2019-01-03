@@ -69,6 +69,7 @@ class App extends Component {
                 </RowPanel>
                 <RowPanel paddingTop={true} paddingBottom={true}>
                   <Select options={optionDropDown} />
+                  <Select options={optionDropDown} width="large"/>
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />
