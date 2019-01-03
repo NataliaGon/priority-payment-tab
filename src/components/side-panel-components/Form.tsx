@@ -28,7 +28,7 @@ export class Form extends ComponentBase<FormProperties, FormState> {
                     <RowPanel paddingBottom={true} paddingTop={true} >
                         <Label>Due Date</Label>
                     </RowPanel>
-                    <RowPanel paddingBottom={true} paddingTop={true}>
+                    <RowPanel>
                        <Select options={optionDropDown} />
                         <Label>From</Label>
                         <Select options={optionDropDown} />

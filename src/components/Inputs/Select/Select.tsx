@@ -94,7 +94,7 @@ export class Select extends ComponentBase<SelectProperties, SelectState> {
     );
 
     return (
-      <div className={styles.containerForDropDown}>
+     
         <div className={styles.dropDownElements}>
           <div
             className={smallInputOptionsClasses}
@@ -106,7 +106,7 @@ export class Select extends ComponentBase<SelectProperties, SelectState> {
           </div>
           <div className={dropDownOptionsClasses}>{this.renderOptions()}</div>
         </div>
-      </div>
+    
     );
   }
 }

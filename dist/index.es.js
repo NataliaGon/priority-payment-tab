@@ -417,8 +417,8 @@ var LineInput = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=LineInput.js.map
 
-var css$8 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Select-module_dropDownElements__21ytE {\n  height: 43px;\n  position: relative; }\n\n.Select-module_inputSmall__bBJSK {\n  height: 30px;\n  border-radius: 3px;\n  border: 1px solid #bfd0d7;\n  z-index: 3;\n  position: absolute;\n  width: 150px;\n  box-sizing: border-box; }\n\n.Select-module_optionsWrapper__1Cr8b {\n  background: #fff;\n  position: relative;\n  width: 150px; }\n\n.Select-module_dropDownResult__4eWkA {\n  height: 30px;\n  background: #6e818a;\n  color: #fff;\n  display: inline-block;\n  line-height: 30px;\n  padding: 0 10px;\n  border-radius: 3px;\n  position: relative; }\n\n.Select-module_dropDownResultsContainer__2Z6Mg {\n  margin-top: 5px; }\n\n.Select-module_dropDownHide__21Dnp {\n  overflow: hidden;\n  height: 30px;\n  border-radius: 3px; }\n\n.Select-module_boxShadow__1YeZR {\n  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);\n  width: 160px;\n  margin-left: -5px;\n  margin-top: -5px;\n  padding: 5px;\n  border-radius: 3px;\n  z-index: 2; }\n\n.Select-module_drop-down_icon-wrapper__3xqih {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: #fff; }\n\n.Select-module_dropDownIconWrapper__3ruHJ {\n  position: absolute;\n  top: 0;\n  right: 0; }\n\n.Select-module_borderColorBlue__2gS6j {\n  border: 1px solid #00adee; }\n\n.Select-module_ul__egZga li:hover {\n  background-color: #D9F6F9; }\n\n.Select-module_ul__egZga li:first-child {\n  height: 27px; }\n  .Select-module_ul__egZga li:first-child:hover {\n    background-color: #fff; }\n\n.Select-module_ul__egZga li:nth-child(2) {\n  margin-top: 11px; }\n\n.Select-module_active__38GJG {\n  color: #00adee; }\n";
-var styles$7 = {"dropDownElements":"Select-module_dropDownElements__21ytE","inputSmall":"Select-module_inputSmall__bBJSK","optionsWrapper":"Select-module_optionsWrapper__1Cr8b","dropDownResult":"Select-module_dropDownResult__4eWkA","dropDownResultsContainer":"Select-module_dropDownResultsContainer__2Z6Mg","dropDownHide":"Select-module_dropDownHide__21Dnp","boxShadow":"Select-module_boxShadow__1YeZR","drop-down_icon-wrapper":"Select-module_drop-down_icon-wrapper__3xqih","dropDownIconWrapper":"Select-module_dropDownIconWrapper__3ruHJ","borderColorBlue":"Select-module_borderColorBlue__2gS6j","ul":"Select-module_ul__egZga","active":"Select-module_active__38GJG"};
+var css$8 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Select-module_dropDownElements__21ytE {\n  height: 43px;\n  position: relative; }\n\n.Select-module_inputSmall__bBJSK {\n  height: 30px;\n  border-radius: 3px;\n  border: 1px solid #bfd0d7;\n  z-index: 3;\n  position: absolute;\n  width: 150px;\n  box-sizing: border-box; }\n\n.Select-module_optionsWrapper__1Cr8b {\n  background: #fff;\n  position: relative;\n  width: 150px; }\n\n.Select-module_dropDownResult__4eWkA {\n  height: 30px;\n  background: #6e818a;\n  color: #fff;\n  display: inline-block;\n  line-height: 30px;\n  padding: 0 10px;\n  border-radius: 3px;\n  position: relative; }\n\n.Select-module_dropDownHide__21Dnp {\n  overflow: hidden;\n  height: 30px;\n  border-radius: 3px; }\n\n.Select-module_boxShadow__1YeZR {\n  box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);\n  width: 160px;\n  margin-left: -5px;\n  margin-top: -5px;\n  padding: 5px;\n  border-radius: 3px;\n  z-index: 2; }\n\n.Select-module_drop-down_icon-wrapper__3xqih {\n  position: absolute;\n  top: 0;\n  right: 0;\n  background: #fff; }\n\n.Select-module_dropDownIconWrapper__3ruHJ {\n  position: absolute;\n  top: 0;\n  right: 0; }\n\n.Select-module_borderColorBlue__2gS6j {\n  border: 1px solid #00adee; }\n\n.Select-module_ul__egZga li:hover {\n  background-color: #D9F6F9; }\n\n.Select-module_ul__egZga li:first-child {\n  height: 27px; }\n  .Select-module_ul__egZga li:first-child:hover {\n    background-color: #fff; }\n\n.Select-module_ul__egZga li:nth-child(2) {\n  margin-top: 11px; }\n\n.Select-module_active__38GJG {\n  color: #00adee; }\n";
+var styles$7 = {"dropDownElements":"Select-module_dropDownElements__21ytE","inputSmall":"Select-module_inputSmall__bBJSK","optionsWrapper":"Select-module_optionsWrapper__1Cr8b","dropDownResult":"Select-module_dropDownResult__4eWkA","dropDownHide":"Select-module_dropDownHide__21Dnp","boxShadow":"Select-module_boxShadow__1YeZR","drop-down_icon-wrapper":"Select-module_drop-down_icon-wrapper__3xqih","dropDownIconWrapper":"Select-module_dropDownIconWrapper__3ruHJ","borderColorBlue":"Select-module_borderColorBlue__2gS6j","ul":"Select-module_ul__egZga","active":"Select-module_active__38GJG"};
 styleInject(css$8);
 
 var css$9 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.OptionItem-module_component__23SsC {\n  margin: 2px 7px;\n  display: flex;\n  height: 40px;\n  align-items: center;\n  padding-left: 10px; }\n";
@@ -485,12 +485,11 @@ var Select = /** @class */ (function (_super) {
         var smallInputOptionsClass = styles$7.inputSmall;
         var dropDownOptionsClasses = classnames(dropDownVisibilityClass, dropDownOptionsClass);
         var smallInputOptionsClasses = classnames(smallInputVisibilityClass, smallInputOptionsClass);
-        return (createElement("div", { className: styles$7.containerForDropDown },
-            createElement("div", { className: styles$7.dropDownElements },
-                createElement("div", { className: smallInputOptionsClasses, onClick: this.dropDownToggle },
-                    createElement("div", { className: styles$7.dropDownIconWrapper },
-                        createElement(Icon, { iconColor: this.state.isOpen ? "blue" : "grey", icon: classForDropDownIcon }))),
-                createElement("div", { className: dropDownOptionsClasses }, this.renderOptions()))));
+        return (createElement("div", { className: styles$7.dropDownElements },
+            createElement("div", { className: smallInputOptionsClasses, onClick: this.dropDownToggle },
+                createElement("div", { className: styles$7.dropDownIconWrapper },
+                    createElement(Icon, { iconColor: this.state.isOpen ? "blue" : "grey", icon: classForDropDownIcon }))),
+            createElement("div", { className: dropDownOptionsClasses }, this.renderOptions())));
     };
     return Select;
 }(ComponentBase));
@@ -4090,7 +4089,7 @@ var Form = /** @class */ (function (_super) {
             createElement(Container, { ContainerWidth: "fullWidth" },
                 createElement(RowPanel, { paddingBottom: true, paddingTop: true },
                     createElement(Label, null, "Due Date")),
-                createElement(RowPanel, { paddingBottom: true, paddingTop: true },
+                createElement(RowPanel, null,
                     createElement(Select, { options: optionDropDown }),
                     createElement(Label, null, "From"),
                     createElement(Select, { options: optionDropDown }),
@@ -4105,6 +4104,7 @@ var Form = /** @class */ (function (_super) {
     };
     return Form;
 }(ComponentBase));
+//# sourceMappingURL=Form.js.map
 
 //# sourceMappingURL=index.js.map
 
