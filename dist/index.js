@@ -310,26 +310,38 @@ var Icon = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$5 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Button-module_component__1-G0j {\n  height: 30px;\n  border-radius: 3px;\n  box-shadow: 0 5px 15px 0 rgba(0, 173, 238, 0.15);\n  font-size: 14px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center; }\n\n.Button-module_regularFixed__RUQjA {\n  width: 120px; }\n\n.Button-module_fullWidth__3FZAe {\n  width: 100%; }\n\n.Button-module_contentWidth__2xs3y {\n  width: unset; }\n\n.Button-module_regular__5w0aR {\n  background-color: #00adee;\n  color: #fff; }\n\n.Button-module_secondary__2WKbk {\n  background-color: #60c5bb;\n  color: #fff; }\n\n.Button-module_stroke__2OI22 {\n  background-color: #fff;\n  border: solid 1px #00adee;\n  color: #00adee; }\n  .Button-module_stroke__2OI22:hover {\n    color: #fff;\n    background-color: #00adee; }\n\n.Button-module_roundStrokeIcon__2h9D- {\n  width: 30px;\n  border-radius: 50%;\n  border: 2px solid #00adee;\n  justify-content: center; }\n\n.Button-module_active__2_Pre {\n  background: #2e4049; }\n\n.Button-module_disabled__3qbwx {\n  background: #d6dddf;\n  opacity: 0.3; }\n\n.Button-module_darkTheme__KwnA-.Button-module_component__1-G0j {\n  height: 40px;\n  font-weight: 700; }\n\n.Button-module_darkTheme__KwnA-.Button-module_roundStrokeIcon__2h9D- {\n  height: 30px; }\n\n.Button-module_small__1YOJT {\n  background-color: #00adee;\n  color: #fff; }\n  .Button-module_small__1YOJT.Button-module_component__1-G0j {\n    height: 20px;\n    padding: 0 10px; }\n";
-var styles$4 = {"component":"Button-module_component__1-G0j","regularFixed":"Button-module_regularFixed__RUQjA","fullWidth":"Button-module_fullWidth__3FZAe","contentWidth":"Button-module_contentWidth__2xs3y","regular":"Button-module_regular__5w0aR","secondary":"Button-module_secondary__2WKbk","stroke":"Button-module_stroke__2OI22","roundStrokeIcon":"Button-module_roundStrokeIcon__2h9D-","active":"Button-module_active__2_Pre","disabled":"Button-module_disabled__3qbwx","darkTheme":"Button-module_darkTheme__KwnA-","small":"Button-module_small__1YOJT"};
+var css$5 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Button-module_component__1-G0j {\n  height: 30px;\n  border-radius: 3px;\n  box-shadow: 0 5px 15px 0 rgba(0, 173, 238, 0.15);\n  font-size: 14px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center; }\n\n.Button-module_regularFixed__RUQjA {\n  width: 120px; }\n\n.Button-module_fullWidth__3FZAe {\n  width: 100%; }\n\n.Button-module_contentWidth__2xs3y {\n  width: unset; }\n\n.Button-module_regular__5w0aR {\n  background-color: #00adee;\n  color: #fff; }\n\n.Button-module_secondary__2WKbk {\n  background-color: #60c5bb;\n  color: #fff; }\n  .Button-module_secondary__2WKbk:hover {\n    background: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8)); }\n\n.Button-module_secondaryActive__27DhZ {\n  border: 1px solid #B2E4E0;\n  box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);\n  background: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8));\n  color: #fff; }\n\n.Button-module_secondaryDisabled__2RTGD {\n  background-color: #788e97;\n  color: #788e97;\n  opacity: 0.2; }\n\n.Button-module_stroke__2OI22 {\n  background-color: #2e4049;\n  border: solid 1px #fff;\n  color: #fff; }\n  .Button-module_stroke__2OI22:hover {\n    border: solid 1px #00adee; }\n\n.Button-module_strokeActive__295SU {\n  background-color: #fff;\n  color: #00adee; }\n\n.Button-module_strokeDisabled__1ZKVP {\n  background-color: #2e4049;\n  color: #788e97;\n  border: 1px solid #788e97; }\n\n.Button-module_roundStrokeIcon__2h9D- {\n  width: 30px;\n  border-radius: 50%;\n  border: 2px solid #00adee;\n  justify-content: center; }\n\n.Button-module_darkTheme__KwnA-.Button-module_component__1-G0j {\n  height: 40px;\n  font-weight: 700; }\n\n.Button-module_darkTheme__KwnA-.Button-module_roundStrokeIcon__2h9D- {\n  height: 30px; }\n\n.Button-module_small__1YOJT {\n  background-color: #00adee;\n  color: #fff; }\n  .Button-module_small__1YOJT.Button-module_component__1-G0j {\n    height: 20px;\n    padding: 0 10px; }\n";
+var styles$4 = {"component":"Button-module_component__1-G0j","regularFixed":"Button-module_regularFixed__RUQjA","fullWidth":"Button-module_fullWidth__3FZAe","contentWidth":"Button-module_contentWidth__2xs3y","regular":"Button-module_regular__5w0aR","secondary":"Button-module_secondary__2WKbk","secondaryActive":"Button-module_secondaryActive__27DhZ","secondaryDisabled":"Button-module_secondaryDisabled__2RTGD","stroke":"Button-module_stroke__2OI22","strokeActive":"Button-module_strokeActive__295SU","strokeDisabled":"Button-module_strokeDisabled__1ZKVP","roundStrokeIcon":"Button-module_roundStrokeIcon__2h9D-","darkTheme":"Button-module_darkTheme__KwnA-","small":"Button-module_small__1YOJT"};
 styleInject(css$5);
 
 var Button = /** @class */ (function (_super) {
     __extends(Button, _super);
     function Button() {
-        return _super !== null && _super.apply(this, arguments) || this;
+        var _this = _super !== null && _super.apply(this, arguments) || this;
+        _this.state = {
+            isActive: false
+        };
+        _this.clickHandler = function () {
+            _this.setState({ isActive: !_this.state.isActive });
+        };
+        return _this;
     }
     Button.prototype.render = function () {
         var skinClass = styles$4[this.props.skin ? this.props.skin : ""];
         var widthClass = styles$4[this.props.width ? this.props.width : ""];
-        console.log(this.props.width);
         var darkThemeClass = styles$4.darkTheme;
-        var buttonClass = classnames(styles$4.component, this.props.componentClasses, skinClass, widthClass, darkThemeClass);
-        return (React.createElement("button", { className: buttonClass, onClick: this.props.onClick }, this.props.children));
+        var activeBtnStyles = this.state.isActive ? styles$4[this.props.skin + 'Active'] : "";
+        var buttonClass = "";
+        if (this.state.isActive) {
+            buttonClass = classnames(styles$4.component, widthClass, skinClass, activeBtnStyles, darkThemeClass);
+        }
+        else {
+            buttonClass = classnames(styles$4.component, skinClass, widthClass, darkThemeClass);
+        }
+        return (React.createElement("button", { className: buttonClass, onClick: this.clickHandler }, this.props.children));
     };
     return Button;
 }(ComponentBase));
-//# sourceMappingURL=Button.js.map
 
 var css$6 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.CheckBox-module_component__2pUWa {\n  font-family: \"icomoon\" !important;\n  color: #788e97;\n  height: 2rem;\n  width: 2rem;\n  font-size: 2rem;\n  border: 1px solid rgba(120, 142, 151, 0.3);\n  border-radius: 0.2rem; }\n  .CheckBox-module_component__2pUWa.CheckBox-module_checked__2F1lL:before {\n    content: \"\\E911\"; }\n  .CheckBox-module_component__2pUWa:hover {\n    color: #00adee;\n    border-color: #00adee; }\n  .CheckBox-module_component__2pUWa.CheckBox-module_disabled__pl-s7 {\n    background-color: #d6dddf;\n    border-color: #d6dddf; }\n";
 var styles$5 = {"component":"CheckBox-module_component__2pUWa","checked":"CheckBox-module_checked__2F1lL","disabled":"CheckBox-module_disabled__pl-s7"};

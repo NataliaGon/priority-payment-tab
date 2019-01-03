@@ -30,33 +30,46 @@
 .secondary{
     background-color: $green;
     color:$white;
-}
-.stroke {
-    background-color: $white;
-    border: solid 1px $blue;
-    color: $blue;
 
-
-    &:hover {
-        color: $white;
-        background-color: $blue;
+    &:hover{
+        background: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8));
     }
 }
+.secondaryActive{
+    border: 1px solid #B2E4E0;
+    box-shadow: 0 5px 10px 0 rgba(11,56,51,0.50);
+    background: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8));
+    color:$white;
+}
+.secondaryDisabled{
+    background-color: $grey;
+    color: $grey;
+    opacity: 0.2;
+}
 
+.stroke{
+    background-color: $dark;
+    border: solid 1px $white;
+    color: $white;
+
+    &:hover{
+        border: solid 1px $blue; 
+}
+}
+.strokeActive{
+    background-color: $white;
+    color: $blue;
+}
+.strokeDisabled{
+    background-color: $dark;
+    color: $grey;
+    border: 1px solid $grey;
+}
 .roundStrokeIcon {
     width: 30px;
     border-radius: 50%;
     border: 2px solid $blue;
     justify-content: center;
-}
-
-.active {
-    background: $dark;
-}
-
-.disabled {
-    background: $disabled-grey;
-    opacity: 0.3;
 }
 
 .darkTheme {
@@ -73,7 +86,7 @@
     background-color: $blue;
     color:$white;
     &.component {
-        height: 20px;
+       height: 20px;
        padding: 0 10px;
     }
 }

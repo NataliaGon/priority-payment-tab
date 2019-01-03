@@ -8,16 +8,10 @@ import { GeneralInput } from '../Inputs';
 import { Select } from '../Inputs/Select/Select';
 import { optionDropDown } from '../../constants/optionDropDown';
 
-
-
-
 class FormProperties extends ComponentBaseProperties {
 
-
 }
-
 interface FormState extends ComponentBaseState {
-
 }
 
 export class Form extends ComponentBase<FormProperties, FormState> {

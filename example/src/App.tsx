@@ -69,7 +69,6 @@ class App extends Component {
                 </RowPanel>
                 <RowPanel paddingTop={true} paddingBottom={true}>
                   <Select options={optionDropDown} />
-                
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />
@@ -95,17 +94,17 @@ class App extends Component {
             </StackPanel>
 
            <Form/>
-           
+
             <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
               <RowPanel alignItems="space-between" >
                 <Container>
-                  <Icon icon={PriorityIcon.clear} />
+                  <Icon icon={PriorityIcon.clear} iconColor="white"/>
                   <Label skin="regular-high-contrast">Clear Search</Label>
                 </Container>
                 <Container ContainerWidth="250px" alignItems="spaceBetween">
                   <WrapPanel>
+                    <Button skin="stroke" width="regularFixed">Save</Button>
                     <Button skin="secondary" width="regularFixed">Save</Button>
-                    <Button skin="regular" width="regularFixed">Apply</Button>
                   </WrapPanel>
                 </Container>
               </RowPanel>

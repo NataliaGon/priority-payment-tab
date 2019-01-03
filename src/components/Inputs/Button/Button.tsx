@@ -4,31 +4,44 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBa
 
 import styles from "./Button.module.scss";
 
-type ButtonSkin = "regular" | "stroke" | "roundStrokeIcon" | "secondary";
+type ButtonSkin = "regular" | "stroke" | "roundStrokeIcon" | "secondary" |"strokeActive";
 type ButtonWidth = "regularFixed" | "fullWidth" | "ccontentWidth" | "small";
 
 interface ButtonProperties extends ComponentBaseProperties {
   skin?: ButtonSkin;
   width?: ButtonWidth;
-  onClick?: () => void;
+  
 }
 
 interface ButtonState extends ComponentBaseState {
-
+isActive?:boolean;
 }
 
 export class Button extends ComponentBase<ButtonProperties, ButtonState> {
 
+state:ButtonState={
+  isActive:false
+}
+clickHandler=()=>{
+  this.setState({isActive:!this.state.isActive});
+}
   public render() {
     const skinClass = styles[this.props.skin ? this.props.skin : ""];
     const widthClass = styles[this.props.width ? this.props.width : ""];
-console.log(this.props.width);
     const darkThemeClass = styles.darkTheme;
-
-    const buttonClass = classNames(styles.component, this.props.componentClasses, skinClass, widthClass, darkThemeClass);
+    const activeBtnStyles = this.state.isActive? styles[this.props.skin  + 'Active'] : "";
+    
+   
+   let buttonClass="";
+    if (this.state.isActive){
+      buttonClass = classNames(styles.component,  widthClass, skinClass, activeBtnStyles, darkThemeClass);
+    }else{
+      buttonClass = classNames(styles.component, skinClass, widthClass, darkThemeClass);
+    }
+     
 
     return (
-      <button className={buttonClass} onClick={this.props.onClick}>{this.props.children}</button>
+      <button className={buttonClass} onClick={this.clickHandler}>{this.props.children}</button>
     );
   }
 }
