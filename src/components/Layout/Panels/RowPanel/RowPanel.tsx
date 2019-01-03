@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import styles from "./RowPanel.module.scss";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../base-classes";
 
-type AlignItems = "flex-start" | "flex-end" | "space-between";
+type AlignItems = "flex-start" | "flex-end" | "space-between" |"center";
 
 interface RowPanelProperties extends ComponentBaseProperties {
   alignItems?: AlignItems;

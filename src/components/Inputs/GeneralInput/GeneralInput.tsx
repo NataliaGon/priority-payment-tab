@@ -17,8 +17,7 @@ import {Button} from '../Button/Button';
 
 class GeneralInputProperties extends ComponentBaseProperties {
     inputWidth?: any;
-    clearable?:boolean;
-    
+    clearable?:boolean; 
 }
 
 interface GeneralInputState extends ComponentBaseState {

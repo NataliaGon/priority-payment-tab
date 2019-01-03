@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../base-classes";
-declare type AlignItems = "flex-start" | "flex-end" | "space-between";
+declare type AlignItems = "flex-start" | "flex-end" | "space-between" | "center";
 interface RowPanelProperties extends ComponentBaseProperties {
     alignItems?: AlignItems;
     paddingTop?: boolean;

@@ -4,9 +4,10 @@ import {
   StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select,
   GeneralInput,
-  PriorityIcon, AutoFill
+  PriorityIcon, AutoFill, Form
 } from 'priority-style-react';
 import { optionDropDown } from './optionDropDown';
+
 
 
 class App extends Component {
@@ -78,7 +79,7 @@ class App extends Component {
                 </RowPanel>
                 <RowPanel paddingTop={true}>
                   <Select options={optionDropDown} />
-                  <GeneralInput inputWidth="large" clearable={true}/>
+                  <GeneralInput inputWidth="large" clearable={true} />
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />
@@ -122,6 +123,9 @@ class App extends Component {
                 <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
               </RowPanel>
             </StackPanel>
+
+           <Form/>
+
 
             <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
               <RowPanel alignItems="space-between" >
