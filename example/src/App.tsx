@@ -62,16 +62,6 @@ class App extends Component {
               </RowPanel>
             </StackPanel>
 
-            <StackPanel>
-              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
-                <Container>
-                  <CheckBox />
-                  <Label skin="bold">Case Sensitive</Label>
-                </Container>
-                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
-              </RowPanel>
-            </StackPanel>
-
             <StackPanel >
               <Container ContainerWidth="fullWidth" >
                 <RowPanel>
@@ -86,16 +76,6 @@ class App extends Component {
                   <Tag text="test" />
                 </WrapPanel>
               </Container>
-            </StackPanel>
-
-            <StackPanel>
-              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
-                <Container>
-                  <CheckBox />
-                  <Label skin="bold">Case Sensitive</Label>
-                </Container>
-                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
-              </RowPanel>
             </StackPanel>
 
             <StackPanel >
@@ -114,19 +94,8 @@ class App extends Component {
               </Container>
             </StackPanel>
 
-            <StackPanel>
-              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
-                <Container>
-                  <CheckBox />
-                  <Label skin="bold">Case Sensitive</Label>
-                </Container>
-                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
-              </RowPanel>
-            </StackPanel>
-
            <Form/>
-
-
+           
             <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
               <RowPanel alignItems="space-between" >
                 <Container>
