@@ -303,7 +303,7 @@ var Icon = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$5 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Button-module_component__1-G0j {\n  height: 30px;\n  border-radius: 3px;\n  box-shadow: 0 5px 15px 0 rgba(0, 173, 238, 0.15);\n  font-size: 14px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center; }\n\n.Button-module_regularFixed__RUQjA {\n  width: 120px; }\n\n.Button-module_fullWidth__3FZAe {\n  width: 100%; }\n\n.Button-module_contentWidth__2xs3y {\n  width: unset; }\n\n.Button-module_regular__5w0aR {\n  background-color: #00adee;\n  color: #fff; }\n\n.Button-module_secondary__2WKbk {\n  background-color: #60c5bb;\n  color: #fff; }\n  .Button-module_secondary__2WKbk:hover {\n    background: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8)); }\n\n.Button-module_secondaryActive__27DhZ {\n  border: 1px solid #B2E4E0;\n  box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);\n  background: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8));\n  color: #fff; }\n\n.Button-module_secondaryDisabled__2RTGD {\n  background-color: #788e97;\n  color: #788e97;\n  opacity: 0.2; }\n\n.Button-module_stroke__2OI22 {\n  background-color: #2e4049;\n  border: solid 1px #fff;\n  color: #fff; }\n  .Button-module_stroke__2OI22:hover {\n    border: solid 1px #00adee; }\n\n.Button-module_strokeActive__295SU {\n  background-color: #fff;\n  color: #00adee; }\n\n.Button-module_strokeDisabled__1ZKVP {\n  background-color: #2e4049;\n  color: #788e97;\n  border: 1px solid #788e97; }\n\n.Button-module_roundStrokeIcon__2h9D- {\n  width: 30px;\n  border-radius: 50%;\n  border: 2px solid #00adee;\n  justify-content: center; }\n\n.Button-module_darkTheme__KwnA-.Button-module_component__1-G0j {\n  height: 40px;\n  font-weight: 700; }\n\n.Button-module_darkTheme__KwnA-.Button-module_roundStrokeIcon__2h9D- {\n  height: 30px; }\n\n.Button-module_small__1YOJT {\n  background-color: #00adee;\n  color: #fff; }\n  .Button-module_small__1YOJT.Button-module_component__1-G0j {\n    height: 20px;\n    padding: 0 10px; }\n";
+var css$5 = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Button-module_component__1-G0j {\n  height: 30px;\n  border-radius: 3px;\n  box-shadow: 0 5px 15px 0 rgba(0, 173, 238, 0.15);\n  font-size: 14px;\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  justify-content: center; }\n\n.Button-module_regularFixed__RUQjA {\n  width: 120px; }\n\n.Button-module_fullWidth__3FZAe {\n  width: 100%; }\n\n.Button-module_contentWidth__2xs3y {\n  width: unset; }\n\n.Button-module_regular__5w0aR {\n  background: #00adee;\n  color: #fff; }\n\n.Button-module_secondary__2WKbk {\n  background: #60c5bb;\n  color: #fff; }\n  .Button-module_secondary__2WKbk:hover {\n    background: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8)); }\n\n.Button-module_secondaryActive__27DhZ {\n  border: 1px solid #B2E4E0;\n  box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);\n  background: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8));\n  color: #fff; }\n\n.Button-module_secondaryDisabled__2RTGD {\n  background: #788e97;\n  color: #f4f6f8;\n  opacity: 0.2; }\n  .Button-module_secondaryDisabled__2RTGD:hover {\n    background: #788e97; }\n\n.Button-module_stroke__2OI22 {\n  background: #2e4049;\n  border: solid 1px #fff;\n  color: #fff; }\n  .Button-module_stroke__2OI22:hover {\n    border: solid 1px #00adee; }\n\n.Button-module_strokeActive__295SU {\n  background: #fff;\n  color: #00adee; }\n\n.Button-module_strokeDisabled__1ZKVP {\n  background: #2e4049;\n  color: #788e97;\n  border: 1px solid #788e97;\n  box-shadow: none; }\n  .Button-module_strokeDisabled__1ZKVP:hover {\n    border: 1px solid #788e97; }\n\n.Button-module_roundStrokeIcon__2h9D- {\n  width: 30px;\n  border-radius: 50%;\n  border: 2px solid #00adee;\n  justify-content: center; }\n\n.Button-module_darkTheme__KwnA-.Button-module_component__1-G0j {\n  height: 40px;\n  font-weight: 700; }\n\n.Button-module_darkTheme__KwnA-.Button-module_roundStrokeIcon__2h9D- {\n  height: 30px; }\n\n.Button-module_small__1YOJT {\n  background: #00adee;\n  color: #fff; }\n  .Button-module_small__1YOJT.Button-module_component__1-G0j {\n    height: 20px;\n    padding: 0 10px; }\n";
 var styles$4 = {"component":"Button-module_component__1-G0j","regularFixed":"Button-module_regularFixed__RUQjA","fullWidth":"Button-module_fullWidth__3FZAe","contentWidth":"Button-module_contentWidth__2xs3y","regular":"Button-module_regular__5w0aR","secondary":"Button-module_secondary__2WKbk","secondaryActive":"Button-module_secondaryActive__27DhZ","secondaryDisabled":"Button-module_secondaryDisabled__2RTGD","stroke":"Button-module_stroke__2OI22","strokeActive":"Button-module_strokeActive__295SU","strokeDisabled":"Button-module_strokeDisabled__1ZKVP","roundStrokeIcon":"Button-module_roundStrokeIcon__2h9D-","darkTheme":"Button-module_darkTheme__KwnA-","small":"Button-module_small__1YOJT"};
 styleInject(css$5);
 
@@ -324,12 +324,16 @@ var Button = /** @class */ (function (_super) {
         var widthClass = styles$4[this.props.width ? this.props.width : ""];
         var darkThemeClass = styles$4.darkTheme;
         var activeBtnStyles = this.state.isActive ? styles$4[this.props.skin + 'Active'] : "";
+        var disabledBtnStyles = this.props.disabled ? styles$4[this.props.skin + 'Disabled'] : "";
         var buttonClass = "";
         if (this.state.isActive) {
             buttonClass = classnames(styles$4.component, widthClass, skinClass, activeBtnStyles, darkThemeClass);
         }
         else {
             buttonClass = classnames(styles$4.component, skinClass, widthClass, darkThemeClass);
+        }
+        if (this.props.disabled) {
+            buttonClass = classnames(styles$4.component, widthClass, skinClass, disabledBtnStyles, darkThemeClass);
         }
         return (createElement("button", { className: buttonClass, onClick: this.clickHandler }, this.props.children));
     };
@@ -387,6 +391,7 @@ var PriorityIcon;
     PriorityIcon["arrowDropDown"] = "icon-icon-arrow_drop_down";
     PriorityIcon["iconReorder"] = "icon-icon-reorder";
     PriorityIcon["tabsArrow"] = "icon-icon-tabs-arrow-reg";
+    PriorityIcon["calendar"] = "icon-icon--calendar";
 })(PriorityIcon || (PriorityIcon = {}));
 //# sourceMappingURL=PriorityIcon.js.map
 
@@ -571,7 +576,7 @@ var AutoFill = /** @class */ (function (_super) {
 }(ComponentBase));
 //# sourceMappingURL=InputAutofill.js.map
 
-var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none;\n  font-family: Roboto;\n  font-size: 14px;\n  font-weight: 500;\n  font-stretch: normal;\n  line-height: 1.21;\n  letter-spacing: normal;\n  padding-left: 10px; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_small__1288l {\n  width: 130px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 40px;\n  top: 5px; }\n\n.GeneralInput-module_iconOptinal__1cOYx {\n  position: absolute;\n  right: 5px;\n  top: 5px; }\n";
+var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none;\n  font-family: Roboto;\n  font-size: 14px;\n  font-weight: 500;\n  font-stretch: normal;\n  line-height: 1.21;\n  letter-spacing: normal;\n  padding-left: 10px; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_small__1288l {\n  width: 130px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 40px;\n  top: 5px; }\n\n.GeneralInput-module_iconOptinal__1cOYx {\n  position: absolute;\n  right: 5px;\n  top: 2px; }\n";
 var styles$a = {"component":"GeneralInput-module_component__330am","input":"GeneralInput-module_input__1avBH","large":"GeneralInput-module_large__1t8F4","medium":"GeneralInput-module_medium__N-uX-","small":"GeneralInput-module_small__1288l","icon":"GeneralInput-module_icon__2-GM9","btn":"GeneralInput-module_btn__2hRkg","iconOptinal":"GeneralInput-module_iconOptinal__1cOYx"};
 styleInject(css$b);
 
@@ -604,15 +609,16 @@ var GeneralInput = /** @class */ (function (_super) {
         return _this;
     }
     GeneralInput.prototype.render = function () {
-        // const iconName=this.props.iconName? this.props.iconName: "" ;
+        var iconName = this.props.iconName ? PriorityIcon[this.props.iconName] : "calendar";
         var iconComponent = this.props.clearable ? createElement(Icon, { icon: PriorityIcon.closeSmall, iconColor: "grey" }) : '';
         var btnComponent = this.props.isButton ? createElement("div", { className: styles$a.btn },
             createElement(Button, { width: "small" }, "Add")) : '';
         var classNamesInput = classnames(styles$a.input, styles$a[this.props.inputWidth]);
         var iconOptinal = this.props.isIcon ? createElement("div", { className: styles$a.iconOptinal },
-            createElement(Icon, { icon: PriorityIcon.tabsArrow, iconColor: "grey" })) : '';
+            createElement(Icon, { icon: iconName, iconColor: "grey" })) : '';
+        var defaultVal = this.props.defaultVal ? this.props.defaultVal : "";
         return (createElement("div", { className: styles$a.component, onMouseEnter: this.HandlerEnter, onMouseLeave: this.HandlerMouseLeave },
-            createElement("input", { className: classNamesInput, type: "text", onBlur: this.HandleOnBlur, onFocus: this.HandlerFocus, defaultValue: "03/12/2018" }),
+            createElement("input", { className: classNamesInput, type: "text", onBlur: this.HandleOnBlur, onFocus: this.HandlerFocus, defaultValue: defaultVal }),
             createElement("div", { className: styles$a.icon }, iconComponent),
             btnComponent,
             iconOptinal));
@@ -4078,8 +4084,8 @@ var Tag = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$j = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Form-module_component__2aaxD {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  align-items: center; }\n\n.Form-module_spaceHolder__3SJwW {\n  width: 54px;\n  display: flex;\n  justify-content: center; }\n\n.Form-module_spaceHolderBig__1LFJW {\n  width: 150px; }\n";
-var styles$k = {"component":"Form-module_component__2aaxD","spaceHolder":"Form-module_spaceHolder__3SJwW","spaceHolderBig":"Form-module_spaceHolderBig__1LFJW"};
+var css$j = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Form-module_component__16mIZ {\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  align-items: center; }\n\n.Form-module_spaceHolder__3LTBS {\n  width: 54px;\n  display: flex;\n  justify-content: center; }\n\n.Form-module_spaceHolderBig__1reWC {\n  width: 150px; }\n";
+var styles$k = {"component":"Form-module_component__16mIZ","spaceHolder":"Form-module_spaceHolder__3LTBS","spaceHolderBig":"Form-module_spaceHolderBig__1reWC"};
 styleInject(css$j);
 
 var optionDropDown = [{
@@ -4120,19 +4126,44 @@ var Form = /** @class */ (function (_super) {
                 createElement(RowPanel, { paddingBottom: true, paddingTop: true },
                     createElement("div", { className: styles$k.spaceHolderBig }),
                     createElement("div", { className: styles$k.spaceHolder }),
-                    createElement(GeneralInput, { inputWidth: "small", isIcon: true }),
+                    createElement(GeneralInput, { inputWidth: "small", isIcon: true, iconName: "calendar", defaultVal: "03/02/19" }),
                     createElement("div", { className: styles$k.spaceHolder }),
-                    createElement(GeneralInput, { inputWidth: "small", isIcon: true })),
+                    createElement(GeneralInput, { inputWidth: "small", isIcon: true, iconName: "calendar", defaultVal: "03/02/19" })),
                 createElement(RowPanel, { alignItems: "flex-end" },
                     createElement(Label, null, "Sort")))));
     };
     return Form;
 }(ComponentBase));
-//# sourceMappingURL=Form.js.map
+
+var css$k = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.FooterSidePanel-module_component__3l-hf {\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  z-index: 4; }\n";
+var styles$l = {"component":"FooterSidePanel-module_component__3l-hf"};
+styleInject(css$k);
+
+var FooterSidePanel = /** @class */ (function (_super) {
+    __extends(FooterSidePanel, _super);
+    function FooterSidePanel() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    FooterSidePanel.prototype.render = function () {
+        return (createElement("div", { className: styles$l.component },
+            createElement(StackPanel, { skin: "dark" },
+                createElement(RowPanel, { alignItems: "space-between" },
+                    createElement(Container, null,
+                        createElement(Icon, { icon: PriorityIcon.clear, iconColor: "white" }),
+                        createElement(Label, { skin: "regular-high-contrast", textColor: "white" }, "Clear Search")),
+                    createElement(Container, { ContainerWidth: "250px", alignItems: "spaceBetween" },
+                        createElement(WrapPanel, null,
+                            createElement(Button, { skin: "stroke", width: "regularFixed" }, "Save as new"),
+                            createElement(Button, { skin: "secondary", width: "regularFixed" }, "Save & Apply"),
+                            createElement(Button, { skin: "regular", width: "regularFixed" }, "Apply")))))));
+    };
+    return FooterSidePanel;
+}(ComponentBase));
+//# sourceMappingURL=FooterSidePanel.js.map
 
 //# sourceMappingURL=index.js.map
 
 //# sourceMappingURL=index.js.map
 
-export { Label, Title, Icon, Button, CheckBox, LineInput, Select, OptionItem, AutoFill, GeneralInput, StackPanel, WrapPanel, RowPanel, ScrollPanel, Container, SidePanel, Tag, Form, PriorityIcon };
+export { Label, Title, Icon, Button, CheckBox, LineInput, Select, OptionItem, AutoFill, GeneralInput, StackPanel, WrapPanel, RowPanel, ScrollPanel, Container, SidePanel, Tag, Form, FooterSidePanel, PriorityIcon };
 //# sourceMappingURL=index.es.js.map

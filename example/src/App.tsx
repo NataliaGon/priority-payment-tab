@@ -3,7 +3,7 @@ import {
   SidePanel,
   StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select,
-  GeneralInput,
+  FooterSidePanel,
   PriorityIcon, AutoFill, Form
 } from 'priority-style-react';
 import { optionDropDown } from './optionDropDown';
@@ -69,7 +69,7 @@ class App extends Component {
                 </RowPanel>
                 <RowPanel paddingTop={true} paddingBottom={true}>
                   <Select options={optionDropDown} />
-                  <Select options={optionDropDown} width="large"/>
+                  <Select options={optionDropDown} width="large" />
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />
@@ -93,25 +93,10 @@ class App extends Component {
                 </WrapPanel>
               </Container>
             </StackPanel>
-
-           <Form/>
-
-            <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
-              <RowPanel alignItems="space-between" >
-                <Container>
-                  <Icon icon={PriorityIcon.clear} iconColor="white"/>
-                  <Label skin="regular-high-contrast" textColor="white">Clear Search</Label>
-                </Container>
-                <Container ContainerWidth="250px" alignItems="spaceBetween">
-                  <WrapPanel>
-                    <Button skin="stroke" width="regularFixed">Cancel</Button>
-                    <Button skin="secondary" width="regularFixed">Save</Button>
-                  </WrapPanel>
-                </Container>
-              </RowPanel>
-            </StackPanel>
-
-          </ScrollPanel>
+            <Form />
+           
+            <FooterSidePanel />
+            </ScrollPanel>
         </SidePanel>
       </div>
     );

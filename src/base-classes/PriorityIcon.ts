@@ -10,5 +10,6 @@ export enum PriorityIcon {
     arrowDropUp = "icon-icon-arrow_drop_up",
     arrowDropDown = "icon-icon-arrow_drop_down",
     iconReorder="icon-icon-reorder",
-    tabsArrow= "icon-icon-tabs-arrow-reg"
+    tabsArrow= "icon-icon-tabs-arrow-reg",
+    calendar ="icon-icon--calendar"
 }

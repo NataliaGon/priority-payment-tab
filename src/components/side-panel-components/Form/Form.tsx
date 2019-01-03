@@ -1,12 +1,12 @@
 import * as React from "react";
-import classNames from 'classnames';
+
 import styles from './Form.module.scss';
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from '../../base-classes';
-import { StackPanel, Container, RowPanel, WrapPanel } from '../Layout';
-import { Label } from '../Text';
-import { GeneralInput } from '../Inputs';
-import { Select } from '../Inputs/Select/Select';
-import { optionDropDown } from '../../constants/optionDropDown';
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from '../../../base-classes';
+import { StackPanel, Container, RowPanel } from '../../Layout';
+import { Label } from '../../Text';
+import { GeneralInput } from '../../Inputs';
+import { Select } from '../../Inputs/Select/Select';
+import { optionDropDown } from '../../../constants/optionDropDown';
 
 class FormProperties extends ComponentBaseProperties {
 
@@ -37,9 +37,9 @@ export class Form extends ComponentBase<FormProperties, FormState> {
                     <RowPanel paddingBottom={true} paddingTop={true} >
                         <div className={styles.spaceHolderBig}></div>
                         <div className={styles.spaceHolder}></div>
-                        <GeneralInput inputWidth="small" isIcon={true}></GeneralInput>
+                        <GeneralInput inputWidth="small" isIcon iconName="calendar" defaultVal="03/02/19" ></GeneralInput>
                         <div className={styles.spaceHolder}></div>
-                        <GeneralInput inputWidth="small" isIcon={true}>
+                        <GeneralInput inputWidth="small" isIcon iconName="calendar" defaultVal="03/02/19">
                         </GeneralInput>
                     </RowPanel>
                     <RowPanel alignItems="flex-end">

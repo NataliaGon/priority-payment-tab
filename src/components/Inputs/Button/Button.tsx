@@ -4,13 +4,13 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBa
 
 import styles from "./Button.module.scss";
 
-type ButtonSkin = "regular" | "stroke" | "roundStrokeIcon" | "secondary" |"strokeActive";
+type ButtonSkin = "regular" | "stroke" | "roundStrokeIcon" | "secondary";
 type ButtonWidth = "regularFixed" | "fullWidth" | "ccontentWidth" | "small";
 
 interface ButtonProperties extends ComponentBaseProperties {
   skin?: ButtonSkin;
   width?: ButtonWidth;
-  
+  disabled?: boolean;
 }
 
 interface ButtonState extends ComponentBaseState {
@@ -30,15 +30,17 @@ clickHandler=()=>{
     const widthClass = styles[this.props.width ? this.props.width : ""];
     const darkThemeClass = styles.darkTheme;
     const activeBtnStyles = this.state.isActive? styles[this.props.skin  + 'Active'] : "";
-    
+    const disabledBtnStyles =this.props.disabled? styles[this.props.skin  + 'Disabled'] : "";
    
    let buttonClass="";
     if (this.state.isActive){
-      buttonClass = classNames(styles.component,  widthClass, skinClass, activeBtnStyles, darkThemeClass);
+      buttonClass = classNames(styles.component,  widthClass, skinClass, activeBtnStyles,darkThemeClass);
     }else{
       buttonClass = classNames(styles.component, skinClass, widthClass, darkThemeClass);
     }
-     
+     if (this.props.disabled){
+      buttonClass = classNames(styles.component,  widthClass, skinClass,disabledBtnStyles, darkThemeClass);
+     }
 
     return (
       <button className={buttonClass} onClick={this.clickHandler}>{this.props.children}</button>
