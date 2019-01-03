@@ -103,7 +103,7 @@ class App extends Component {
                 </Container>
                 <Container ContainerWidth="250px" alignItems="spaceBetween">
                   <WrapPanel>
-                    <Button skin="stroke" width="regularFixed">Save</Button>
+                    <Button skin="stroke" width="regularFixed">Cancel</Button>
                     <Button skin="secondary" width="regularFixed">Save</Button>
                   </WrapPanel>
                 </Container>
