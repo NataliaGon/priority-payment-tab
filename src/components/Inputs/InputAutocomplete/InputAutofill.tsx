@@ -33,13 +33,15 @@ export class AutoFill extends ComponentBase<
       borderRadius: '3px',
       boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
       background: 'rgba(255, 255, 255)',
-      padding: '2px 0',
+      padding: '2px 5px',
       fontSize: '90%',
       overflow: 'auto',
       height: 'auto',
       position: 'absolute',
-      left:'0',
+      left:'-5px',
+      top:'-5px',
       zIndex:'5',
+      boxSizing: 'content-box'
     }
 
     // const menuStyles: any=styles.menuStyles;
@@ -61,7 +63,8 @@ export class AutoFill extends ComponentBase<
               key={item.id}
               style={{ backgroundColor: highlighted ? '#D9F6F9' : 'transparent' }}
             >
-              {item.label}
+               <input className={styles.inputCheckbox} type="checkbox" name="vehicle1" value={item.label} /> {item.label}<br></br>
+              
             </div>
           }
           renderInputComponent={() =>

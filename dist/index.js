@@ -524,8 +524,8 @@ var Select = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97;\n    position: relative; }\n    .InputAutofill-module_component__MAOAz div input {\n      width: 100%;\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97;\n      outline-color: #00adee;\n      outline-width: 1px; }\n    .InputAutofill-module_component__MAOAz div div div {\n      height: 30px;\n      width: 336px;\n      margin: 0 10px;\n      line-height: 30px;\n      font-style: normal;\n      padding: 0 10px; }\n      .InputAutofill-module_component__MAOAz div div div:hover {\n        background-color: #D9F6F9; }\n";
-var styles$9 = {"component":"InputAutofill-module_component__MAOAz"};
+var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97;\n    position: relative; }\n    .InputAutofill-module_component__MAOAz div input {\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97;\n      outline-color: #00adee;\n      outline-width: 1px;\n      width: 100%;\n      z-index: 6;\n      position: absolute; }\n    .InputAutofill-module_component__MAOAz div div div {\n      height: 30px;\n      width: 336px;\n      margin: 0 10px;\n      line-height: 30px;\n      font-style: normal;\n      padding: 0 10px;\n      display: flex; }\n      .InputAutofill-module_component__MAOAz div div div:hover {\n        background-color: #D9F6F9; }\n\n.InputAutofill-module_inputCheckbox__1VXdw {\n  width: 20px !important;\n  position: static !important; }\n";
+var styles$9 = {"component":"InputAutofill-module_component__MAOAz","inputCheckbox":"InputAutofill-module_inputCheckbox__1VXdw"};
 styleInject(css$a);
 
 var InputAutoProperties = /** @class */ (function (_super) {
@@ -551,13 +551,15 @@ var AutoFill = /** @class */ (function (_super) {
             borderRadius: '3px',
             boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
             background: 'rgba(255, 255, 255)',
-            padding: '2px 0',
+            padding: '2px 5px',
             fontSize: '90%',
             overflow: 'auto',
             height: 'auto',
             position: 'absolute',
-            left: '0',
+            left: '-5px',
+            top: '-5px',
             zIndex: '5',
+            boxSizing: 'content-box'
         };
         // const menuStyles: any=styles.menuStyles;
         return (React.createElement("div", { className: styles$9.component },
@@ -569,7 +571,11 @@ var AutoFill = /** @class */ (function (_super) {
                     { id: 'br', label: 'ba' },
                     { id: 'bz', label: 'ba' },
                 ], shouldItemRender: function (item, value) { return item.label.toLowerCase().indexOf(value.toLowerCase()) > -1; }, getItemValue: function (item) { return item.label; }, renderItem: function (item, highlighted) {
-                    return React.createElement("div", { key: item.id, style: { backgroundColor: highlighted ? '#D9F6F9' : 'transparent' } }, item.label);
+                    return React.createElement("div", { key: item.id, style: { backgroundColor: highlighted ? '#D9F6F9' : 'transparent' } },
+                        React.createElement("input", { className: styles$9.inputCheckbox, type: "checkbox", name: "vehicle1", value: item.label }),
+                        " ",
+                        item.label,
+                        React.createElement("br", null));
                 }, renderInputComponent: function () {
                     return React.createElement("div", null,
                         React.createElement("input", null),
@@ -580,7 +586,6 @@ var AutoFill = /** @class */ (function (_super) {
     };
     return AutoFill;
 }(ComponentBase));
-//# sourceMappingURL=InputAutofill.js.map
 
 var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none;\n  font-family: Roboto;\n  font-size: 14px;\n  font-weight: 500;\n  font-stretch: normal;\n  line-height: 1.21;\n  letter-spacing: normal;\n  padding-left: 10px; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_small__1288l {\n  width: 130px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 40px;\n  top: 5px; }\n\n.GeneralInput-module_iconOptinal__1cOYx {\n  position: absolute;\n  right: 5px;\n  top: 2px; }\n";
 var styles$a = {"component":"GeneralInput-module_component__330am","input":"GeneralInput-module_input__1avBH","large":"GeneralInput-module_large__1t8F4","medium":"GeneralInput-module_medium__N-uX-","small":"GeneralInput-module_small__1288l","icon":"GeneralInput-module_icon__2-GM9","btn":"GeneralInput-module_btn__2hRkg","iconOptinal":"GeneralInput-module_iconOptinal__1cOYx"};
@@ -2201,6 +2206,7 @@ var ScrollPanel = /** @class */ (function (_super) {
     };
     return ScrollPanel;
 }(ComponentBase));
+//# sourceMappingURL=ScrollPanel.js.map
 
 var css$g = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  position: relative; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n\n.Container-module_fullWidth__1fHZC {\n  width: 100%;\n  flex-direction: column;\n  background-color: #f4f6f8;\n  border-radius: 3px;\n  padding: 17px 10px 15px; }\n\n.Container-module_fullWidthActive__aUtgg {\n  width: 100%;\n  flex-direction: column;\n  border: 1px solid #00adee;\n  background-color: #F7FCFE;\n  border-radius: 3px;\n  padding: 17px 10px 15px; }\n\n.Container-module_regular__1erHS {\n  width: auto; }\n\n.Container-module_draggable__3hzCu {\n  position: absolute;\n  left: -12px;\n  top: 12px; }\n";
 var styles$h = {"component":"Container-module_component__2uDlo","flexStart":"Container-module_flexStart__2ySvs","flexEnd":"Container-module_flexEnd__1B58j","spaceBetween":"Container-module_spaceBetween__EaTZn","fullWidth":"Container-module_fullWidth__1fHZC","fullWidthActive":"Container-module_fullWidthActive__aUtgg","regular":"Container-module_regular__1erHS","draggable":"Container-module_draggable__3hzCu"};
