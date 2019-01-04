@@ -2201,7 +2201,6 @@ var ScrollPanel = /** @class */ (function (_super) {
     };
     return ScrollPanel;
 }(ComponentBase));
-//# sourceMappingURL=ScrollPanel.js.map
 
 var css$g = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.Container-module_component__2uDlo {\n  display: flex;\n  flex-flow: row nowrap;\n  align-items: center;\n  position: relative; }\n\n.Container-module_flexStart__2ySvs {\n  justify-content: flex-start; }\n\n.Container-module_flexEnd__1B58j {\n  justify-content: flex-end; }\n\n.Container-module_spaceBetween__EaTZn {\n  justify-content: space-between; }\n\n.Container-module_fullWidth__1fHZC {\n  width: 100%;\n  flex-direction: column;\n  background-color: #f4f6f8;\n  border-radius: 3px;\n  padding: 17px 10px 15px; }\n\n.Container-module_fullWidthActive__aUtgg {\n  width: 100%;\n  flex-direction: column;\n  border: 1px solid #00adee;\n  background-color: #F7FCFE;\n  border-radius: 3px;\n  padding: 17px 10px 15px; }\n\n.Container-module_regular__1erHS {\n  width: auto; }\n\n.Container-module_draggable__3hzCu {\n  position: absolute;\n  left: -12px;\n  top: 12px; }\n";
 var styles$h = {"component":"Container-module_component__2uDlo","flexStart":"Container-module_flexStart__2ySvs","flexEnd":"Container-module_flexEnd__1B58j","spaceBetween":"Container-module_spaceBetween__EaTZn","fullWidth":"Container-module_fullWidth__1fHZC","fullWidthActive":"Container-module_fullWidthActive__aUtgg","regular":"Container-module_regular__1erHS","draggable":"Container-module_draggable__3hzCu"};
@@ -4140,8 +4139,9 @@ var Form = /** @class */ (function (_super) {
     };
     return Form;
 }(ComponentBase));
+//# sourceMappingURL=Form.js.map
 
-var css$k = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.FooterSidePanel-module_component__3l-hf {\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  z-index: 4; }\n";
+var css$k = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.FooterSidePanel-module_component__3l-hf {\n  position: absolute;\n  width: 100%;\n  bottom: 0;\n  z-index: 4; }\n\n.FooterSidePanel-module_component__3l-hf::before {\n  content: '';\n  height: 300px;\n  width: 100%; }\n";
 var styles$l = {"component":"FooterSidePanel-module_component__3l-hf"};
 styleInject(css$k);
 

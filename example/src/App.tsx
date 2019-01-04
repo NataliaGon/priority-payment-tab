@@ -17,7 +17,8 @@ class App extends Component {
     return (
       <div className="App">
         <SidePanel>
-          <ScrollPanel gradient>
+          <ScrollPanel autoHeightMax={100} >
+          <div style={{paddingBottom:"100px"}}>
             <StackPanel className="header" skin="silver">
               <RowPanel paddingBottom={true} paddingTop={true}>
                 <Title>Advanced Search</Title>
@@ -94,9 +95,10 @@ class App extends Component {
               </Container>
             </StackPanel>
             <Form />
-           
-            <FooterSidePanel />
-            </ScrollPanel>
+            </div>
+          </ScrollPanel>
+          
+          <FooterSidePanel />
         </SidePanel>
       </div>
     );
