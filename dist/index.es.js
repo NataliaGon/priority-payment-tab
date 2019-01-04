@@ -518,7 +518,7 @@ var Select = /** @class */ (function (_super) {
 
 //# sourceMappingURL=index.js.map
 
-var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n  .InputAutofill-module_component__MAOAz div {\n    width: 100%;\n    height: 100%;\n    font-family: Roboto;\n    font-size: 14px;\n    font-weight: 500;\n    font-style: italic;\n    font-stretch: normal;\n    line-height: 1.21;\n    letter-spacing: normal;\n    color: #788e97;\n    position: relative; }\n    .InputAutofill-module_component__MAOAz div input {\n      height: 100%;\n      padding: 0 10px;\n      font-family: Roboto;\n      font-size: 14px;\n      font-weight: 500;\n      font-style: italic;\n      font-stretch: normal;\n      line-height: 1.21;\n      letter-spacing: normal;\n      color: #788e97;\n      outline-color: #00adee;\n      outline-width: 1px;\n      width: 100%;\n      z-index: 6;\n      position: absolute; }\n    .InputAutofill-module_component__MAOAz div div div {\n      height: 30px;\n      width: 336px;\n      margin: 0 10px;\n      line-height: 30px;\n      font-style: normal;\n      padding: 0 10px;\n      display: flex; }\n      .InputAutofill-module_component__MAOAz div div div:hover {\n        background-color: #D9F6F9; }\n\n.InputAutofill-module_inputCheckbox__1VXdw {\n  width: 20px !important;\n  position: static !important; }\n";
+var css$a = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.InputAutofill-module_component__MAOAz {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.InputAutofill-module_component__MAOAz > div > div > div {\n  height: 40px;\n  line-height: 40px;\n  font-style: normal;\n  padding: 0 10px;\n  display: flex;\n  align-items: center;\n  font-size: 1.4rem; }\n  .InputAutofill-module_component__MAOAz > div > div > div:hover {\n    background-color: #D9F6F9; }\n\n.InputAutofill-module_component__MAOAz > div, .InputAutofill-module_component__MAOAz > div > div {\n  width: 100%;\n  height: 100%;\n  font-family: Roboto;\n  font-size: 14px;\n  font-weight: 500;\n  font-style: italic;\n  font-stretch: normal;\n  line-height: 1.21;\n  letter-spacing: normal;\n  color: #788e97;\n  position: relative; }\n\n.InputAutofill-module_component__MAOAz > div > input {\n  height: 100%;\n  padding: 0 10px;\n  font-family: Roboto;\n  font-size: 14px;\n  font-weight: 500;\n  font-style: italic;\n  font-stretch: normal;\n  line-height: 1.21;\n  letter-spacing: normal;\n  color: #788e97;\n  outline-color: #00adee;\n  border-radius: 3px;\n  outline-width: 1px;\n  width: 100%;\n  z-index: 6;\n  position: absolute; }\n  .InputAutofill-module_component__MAOAz > div > input:focus {\n    box-shadow: 0 0 0 1px #00adee; }\n\n.InputAutofill-module_inputCheckbox__1VXdw {\n  width: 20px !important;\n  position: static !important; }\n";
 var styles$9 = {"component":"InputAutofill-module_component__MAOAz","inputCheckbox":"InputAutofill-module_inputCheckbox__1VXdw"};
 styleInject(css$a);
 
@@ -543,9 +543,8 @@ var AutoFill = /** @class */ (function (_super) {
         var Autocomplete = require("react-autocomplete");
         var menuStyle = {
             borderRadius: '3px',
-            boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
             background: 'rgba(255, 255, 255)',
-            padding: '2px 5px',
+            padding: '44px 5px 5px',
             fontSize: '90%',
             overflow: 'auto',
             height: 'auto',
@@ -553,11 +552,12 @@ var AutoFill = /** @class */ (function (_super) {
             left: '-5px',
             top: '-5px',
             zIndex: '5',
-            boxSizing: 'content-box'
+            boxSizing: 'content-box',
+            boxShadow: '0 10px 20px 0 rgba(0, 0, 0, 0.2)'
         };
         // const menuStyles: any=styles.menuStyles;
         return (createElement("div", { className: styles$9.component },
-            createElement(Autocomplete, { items: [
+            createElement(Autocomplete, { className: styles$9.inputComponent, items: [
                     { id: 'foo', label: 'foo' },
                     { id: 'bar', label: 'bar' },
                     { id: 'baz', label: 'baz' },
@@ -570,16 +570,20 @@ var AutoFill = /** @class */ (function (_super) {
                         " ",
                         item.label,
                         createElement("br", null));
-                }, renderInputComponent: function () {
-                    return createElement("div", null,
-                        createElement("input", null),
-                        createElement("div", null, "bnkp;"));
-                }, renderMenu: function (items) {
+                }, 
+                // renderInput={() =>
+                //   <div>
+                //     <input className={styles.inputComponent}/>
+                //     <div>bnkp;</div>
+                //   </div>
+                // }
+                renderMenu: function (items) {
                     return createElement("div", { style: menuStyle, children: items });
                 }, value: this.state.value, onChange: function (e) { return _this.setState({ value: e.target.value }); }, onSelect: function (value) { return _this.setState({ value: value }); } })));
     };
     return AutoFill;
 }(ComponentBase));
+//# sourceMappingURL=InputAutofill.js.map
 
 var css$b = "/*** Colors ***/\n/*** End - Colors ***/\n/*** Font Families ***/\n/*** End - Font Families ***/\n/*** Font Size ***/\n/*** End - Font Size ***/\n/*** Font Weight ***/\n/*** End - Font Weight ***/\n.GeneralInput-module_component__330am {\n  position: relative; }\n\n.GeneralInput-module_input__1avBH {\n  outline-color: #00adee;\n  outline-width: 1px;\n  border: none;\n  font-family: Roboto;\n  font-size: 14px;\n  font-weight: 500;\n  font-stretch: normal;\n  line-height: 1.21;\n  letter-spacing: normal;\n  padding-left: 10px; }\n\n.GeneralInput-module_large__1t8F4 {\n  width: 356px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_medium__N-uX- {\n  width: 150px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_small__1288l {\n  width: 130px;\n  height: 30px;\n  border: 1px solid #bfd0d7;\n  border-radius: 3px;\n  box-sizing: border-box; }\n\n.GeneralInput-module_icon__2-GM9 {\n  position: absolute;\n  right: 10px;\n  top: 3px; }\n\n.GeneralInput-module_btn__2hRkg {\n  position: absolute;\n  right: 40px;\n  top: 5px; }\n\n.GeneralInput-module_iconOptinal__1cOYx {\n  position: absolute;\n  right: 5px;\n  top: 2px; }\n";
 var styles$a = {"component":"GeneralInput-module_component__330am","input":"GeneralInput-module_input__1avBH","large":"GeneralInput-module_large__1t8F4","medium":"GeneralInput-module_medium__N-uX-","small":"GeneralInput-module_small__1288l","icon":"GeneralInput-module_icon__2-GM9","btn":"GeneralInput-module_btn__2hRkg","iconOptinal":"GeneralInput-module_iconOptinal__1cOYx"};

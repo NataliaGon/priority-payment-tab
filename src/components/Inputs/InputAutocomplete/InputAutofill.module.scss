@@ -5,7 +5,21 @@
     @include border($input-border-grey);
     border-radius: $input-border-radius;
     box-sizing: border-box;
-div{
+}
+.component>div>div>div{
+    height: 40px;
+    line-height: 40px;
+    font-style: normal;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+
+    &:hover {
+        background-color: $background-color-blue;
+    }
+}
+.component>div, .component>div>div{
     width:100%;
     height: 100%;
     font-family: Roboto;
@@ -17,43 +31,29 @@ div{
     letter-spacing: normal;
     color: $grey;
     position: relative;
-
-    input{
-        height: 100%;
-        padding: 0 10px;
-        font-family: Roboto;
-        font-size: 14px;
-        font-weight: 500;
-        font-style: italic;
-        font-stretch: normal;
-        line-height: 1.21;
-        letter-spacing: normal;
-        color: $grey;
-        outline-color: $blue;
-        outline-width: 1px;
-        width:100%;
-        z-index: 6;
-        position: absolute;
-    }
-    div{
-        
-    
-     div{
-        height: 30px;
-        width: 336px;
-        margin: 0 10px;
-        line-height: 30px;
-        font-style: normal;
-        padding: 0 10px;
-        display: flex;
-      
-        &:hover {
-            background-color: $background-color-blue;
-        }
-     }
-    }
   
 }
+
+.component>div>input{
+    height: 100%;
+    padding: 0 10px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    color: $grey;
+    outline-color: $blue;
+    border-radius: $input-border-radius;
+    outline-width: 1px;
+    width:100%;
+    z-index: 6;
+    position: absolute;
+    &:focus{
+        box-shadow: 0 0 0 1px $blue;
+    }
 }
 .inputCheckbox{
     width: 20px!important;

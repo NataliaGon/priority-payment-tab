@@ -2,7 +2,7 @@ import * as React from "react";
 import classNames from "classnames";
 
 import styles from "./InputAutofill.module.scss";
-import ReactAutocomplete from "react-autocomplete";
+import Autocomplete from "react-autocomplete";
 import {
   ComponentBaseProperties,
   ComponentBaseState,
@@ -31,9 +31,8 @@ export class AutoFill extends ComponentBase<
 
     const menuStyle: any={
       borderRadius: '3px',
-      boxShadow: '0 2px 12px rgba(0, 0, 0, 0.1)',
       background: 'rgba(255, 255, 255)',
-      padding: '2px 5px',
+      padding: '44px 5px 5px',
       fontSize: '90%',
       overflow: 'auto',
       height: 'auto',
@@ -41,13 +40,15 @@ export class AutoFill extends ComponentBase<
       left:'-5px',
       top:'-5px',
       zIndex:'5',
-      boxSizing: 'content-box'
+      boxSizing: 'content-box',
+      boxShadow: '0 10px 20px 0 rgba(0, 0, 0, 0.2)'
     }
 
     // const menuStyles: any=styles.menuStyles;
     return (
       <div className={styles.component}>
         <Autocomplete
+        className={styles.inputComponent}
           items={[
             { id: 'foo', label: 'foo' },
             { id: 'bar', label: 'bar' },
@@ -67,12 +68,12 @@ export class AutoFill extends ComponentBase<
               
             </div>
           }
-          renderInputComponent={() =>
-            <div>
-              <input />
-              <div>bnkp;</div>
-            </div>
-          }
+          // renderInput={() =>
+          //   <div>
+          //     <input className={styles.inputComponent}/>
+          //     <div>bnkp;</div>
+          //   </div>
+          // }
           renderMenu={(items: any) =>
            <div style={ menuStyle } children={items}/>
           }
