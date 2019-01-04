@@ -5,7 +5,6 @@
     flex-flow: row nowrap;
     align-items: center;
     position: relative;
-   
 }
 .flexStart {
     justify-content: flex-start;
@@ -21,7 +20,7 @@
     flex-direction: column;
     background-color: $snow;
     border-radius:3px; 
-    padding: 17px 10px 15px;
+    padding: 17px 20px 15px;
 }
 .fullWidthActive{
     width:100%;
@@ -29,7 +28,7 @@
     border: 1px solid $blue;
     background-color: $lightBlue;
     border-radius:3px; 
-    padding: 17px 10px 15px;
+    padding: 17px 20px 15px;
 }
 .regular{
     width:auto;

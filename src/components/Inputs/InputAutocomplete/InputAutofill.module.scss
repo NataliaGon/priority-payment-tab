@@ -45,9 +45,8 @@
     line-height: 1.21;
     letter-spacing: normal;
     color: $grey;
-    outline-color: $blue;
+    outline:none;
     border-radius: $input-border-radius;
-    outline-width: 1px;
     width:100%;
     z-index: 6;
     position: absolute;
