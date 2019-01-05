@@ -1,24 +1,19 @@
 import React, { Component } from 'react';
+
 import {
-  SidePanel,
-  StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
+  SidePanel, StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select,
-  FooterSidePanel,
-  PriorityIcon, AutoFill, Form
+  GeneralInput, PriorityIcon, AutoFill
 } from 'priority-style-react';
+
 import { optionDropDown } from './optionDropDown';
-
-
 
 class App extends Component {
   render() {
-
-
     return (
       <div className="App">
         <SidePanel>
-          <ScrollPanel autoHeightMax={100} >
-          <div style={{paddingBottom:"100px"}}>
+          <ScrollPanel gradient>
             <StackPanel className="header" skin="silver">
               <RowPanel paddingBottom={true} paddingTop={true}>
                 <Title>Advanced Search</Title>
@@ -63,20 +58,40 @@ class App extends Component {
               </RowPanel>
             </StackPanel>
 
+            <StackPanel>
+              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
+                <Container>
+                  <CheckBox />
+                  <Label skin="bold">Case Sensitive</Label>
+                </Container>
+                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
+              </RowPanel>
+            </StackPanel>
+
             <StackPanel >
               <Container ContainerWidth="fullWidth" >
                 <RowPanel>
                   <Label skin="regular-high-contrast">Customer No.</Label>
                 </RowPanel>
-                <RowPanel paddingTop={true} paddingBottom={true}>
+                <RowPanel paddingTop={true}>
                   <Select options={optionDropDown} />
-                  <Select options={optionDropDown} width="large" />
+                  <GeneralInput inputWidth="large" clearable={true} />
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />
                   <Tag text="test" />
                 </WrapPanel>
               </Container>
+            </StackPanel>
+
+            <StackPanel>
+              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
+                <Container>
+                  <CheckBox />
+                  <Label skin="bold">Case Sensitive</Label>
+                </Container>
+                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
+              </RowPanel>
             </StackPanel>
 
             <StackPanel >
@@ -94,11 +109,33 @@ class App extends Component {
                 </WrapPanel>
               </Container>
             </StackPanel>
-            <Form />
-            </div>
+
+            <StackPanel>
+              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
+                <Container>
+                  <CheckBox />
+                  <Label skin="bold">Case Sensitive</Label>
+                </Container>
+                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
+              </RowPanel>
+            </StackPanel>
+
+            <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
+              <RowPanel alignItems="space-between" >
+                <Container>
+                  <Icon icon={PriorityIcon.clear} />
+                  <Label skin="regular-high-contrast">Clear Search</Label>
+                </Container>
+                <Container ContainerWidth="250px" alignItems="spaceBetween">
+                  <WrapPanel>
+                    <Button skin="secondary" width="regularFixed">Save</Button>
+                    <Button skin="regular" width="regularFixed">Apply</Button>
+                  </WrapPanel>
+                </Container>
+              </RowPanel>
+            </StackPanel>
+
           </ScrollPanel>
-          
-          <FooterSidePanel />
         </SidePanel>
       </div>
     );
@@ -106,4 +143,3 @@ class App extends Component {
 }
 
 export default App;
-

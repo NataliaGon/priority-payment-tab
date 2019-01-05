@@ -9,7 +9,7 @@ declare module '*.scss' {
 
 declare module 'classnames'
 
-interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> {}
+interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> { }
 
 declare module '*.svg' {
   const svgUrl: string;
