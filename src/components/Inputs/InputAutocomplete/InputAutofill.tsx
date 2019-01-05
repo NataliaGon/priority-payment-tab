@@ -59,6 +59,9 @@ export class AutoFill extends ComponentBase<
           ]}
           shouldItemRender={(item: any, value: any) => item.label.toLowerCase().indexOf(value.toLowerCase()) > -1}
           getItemValue={(item: any) => item.label}
+          onMenuVisibilityChange={()=>
+console.log('hello')
+          }
           renderItem={(item: any, highlighted: any) =>
             <div
               key={item.id}
@@ -68,12 +71,6 @@ export class AutoFill extends ComponentBase<
               
             </div>
           }
-          // renderInput={() =>
-          //   <div>
-          //     <input className={styles.inputComponent}/>
-          //     <div>bnkp;</div>
-          //   </div>
-          // }
           renderMenu={(items: any) =>
            <div style={ menuStyle } children={items}/>
           }
