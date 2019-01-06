@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import {
   SidePanel, StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select,
-  GeneralInput, PriorityIcon, AutoFill
+  GeneralInput, PriorityIcon, AutoFill, Form
 } from 'priority-style-react';
 
-import { optionDropDown } from './optionDropDown';
+import { optionDropDown } from './mock-data/optionDropDown';
 
 class App extends Component {
   render() {
@@ -14,7 +14,7 @@ class App extends Component {
       <div className="App">
         <SidePanel>
           <ScrollPanel gradient>
-            <StackPanel className="header" skin="silver">
+            <StackPanel componentClasses={["header"]} skin="silver">
               <RowPanel paddingBottom={true} paddingTop={true}>
                 <Title>Advanced Search</Title>
                 <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
@@ -109,6 +109,8 @@ class App extends Component {
                 </WrapPanel>
               </Container>
             </StackPanel>
+
+            <Form />
 
             <StackPanel>
               <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>

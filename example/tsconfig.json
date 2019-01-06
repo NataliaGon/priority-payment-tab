@@ -12,7 +12,6 @@
     "sourceMap": true,
     "allowJs": false,
     "jsx": "preserve",
-    //"declaration": true,
     "moduleResolution": "node",
     "forceConsistentCasingInFileNames": true,
     "noImplicitReturns": true,
@@ -35,9 +34,6 @@
   ],
   "exclude": [
     "node_modules",
-    "build",
-    "dist",
-    "example",
-    "rollup.config.js"
+    "build"
   ]
 }
