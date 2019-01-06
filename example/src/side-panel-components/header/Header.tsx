@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from 'priority-style-react';
-import { StackPanel, Container, RowPanel, Label, Input, Select, Icon, Title, Button, LineInput } from 'priority-style-react';
+import { StackPanel, RowPanel, Label, Input,  Icon, Title, Button } from 'priority-style-react';
 
 import styles from './Header.module.scss';
 
@@ -51,9 +51,7 @@ ClickHandler=()=>{
               </RowPanel>
               <RowPanel >
                 <div style={{ display: "flex" }}>
-                
                   <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
-                 
                   <div onClick={this.ClickHandler}>
                   {labelComponent}
                   </div>

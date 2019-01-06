@@ -1,13 +1,10 @@
 
 .component {
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    z-index: 4;
+    // position: absolute;
+
+    // bottom: 0;
+    // z-index: 4;
+align-self: flex-end;
+width: 100%;
 }
 
-.component::before {
-    content: '';
-    height: 300px;
-    width: 100%;
-}

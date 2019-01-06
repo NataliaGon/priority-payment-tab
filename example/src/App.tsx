@@ -14,23 +14,25 @@ class App extends Component {
     return (
       <div className="App">
         <SidePanel>
-          <ScrollPanel gradient>
-            <Header/>
+          <ScrollPanel>
+           
+              <Header />
 
-            <StackPanel>
-              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
-                <div style={{ display: "flex" }}>
-                  <CheckBox />
-                  <Label skin="bold">Case Sensitive</Label>
-                </div>
-                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
-              </RowPanel>
-            </StackPanel>
+              <StackPanel>
+                <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
+                  <div style={{ display: "flex" }}>
+                    <CheckBox />
+                    <Label skin="bold">Case Sensitive</Label>
+                  </div>
+                  <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
+                </RowPanel>
+              </StackPanel>
 
-            <CustomerForm/>
-            <DateQueryBlock/>
-            <FooterBlock/>
+              <CustomerForm />
+              <DateQueryBlock />
+             
           </ScrollPanel>
+          <FooterBlock />
         </SidePanel>
       </div>
     );
