@@ -1,64 +1,74 @@
-/*** Colors ***/
-
 $black: #212529;
 $dark: #2e4049;
 $grey: #788e97;
 $white: #fff;
+$snow: #f4f6f8;
 $silver: #ebedee;
 $blue: #00adee;
 $green: #60c5bb;
 $peach: #F37C70;
 $purple: #9773B3;
-$lightBlue:rgba(0, 173, 238, 0.03);
-
+$lightBlue: #F7FCFE;
 
 $disabled-grey: #d6dddf;
 
 $light-stroke: #e2eaf1;
-$light-gray-stroke: #d0dbe0;
+
 $tag-background-grey: #6e818a;
+$tag-box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);
+
 $background-color-blue: #D9F6F9;
-$background-color-dark-grey :#485761;
+$background-color-dark-grey: #2E4049;
 
-$boxShadow-brown-light :rgba(120, 142, 151, 0.3);
-$boxShadow-brown-dark:rgba(0, 0, 0, 0.2);
-$boxShadow-brown:rgba(0, 173, 238, 0.15);
-/*** End - Colors ***/
+$white3Opacity: rgba(255, 255, 255, 0.3);
+$white6Opacity: rgba(255, 255, 255, 0.6);
+$white7Opacity: rgba(255, 255, 255, 0.7);
+$white8Opacity: rgba(255, 255, 255, 0.8);
+$black6Opacity: rgba(0, 0, 0, 0.6);
+$black8Opacity: rgba(0, 0, 0, 0.8);
+$blackBootstrapInsetShadow: rgba(0, 0, 0, 0.075);
+$grey46Opacity: rgba($grey, 0.46);
 
-/*** Font Families ***/
+$clickable-hover-active: $purple;
+
+$boxShadow-brown-light: rgba(120, 142, 151, 0.3);
+$boxShadow-brown-dark: rgba(0, 0, 0, 0.2);
+$boxShadow-brown: rgba(0, 173, 238, 0.15);
 
 $font-family-main: "Roboto", sans-serif;
-$font-family-main-hebrew: "Arimo", sans-serif;
 $font-family-serif: "Bree Serif", serif;
 $font-family-icons: "icomoon" !important;
 
-/*** End - Font Families ***/
-
-/*** Font Size ***/
-
 $font-size-base: 62.5%;
-
 $font-size-large: 2.8rem;
 $font-size-medium: 2.2rem;
 $font-size-regular: 1.4rem;
 $font-size-smaller: 1.3rem;
 $font-size-small: 1.2rem;
 
-/*** End - Font Size ***/
-
-/*** Font Weight ***/
-
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-bold: 700;
 
-/*** End - Font Weight ***/
+$general-border-radius: 3px;
 
-// Inputs
-$input-border-radius: 3px;
+$input-border-radius: $general-border-radius;
 $input-border-grey: #bfd0d7;
 
 // End Inputs
+
+// Icons
+$priority-icon-width: 2.4rem;
+$priority-icon-height: 2.4rem;
+$priority-icon-font-size: 2.4rem;
+
+@mixin priority-icon {
+    width: $priority-icon-width;
+    height: $priority-icon-height;
+    font-size: $priority-icon-font-size;
+}
+
+// End Icons
 
 @mixin border($color) {
     border: 1px solid $color;

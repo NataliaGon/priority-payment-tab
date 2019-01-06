@@ -1,0 +1,54 @@
+@import "../../../../styles/vars";
+
+.component {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    position: relative;
+}
+
+.flexStart {
+    justify-content: flex-start;
+}
+
+.flexEnd {
+    justify-content: flex-end;
+}
+
+.spaceBetween {
+    justify-content: space-between;
+}
+
+.fullWidth {
+    width: 100%;
+    flex-direction: column;
+    background-color: $snow;
+    border-radius: $general-border-radius;
+    padding: 17px 20px 15px;
+}
+
+.fullWidthActive {
+    width: 100%;
+    flex-direction: column;
+    border: 1px solid $blue;
+    background-color: $lightBlue;
+    border-radius: $general-border-radius;
+    padding: 17px 20px 15px;
+}
+
+.regular {
+    width: auto;
+}
+
+.closeContainerIcon {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.reorderIcon {
+    position: absolute;
+    left: -12px;
+    top: 12px;
+}

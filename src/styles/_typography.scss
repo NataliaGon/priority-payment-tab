@@ -11,6 +11,16 @@ body {
     font-weight: $font-weight-regular;
 }
 
+// mixings
+
+@mixin withRTL {
+    :global(.rtl), :global([dir='rtl']) {
+        @content;
+    }
+}
+
+// end mixings
+
 // Text
 
 .text-color {

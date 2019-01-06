@@ -1,0 +1,11 @@
+@import "../../../styles/vars";
+
+.component {
+    @include priority-icon;
+
+    position: relative;
+}
+
+.visible {
+    display: block;
+}
