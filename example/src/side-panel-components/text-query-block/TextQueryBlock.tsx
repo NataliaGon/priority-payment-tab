@@ -5,13 +5,13 @@ import { Label, StackPanel, Container, RowPanel, WrapPanel, Select, Input,Tag } 
 import { optionDropDown } from './../../optionDropDown';
 // import styles from "./CustomerForm.module.scss";
 
-interface CustomerFormBlockProperties extends ComponentBaseProperties {
+interface TextQueryBlockBlockProperties extends ComponentBaseProperties {
     
 }
-interface CustomerFormBlockState extends ComponentBaseState {
+interface TextQueryBlockBlockState extends ComponentBaseState {
   
 }
-export class CustomerForm extends ComponentBase<CustomerFormBlockProperties, CustomerFormBlockState> {
+export class TextQueryBlock extends ComponentBase<TextQueryBlockBlockProperties, TextQueryBlockBlockState> {
 
     render() {
         return (

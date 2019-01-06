@@ -6,7 +6,7 @@ import {
   Input, PriorityIcon
 } from 'priority-style-react';
 
-import { DateQueryBlock, FooterBlock, CustomerForm, Header } from './side-panel-components';
+import { DateQueryBlock, FooterBlock, TextQueryBlock, Header } from './side-panel-components';
 
 
 class App extends Component {
@@ -15,7 +15,6 @@ class App extends Component {
       <div className="App">
         <SidePanel>
           <ScrollPanel>
-           
               <Header />
 
               <StackPanel>
@@ -28,7 +27,7 @@ class App extends Component {
                 </RowPanel>
               </StackPanel>
 
-              <CustomerForm />
+              <TextQueryBlock />
               <DateQueryBlock />
              
           </ScrollPanel>
