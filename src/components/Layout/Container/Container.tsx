@@ -66,11 +66,11 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
    
     const activeClasses=(this.state.active)? styles.fullWidthActive : '';
 
-    if (this.props.closable) {
+    if (this.state.active) {
       icon = <Icon icon={PriorityIcon.closeSmall} visible={this.state.hovered} componentClasses={[styles["closeContainerIcon"]]} />
     }
 
-    if (this.props.draggable) {
+    if (this.state.active) {
       reorderIcon =
         <div className={styles["reorderIcon"]}>
           <Icon icon={PriorityIcon.iconReorder} iconColor="blue" />
