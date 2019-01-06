@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import {
   SidePanel, StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select,
-  Input, PriorityIcon, AutoFill, DateQueryBlock, FooterBlock, CustomerForm
+  Input, PriorityIcon, AutoFill 
 } from 'priority-style-react';
 
+import{DateQueryBlock, FooterBlock, CustomerForm} from './side-panel-components';
 // import { optionDropDown } from './mock-data/optionDropDown';
 
 class App extends Component {

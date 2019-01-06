@@ -1,7 +1,7 @@
 import * as React from "react";
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from '../../../core';
-import { StackPanel, Container, RowPanel, Label, Input, Select, Icon } from '../..';
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from 'priority-style-react';
+import { StackPanel, Container, RowPanel, Label, Input, Select, Icon } from 'priority-style-react';
 
 import styles from './DateQueryBlock.module.scss';
 

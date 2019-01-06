@@ -1,8 +1,7 @@
 import * as React from 'react';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from "../../../core";
-import { Label, Icon, Button, StackPanel, Container, RowPanel, WrapPanel } from '../../';
-
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from 'priority-style-react';
+import { Label, Icon, Button, StackPanel, Container, RowPanel, WrapPanel } from 'priority-style-react';
 import styles from "./FooterBlock.module.scss";
 
 
