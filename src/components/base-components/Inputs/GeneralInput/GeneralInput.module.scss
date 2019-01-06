@@ -2,15 +2,14 @@
 
 .component {
     position: relative;
-    outline-color: #00adee;
+    outline-color: $blue;
     outline-width: 1px;
     border: none;
-    font-family: Roboto;
-    font-size: 14px;
-    font-weight: 500;
-    font-stretch: normal;
-    line-height: 1.21;
-    letter-spacing: normal;
+    font-family: $font-family-main;
+    font-size: $font-size-regular;
+    font-weight: $font-weight-regular;
+
+    //line-height: 1.21;
     padding-left: 10px;
 
     &:hover {}

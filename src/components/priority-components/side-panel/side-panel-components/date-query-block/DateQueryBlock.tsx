@@ -3,7 +3,7 @@ import * as React from "react";
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from '../../../../../core';
 import { StackPanel, Container, RowPanel, Label, GeneralInput, Select, Icon } from '../../../../base-components';
 
-import styles from './Form.module.scss';
+import styles from './DateQueryBlock.module.scss';
 
 export const optionDropDown = [{
     iconName: "icon-search-equal",
@@ -14,14 +14,14 @@ export const optionDropDown = [{
 }
 ];
 
-class FormProperties extends ComponentBaseProperties {
+class DateQueryBlockProperties extends ComponentBaseProperties {
 
 }
 
-interface FormState extends ComponentBaseState {
+interface DateQueryBlockState extends ComponentBaseState {
 }
 
-export class Form extends ComponentBase<FormProperties, FormState> {
+export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, DateQueryBlock> {
     render() {
         return (
             <StackPanel >

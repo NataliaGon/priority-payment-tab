@@ -3,19 +3,19 @@ import * as React from 'react';
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from "../../../../../core";
 import { Label, Icon, Button, StackPanel, Container, RowPanel, WrapPanel } from '../../../../base-components';
 
-import styles from "./FooterSidePanel.module.scss";
+import styles from "./FooterBlock.module.scss";
 
 
 
-interface FooterSidePanelProperties extends ComponentBaseProperties {
-
-}
-
-interface FooterSidePanelState extends ComponentBaseState {
+interface FooterBlockProperties extends ComponentBaseProperties {
 
 }
 
-export class FooterSidePanel extends ComponentBase<FooterSidePanelProperties, FooterSidePanelState> {
+interface FooterBlockState extends ComponentBaseState {
+
+}
+
+export class FooterBlock extends ComponentBase<FooterBlockProperties, FooterBlockState> {
 
     render() {
         return (
