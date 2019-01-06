@@ -1,0 +1,9 @@
+@mixin withRTL {
+    :global(.rtl), :global([dir='rtl']) {
+        @content;
+    }
+}
+
+@mixin border($color) {
+    border: 1px solid $color;
+}

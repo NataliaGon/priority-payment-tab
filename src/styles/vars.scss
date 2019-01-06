@@ -70,6 +70,4 @@ $priority-icon-font-size: 2.4rem;
 
 // End Icons
 
-@mixin border($color) {
-    border: 1px solid $color;
-}
+@import "./mixins";
