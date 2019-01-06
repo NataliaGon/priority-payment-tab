@@ -59,22 +59,6 @@ class App extends Component {
             </StackPanel>
 
           <CustomerForm/>
-    
-            {/* <StackPanel >
-              <Container ContainerWidth="fullWidthActive" closable={true} draggable={true}>
-                <RowPanel >
-                  <Label skin="regular-high-contrast">Customer No.</Label>
-                </RowPanel>
-                <RowPanel paddingBottom={true} paddingTop={true}>
-                  <Select options={optionDropDown} />
-                  <AutoFill />
-                </RowPanel>
-                <WrapPanel>
-                  <Tag text="test" />
-                  <Tag text="test" />
-                </WrapPanel>
-              </Container>
-            </StackPanel> */}
 
             <DateQueryBlock />
 

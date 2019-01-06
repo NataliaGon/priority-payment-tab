@@ -14,38 +14,22 @@ type ContainerWidth = "regular" | "fullWidth" | "";
 class ContainerProperties extends ComponentBaseProperties {
   ContainerWidth?: string;
   alignItems?: AlignItems;
-  closable?: boolean;
   onClick?: () => void;
 }
 
 interface ContainerState extends ComponentBaseState {
-  hovered?: boolean;
   position?: boolean;
-  closable?:boolean;
-  draggable?:boolean;
-  active?:boolean;
+  active?: boolean;
 }
 
 export class Container extends ComponentBase<ContainerProperties, ContainerState> {
 
   state: ContainerState = {
-    hovered: false,
-    closable:false,
-    draggable:false,
-    active:false
+    active: false
   }
 
-  static defaultProps = {
-    closable: false
-  };
 
-  HandlerEnter = () => {
-    this.setState({ hovered: !this.state.hovered });
-  }
-
-  HandlerMouseLeave = () => {
-    this.setState({ hovered: !this.state.hovered });
-  }
+ 
   ClickHandler = () => {
     this.setState({ active: !this.state.active });
   }
@@ -61,33 +45,21 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
       widthClass = styles[this.props.ContainerWidth];
     }
 
-    let icon: any = "";
-    let reorderIcon: any = "";
+    const activeClasses = (this.state.active) ? styles.fullWidthActive : '';
+    const iconActiveClass = (this.state.active) ? styles.displayBlock : '';
+
    
-    const activeClasses=(this.state.active)? styles.fullWidthActive : '';
-
-    if (this.state.active) {
-      icon = <Icon icon={PriorityIcon.closeSmall} visible={this.state.hovered} componentClasses={[styles["closeContainerIcon"]]} />
-    }
-
-    if (this.state.active) {
-      reorderIcon =
-        <div className={styles["reorderIcon"]}>
-          <Icon icon={PriorityIcon.iconReorder} iconColor="blue" />
-        </div>
-    }
-    
-
+    const iconCloseClasses = classNames(styles.closeContainerIcon, iconActiveClass);
+    const iconDraggableClasses = classNames(styles.reorderIcon , iconActiveClass);
     const componentClasses = classNames(styles.component, this.props.componentClasses, alignItemsClass, widthClass, activeClasses);
 
     return (
-      <div className={componentClasses} onMouseEnter={this.HandlerEnter}
-        onMouseLeave={this.HandlerMouseLeave}    onClick={this.ClickHandler}>
-        {icon}
-        {reorderIcon}
+      <div className={componentClasses}  onClick={this.ClickHandler}>
+        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClasses} />
+        <Icon icon={PriorityIcon.iconReorder} componentClasses={iconDraggableClasses} iconColor="blue" />
         {this.props.children}
-     
-        </div>
+
+      </div>
     );
   }
 }

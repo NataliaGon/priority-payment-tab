@@ -6,6 +6,16 @@
     align-items: center;
     position: relative;
     box-sizing: border-box;
+    &:hover {
+        background-color: $lightBlue;
+        border: 1px solid $blue;
+    }
+    &:hover  .closeContainerIcon{
+    display:block;
+    }
+    &:hover  .reorderIcon{
+        display:block;
+    }
 }
 
 .flexStart {
@@ -50,7 +60,11 @@
 }
 
 .reorderIcon {
+    display: none;
     position: absolute;
     left: -12px;
     top: 12px;
+}
+.displayBlock{
+    display: block;
 }
