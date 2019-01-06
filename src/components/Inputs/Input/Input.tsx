@@ -10,39 +10,29 @@ import {
 
 import { Icon } from "../../Icon/Icon";
 
-import styles from "./GeneralInput.module.scss";
+import styles from "./Input.module.scss";
 
 
-class GeneralInputProperties extends ComponentBaseProperties {
+class InputProperties extends ComponentBaseProperties {
     inputWidth?: any;
     clearable?: boolean;
     label?: string
 }
 
-interface GeneralInputState extends ComponentBaseState {
+interface InputState extends ComponentBaseState {
     isFocus?: boolean
 }
 
-export class GeneralInput extends ComponentBase<
-    GeneralInputProperties,
-    GeneralInputState
+export class Input extends ComponentBase<
+    InputProperties,
+    InputState
     > {
 
-    state: GeneralInputState = {
+    state: InputState = {
         isFocus: false
     }
 
-    HandlerEnter = () => {
-        this.setState({
 
-        });
-    }
-
-    HandlerMouseLeave = () => {
-        this.setState({
-
-        });
-    }
 
     HandlerFocus = () => {
         this.setState({isFocus:!this.state.isFocus});
@@ -59,8 +49,7 @@ export class GeneralInput extends ComponentBase<
         const label = this.props.label ? this.props.label : '';
 
         return (
-            <div className={componentClassNames} onMouseEnter={this.HandlerEnter}
-                onMouseLeave={this.HandlerMouseLeave} >
+            <div className={componentClassNames}>
                 <input className={styles.input} type="text" onBlur={this.HandleOnBlur} onFocus={this.HandlerFocus} placeholder={label}  />
                 <div className={styles.icon}>
                     {clearIcon}

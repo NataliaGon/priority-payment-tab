@@ -3,9 +3,10 @@ import React, { Component } from 'react';
 import {
   SidePanel, StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select,
-  GeneralInput, PriorityIcon, AutoFill, DateQueryBlock, FooterBlock, CustomerForm
+  Input, PriorityIcon, AutoFill 
 } from 'priority-style-react';
 
+import{DateQueryBlock, FooterBlock, CustomerForm} from './side-panel-components';
 // import { optionDropDown } from './mock-data/optionDropDown';
 
 class App extends Component {
@@ -20,23 +21,23 @@ class App extends Component {
                 <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
               </RowPanel>
               <RowPanel paddingBottom={true} paddingTop={true}>
-                <Container>
+                <div style={{ display: "flex" }}>
                   <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
                   <Label skin="large">New Search</Label>
-                </Container>
-                <Container>
+                </div>
+                <div style={{ display: "flex" }}>
                   <Icon icon={PriorityIcon.questionCircle} ></Icon>
                   <Label textHref="#">Help</Label>
-                </Container>
+                </div>
               </RowPanel>
             </StackPanel>
 
             <StackPanel>
               <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
-                <Container>
+                <div style={{ display: "flex" }}>
                   <CheckBox />
                   <Label skin="bold">Case Sensitive</Label>
-                </Container>
+                </div>
                 <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
               </RowPanel>
             </StackPanel>
@@ -47,18 +48,18 @@ class App extends Component {
                 <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
               </RowPanel>
               <RowPanel paddingBottom={true} paddingTop={true}>
-                <Container>
+                <div style={{ display: "flex" }}>
                   <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
-                </Container>
-                <Container>
+                </div>
+                <div style={{ display: "flex" }}>
                   <Icon icon={PriorityIcon.questionCircle} ></Icon>
                   <Label textHref="#">Help</Label>
-                </Container>
+                </div>
                 <LineInput />
               </RowPanel>
             </StackPanel>
 
-          <CustomerForm/>
+            <CustomerForm />
 
             <DateQueryBlock />
 
