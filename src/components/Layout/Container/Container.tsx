@@ -15,17 +15,24 @@ class ContainerProperties extends ComponentBaseProperties {
   ContainerWidth?: string;
   alignItems?: AlignItems;
   closable?: boolean;
+  onClick?: () => void;
 }
 
 interface ContainerState extends ComponentBaseState {
   hovered?: boolean;
   position?: boolean;
+  closable?:boolean;
+  draggable?:boolean;
+  active?:boolean;
 }
 
 export class Container extends ComponentBase<ContainerProperties, ContainerState> {
 
   state: ContainerState = {
-    hovered: false
+    hovered: false,
+    closable:false,
+    draggable:false,
+    active:false
   }
 
   static defaultProps = {
@@ -39,7 +46,9 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
   HandlerMouseLeave = () => {
     this.setState({ hovered: !this.state.hovered });
   }
-
+  ClickHandler = () => {
+    this.setState({ active: !this.state.active });
+  }
   public render() {
 
     let alignItemsClass = "";
@@ -54,6 +63,8 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
 
     let icon: any = "";
     let reorderIcon: any = "";
+   
+    const activeClasses=(this.state.active)? styles.fullWidthActive : '';
 
     if (this.props.closable) {
       icon = <Icon icon={PriorityIcon.closeSmall} visible={this.state.hovered} componentClasses={[styles["closeContainerIcon"]]} />
@@ -65,15 +76,18 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
           <Icon icon={PriorityIcon.iconReorder} iconColor="blue" />
         </div>
     }
+    
 
-    const componentClasses = classNames(styles.component, this.props.componentClasses, alignItemsClass, widthClass);
+    const componentClasses = classNames(styles.component, this.props.componentClasses, alignItemsClass, widthClass, activeClasses);
 
     return (
       <div className={componentClasses} onMouseEnter={this.HandlerEnter}
-        onMouseLeave={this.HandlerMouseLeave}>
+        onMouseLeave={this.HandlerMouseLeave}    onClick={this.ClickHandler}>
         {icon}
         {reorderIcon}
-        {this.props.children}</div>
+        {this.props.children}
+     
+        </div>
     );
   }
 }

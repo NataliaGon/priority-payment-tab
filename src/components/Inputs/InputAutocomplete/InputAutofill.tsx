@@ -62,7 +62,7 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
           }
 
           renderItem={(item: any, highlighted: any) =>
-            <div key={item.id} style={{ backgroundColor: highlighted ? '#D9F6F9' : 'transparent' }}>
+            <div key={item.id} style={{ backgroundColor: highlighted ? 'transparent' : 'transparent' }}>
               <input className={styles.inputCheckbox} type="checkbox" name="vehicle1" value={item.label} /> {item.label}<br></br>
             </div>
           }

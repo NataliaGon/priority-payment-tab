@@ -2,15 +2,20 @@
 
 .component {
     position: relative;
-    outline-color: $blue;
-    outline-width: 1px;
     border: none;
     font-family: $font-family-main;
     font-size: $font-size-regular;
     font-weight: $font-weight-regular;
-
-    //line-height: 1.21;
+    display: flex;
+    border: 1px solid $grey;
+    border-radius: $general-border-radius;
+    background: $white;
     padding-left: 10px;
+    height: 30px;
+    border: 1px solid #bfd0d7;
+    border-radius: 3px;
+    box-sizing: border-box;
+   
 
     &:hover {}
 
@@ -24,21 +29,16 @@
     border-radius: 3px;
     box-sizing: border-box;
 }
-
+.input{
+    width: 80%;
+    outline: none;
+}
 .medium {
     width: 150px;
-    height: 30px;
-    border: 1px solid #bfd0d7;
-    border-radius: 3px;
-    box-sizing: border-box;
 }
 
 .small {
     width: 130px;
-    height: 30px;
-    border: 1px solid #bfd0d7;
-    border-radius: 3px;
-    box-sizing: border-box;
 }
 
 .icon {
@@ -57,4 +57,7 @@
     position: absolute;
     right: 5px;
     top: 2px;
+}
+.focusBorder{
+    border: 1px solid $blue;
 }

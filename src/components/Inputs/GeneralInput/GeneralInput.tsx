@@ -45,26 +45,23 @@ export class GeneralInput extends ComponentBase<
     }
 
     HandlerFocus = () => {
-        this.setState({
-
-        });
+        this.setState({isFocus:!this.state.isFocus});
     }
 
     HandleOnBlur = () => {
-        this.setState({
-
-        });
+        this.setState({isFocus:!this.state.isFocus });
     }
 
     public render() {
         const clearIcon = this.props.clearable ? <Icon icon={PriorityIcon.closeSmall} iconColor="grey" /> : '';
-        const inputClassNames = classNames(styles.component, styles[this.props.inputWidth], this.props.componentClasses);
+        const hasBorder= this.state.isFocus? styles.focusBorder : '';
+        const componentClassNames = classNames(styles.component, styles[this.props.inputWidth], hasBorder ,this.props.componentClasses);
         const label = this.props.label ? this.props.label : '';
 
         return (
-            <div className={styles.component} onMouseEnter={this.HandlerEnter}
+            <div className={componentClassNames} onMouseEnter={this.HandlerEnter}
                 onMouseLeave={this.HandlerMouseLeave} >
-                <input className={inputClassNames} type="text" onBlur={this.HandleOnBlur} onFocus={this.HandlerFocus} defaultValue={label} />
+                <input className={styles.input} type="text" onBlur={this.HandleOnBlur} onFocus={this.HandlerFocus} placeholder={label}  />
                 <div className={styles.icon}>
                     {clearIcon}
                 </div>
