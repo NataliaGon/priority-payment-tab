@@ -87,14 +87,14 @@
 }
 
 .active {
-    color: $blue;
+    color:$blue;
 }
 .small{
-    width:130px;
+    width:$inputSizeSmall;
 }
 .medium{
-    width:150px;
+    width:$inputSizeMedium;
 }
 .large{
-    width:360px
+    width:$inputSizeLarge;
 }

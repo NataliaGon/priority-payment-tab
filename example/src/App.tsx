@@ -3,11 +3,11 @@ import React, { Component } from 'react';
 import {
   SidePanel, StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select,
-  Input, PriorityIcon, AutoFill 
+  Input, PriorityIcon
 } from 'priority-style-react';
 
-import{DateQueryBlock, FooterBlock, CustomerForm} from './side-panel-components';
-// import { optionDropDown } from './mock-data/optionDropDown';
+import { DateQueryBlock, FooterBlock, CustomerForm, Header } from './side-panel-components';
+
 
 class App extends Component {
   render() {
@@ -15,22 +15,7 @@ class App extends Component {
       <div className="App">
         <SidePanel>
           <ScrollPanel gradient>
-            <StackPanel componentClasses={["header"]} skin="silver">
-              <RowPanel paddingBottom={true} paddingTop={true}>
-                <Title>Advanced Search</Title>
-                <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
-              </RowPanel>
-              <RowPanel paddingBottom={true} paddingTop={true}>
-                <div style={{ display: "flex" }}>
-                  <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
-                  <Label skin="large">New Search</Label>
-                </div>
-                <div style={{ display: "flex" }}>
-                  <Icon icon={PriorityIcon.questionCircle} ></Icon>
-                  <Label textHref="#">Help</Label>
-                </div>
-              </RowPanel>
-            </StackPanel>
+            <Header/>
 
             <StackPanel>
               <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
@@ -42,30 +27,9 @@ class App extends Component {
               </RowPanel>
             </StackPanel>
 
-            <StackPanel skin="light">
-              <RowPanel paddingBottom={true} paddingTop={true}>
-                <Title>Advanced Search</Title>
-                <Button skin="roundStrokeIcon"><Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /></Button>
-              </RowPanel>
-              <RowPanel paddingBottom={true} paddingTop={true}>
-                <div style={{ display: "flex" }}>
-                  <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
-                </div>
-                <div style={{ display: "flex" }}>
-                  <Icon icon={PriorityIcon.questionCircle} ></Icon>
-                  <Label textHref="#">Help</Label>
-                </div>
-                <LineInput />
-              </RowPanel>
-            </StackPanel>
-
-            <CustomerForm />
-
-            <DateQueryBlock />
-
-            <FooterBlock />
-
-
+            <CustomerForm/>
+            <DateQueryBlock/>
+            <FooterBlock/>
           </ScrollPanel>
         </SidePanel>
       </div>

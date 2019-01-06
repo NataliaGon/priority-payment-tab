@@ -12,6 +12,7 @@ interface IconProperties extends ComponentBaseProperties {
   iconColor?: TextColor;
   counterValue?: number;
   visible?: boolean;
+  onClick?: () => void;
 }
 
 interface IconState extends ComponentBaseState {

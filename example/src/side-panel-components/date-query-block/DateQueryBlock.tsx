@@ -4,15 +4,8 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIco
 import { StackPanel, Container, RowPanel, Label, Input, Select, Icon } from 'priority-style-react';
 
 import styles from './DateQueryBlock.module.scss';
+import {optionDropDown} from './../../optionDropDown';
 
-export const optionDropDown = [{
-    iconName: "icon-search-equal",
-    name: "Between"
-}, {
-    iconName: "icon-search-equal",
-    name: "Between"
-}
-];
 
 class DateQueryBlockProperties extends ComponentBaseProperties {
 
@@ -21,7 +14,7 @@ class DateQueryBlockProperties extends ComponentBaseProperties {
 interface DateQueryBlockState extends ComponentBaseState {
 }
 
-export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, DateQueryBlock> {
+export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, DateQueryBlockState> {
     render() {
         return (
             <StackPanel >

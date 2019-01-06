@@ -23,7 +23,7 @@
 }
 
 .large {
-    width: 356px;
+    width: $inputSizeLarge;
     height: 30px;
     border: 1px solid #bfd0d7;
     border-radius: 3px;
@@ -34,11 +34,11 @@
     outline: none;
 }
 .medium {
-    width: 150px;
+    width: $inputSizeMedium;
 }
 
 .small {
-    width: 130px;
+    width: $inputSizeSmall;
 }
 
 .icon {
@@ -60,4 +60,21 @@
 }
 .focusBorder{
     border: 1px solid $blue;
+}
+.line{
+    border:none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed $blue;
+    padding-bottom: 5px;
+    width: 450px;
+    position: absolute;
+    left: 62px;
+    background: transparent;
+   
+    .input{
+        background: $silver;
+        font-size: 2.2rem;
+        color: #788e97;
+    }
 }

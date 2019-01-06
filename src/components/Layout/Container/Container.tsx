@@ -14,7 +14,7 @@ type ContainerWidth = "regular" | "fullWidth" | "";
 class ContainerProperties extends ComponentBaseProperties {
   ContainerWidth?: string;
   alignItems?: AlignItems;
-  onClick?: () => void;
+
 }
 
 interface ContainerState extends ComponentBaseState {

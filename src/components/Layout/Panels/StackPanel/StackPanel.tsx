@@ -5,6 +5,7 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../.
 
 import styles from "./StackPanel.module.scss";
 import { GlobalStyles } from "../../../../core/global-styles";
+import { isArray } from "util";
 
 type StackPanelDirection = "horizontal";
 type StackPanelSkin = "default" | "silver" | "light" | "dark" | "padded-panel" | "snow";
@@ -28,7 +29,7 @@ export class StackPanel extends ComponentBase<StackPanelProperties, StackPanelSt
 
     let classes: string[] = [];
 
-    if (this.props.componentClasses) {
+    if (this.props.componentClasses && isArray(this.props.componentClasses)) {
       this.props.componentClasses.forEach(function (value: string) {
         classes.push(GlobalStyles[value]);
       });

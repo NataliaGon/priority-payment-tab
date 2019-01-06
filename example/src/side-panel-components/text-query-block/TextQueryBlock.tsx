@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase} from 'priority-style-react';
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, AutoFill} from 'priority-style-react';
 import { Label, StackPanel, Container, RowPanel, WrapPanel, Select, Input,Tag } from 'priority-style-react';
 import { optionDropDown } from './../../optionDropDown';
 // import styles from "./CustomerForm.module.scss";
@@ -23,7 +23,7 @@ export class CustomerForm extends ComponentBase<CustomerFormBlockProperties, Cus
                 </RowPanel>
                 <RowPanel paddingTop={true} paddingBottom={true}>
                   <Select options={optionDropDown} />
-                  <Input inputWidth="large" clearable={true} />
+                  <AutoFill/>
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />
