@@ -4,7 +4,7 @@ import classNames from 'classnames';
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from "../../../core";
 import { Icon } from '../../Icon/Icon';
 
-import { GlobalStyles } from '../../../core/global-styles';
+
 
 import styles from "./Container.module.scss";
 

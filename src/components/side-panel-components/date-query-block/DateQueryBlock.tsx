@@ -1,7 +1,7 @@
 import * as React from "react";
 
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from '../../../core';
-import { StackPanel, Container, RowPanel, Label, GeneralInput, Select, Icon } from '../..';
+import { StackPanel, Container, RowPanel, Label, Input, Select, Icon } from '../..';
 
 import styles from './DateQueryBlock.module.scss';
 
@@ -44,13 +44,13 @@ export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, Date
                     <RowPanel paddingBottom={true} paddingTop={true} >
                         <div className={styles.spaceHolderBig}></div>
                         <div className={styles.spaceHolder}></div>
-                        <GeneralInput inputWidth="small" label="03/02/19" >
+                        <Input inputWidth="small" label="03/02/19" >
                             <Icon icon={PriorityIcon.calendar} iconColor="grey" />
-                        </GeneralInput>
+                        </Input>
                         <div className={styles.spaceHolder}></div>
-                        <GeneralInput inputWidth="small" label="03/02/19">
+                        <Input inputWidth="small" label="03/02/19">
                             <Icon icon={PriorityIcon.calendar} iconColor="grey" />
-                        </GeneralInput>
+                        </Input>
                     </RowPanel>
                     <RowPanel alignItems="flex-end">
                         <Label>Sort</Label>

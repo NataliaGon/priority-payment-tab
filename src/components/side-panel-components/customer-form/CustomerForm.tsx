@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase} from "../../../core";
-import { Label, StackPanel, Container, RowPanel, WrapPanel, Select, GeneralInput,Tag } from '../../';
+import { Label, StackPanel, Container, RowPanel, WrapPanel, Select, Input,Tag } from '../../';
 import { optionDropDown } from '../../../core/constants/optionDropDown';
 import styles from "./CustomerForm.module.scss";
 
@@ -31,7 +31,7 @@ export class CustomerForm extends ComponentBase<CustomerFormBlockProperties, Cus
                 </RowPanel>
                 <RowPanel paddingTop={true} paddingBottom={true}>
                   <Select options={optionDropDown} />
-                  <GeneralInput inputWidth="large" clearable={true} />
+                  <Input inputWidth="large" clearable={true} />
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />
