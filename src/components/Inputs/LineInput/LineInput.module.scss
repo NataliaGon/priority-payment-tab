@@ -1,0 +1,36 @@
+@import "../../../styles/vars.scss";
+
+.component{
+    display: flex;
+    justify-content: flex-end;
+    border-bottom: 1px dashed $blue;
+    padding-bottom: 5px;
+    width: 450px;
+    position: absolute;
+    left: 62px;
+}
+.iconDoneWrapper{
+    background-color: $blue;
+    border-radius: 50%;
+}
+.input{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    font-size: $font-size-medium;
+    color: $grey;
+    display:none;
+}
+.span{
+    width: 100%;
+    background: transparent;
+    outline: none;
+    font-size: $font-size-medium;
+    color: $grey;
+}
+.displayNone{
+    display: none;
+}
+.displayBlock{
+    display: block;
+}

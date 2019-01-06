@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import {
   SidePanel, StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
   Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select,
-  GeneralInput, PriorityIcon, AutoFill, DateQueryBlock, FooterBlock
+  GeneralInput, PriorityIcon, AutoFill, DateQueryBlock, FooterBlock, CustomerForm
 } from 'priority-style-react';
 
-import { optionDropDown } from './mock-data/optionDropDown';
+// import { optionDropDown } from './mock-data/optionDropDown';
 
 class App extends Component {
   render() {
@@ -58,86 +58,12 @@ class App extends Component {
               </RowPanel>
             </StackPanel>
 
-            {/* <StackPanel>
-              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
-                <Container>
-                  <CheckBox />
-                  <Label skin="bold">Case Sensitive</Label>
-                </Container>
-                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
-              </RowPanel>
-            </StackPanel> */}
-
-            <StackPanel >
-              <Container ContainerWidth="fullWidth" >
-                <RowPanel>
-                  <Label skin="regular-high-contrast">Customer No.</Label>
-                </RowPanel>
-                <RowPanel paddingTop={true} paddingBottom={true}>
-                  <Select options={optionDropDown} />
-                  <GeneralInput inputWidth="large" clearable={true} />
-                </RowPanel>
-                <WrapPanel>
-                  <Tag text="test" />
-                  <Tag text="test" />
-                </WrapPanel>
-              </Container>
-            </StackPanel>
-
-            {/* <StackPanel>
-              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
-                <Container>
-                  <CheckBox />
-                  <Label skin="bold">Case Sensitive</Label>
-                </Container>
-                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
-              </RowPanel>
-            </StackPanel> */}
-
-            <StackPanel >
-              <Container ContainerWidth="fullWidthActive" closable={true} draggable={true}>
-                <RowPanel >
-                  <Label skin="regular-high-contrast">Customer No.</Label>
-                </RowPanel>
-                <RowPanel paddingBottom={true} paddingTop={true}>
-                  <Select options={optionDropDown} />
-                  <AutoFill />
-                </RowPanel>
-                <WrapPanel>
-                  <Tag text="test" />
-                  <Tag text="test" />
-                </WrapPanel>
-              </Container>
-            </StackPanel>
+          <CustomerForm/>
 
             <DateQueryBlock />
 
-            {/* <StackPanel>
-              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
-                <Container>
-                  <CheckBox />
-                  <Label skin="bold">Case Sensitive</Label>
-                </Container>
-                <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
-              </RowPanel>
-            </StackPanel> */}
-
             <FooterBlock />
 
-            {/* <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
-              <RowPanel alignItems="space-between" >
-                <Container>
-                  <Icon icon={PriorityIcon.clear} />
-                  <Label skin="regular-high-contrast">Clear Search</Label>
-                </Container>
-                <Container ContainerWidth="250px" alignItems="spaceBetween">
-                  <WrapPanel>
-                    <Button skin="secondary" width="regularFixed">Save</Button>
-                    <Button skin="regular" width="regularFixed">Apply</Button>
-                  </WrapPanel>
-                </Container>
-              </RowPanel>
-            </StackPanel> */}
 
           </ScrollPanel>
         </SidePanel>

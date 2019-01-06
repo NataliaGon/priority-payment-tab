@@ -1,0 +1,19 @@
+@import "../../styles/vars";
+
+.component {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    padding: 5px 0 5px 10px;
+    height: 30px;
+    color: $white;
+    background-color: $tag-background-grey;
+    font-weight: $font-weight-bold;
+    border-radius: $input-border-radius;
+    font-size: $font-size-regular;
+    align-items: center;
+
+    &:hover {
+        box-shadow: $tag-box-shadow;
+    }
+}
