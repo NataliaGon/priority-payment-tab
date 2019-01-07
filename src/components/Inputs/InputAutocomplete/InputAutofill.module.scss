@@ -9,6 +9,9 @@
     &:hover {
         border-color: $blue;
     }
+    &:hover .iconClose{
+        display: block;
+    }
 }
 .component>div>div>div{
     height: 40px;
@@ -70,4 +73,5 @@
     right: 10px!important;
     top: 7px;
     z-index: 6;
+    display: none;
 }
