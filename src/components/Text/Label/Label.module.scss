@@ -28,6 +28,11 @@
 .regular-hight-contrast {
     font-size: $font-size-regular;
     color: $black;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: 500;
 }
 
 .small {

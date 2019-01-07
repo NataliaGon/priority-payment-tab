@@ -75,6 +75,7 @@
     color:$blue;
     &:hover {
         background-color: $background-color-blue;
+        border-radius: $input-border-radius
     }
 }
 

@@ -21,7 +21,7 @@ export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, Date
             <Container roundConer >
                     <RowPanel paddingBottom={true}  >
                     <div style={{marginLeft:"-10px"}}>
-                        <Label>Due Date</Label>
+                        <Label size="regular-hight-contrast">Due Date</Label>
                     </div>
                     </RowPanel>
                     <RowPanel>

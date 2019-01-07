@@ -21,7 +21,7 @@ class App extends Component {
                 <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
                   <div style={{ display: "flex" }}>
                     <CheckBox />
-                    <Label size="bold">Case Sensitive</Label>
+                    <Label size="regular-hight-contrast">Case Sensitive</Label>
                   </div>
                   <Label size="small-bold">Sort table by rearranging filter order with drag and drop</Label>
                 </RowPanel>

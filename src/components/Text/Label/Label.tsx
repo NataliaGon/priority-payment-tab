@@ -5,7 +5,7 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../.
 
 import styles from "./Label.module.scss";
 
-type LabelSize = "large" | "regular" | "regular-high-contrast" | "small" | "bold" | "small-bold";
+type LabelSize = "large" | "regular" | "regular-hight-contrast" | "small" | "bold" | "small-bold";
 
 
 interface LabelProperties extends ComponentBaseProperties {
