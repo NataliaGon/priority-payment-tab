@@ -39,18 +39,9 @@ export class Label extends ComponentBase<LabelProperties, LabelState> {
     let colorClass = "grey";
 
     if (this.props.textColor) {
-      if (this.props.textColor === "white") {
-        colorClass = styles.white;
-      }
-      if (this.props.textColor === "blue") {
-        colorClass = styles.blue;
-      }
-      if (this.props.textColor === "black") {
-        colorClass = styles.black;
-      }
-      if (this.props.textColor === "grey") {
-        colorClass = styles.grey;
-      }
+
+        colorClass = styles[this.props.textColor];
+    
     }
 
     const elementClasses = classNames(styles.component, this.props.componentClasses, sizeClass, paddingClass, linkClass, colorClass);
