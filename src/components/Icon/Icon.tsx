@@ -43,7 +43,7 @@ export class Icon extends ComponentBase<IconProperties, IconState> {
     }
 
     const iconVisibilityClass = this.props.visible? styles.visible:'';
-    const iconClass = classNames(styles.component, this.props.icon, iconColorClass, iconVisibilityClass, this.props.componentClasses);
+    const iconClass = classNames(styles.component, this.props.icon, iconColorClass, iconVisibilityClass, this.props.componentClasses,this.props.textSize);
     const iconCounter =  (this.props.counterValue) ? <IconCounter count={this.props.counterValue} /> : null;
 
     return (

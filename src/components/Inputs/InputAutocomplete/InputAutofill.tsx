@@ -78,7 +78,7 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
           onSelect={(value: any) => this.setState({ value })}
         />
         <div className={styles.iconClose}>
-        <Icon icon={PriorityIcon.closeSmall} />
+        <Icon icon={PriorityIcon.closeSmall} textSize="large" />
         </div>
       </div>
     );

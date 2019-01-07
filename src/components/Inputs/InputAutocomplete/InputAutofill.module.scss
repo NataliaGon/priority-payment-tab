@@ -71,7 +71,12 @@
     position: absolute!important;
     width: auto!important;
     right: 10px!important;
-    top: 7px;
+    top: 0;
     z-index: 6;
     display: none;
+   &>*{
+        width: 2.4rem!important;
+        height: 2.4rem!important;
+        font-size: 2.4rem!important;
+    }
 }
