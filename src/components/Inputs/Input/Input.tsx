@@ -34,11 +34,11 @@ export class Input extends ComponentBase<
         isFocus: false
     }
 
-    HandlerFocus = () => {
+    handlerFocus = () => {
         this.setState({isFocus:!this.state.isFocus});
     }
 
-    HandleOnBlur = () => {
+    handleOnBlur = () => {
         this.setState({isFocus:!this.state.isFocus });
     }
 
@@ -51,7 +51,7 @@ export class Input extends ComponentBase<
 
         return (
             <div className={componentClassNames}>
-                <input className={styles.input} type="text" onBlur={this.HandleOnBlur} onFocus={this.HandlerFocus} placeholder={label}  />
+                <input className={styles.input} type="text" onBlur={this.handleOnBlur} onFocus={this.handlerFocus} placeholder={label}  />
                 <div className={styles.icon}>
                     {clearIcon}
                 </div>

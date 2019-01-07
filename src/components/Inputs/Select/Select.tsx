@@ -20,6 +20,7 @@ export interface SelectProperties extends ComponentBaseProperties {
   IconTextColor?: string;
   options: any[];
   width?: selectWidth;
+  isBlue?:boolean;
 }
 
 export interface SelectState extends ComponentBaseState {
@@ -42,12 +43,13 @@ export class Select extends ComponentBase<SelectProperties, SelectState> {
 
     const [firstElem, ...restElems] = this.props.options;
 
+
     if (this.props.options && Array.isArray(this.props.options)) {
       return (
         <ul className={styles.ul}>
           <OptionItem
             iconName={firstElem.iconName}
-            isClicked={this.state.isOpen}
+            isBlue={this.props.isBlue}
           >
             {firstElem.name}
           </OptionItem>

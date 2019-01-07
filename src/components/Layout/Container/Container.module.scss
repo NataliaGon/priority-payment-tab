@@ -6,6 +6,7 @@
     align-items: center;
     position: relative;
     box-sizing: border-box;
+    cursor: pointer;
     &:hover {
         background-color: $lightBlue;
         border: 1px solid $blue;
@@ -36,7 +37,7 @@
     background-color: $snow;
     border-radius: $general-border-radius;
     padding: 17px 20px 15px;
-    border: 1px solid $snow;
+    border: 1px solid $light-stroke;
 }
 
 .fullWidthActive {

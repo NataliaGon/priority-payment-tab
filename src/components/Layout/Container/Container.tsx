@@ -12,7 +12,7 @@ type AlignItems = "flexStart" | "flexEnd" | "spaceBetween";
 type ContainerWidth = "regular" | "fullWidth" | "";
 
 class ContainerProperties extends ComponentBaseProperties {
-  ContainerWidth?: string;
+  containerWidth?: string;
   alignItems?: AlignItems;
 
 }
@@ -28,7 +28,6 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
     active: false
   }
 
-
  
   ClickHandler = () => {
     this.setState({ active: !this.state.active });
@@ -41,8 +40,8 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
     if (this.props.alignItems) {
       alignItemsClass = styles[this.props.alignItems];
     }
-    if (this.props.ContainerWidth) {
-      widthClass = styles[this.props.ContainerWidth];
+    if (this.props.containerWidth) {
+      widthClass = styles[this.props.containerWidth];
     }
 
     const activeClasses = (this.state.active) ? styles.fullWidthActive : '';
@@ -58,7 +57,6 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
         <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClasses} />
         <Icon icon={PriorityIcon.iconReorder} componentClasses={iconDraggableClasses} iconColor="blue" />
         {this.props.children}
-
       </div>
     );
   }

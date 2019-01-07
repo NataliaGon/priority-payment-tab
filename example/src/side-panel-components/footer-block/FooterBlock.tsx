@@ -21,7 +21,7 @@ export class FooterBlock extends ComponentBase<FooterBlockProperties, FooterBloc
             <div className={styles.component}>
                 <StackPanel skin="dark">
                     <RowPanel alignItems="space-between" >
-                        <div style={{ display: "flex" }}>
+                        <div style={{ display: "flex",  cursor: "pointer"}}>
                             <Icon icon={PriorityIcon.clear} iconColor="white" />
                             <Label skin="regular-high-contrast" textColor="white">Clear Search</Label>
                         </div>

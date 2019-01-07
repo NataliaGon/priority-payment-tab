@@ -18,12 +18,12 @@ export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, Date
     render() {
         return (
             <StackPanel >
-                <Container ContainerWidth="fullWidth">
+                <Container containerWidth="fullWidth">
                     <RowPanel paddingBottom={true}  >
                         <Label>Due Date</Label>
                     </RowPanel>
                     <RowPanel>
-                        <Select options={optionDropDown} width="medium" />
+                        <Select options={optionDropDown} width="medium" isBlue/>
                         <div className={styles.spaceHolder}>
                             <Label>From</Label>
                         </div>

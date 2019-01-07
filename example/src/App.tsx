@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
 import {
-  SidePanel, StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
-  Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select,
-  Input, PriorityIcon
+  SidePanel, StackPanel, RowPanel,ScrollPanel,
+ CheckBox, Label
+ 
 } from 'priority-style-react';
 
 import { DateQueryBlock, FooterBlock, TextQueryBlock, Header } from './side-panel-components';

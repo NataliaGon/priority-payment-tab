@@ -19,7 +19,7 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
 state:HeaderBlockState ={
     withInput:false
 }
-ClickHandler=()=>{
+clickHandler=()=>{
   this.setState({withInput:!this.state.withInput});
 }
 
@@ -28,10 +28,10 @@ ClickHandler=()=>{
         
         <Input skin="line" label="New Search">
         <div style={{display:"flex"}}>
-        <button className={styles.iconDoneWrapper} onClick={this.ClickHandler}>
+        <button className={styles.iconDoneWrapper} onClick={this.clickHandler}>
           <Icon iconColor="white" icon={PriorityIcon.done} />
         </button>
-        <button onClick={this.ClickHandler}>
+        <button onClick={this.clickHandler}>
         <Icon icon={PriorityIcon.closeSmall} />
         </button>
         </div>
@@ -52,16 +52,14 @@ ClickHandler=()=>{
               <RowPanel >
                 <div style={{ display: "flex" }}>
                   <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
-                  <div onClick={this.ClickHandler}>
+                  <div onClick={this.clickHandler}>
                   {labelComponent}
                   </div>
                 </div>
                 {inputComponent}
                 <div style={{ display: "flex" }}>
-                  <Icon icon={PriorityIcon.questionCircle} ></Icon>
-                  
+                  <Icon icon={PriorityIcon.questionCircle}  ></Icon> 
                   <Label textHref="#">Help</Label>
-                 
                 </div>
                 
               </RowPanel>

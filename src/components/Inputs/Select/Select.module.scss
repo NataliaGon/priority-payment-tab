@@ -17,6 +17,9 @@
     z-index: 3;
     position: absolute;
     box-sizing: border-box;
+    &:hover{
+        border-color: $blue;
+    }
 }
 
 .optionsWrapper {
@@ -69,6 +72,7 @@
 }
 
 .ul li {
+    color:$blue;
     &:hover {
         background-color: $background-color-blue;
     }
