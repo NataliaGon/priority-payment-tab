@@ -21,8 +21,6 @@ interface IconState extends ComponentBaseState {
 
 export class Icon extends ComponentBase<IconProperties, IconState> {
 
-
-
   constructor(properties: IconProperties, state: IconState) {
     super(properties, state);
 

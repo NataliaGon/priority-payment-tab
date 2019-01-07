@@ -18,7 +18,9 @@ export class TextQueryBlock extends ComponentBase<TextQueryBlockBlockProperties,
           <StackPanel >
           <Container roundConer > 
                 <RowPanel>
+                  <div style={{marginLeft:"-10px"}}>
                   <Label size="regular-high-contrast">Customer No.</Label>
+                  </div>
                 </RowPanel>
                 <RowPanel paddingTop paddingBottom>
                   <Select options={optionDropDown} isBlue/>

@@ -20,7 +20,9 @@ export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, Date
             <StackPanel >
             <Container roundConer >
                     <RowPanel paddingBottom={true}  >
+                    <div style={{marginLeft:"-10px"}}>
                         <Label>Due Date</Label>
+                    </div>
                     </RowPanel>
                     <RowPanel>
                         <Select options={optionDropDown} width="medium" isBlue/>
