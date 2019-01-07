@@ -4,21 +4,18 @@ import classNames from 'classnames';
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from "../../../core";
 import { Icon } from '../../Icon/Icon';
 
-
-
 import styles from "./Container.module.scss";
 
-type AlignItems = "flexStart" | "flexEnd" | "spaceBetween";
-type ContainerWidth = "regular" | "fullWidth" | "";
+
+type ContainerPanelSkin = "default" | "silver" | "light" | "dark" | "snow";
+
 
 class ContainerProperties extends ComponentBaseProperties {
-  containerWidth?: ContainerWidth;
-  alignItems?: AlignItems;
-
+  skin?: ContainerPanelSkin;
+  roundConer?:boolean; 
 }
 
 interface ContainerState extends ComponentBaseState {
-  position?: boolean;
   active?: boolean;
 }
 
@@ -37,7 +34,7 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
 
     let classNames = require('classnames/bind');
     let cx = classNames.bind(styles);
-    const componentClassNames = cx('component', {'fullWidthActive':this.state.active}, this.props.alignItems, this.props.containerWidth);
+    const componentClassNames = cx('component', {'active':this.state.active},{'roundConer':this.props.roundConer});
     const iconCloseClassNames =cx('closeContainerIcon', {'displayBlock':this.state.active});
     const iconDraggableClassNames =cx('dragIcon', {'displayBlock':this.state.active});
    

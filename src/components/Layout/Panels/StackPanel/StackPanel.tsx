@@ -6,10 +6,12 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../.
 import styles from "./StackPanel.module.scss";
 
 
-type StackPanelSkin = "default" | "silver" | "light" | "dark" | "padded-panel" | "snow";
+type AlignItems = "flexStart" | "flexEnd" | "spaceBetween";
+type StackPanelSkin = "default" | "silver" | "light" | "dark" | "snow";
 
 class StackPanelProperties extends ComponentBaseProperties {
-  skin?: StackPanelSkin = "default";
+  alignItems?: AlignItems;
+  skin?:StackPanelSkin;
 }
 
 interface StackPanelState extends ComponentBaseState {

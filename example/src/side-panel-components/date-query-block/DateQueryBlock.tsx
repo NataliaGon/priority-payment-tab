@@ -18,7 +18,7 @@ export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, Date
     render() {
         return (
             <StackPanel >
-                <Container containerWidth="fullWidth">
+            <Container roundConer >
                     <RowPanel paddingBottom={true}  >
                         <Label>Due Date</Label>
                     </RowPanel>
@@ -32,7 +32,6 @@ export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, Date
                             <Label>To</Label>
                         </div>
                         <Select options={optionDropDown} width="small" />
-
                     </RowPanel>
                     <RowPanel paddingBottom={true} paddingTop={true} >
                         <div className={styles.spaceHolderBig}></div>
@@ -47,8 +46,8 @@ export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, Date
                     </RowPanel>
                     <RowPanel alignItems="flex-end">
                         <Label>Sort</Label>
-                    </RowPanel>
-                </Container>
+                    </RowPanel>  
+            </Container>
             </StackPanel>
         )
     }
