@@ -5,11 +5,11 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../.
 
 import styles from "./Label.module.scss";
 
-type LabelSkin = "large" | "regular" | "regular-high-contrast" | "small" | "bold" | "small-bold";
+type LabelSize = "large" | "regular" | "regular-high-contrast" | "small" | "bold" | "small-bold";
 type LabelPadding = "regular" | "double";
 
 interface LabelProperties extends ComponentBaseProperties {
-  skin?: LabelSkin;
+  size?: LabelSize;
   labelPadding?: LabelPadding;
   textHref?: string;
 }
@@ -21,9 +21,9 @@ interface LabelState extends ComponentBaseState {
 export class Label extends ComponentBase<LabelProperties, LabelState> {
   public render() {
 
-    let skinClass = "";
-    if (this.props.skin) {
-      skinClass = styles[this.props.skin];
+    let sizeClass = "";
+    if (this.props.size) {
+      sizeClass = styles[this.props.size];
     }
 
     let paddingClass = "";
@@ -53,7 +53,7 @@ export class Label extends ComponentBase<LabelProperties, LabelState> {
       }
     }
 
-    const elementClasses = classNames(styles.component, this.props.componentClasses, skinClass, paddingClass, linkClass, colorClass);
+    const elementClasses = classNames(styles.component, this.props.componentClasses, sizeClass, paddingClass, linkClass, colorClass);
 
     return (
       this.props.textHref ?

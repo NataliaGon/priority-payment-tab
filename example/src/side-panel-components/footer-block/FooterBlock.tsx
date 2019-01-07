@@ -23,7 +23,7 @@ export class FooterBlock extends ComponentBase<FooterBlockProperties, FooterBloc
                     <RowPanel alignItems="space-between" >
                         <div style={{ display: "flex",  cursor: "pointer"}}>
                             <Icon icon={PriorityIcon.clear} iconColor="white" />
-                            <Label skin="regular-high-contrast" textColor="white">Clear Search</Label>
+                            <Label size="regular-high-contrast" textColor="white">Clear Search</Label>
                         </div>
                         <div style={{ display: "flex" }}>
                             <WrapPanel>

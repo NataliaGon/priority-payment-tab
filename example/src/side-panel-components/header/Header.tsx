@@ -39,7 +39,7 @@ clickHandler=()=>{
      
       : '';
       
-        const labelComponent = (this.state.withInput) ? '' : <Label skin="large">New Search</Label>;
+        const labelComponent = (this.state.withInput) ? '' : <Label size="large">New Search</Label>;
 
         return (
           <StackPanel skin="light" >

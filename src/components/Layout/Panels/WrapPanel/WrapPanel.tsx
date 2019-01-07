@@ -5,8 +5,6 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../.
 
 import styles from "./WrapPanel.module.scss";
 
-
-
 interface WrapPanelProperties extends ComponentBaseProperties {
 
 }
