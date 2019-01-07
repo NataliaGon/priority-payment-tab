@@ -4,9 +4,9 @@ import classNames from "classnames";
 import {
   ComponentBaseProperties,
   ComponentBaseState,
-  ComponentBase
+  ComponentBase, PriorityIcon
 } from "../../../core";
-
+import {Icon} from "../../Icon/Icon"
 import styles from "./InputAutofill.module.scss";
 
 class InputAutoProperties extends ComponentBaseProperties {
@@ -63,7 +63,9 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
 
           renderItem={(item: any, highlighted: any) =>
             <div key={item.id} style={{ backgroundColor: highlighted ? 'transparent' : 'transparent' }}>
-              <input className={styles.inputCheckbox} type="checkbox" name="vehicle1" value={item.label} /> {item.label}<br></br>
+              <input className={styles.inputCheckbox} type="checkbox" name="vehicle1" value={item.label} /> {item.label}
+              
+              <br></br>
             </div>
           }
 
@@ -75,6 +77,9 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
           onChange={(e: any) => this.setState({ value: e.target.value })}
           onSelect={(value: any) => this.setState({ value })}
         />
+        <div className={styles.iconClose}>
+        <Icon icon={PriorityIcon.closeSmall} />
+        </div>
       </div>
     );
   }

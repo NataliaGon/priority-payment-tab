@@ -5,6 +5,7 @@
     @include border($input-border-grey);
     border-radius: $input-border-radius;
     box-sizing: border-box;
+    position: relative;
     &:hover {
         border-color: $blue;
     }
@@ -62,4 +63,11 @@
 .inputCheckbox{
     width: 20px!important;
     position: static!important;
+}
+.iconClose{
+    position: absolute!important;
+    width: auto!important;
+    right: 10px!important;
+    top: 7px;
+    z-index: 6;
 }
