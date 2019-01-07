@@ -12,7 +12,7 @@ type AlignItems = "flexStart" | "flexEnd" | "spaceBetween";
 type ContainerWidth = "regular" | "fullWidth" | "";
 
 class ContainerProperties extends ComponentBaseProperties {
-  containerWidth?: string;
+  containerWidth?: ContainerWidth;
   alignItems?: AlignItems;
 
 }
@@ -34,28 +34,18 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
   }
   public render() {
 
-    let alignItemsClass = "";
-    let widthClass = "";
 
-    if (this.props.alignItems) {
-      alignItemsClass = styles[this.props.alignItems];
-    }
-    if (this.props.containerWidth) {
-      widthClass = styles[this.props.containerWidth];
-    }
-
-    const activeClasses = (this.state.active) ? styles.fullWidthActive : '';
-    const iconActiveClass = (this.state.active) ? styles.displayBlock : '';
-
+    let classNames = require('classnames/bind');
+    let cx = classNames.bind(styles);
+    const componentClassNames = cx('component', {'fullWidthActive':this.state.active}, this.props.alignItems, this.props.containerWidth);
+    const iconCloseClassNames =cx('closeContainerIcon', {'displayBlock':this.state.active});
+    const iconDraggableClassNames =cx('dragIcon', {'displayBlock':this.state.active});
    
-    const iconCloseClasses = classNames(styles.closeContainerIcon, iconActiveClass);
-    const iconDraggableClasses = classNames(styles.reorderIcon , iconActiveClass);
-    const componentClasses = classNames(styles.component, this.props.componentClasses, alignItemsClass, widthClass, activeClasses);
 
     return (
-      <div className={componentClasses}  onClick={this.ClickHandler}>
-        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClasses} />
-        <Icon icon={PriorityIcon.iconReorder} componentClasses={iconDraggableClasses} iconColor="blue" />
+      <div className={componentClassNames}  onClick={this.ClickHandler}>
+        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} />
+        <Icon icon={PriorityIcon.iconReorder} componentClasses={iconDraggableClassNames} iconColor="blue" />
         {this.props.children}
       </div>
     );

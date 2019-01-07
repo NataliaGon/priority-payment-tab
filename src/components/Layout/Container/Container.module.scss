@@ -14,7 +14,7 @@
     &:hover  .closeContainerIcon{
     display:block;
     }
-    &:hover  .reorderIcon{
+    &:hover  .dragIcon{
         display:block;
     }
 }
@@ -60,7 +60,7 @@
     top: 5px;
 }
 
-.reorderIcon {
+.dragIcon {
     display: none;
     position: absolute;
     left: -12px;
