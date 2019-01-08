@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import {
   SidePanel, StackPanel, RowPanel,ScrollPanel,
- CheckBox, Label
+ CheckBox, Label, Button
  
 } from 'priority-style-react';
 
@@ -28,7 +28,7 @@ class App extends Component {
               </StackPanel>
 
               <TextQueryBlock />
-              <TextQueryBlock hasButton/>
+              <TextQueryBlock /> 
               <DateQueryBlock />
              
           </ScrollPanel>

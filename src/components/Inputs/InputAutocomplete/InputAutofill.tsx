@@ -10,9 +10,10 @@ import {Icon} from "../../Icon/Icon"
 import styles from "./InputAutofill.module.scss";
 import {CheckBox} from "../CheckBox/CheckBox"
 import { Button } from "../Button/Button";
+import { isDeepStrictEqual } from "util";
 
 class InputAutoProperties extends ComponentBaseProperties {
-hasButton?:boolean;
+ isMultiselect?:boolean
 }
 
 interface InputAutoState extends ComponentBaseState {
@@ -24,7 +25,20 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
   state: InputAutoState = {
     value: "bar"
   }
-
+  isButton(button){
+    if(button){
+      return(<Button width="small">{button}</Button>)
+    }else{
+      return null
+    }
+  }
+  // isIcon(icon){
+  //   if(icon){
+  //     return(<Icon icon={PriorityIcon[icon]}/>)
+  //   }else{
+  //     return null
+  //   }
+  // }
   public render() {
     const Autocomplete = require("react-autocomplete") as any;
 
@@ -42,17 +56,18 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
       boxSizing: 'content-box',
       boxShadow: '0 10px 20px 0 rgba(0, 0, 0, 0.2)'
     }
-   const button =this.props.hasButton? <Button width="small" >Apply</Button>:'' ;
+  const checkBox = (this.props.isMultiselect)? <CheckBox />:'';
+  
     return (
       <div className={styles.component}>
         <Autocomplete
           className={styles.inputComponent}
 
           items={[
-            { id: 'foo', label: 'foo' },
-            { id: 'bar', label: 'bar' },
+            { id: 'foo', label: 'foo', btn:'Apply' },
+            { id: 'bar', label: 'bar', icon:'done' },
             { id: 'baz', label: 'baz' },
-            { id: 'fo', label: 'fo' },
+            { id: 'fo', label: 'fo', btn:'Delete', icon:'clear'},
             { id: 'br', label: 'ba' },
             { id: 'bz', label: 'ba' },
           ]}
@@ -64,10 +79,11 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
           }
 
           renderItem={(item: any, highlighted: any) =>
+         
             <div key={item.id} style={{ backgroundColor: highlighted ? 'transparent' : 'transparent' }}>
-              <CheckBox />&nbsp;
+              {checkBox}
               {item.label}
-              
+              {this.isButton(item.btn)}
               <br></br>
             </div>
           }
@@ -81,7 +97,7 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
           onSelect={(value: any) => this.setState({ value })}
         />
         <div className={styles.btnIconWrapper}>
-        {button}
+     
         <Icon icon={PriorityIcon.closeSmall} textSize="large" />
         </div>
         

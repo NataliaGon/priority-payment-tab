@@ -1,12 +1,12 @@
 import * as React from 'react';
 
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, AutoFill} from 'priority-style-react';
-import { Label, StackPanel, Container, RowPanel, WrapPanel, Select, Tag } from 'priority-style-react';
+import { Label, StackPanel, Container, RowPanel, WrapPanel, Select, Tag, Button } from 'priority-style-react';
 import { optionDropDown } from './../../optionDropDown';
 
 
 interface TextQueryBlockBlockProperties extends ComponentBaseProperties {
-  hasButton?:boolean;
+
 }
 interface TextQueryBlockBlockState extends ComponentBaseState {
   
@@ -24,7 +24,8 @@ export class TextQueryBlock extends ComponentBase<TextQueryBlockBlockProperties,
                 </RowPanel>
                 <RowPanel paddingTop paddingBottom>
                   <Select options={optionDropDown} isBlue/>
-                  <AutoFill hasButton={this.props.hasButton}/>
+                  <AutoFill isMultiselect >
+                  </AutoFill>
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />

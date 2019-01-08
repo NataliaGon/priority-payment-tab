@@ -44,7 +44,7 @@ clickHandler=()=>{
         return (
           <StackPanel skin="light" >
             <div className={styles.componentWrapper}>
-              <RowPanel >
+              <RowPanel>
                 <Title>Advanced Search</Title>
                 <Button skin="roundStrokeIcon">
             <Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /> </Button>
