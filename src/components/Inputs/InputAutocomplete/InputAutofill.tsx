@@ -8,6 +8,7 @@ import {
 } from "../../../core";
 import {Icon} from "../../Icon/Icon"
 import styles from "./InputAutofill.module.scss";
+import {CheckBox} from "../CheckBox/CheckBox"
 
 class InputAutoProperties extends ComponentBaseProperties {
 
@@ -63,7 +64,8 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
 
           renderItem={(item: any, highlighted: any) =>
             <div key={item.id} style={{ backgroundColor: highlighted ? 'transparent' : 'transparent' }}>
-              <input className={styles.inputCheckbox} type="checkbox" name="vehicle1" value={item.label} /> {item.label}
+              <CheckBox />&nbsp;
+              {item.label}
               
               <br></br>
             </div>
