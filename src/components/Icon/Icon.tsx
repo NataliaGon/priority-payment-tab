@@ -12,10 +12,11 @@ interface IconProperties extends ComponentBaseProperties {
   iconColor?: TextColor;
   counterValue?: number;
   visible?: boolean;
+  onClick?: () => void;
 }
 
 interface IconState extends ComponentBaseState {
-  counterValue?: number;
+
 }
 
 export class Icon extends ComponentBase<IconProperties, IconState> {
@@ -23,8 +24,8 @@ export class Icon extends ComponentBase<IconProperties, IconState> {
   constructor(properties: IconProperties, state: IconState) {
     super(properties, state);
 
-    if (properties.counterValue) {
-      this.setState({ counterValue: properties.counterValue });
+    if (this.props.counterValue) {
+      this.setState({ counterValue: this.props.counterValue });
     }
   }
 
@@ -41,14 +42,9 @@ export class Icon extends ComponentBase<IconProperties, IconState> {
       iconColorClass = GlobalStyles["text-color-" + this.props.iconColor];
     }
 
-    let iconVisibilityClass = "";
-
-    if (this.props.visible) {
-      iconVisibilityClass = styles.visible;
-    }
-
-    const iconClass = classNames(styles.component, this.props.icon, iconColorClass, iconVisibilityClass, this.props.componentClasses);
-    const iconCounter = this.state && this.state.counterValue ? <IconCounter count={this.state.counterValue} /> : null;
+    const iconVisibilityClass = this.props.visible? styles.visible:'';
+    const iconClass = classNames(styles.component, this.props.icon, iconColorClass, iconVisibilityClass, this.props.componentClasses,this.props.textSize);
+    const iconCounter =  (this.props.counterValue) ? <IconCounter count={this.props.counterValue} /> : null;
 
     return (
       <div className={iconClass}>{iconCounter}</div>

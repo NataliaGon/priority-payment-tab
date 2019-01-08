@@ -7,6 +7,9 @@
     justify-content: flex-start;
     align-items: center;
 
+    @include withRTL;
+    
+
     & > * {
         margin-right: 5px;
     }
@@ -16,30 +19,3 @@
     }
 }
 
-.transparent {
-    background-color: transparent;
-}
-
-.default {
-    background-color: $white;
-}
-
-.header {
-    background-color: $silver;
-}
-
-.light {
-    background-color: $silver;
-    border: 1px solid $light-stroke;
-    padding: 15px 20px;
-
-    &:hover,
-    &.selected {
-        background-color: $white;
-        border: 1px solid $blue;
-    }
-}
-
-.dark {
-    background-color: $dark;
-}

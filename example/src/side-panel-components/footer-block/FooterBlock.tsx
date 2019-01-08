@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from 'priority-style-react';
-import { Label, Icon, Button, StackPanel, Container, RowPanel, WrapPanel } from 'priority-style-react';
+import { Label, Icon, Button, StackPanel,  RowPanel, WrapPanel } from 'priority-style-react';
 import styles from "./FooterBlock.module.scss";
 
 
@@ -19,17 +19,17 @@ export class FooterBlock extends ComponentBase<FooterBlockProperties, FooterBloc
     render() {
         return (
             <div className={styles.component}>
-                <StackPanel skin="dark">
+                <StackPanel skin="dark" >
                     <RowPanel alignItems="space-between" >
-                        <div style={{ display: "flex" }}>
+                        <div style={{ display: "flex",  cursor: "pointer"}}>
                             <Icon icon={PriorityIcon.clear} iconColor="white" />
-                            <Label skin="regular-high-contrast" textColor="white">Clear Search</Label>
+                            <Label size="regular-hight-contrast" textColor="white">Clear Search</Label>
                         </div>
                         <div style={{ display: "flex" }}>
                             <WrapPanel>
-                                <Button skin="stroke" width="regularFixed" >Save as new</Button>
+                                <Button skin="stroke" width="regularFixed"  >Save as new</Button>
                                 <Button skin="secondary" width="regularFixed" >Save & Apply</Button>
-                                <Button skin="regular" width="regularFixed">Apply</Button>
+                                <Button skin="regular" width="regularFixed" >Apply</Button>
                             </WrapPanel>
                         </div>
                     </RowPanel>

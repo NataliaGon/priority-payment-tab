@@ -15,8 +15,16 @@
     }
 }
 
-.transparent {
-    background-color: transparent;
+.flexStart {
+    justify-content: flex-start;
+}
+
+.flexEnd {
+    justify-content: flex-end;
+}
+
+.spaceBetween {
+    justify-content: space-between;
 }
 
 .default {
@@ -34,19 +42,9 @@
 .light {
     background-color: $silver;
     border: 1px solid $light-stroke;
-
-    &:hover,
-    &.selected {
-        background-color: $white;
-        border: 1px solid $blue;
-    }
 }
 
 .dark {
     background-color: $dark;
     padding: 30px;
-}
-
-.padded-panel {
-    padding: 0 30px;
 }

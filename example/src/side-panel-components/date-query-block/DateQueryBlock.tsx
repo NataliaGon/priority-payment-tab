@@ -4,15 +4,8 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIco
 import { StackPanel, Container, RowPanel, Label, Input, Select, Icon } from 'priority-style-react';
 
 import styles from './DateQueryBlock.module.scss';
+import {optionDropDown} from './../../optionDropDown';
 
-export const optionDropDown = [{
-    iconName: "icon-search-equal",
-    name: "Between"
-}, {
-    iconName: "icon-search-equal",
-    name: "Between"
-}
-];
 
 class DateQueryBlockProperties extends ComponentBaseProperties {
 
@@ -21,16 +14,18 @@ class DateQueryBlockProperties extends ComponentBaseProperties {
 interface DateQueryBlockState extends ComponentBaseState {
 }
 
-export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, DateQueryBlock> {
+export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, DateQueryBlockState> {
     render() {
         return (
             <StackPanel >
-                <Container ContainerWidth="fullWidth">
+            <Container roundConer >
                     <RowPanel paddingBottom={true}  >
-                        <Label>Due Date</Label>
+                    <div style={{marginLeft:"-10px"}}>
+                        <Label size="regular-hight-contrast">Due Date</Label>
+                    </div>
                     </RowPanel>
                     <RowPanel>
-                        <Select options={optionDropDown} width="medium" />
+                        <Select options={optionDropDown} width="medium" isBlue/>
                         <div className={styles.spaceHolder}>
                             <Label>From</Label>
                         </div>
@@ -39,7 +34,6 @@ export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, Date
                             <Label>To</Label>
                         </div>
                         <Select options={optionDropDown} width="small" />
-
                     </RowPanel>
                     <RowPanel paddingBottom={true} paddingTop={true} >
                         <div className={styles.spaceHolderBig}></div>
@@ -54,8 +48,8 @@ export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, Date
                     </RowPanel>
                     <RowPanel alignItems="flex-end">
                         <Label>Sort</Label>
-                    </RowPanel>
-                </Container>
+                    </RowPanel>  
+            </Container>
             </StackPanel>
         )
     }

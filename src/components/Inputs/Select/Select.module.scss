@@ -17,6 +17,9 @@
     z-index: 3;
     position: absolute;
     box-sizing: border-box;
+    &:hover{
+        border-color: $blue;
+    }
 }
 
 .optionsWrapper {
@@ -69,8 +72,10 @@
 }
 
 .ul li {
+    color:$blue;
     &:hover {
         background-color: $background-color-blue;
+        border-radius: $input-border-radius
     }
 }
 
@@ -87,14 +92,14 @@
 }
 
 .active {
-    color: $blue;
+    color:$blue;
 }
 .small{
-    width:130px;
+    width:$inputSizeSmall;
 }
 .medium{
-    width:150px;
+    width:$inputSizeMedium;
 }
 .large{
-    width:360px
+    width:$inputSizeLarge;
 }

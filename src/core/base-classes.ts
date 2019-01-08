@@ -13,7 +13,7 @@ export class DefaultTextProperties {
 }
 
 export class ComponentBaseProperties {
-    componentClasses?: string[];
+    componentClasses?: string[] | string;
     text?: string;
     textSize?: TextSize;
     textColor?: TextColor;

@@ -5,12 +5,11 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../.
 
 import styles from "./Label.module.scss";
 
-type LabelSkin = "large" | "regular" | "regular-high-contrast" | "small" | "bold" | "small-bold";
-type LabelPadding = "regular" | "double";
+type LabelSize = "large" | "regular" | "regular-hight-contrast" | "small" | "bold" | "small-bold";
+
 
 interface LabelProperties extends ComponentBaseProperties {
-  skin?: LabelSkin;
-  labelPadding?: LabelPadding;
+  size?: LabelSize;
   textHref?: string;
 }
 
@@ -21,40 +20,11 @@ interface LabelState extends ComponentBaseState {
 export class Label extends ComponentBase<LabelProperties, LabelState> {
   public render() {
 
-    let skinClass = "";
-    if (this.props.skin) {
-      skinClass = styles[this.props.skin];
-    }
 
-    let paddingClass = "";
-    if (this.props.labelPadding) {
-      paddingClass = styles["padding-" + this.props.labelPadding];
-    }
-
-    let linkClass = "";
-    if (this.props.textHref) {
-      linkClass = styles.href;
-    }
-
-    let colorClass = "grey";
-
-    if (this.props.textColor) {
-      if (this.props.textColor === "white") {
-        colorClass = styles.white;
-      }
-      if (this.props.textColor === "blue") {
-        colorClass = styles.blue;
-      }
-      if (this.props.textColor === "black") {
-        colorClass = styles.black;
-      }
-      if (this.props.textColor === "grey") {
-        colorClass = styles.grey;
-      }
-    }
-
-    const elementClasses = classNames(styles.component, this.props.componentClasses, skinClass, paddingClass, linkClass, colorClass);
-
+    let classNames = require('classnames/bind');
+    let cx = classNames.bind(styles);
+    const elementClasses = cx('component',this.props.size, this.props.textColor, {'href':this.props.textHref});
+    
     return (
       this.props.textHref ?
         <a className={elementClasses} href={this.props.textHref}>{this.props.text ? this.props.text : this.props.children}</a>

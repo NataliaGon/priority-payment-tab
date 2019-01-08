@@ -5,8 +5,15 @@
     @include border($input-border-grey);
     border-radius: $input-border-radius;
     box-sizing: border-box;
+    position: relative;
+    &:hover {
+        border-color: $blue;
+    }
+    &:hover .btnIconWrapper{
+        display: flex;
+    }  
 }
-.component>div>div>div{
+.item{
     height: 40px;
     line-height: 40px;
     font-style: normal;
@@ -15,9 +22,9 @@
     align-items: center;
     font-size: 1.4rem;
     border-bottom: 1px solid $silver;
-
+    background: white;
     &:hover {
-        background-color: $background-color-blue;
+       border: 1ps solid $blue;
     }
 }
 .component>div, .component>div>div{
@@ -32,6 +39,7 @@
     letter-spacing: normal;
     color: $grey;
     position: relative;
+    background: white;
 
 }
 
@@ -51,11 +59,37 @@
     width:100%;
     z-index: 6;
     position: absolute;
+    @include withRTL;
     &:focus{
         box-shadow: 0 0 0 1px $blue;
     }
+    
 }
 .inputCheckbox{
     width: 20px!important;
     position: static!important;
+}
+.btnIconWrapper{
+    position: absolute!important;
+    width: auto!important;
+    right: 10px!important;
+    top: 0;
+    z-index: 6;
+    display: none;
+  
+    &>button{
+        margin-top: 4px;
+    }
+   &>div{
+        width: 2.4rem!important;
+        height: 2.4rem!important;
+        font-size: 2.4rem!important;
+    }
+}
+.itemLabel{
+    margin-left: 10px;
+}
+.itemButton{
+   position: absolute;
+   right: 10px;
 }

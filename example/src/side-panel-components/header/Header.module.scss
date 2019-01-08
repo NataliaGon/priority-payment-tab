@@ -1,0 +1,22 @@
+.componentWrapper{
+    padding: 17px 0 22px;
+    width: 100%;
+    height: 114px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+.iconDoneWrapper{
+    background-color: #00adee;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    >*{
+        width: 14px;
+        height: 14px;
+        font-size: 14px;
+        display: inline-block;
+    }
+}

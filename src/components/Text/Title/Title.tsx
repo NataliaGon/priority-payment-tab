@@ -15,15 +15,13 @@ interface TitleState extends ComponentBaseState {
 
 export class Title extends ComponentBase<TitleProperties, TitleState> {
 
-  constructor(properties: TitleProperties, state?: TitleState) {
-    super(properties, state);
-  }
+
 
   public render() {
-    const componentClasses = classNames(styles.component, this.props.componentClasses);
+ 
 
     return (
-      <h1 className={componentClasses}>{this.props.text ? this.props.text : this.props.children}</h1>
+      <h1 className={styles.component}>{this.props.text ? this.props.text : this.props.children}</h1>
     );
   }
 }

@@ -12,7 +12,7 @@ interface ScrollPanelProperties extends ComponentBaseProperties {
     autoHeightMax?: number,
     autoHeightMin?: number,
     className?: string,
-    //spaceBottom?:number
+ 
 }
 
 interface ScrollPanelState extends ComponentBaseState {
@@ -56,7 +56,6 @@ export class ScrollPanel extends ComponentBase<ScrollPanelProperties, ScrollPane
         return (
             <div className={styles.component}>
                 <Scrollbars ref={s => this.scrollbar = s}
-                    //onScroll={gradient && this.checkScroll}
                     autoHeight={autoHeight}
                     autoHeightMax={autoHeightMax}
                     autoHeightMin={autoHeightMin}

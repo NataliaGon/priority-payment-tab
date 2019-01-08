@@ -6,6 +6,12 @@
     align-items: center;
     position: relative;
     box-sizing: border-box;
+    width: 100%;
+    flex-direction: column;
+    background-color: $snow;
+    border: 1px solid $light-stroke;
+    padding: 17px 20px 15px;
+    cursor: pointer;
     &:hover {
         background-color: $lightBlue;
         border: 1px solid $blue;
@@ -13,39 +19,17 @@
     &:hover  .closeContainerIcon{
     display:block;
     }
-    &:hover  .reorderIcon{
+    &:hover  .dragIcon{
         display:block;
     }
 }
-
-.flexStart {
-    justify-content: flex-start;
-}
-
-.flexEnd {
-    justify-content: flex-end;
-}
-
-.spaceBetween {
-    justify-content: space-between;
-}
-
-.fullWidth {
-    width: 100%;
-    flex-direction: column;
-    background-color: $snow;
+.roundConer{
     border-radius: $general-border-radius;
-    padding: 17px 20px 15px;
-    border: 1px solid $snow;
 }
 
-.fullWidthActive {
-    width: 100%;
-    flex-direction: column;
+.active {
     border: 1px solid $blue;
-    background-color: $lightBlue;
-    border-radius: $general-border-radius;
-    padding: 17px 20px 15px;
+    background-color: $lightBlue; 
 }
 
 .regular {
@@ -59,7 +43,7 @@
     top: 5px;
 }
 
-.reorderIcon {
+.dragIcon {
     display: none;
     position: absolute;
     left: -12px;
@@ -67,4 +51,30 @@
 }
 .displayBlock{
     display: block;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.default {
+    background-color: $white;
+}
+
+.silver {
+    background-color: $silver;
+}
+
+.snow {
+    background-color: $snow;
+}
+
+.light {
+    background-color: $silver;
+    border: 1px solid $light-stroke;
+}
+
+.dark {
+    background-color: $dark;
+    padding: 30px;
 }

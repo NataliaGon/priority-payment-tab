@@ -79,5 +79,8 @@
         min-width: 620px;
         box-shadow: 0 0 50px 0 $boxShadow-brown-dark;
         transition: width 0.8s;
+        display: grid;
+        grid-template-rows: 80% 100px;
+        align-content: space-between;
     }
 }

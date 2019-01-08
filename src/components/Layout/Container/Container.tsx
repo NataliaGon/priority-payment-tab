@@ -4,21 +4,18 @@ import classNames from 'classnames';
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from "../../../core";
 import { Icon } from '../../Icon/Icon';
 
-
-
 import styles from "./Container.module.scss";
 
-type AlignItems = "flexStart" | "flexEnd" | "spaceBetween";
-type ContainerWidth = "regular" | "fullWidth" | "";
+
+type ContainerPanelSkin = "default" | "silver" | "light" | "dark" | "snow";
+
 
 class ContainerProperties extends ComponentBaseProperties {
-  ContainerWidth?: string;
-  alignItems?: AlignItems;
-  onClick?: () => void;
+  skin?: ContainerPanelSkin;
+  roundConer?:boolean; 
 }
 
 interface ContainerState extends ComponentBaseState {
-  position?: boolean;
   active?: boolean;
 }
 
@@ -28,37 +25,25 @@ export class Container extends ComponentBase<ContainerProperties, ContainerState
     active: false
   }
 
-
  
   ClickHandler = () => {
     this.setState({ active: !this.state.active });
   }
   public render() {
 
-    let alignItemsClass = "";
-    let widthClass = "";
 
-    if (this.props.alignItems) {
-      alignItemsClass = styles[this.props.alignItems];
-    }
-    if (this.props.ContainerWidth) {
-      widthClass = styles[this.props.ContainerWidth];
-    }
-
-    const activeClasses = (this.state.active) ? styles.fullWidthActive : '';
-    const iconActiveClass = (this.state.active) ? styles.displayBlock : '';
-
+    let classNames = require('classnames/bind');
+    let cx = classNames.bind(styles);
+    const componentClassNames = cx('component', {'active':this.state.active},{'roundConer':this.props.roundConer});
+    const iconCloseClassNames =cx('closeContainerIcon', {'displayBlock':this.state.active});
+    const iconDraggableClassNames =cx('dragIcon', {'displayBlock':this.state.active});
    
-    const iconCloseClasses = classNames(styles.closeContainerIcon, iconActiveClass);
-    const iconDraggableClasses = classNames(styles.reorderIcon , iconActiveClass);
-    const componentClasses = classNames(styles.component, this.props.componentClasses, alignItemsClass, widthClass, activeClasses);
 
     return (
-      <div className={componentClasses}  onClick={this.ClickHandler}>
-        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClasses} />
-        <Icon icon={PriorityIcon.iconReorder} componentClasses={iconDraggableClasses} iconColor="blue" />
+      <div className={componentClassNames}  onClick={this.ClickHandler}>
+        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} />
+        <Icon icon={PriorityIcon.iconReorder} componentClasses={iconDraggableClassNames} iconColor="blue" />
         {this.props.children}
-
       </div>
     );
   }
