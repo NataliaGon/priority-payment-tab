@@ -11,10 +11,9 @@
     }
     &:hover .btnIconWrapper{
         display: flex;
-    }
-    
+    }  
 }
-.component>div>div>div{
+.item{
     height: 40px;
     line-height: 40px;
     font-style: normal;
@@ -86,4 +85,11 @@
         height: 2.4rem!important;
         font-size: 2.4rem!important;
     }
+}
+.itemLabel{
+    margin-left: 10px;
+}
+.itemButton{
+   position: absolute;
+   right: 10px;
 }

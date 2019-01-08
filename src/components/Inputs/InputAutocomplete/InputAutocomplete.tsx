@@ -7,7 +7,7 @@ import {
   ComponentBase, PriorityIcon
 } from "../../../core";
 import {Icon} from "../../Icon/Icon"
-import styles from "./InputAutofill.module.scss";
+import styles from "./InputAutocomplete.module.scss";
 import {CheckBox} from "../CheckBox/CheckBox"
 import { Button } from "../Button/Button";
 import { isDeepStrictEqual } from "util";
@@ -80,10 +80,10 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
 
           renderItem={(item: any, highlighted: any) =>
          
-            <div key={item.id} style={{ backgroundColor: highlighted ? 'transparent' : 'transparent' }}>
+            <div className={styles.item} key={item.id} style={{ backgroundColor: highlighted ? 'transparent' : 'transparent' }}>
               {checkBox}
-              {item.label}
-              {this.isButton(item.btn)}
+              <span className={styles.itemLabel}>{item.label}</span>
+              <span className={styles.itemButton}> {this.isButton(item.btn)}</span>
               <br></br>
             </div>
           }
