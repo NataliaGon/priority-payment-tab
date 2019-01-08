@@ -12,6 +12,7 @@
     &:hover .iconClose{
         display: block;
     }
+    
 }
 .component>div>div>div{
     height: 40px;
@@ -22,7 +23,7 @@
     align-items: center;
     font-size: 1.4rem;
     border-bottom: 1px solid $silver;
-
+    background: white;
     &:hover {
        border: 1ps solid $blue;
     }
@@ -39,6 +40,7 @@
     letter-spacing: normal;
     color: $grey;
     position: relative;
+    background: white;
 
 }
 
@@ -58,6 +60,7 @@
     width:100%;
     z-index: 6;
     position: absolute;
+    @include withRTL;
     &:focus{
         box-shadow: 0 0 0 1px $blue;
     }
