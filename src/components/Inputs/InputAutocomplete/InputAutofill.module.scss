@@ -9,8 +9,8 @@
     &:hover {
         border-color: $blue;
     }
-    &:hover .iconClose{
-        display: block;
+    &:hover .btnIconWrapper{
+        display: flex;
     }
     
 }
@@ -70,14 +70,17 @@
     width: 20px!important;
     position: static!important;
 }
-.iconClose{
+.btnIconWrapper{
     position: absolute!important;
     width: auto!important;
     right: 10px!important;
     top: 0;
     z-index: 6;
     display: none;
-   &>*{
+    &>:nth-child(1){
+        margin-top: 4px;
+    }
+   &>:nth-child(2){
         width: 2.4rem!important;
         height: 2.4rem!important;
         font-size: 2.4rem!important;

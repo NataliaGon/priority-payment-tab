@@ -109,6 +109,8 @@
     &.component {
         height: 20px;
         padding: 0 10px;
+        font-size: $font-size-regular;
+        line-height: inherit;
     }
 }
 

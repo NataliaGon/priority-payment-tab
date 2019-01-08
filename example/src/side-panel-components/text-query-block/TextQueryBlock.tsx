@@ -6,7 +6,7 @@ import { optionDropDown } from './../../optionDropDown';
 
 
 interface TextQueryBlockBlockProperties extends ComponentBaseProperties {
-    
+  hasButton?:boolean;
 }
 interface TextQueryBlockBlockState extends ComponentBaseState {
   
@@ -24,7 +24,7 @@ export class TextQueryBlock extends ComponentBase<TextQueryBlockBlockProperties,
                 </RowPanel>
                 <RowPanel paddingTop paddingBottom>
                   <Select options={optionDropDown} isBlue/>
-                  <AutoFill/>
+                  <AutoFill hasButton={this.props.hasButton}/>
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />

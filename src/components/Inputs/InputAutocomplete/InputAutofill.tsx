@@ -9,9 +9,10 @@ import {
 import {Icon} from "../../Icon/Icon"
 import styles from "./InputAutofill.module.scss";
 import {CheckBox} from "../CheckBox/CheckBox"
+import { Button } from "../Button/Button";
 
 class InputAutoProperties extends ComponentBaseProperties {
-
+hasButton?:boolean;
 }
 
 interface InputAutoState extends ComponentBaseState {
@@ -41,7 +42,7 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
       boxSizing: 'content-box',
       boxShadow: '0 10px 20px 0 rgba(0, 0, 0, 0.2)'
     }
-
+   const button =this.props.hasButton? <Button width="small" >Apply</Button>:'' ;
     return (
       <div className={styles.component}>
         <Autocomplete
@@ -79,9 +80,11 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
           onChange={(e: any) => this.setState({ value: e.target.value })}
           onSelect={(value: any) => this.setState({ value })}
         />
-        <div className={styles.iconClose}>
+        <div className={styles.btnIconWrapper}>
+        {button}
         <Icon icon={PriorityIcon.closeSmall} textSize="large" />
         </div>
+        
       </div>
     );
   }
