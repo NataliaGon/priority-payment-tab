@@ -14,12 +14,12 @@
 .component {
     position: fixed;
     bottom: 0;
-    left: 0;
     width: 620px;
     height: calc(100% - 46px);
     background-color: $white;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
     transition: width 0.8s;
+    @include position-horizontal(0);
 }
 
 
@@ -100,13 +100,5 @@
         &.wide {
             width: 0;
         }
-    }
-}
-
-
-@include withRTL() {
-    .component {
-        right: 0;
-        left: initial;
     }
 }

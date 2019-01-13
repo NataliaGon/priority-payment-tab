@@ -16,6 +16,10 @@
     // reset
     outline: none;
     border: 0;
+
+    @include rtl() {
+        font-family: $font-family-main-hebrew;
+    }
 }
 
 // skin
@@ -58,7 +62,7 @@
 }
 
 .title .icon {
-    margin-right: 7px;
+    @include margin-horizontal(0,7px);
 }
 
 .active {
@@ -133,18 +137,6 @@
 
 .square,.round {
     padding: 0;
-}
-
-@include withRTL() {
-    .component {
-        font-family: $font-family-main-hebrew;
-    }
-
-    .title .icon {
-        margin-right: 0;
-        margin-left: 7px;
-    }
- 
 }
 
 
