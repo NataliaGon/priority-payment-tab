@@ -55,9 +55,9 @@ $general-border-radius: 3px;
 $input-border-radius: $general-border-radius;
 $input-border-grey: #bfd0d7;
 
-$inputSizeSmall:130px;
-$inputSizeMedium:150px;
-$inputSizeLarge:360px;
+$inputSizeSmall: 130px;
+$inputSizeMedium: 150px;
+$inputSizeLarge: 360px;
 
 // End Inputs
 
@@ -72,9 +72,6 @@ $priority-icon-font-size: 2.4rem;
     font-size: $priority-icon-font-size;
 }
 
-
-
 // End Icons
 
 @import "./mixins";
-
