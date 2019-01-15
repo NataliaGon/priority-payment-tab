@@ -9,11 +9,18 @@ import {
 import { DateQueryBlock, FooterBlock, TextQueryBlock, Header } from './side-panel-components';
 
 
-class App extends Component {
+class App extends Component { 
+
+  panelRef;
+
+  componentDidMount() {
+    this.panelRef.open();
+  }
+
   render() {
     return (
       <div className="App">
-        <SidePanel>
+        <SidePanel ref={p => this.panelRef = p}>
           <ScrollPanel>
             <Header />
 

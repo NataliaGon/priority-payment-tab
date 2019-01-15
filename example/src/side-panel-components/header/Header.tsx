@@ -46,8 +46,7 @@ clickHandler=()=>{
             <div className={styles.componentWrapper}>
               <RowPanel>
                 <Title>Advanced Search</Title>
-                <Button skin="roundStrokeIcon">
-            <Icon iconColor="blue" icon={PriorityIcon.arrowLeftLong} /> </Button>
+                <Button skin="stroke" shape="round" icon={PriorityIcon.arrowLeftLong}/>
               </RowPanel>
               <RowPanel >
                 <div style={{ display: "flex" }}>
