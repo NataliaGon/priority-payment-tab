@@ -1,10 +1,9 @@
 import * as React from "react";
 import classNames from 'classnames';
 import styles from "./Tag.module.scss";
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../base-classes";
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from "../../core";
 import { Icon } from "../Icon";
 import { Label } from "../Text";
-import { PriorityIcon } from "../../base-classes/PriorityIcon";
 
 interface TagProperties extends ComponentBaseProperties {
 }

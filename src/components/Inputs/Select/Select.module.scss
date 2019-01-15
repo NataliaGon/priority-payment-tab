@@ -1,28 +1,30 @@
 @import "../../../styles/vars.scss";
 
-.component {}
+.component {
+
+
+}
 
 .dropDownElements {
-    height: 43px;
+    height: 30px;
     position: relative;
 }
 
 .inputSmall {
     height: 30px;
     border-radius: $input-border-radius;
-
     @include border($input-border-grey);
-
     z-index: 3;
     position: absolute;
-    width: 150px;
     box-sizing: border-box;
+    &:hover{
+        border-color: $blue;
+    }
 }
 
 .optionsWrapper {
     background: $white;
     position: absolute;
-    width: 150px;
 }
 
 .dropDownResult {
@@ -35,11 +37,6 @@
     border-radius: $input-border-radius;
     position: relative;
 }
-
-.dropDownResultsContainer {
-    margin-top: 5px;
-}
-
 .dropDownHide {
     overflow: hidden;
     height: 30px;
@@ -48,12 +45,13 @@
 
 .boxShadow {
     box-shadow: 0 10px 20px 0 $boxShadow-brown-dark;
-    width: 160px;
+    width: 100%;
     margin-left: -5px;
     margin-top: -5px;
     padding: 5px;
     border-radius: $input-border-radius;
     z-index: 2;
+    box-sizing: content-box;
 }
 
 .drop-down_icon-wrapper {
@@ -65,7 +63,7 @@
 
 .dropDownIconWrapper {
     position: absolute;
-    top: 0;
+    top: 2px;
     right: 0;
 }
 
@@ -74,8 +72,10 @@
 }
 
 .ul li {
+    color:$blue;
     &:hover {
         background-color: $background-color-blue;
+        border-radius: $input-border-radius
     }
 }
 
@@ -92,5 +92,14 @@
 }
 
 .active {
-    color: $blue;
+    color:$blue;
+}
+.small{
+    width:$inputSizeSmall;
+}
+.medium{
+    width:$inputSizeMedium;
+}
+.large{
+    width:$inputSizeLarge;
 }

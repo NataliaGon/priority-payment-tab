@@ -22,6 +22,7 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
+    "@types/react-custom-scrollbars": "^4.0.5",
     "classnames": "^2.2.6",
     "react-autocomplete": "^1.8.1",
     "react-custom-scrollbars": "^4.2.1",
@@ -37,6 +38,7 @@
     "@types/jest": "^23.1.5",
     "@types/react": "16.3.14",
     "@types/react-dom": "^16.0.5",
+    "@types/react-transition-group": "^2.0.15",
     "babel-core": "^6.26.3",
     "babel-runtime": "^6.26.0",
     "cross-env": "^5.1.4",

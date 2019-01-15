@@ -6,36 +6,13 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-
+    
     & > * {
         margin-right: 5px;
     }
-}
 
-.transparent {
-    background-color: transparent;
-}
-
-.default {
-    background-color: $white;
-}
-
-.header {
-    background-color: $silver;
-}
-
-.light {
-    background-color: $silver;
-    border: 1px solid $light-stroke;
-    padding: 15px 20px;
-
-    &:hover,
-    &.selected {
-        background-color: $white;
-        border: 1px solid $blue;
+    & > *:last-child {
+        margin-right: 0;
     }
 }
 
-.dark {
-    background-color: $dark;
-}

@@ -4,16 +4,77 @@
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    flex-direction: column;
+    background-color: $snow;
+    border: 1px solid $light-stroke;
+    padding: 17px 20px 15px;
+    cursor: pointer;
+    &:hover {
+        background-color: $light-blue;
+        border: 1px solid $blue;
+    }
+    &:hover  .closeContainerIcon{
+    display:block;
+    }
+    &:hover  .dragIcon{
+        display:block;
+    }
+}
+.roundConer{
+    border-radius: $general-border-radius;
 }
 
-.flexStart {
-    justify-content: flex-start;
+.active {
+    border: 1px solid $blue;
+    background-color: $light-blue; 
 }
 
-.flexEnd {
-    justify-content: flex-end;
+.regular {
+    width: auto;
 }
 
-.spaceBetween {
-    justify-content: space-between;
+.closeContainerIcon {
+    display: none;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+}
+
+.dragIcon {
+    display: none;
+    position: absolute;
+    left: -12px;
+    top: 12px;
+}
+.displayBlock{
+    display: block;
+}
+
+.transparent {
+    background-color: transparent;
+}
+
+.default {
+    background-color: $white;
+}
+
+.silver {
+    background-color: $silver;
+}
+
+.snow {
+    background-color: $snow;
+}
+
+.light {
+    background-color: $silver;
+    border: 1px solid $light-stroke;
+}
+
+.dark {
+    background-color: $dark;
+    padding: 30px;
 }

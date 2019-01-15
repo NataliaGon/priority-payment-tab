@@ -5,7 +5,7 @@ import {
   ComponentBaseProperties,
   ComponentBaseState,
   ComponentBase
-} from "../../../base-classes";
+} from "../../../core";
 
 import styles from "./IconCounter.module.scss";
 

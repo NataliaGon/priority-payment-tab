@@ -28,6 +28,11 @@
 .regular-hight-contrast {
     font-size: $font-size-regular;
     color: $black;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    font-weight: 500;
 }
 
 .small {
@@ -35,16 +40,47 @@
     color: $black;
 }
 
-.padding-regular {
-    padding: 0 0.5rem;
-}
-
-.padding-double {
-    padding: 0 1rem;
-}
-
 .darkTheme {
     &.regular-hight-contrast {
         color: $white;
     }
+}
+
+.white {
+    color: $white;
+}
+
+.blue {
+    color: $blue;
+}
+
+.grey {
+    color: $grey;
+}
+
+.black {
+    color: $black;
+}
+
+.bold {
+    color: $black;
+    font-size: 14px;
+    font-family: Roboto;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+}
+
+.small-bold {
+    color: $black;
+    opacity: 0.7;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.25;
+    letter-spacing: normal;
 }

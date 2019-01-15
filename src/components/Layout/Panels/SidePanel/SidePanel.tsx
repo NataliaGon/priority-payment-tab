@@ -1,9 +1,10 @@
 import * as React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import classNames from 'classnames';
-import { keyCodes } from '../../../constants';
+
+import { ComponentBaseState, ComponentAnimatedProperties, ComponentBase, keyCodes } from '../../../../core';
+
 import styles from './SidePanel.module.scss';
-import { ComponentBaseState, ComponentAnimatedProperties, ComponentBase } from '../../../base-classes';
 
 interface SidePanelState extends ComponentBaseState {
 	open: boolean

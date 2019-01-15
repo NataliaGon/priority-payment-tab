@@ -1,8 +1,15 @@
 // mixins
 
+
+@mixin border($color) {
+    border: 1px solid $color;
+}
+
+// rtl
+
 $include-rtl: true !default;
 
- @mixin rtl() {
+@mixin rtl() {
   @if $include-rtl {
     @at-root [dir="rtl"] #{&} {
       @content;

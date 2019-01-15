@@ -1,14 +1,14 @@
 import * as React from "react";
 import classNames from 'classnames';
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBaseSkin } from "../../../base-classes";
-import { PriorityIcon } from "../../../base-classes/PriorityIcon";
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBaseSkin } from "../../../core";
+import { PriorityIcon } from "../../../core";
 import { Icon } from "../../Icon";
 
 import styles from "./Button.module.scss";
 
-type ButtonSkin = "regular" | "stroke" | "strokeLight";
+type ButtonSkin = "primary" | "secondary" | "stroke" | "strokeLight";
 type ButtonWidth = "regularFixed" | "fullWidth" | "contentWidth";
-type ButtonShape = "none" | "round" | "square";
+type ButtonShape = "regular" | "round" | "square";
 type ButtonSize = "small" | "medium" | "large";
 
 interface ButtonProperties extends ComponentBaseProperties {
@@ -16,6 +16,8 @@ interface ButtonProperties extends ComponentBaseProperties {
   width?: ButtonWidth;
   shape?: ButtonShape;
   size?: ButtonSize;
+  disabled?: boolean;
+  darkContainer?: boolean;
   icon?: PriorityIcon;
   onClick?: () => void;
 }
@@ -25,30 +27,34 @@ interface ButtonState extends ComponentBaseState {
 }
 
 const defaultButtonProperties: ButtonProperties = {
-  skin: "regular",
+  skin: "primary",
   width: "contentWidth",
-  shape: "none",
+  shape: "regular",
   size: "medium"
 }
 
 export class Button extends ComponentBase<ButtonProperties, ButtonState> {
 
-  // protected defaultProperties = function (): any {
-  //     return new DefaultButtonProperties();
-  // }
-
   static defaultProps = defaultButtonProperties;
 
   public render() {
-    const { skin, width, size, shape, icon, children } = this.props;
+    const { skin, width, size, shape, disabled, darkContainer, icon, children } = this.props;
+
     const skinClass = skin && styles[skin];
     const widthClass = width && styles[width];
     const shapeClass = shape && styles[shape];
     const sizeClass = size && styles[size];
 
-    const darkThemeClass = styles.darkTheme;
-
-    const buttonClass = classNames(styles.component, this.props.componentClasses, skinClass, widthClass, shapeClass, sizeClass, darkThemeClass, {[styles.title]: children});
+    const buttonClass = classNames(styles.component,
+                          this.props.componentClasses,
+                          skinClass,
+                          widthClass,
+                          shapeClass,
+                          sizeClass,{
+                           [styles.title]: children,
+                           [styles.disabled]: disabled,
+                           [styles.darkContainer]: darkContainer
+                         });
 
     return (
       <button className={buttonClass} onClick={this.props.onClick}>

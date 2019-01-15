@@ -12,4 +12,8 @@
     border-radius: $input-border-radius;
     font-size: $font-size-regular;
     align-items: center;
+
+    &:hover {
+        box-shadow: $tag-box-shadow;
+    }
 }

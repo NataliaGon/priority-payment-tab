@@ -1,3 +1,5 @@
+@import "../../../styles/vars.scss";
+
 .component {
     position: absolute;
     top: -5px;
@@ -5,10 +7,10 @@
     border-radius: 50px;
     min-width: 15px;
     height: 15px;
-    background-color: #00adee;
-    color: white;
-    font-size: 12px;
-    font-family: 'Roboto';
+    background-color: $blue;
+    color: $white;
+    font-size: $font-size-small;
+    font-family: $font-family-main;
     display: flex;
     justify-content: center;
     align-items: center;

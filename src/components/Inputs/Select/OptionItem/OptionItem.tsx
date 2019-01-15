@@ -1,16 +1,18 @@
 import * as React from "react";
 import classNames from 'classnames';
-import styles from "./OptionItem.module.scss";
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../base-classes";
+
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from "../../../../core";
 import { Icon } from "../../../Icon";
 import { Label } from "../../../Text";
-import { PriorityIcon } from "../../../../base-classes/PriorityIcon";
+
+import styles from "./OptionItem.module.scss";
 
 interface OptionItemProperties extends ComponentBaseProperties {
   iconName?: string;
   value?: any;
   displayValue?: boolean;
   onClick?: (e: any) => void;
+  isBlue?: boolean;
 }
 
 interface OptionItemState extends ComponentBaseState {
@@ -24,9 +26,9 @@ export class OptionItem extends ComponentBase<OptionItemProperties, OptionItemSt
 
     return (
       <li className={elementClasses} onClick={this.props.onClick}>
-        <Icon icon={PriorityIcon.operatorSearchBetween} iconColor={this.state && this.state.selected ? "blue" : "grey"} />
-        <Label skin="regular">{this.props.children}</Label>
-        {this.props.displayValue ? <Label skin="small">{this.props.value}</Label> : ""}
+        <Icon icon={PriorityIcon.operatorSearchBetween} iconColor={this.props.isBlue ? "blue" : "grey"} />
+        <Label textColor={this.props.isBlue ? "blue" : "grey"} size="regular">{this.props.children}</Label>
+        {this.props.displayValue ? <Label size="small">{this.props.value}</Label> : ""}
       </li>
     );
   }

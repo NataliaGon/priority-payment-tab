@@ -1,8 +1,13 @@
 @import "../../styles/vars";
 
 .component {
-    width: 2.4rem;
-    height: 2.4rem;
-    font-size: 2.4rem;
+    @include priority-icon;
     position: relative;
+}
+
+.visible {
+    display: block;
+}
+.large{
+    font-size: 49px;
 }

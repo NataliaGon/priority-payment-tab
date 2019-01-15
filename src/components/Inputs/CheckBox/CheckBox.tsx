@@ -1,7 +1,9 @@
 import * as React from "react";
 import classNames from 'classnames';
+
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../core";
+
 import styles from "./CheckBox.module.scss";
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../base-classes";
 
 class CheckBoxProperties extends ComponentBaseProperties {
 

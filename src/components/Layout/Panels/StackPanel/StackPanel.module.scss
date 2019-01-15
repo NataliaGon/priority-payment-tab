@@ -1,22 +1,30 @@
 @import "../../../../styles/vars";
 
 .component {
-    //width: 100%;
+    width: 100%;
     display: flex;
     flex-flow: column;
     justify-content: flex-start;
     align-items: center;
     padding: 0 30px;
     position: relative;
-    
+    margin: 10px 0;
 
-    & > * {
-        width: 100%;
+    &:first-child {
+        margin: 0;
     }
 }
 
-.transparent {
-    background-color: transparent;
+.flexStart {
+    justify-content: flex-start;
+}
+
+.flexEnd {
+    justify-content: flex-end;
+}
+
+.spaceBetween {
+    justify-content: space-between;
 }
 
 .default {
@@ -27,23 +35,16 @@
     background-color: $silver;
 }
 
+.snow {
+    background-color: $snow;
+}
+
 .light {
     background-color: $silver;
     border: 1px solid $light-stroke;
-    padding: 0 20px 10px;
-
-    &:hover,
-    &.selected {
-        background-color: $white;
-        border: 1px solid $blue;
-    }
 }
 
 .dark {
     background-color: $dark;
     padding: 30px;
-}
-
-.padded-panel {
-    padding: 0 30px;
 }

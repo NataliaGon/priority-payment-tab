@@ -1,36 +1,50 @@
 import * as React from "react";
 import classNames from 'classnames';
-import styles from "./Container.module.scss";
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../base-classes";
 
-type AlignItems = "flexStart" | "flexEnd" | "spaceBetween";
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from "../../../core";
+import { Icon } from '../../Icon/Icon';
+
+import styles from "./Container.module.scss";
+
+
+type ContainerPanelSkin = "default" | "silver" | "light" | "dark" | "snow";
+
 
 class ContainerProperties extends ComponentBaseProperties {
-  width?: string;
-  alignItems?: AlignItems;
+  skin?: ContainerPanelSkin;
+  roundConer?:boolean; 
 }
 
 interface ContainerState extends ComponentBaseState {
-
+  active?: boolean;
 }
 
 export class Container extends ComponentBase<ContainerProperties, ContainerState> {
+
+  state: ContainerState = {
+    active: false
+  }
+
+ 
+  ClickHandler = () => {
+    this.setState({ active: !this.state.active });
+  }
   public render() {
 
-    let alignItemsClass = "";
 
-    if (this.props.alignItems) {
-      alignItemsClass = styles[this.props.alignItems];
-    }
+    let classNames = require('classnames/bind');
+    let cx = classNames.bind(styles);
+    const componentClassNames = cx('component', {'active':this.state.active},{'roundConer':this.props.roundConer});
+    const iconCloseClassNames =cx('closeContainerIcon', {'displayBlock':this.state.active});
+    const iconDraggableClassNames =cx('dragIcon', {'displayBlock':this.state.active});
+   
 
-    const componentClasses = classNames(styles.component, this.props.componentClasses, alignItemsClass);
-
-    let inlineStyle = {};
-    if (this.props.width) {
-      inlineStyle = { width: this.props.width }
-    }
     return (
-      <div className={componentClasses} style={inlineStyle}>{this.props.children}</div>
+      <div className={componentClassNames}  onClick={this.ClickHandler}>
+        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} />
+        <Icon icon={PriorityIcon.iconReorder} componentClasses={iconDraggableClassNames} iconColor="blue" />
+        {this.props.children}
+      </div>
     );
   }
 }

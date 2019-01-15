@@ -1,136 +1,45 @@
 import React, { Component } from 'react';
-import { SidePanel,
-	StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
-	Title, CheckBox, Label, Button, Icon, Tag, LineInput, Select, OptionItem,
-	PriorityIcon
+
+import {
+  SidePanel, StackPanel, RowPanel, ScrollPanel,
+  CheckBox, Label, Button
+
 } from 'priority-style-react';
 
+import { DateQueryBlock, FooterBlock, TextQueryBlock, Header } from './side-panel-components';
 
-class App extends Component {
+
+class App extends Component { 
+
+  panelRef;
+
+  componentDidMount() {
+    this.panelRef.open();
+  }
+
   render() {
-
-
     return (
       <div className="App">
-        <SidePanel>
-   <ScrollPanel gradient>
-          <StackPanel className="header" skin="silver">
-            <RowPanel>
-              <Title>Advanced Search</Title>
-              <Button shape="round" icon={PriorityIcon.arrowLeftLong}></Button>
-            </RowPanel>
-            <RowPanel>
-              <Container>
-                <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
-                <Label skin="large">New Search</Label>
-              </Container>
-              <Container>
-                <Icon icon={PriorityIcon.questionCircle} ></Icon>
-                <Label textHref="#">Help</Label>
-              </Container>
-            </RowPanel>
-          </StackPanel>
+        <SidePanel ref={p => this.panelRef = p}>
+          <ScrollPanel>
+            <Header />
 
-          <StackPanel>
-            <RowPanel alignItems="space-between">
-              <Container>
-                <CheckBox />
-                <Label skin="regular-high-contrast">Case Sensitive</Label>
-              </Container>
-              <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
-            </RowPanel>
-          </StackPanel>
-
-
-          <StackPanel  skin="silver">
-            <RowPanel>
-              <Title>Advanced Search</Title>
-              <Button skin="stroke" shape="round" icon={PriorityIcon.arrowLeftLong} />
-            </RowPanel>
-            <RowPanel>
-              <Container>
-                <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon>
-              </Container>
-              <Container>
-                <Icon icon={PriorityIcon.questionCircle} ></Icon>
-                <Label textHref="#">Help</Label>
-              </Container>
-              <LineInput />
-
-            </RowPanel>
-            <RowPanel>
-            	<Button skin="strokeLight" shape="square" icon={PriorityIcon.edit} />
-            	<Button skin="strokeLight" icon={PriorityIcon.edit}>More</Button>
-            </RowPanel>
-          </StackPanel>
-
-
-       
-            <RowPanel alignItems="space-between">
-              <Container>
-                <CheckBox />
-                <Label skin="regular-high-contrast">Case Sensitive</Label>
-              </Container>
-              <Label skin="small">Sort table by rearranging filter order with drag and drop</Label>
-            </RowPanel>
-
-            <StackPanel skin="light">
-              <RowPanel>
-                <Label skin="regular-high-contrast">Customer No.</Label>
+            <StackPanel>
+              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
+                <div style={{ display: "flex" }}>
+                  <CheckBox />
+                  <Label size="regular-hight-contrast">Case Sensitive</Label>
+                </div>
+                <Label size="small-bold">Sort table by rearranging filter order with drag and drop</Label>
               </RowPanel>
-              <RowPanel>
-                <Select>
-                  <OptionItem key={1} iconName="icon-search-equal" value="1">Between</OptionItem>
-                  <OptionItem key={2} iconName="icon-search-contains-v2" value="1">Between</OptionItem>
-                </Select>
-            
-              </RowPanel>
-              <WrapPanel>
-                <Tag text="test" />
-                <Tag text="test" />
-              </WrapPanel>
             </StackPanel>
-            <StackPanel skin="light">
-              <RowPanel>
-                <Label skin="regular-high-contrast">Customer No.</Label>
-              </RowPanel>
-              <RowPanel>
-               
-            
-              </RowPanel>
-              <WrapPanel>
-                <Tag text="test" />
-                <Tag text="test" />
-              </WrapPanel>
-            </StackPanel>
-            <StackPanel skin="light">
-              <RowPanel>
-                <Label skin="regular-high-contrast">Customer No.</Label>
-              </RowPanel>
-              <RowPanel>
-                
-             
-              </RowPanel>
-              <WrapPanel>
-                <Tag text="test" />
-                <Tag text="test" />
-              </WrapPanel>
-            </StackPanel>
-       
 
-          <StackPanel componentClasses={["position", "absolute", "bottom"]} skin="dark">
-            <RowPanel alignItems="space-between" >
-              <Container>
-                <Icon icon={PriorityIcon.clear} />
-                <Label skin="regular-high-contrast">Clear Search</Label>
-              </Container>
-              <Container width="250px" alignItems="spaceBetween">
-                <Button skin="stroke" width="regularFixed" size="large">Save</Button>
-                <Button skin="regular" width="regularFixed" size="large">Apply</Button>
-              </Container>
-            </RowPanel>
-          </StackPanel>
-             </ScrollPanel>
+            <TextQueryBlock />
+            <TextQueryBlock />
+            <DateQueryBlock />
+
+          </ScrollPanel>
+          <FooterBlock />
         </SidePanel>
       </div>
     );
@@ -138,4 +47,3 @@ class App extends Component {
 }
 
 export default App;
-

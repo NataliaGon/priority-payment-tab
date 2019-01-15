@@ -1,16 +1,17 @@
 import * as React from "react";
 import classNames from 'classnames';
+
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../core";
+
 import styles from "./StackPanel.module.scss";
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../base-classes";
 
 
-
-type StackPanelDirection = "horizontal";
-type StackPanelSkin = "default" | "silver" | "light" | "dark" | "padded-panel";
+type AlignItems = "flexStart" | "flexEnd" | "spaceBetween";
+type StackPanelSkin = "default" | "silver" | "light" | "dark" | "snow";
 
 class StackPanelProperties extends ComponentBaseProperties {
-  skin?: StackPanelSkin = "default";
-  className?: string
+  alignItems?: AlignItems;
+  skin?:StackPanelSkin;
 }
 
 interface StackPanelState extends ComponentBaseState {
@@ -18,6 +19,7 @@ interface StackPanelState extends ComponentBaseState {
 }
 
 export class StackPanel extends ComponentBase<StackPanelProperties, StackPanelState> {
+
   public render() {
 
     let skinClass = "";
@@ -25,10 +27,13 @@ export class StackPanel extends ComponentBase<StackPanelProperties, StackPanelSt
       skinClass = styles[this.props.skin];
     }
 
-    const componentClasses = classNames(styles.component, this.props.componentClasses, skinClass, this.props.className);
+
+    const componentClasses = classNames(styles.component, skinClass);
 
     return (
-      <div className={componentClasses} >{this.props.children}</div>
+      <div className={componentClasses} >
+        {this.props.children}
+      </div>
     );
   }
 }

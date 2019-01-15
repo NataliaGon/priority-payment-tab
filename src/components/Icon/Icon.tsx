@@ -1,19 +1,22 @@
 import * as React from "react";
 import classNames from 'classnames';
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, IconColor } from "../../base-classes";
 
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, IconColor, PriorityIcon, TextColor } from "../../core";
+import { GlobalStyles } from '../../core/global-styles';
 import styles from "./Icon.module.scss";
 import IconCounter from "./IconCounter/IconCounter";
-import { PriorityIcon } from "../../base-classes/PriorityIcon";
+
 
 interface IconProperties extends ComponentBaseProperties {
   icon?: PriorityIcon;
-  iconColor?: IconColor;
+  iconColor?: TextColor;
   counterValue?: number;
+  visible?: boolean;
+  onClick?: () => void;
 }
 
 interface IconState extends ComponentBaseState {
-  counterValue?: number;
+
 }
 
 export class Icon extends ComponentBase<IconProperties, IconState> {
@@ -21,16 +24,22 @@ export class Icon extends ComponentBase<IconProperties, IconState> {
   constructor(properties: IconProperties, state: IconState) {
     super(properties, state);
 
-    if (properties.counterValue) {
-      this.setState({ counterValue: properties.counterValue });
+    if (this.props.counterValue) {
+      this.setState({ counterValue: this.props.counterValue });
     }
   }
 
+  static defaultProps = {
+    visibility: false,
+    position: false
+  };
+
   public render() {
 
-    const iconColorClass = this.props.iconColor ? "icon-color-" + this.props.iconColor : "";
-    const iconClass = classNames(styles.component, this.props.icon, this.props.componentClasses, iconColorClass);
-    const iconCounter = this.state && this.state.counterValue ? <IconCounter count={this.state.counterValue} /> : null;
+    const iconVisibilityClass = this.props.visible? styles.visible:'';
+    const iconColorClass = this.props.iconColor ? "text-color-" + this.props.iconColor : "";//default "text-color-grey" ?
+    const iconClass = classNames(styles.component, this.props.icon, this.props.componentClasses, iconColorClass, iconVisibilityClass, this.props.textSize);
+    const iconCounter = this.props.counterValue ? <IconCounter count={this.props.counterValue} /> : null;
 
     return (
       <div className={iconClass}>{iconCounter}</div>

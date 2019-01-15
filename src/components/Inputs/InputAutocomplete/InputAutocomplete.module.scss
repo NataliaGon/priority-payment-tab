@@ -1,0 +1,98 @@
+@import "../../../styles/vars";
+.component{
+    width:356px;
+    height: 30px;
+    @include border($input-border-grey);
+    border-radius: $input-border-radius;
+    box-sizing: border-box;
+    position: relative;
+    &:hover {
+        border-color: $blue;
+    }
+    &:hover .btnIconWrapper{
+        display: flex;
+    }  
+}
+.item{
+    height: 40px;
+    line-height: 40px;
+    font-style: normal;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    border-bottom: 1px solid $silver;
+    background: white;
+    &:hover {
+       border: 1ps solid $blue;
+    }
+}
+.item:last-child{
+    border-bottom:none;
+}
+.component>div, .component>div>div{
+    width:100%;
+    height: 100%;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    color: $grey;
+    position: relative;
+    background: white;
+
+}
+
+.component>div>input{
+    height: 100%;
+    padding: 0 10px;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: italic;
+    font-stretch: normal;
+    line-height: 1.21;
+    letter-spacing: normal;
+    color: $grey;
+    outline:none;
+    border-radius: $input-border-radius;
+    width:100%;
+    position: absolute;
+
+    &:focus{
+        box-shadow: 0 0 0 1px $blue;
+        z-index: 6;
+    }
+  
+}
+.inputCheckbox{
+    width: 20px!important;
+    position: static!important;
+}
+.btnIconWrapper{
+    position: absolute!important;
+    width: auto!important;
+    right: 10px!important;
+    top: 0;
+    z-index: 6;
+    display: none;
+  
+    &>button{
+        margin-top: 4px;
+    }
+   &>div{
+        width: 2.4rem!important;
+        height: 2.4rem!important;
+        font-size: 2.4rem!important;
+    }
+}
+.itemLabel{
+    margin-left: 10px;
+}
+.itemButton{
+   position: absolute;
+   right: 10px;
+}
