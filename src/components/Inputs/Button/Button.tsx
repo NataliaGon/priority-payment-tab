@@ -1,45 +1,66 @@
 import * as React from "react";
 import classNames from 'classnames';
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../core";
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBaseSkin } from "../../../core";
+import { PriorityIcon } from "../../../core";
+import { Icon } from "../../Icon";
 
 import styles from "./Button.module.scss";
 
-type ButtonSkin = "regular" | "stroke" | "roundStrokeIcon" | "secondary";
-type ButtonWidth = "regularFixed" | "fullWidth" | "contentWidth" | "small";
+type ButtonSkin = "primary" | "secondary" | "stroke" | "strokeLight";
+type ButtonWidth = "regularFixed" | "fullWidth" | "contentWidth";
+type ButtonShape = "regular" | "round" | "square";
+type ButtonSize = "small" | "medium" | "large";
 
 interface ButtonProperties extends ComponentBaseProperties {
   skin?: ButtonSkin;
   width?: ButtonWidth;
+  shape?: ButtonShape;
+  size?: ButtonSize;
   disabled?: boolean;
+  darkContainer?: boolean;
+  icon?: PriorityIcon;
+  onClick?: () => void;
 }
 
 interface ButtonState extends ComponentBaseState {
 
 }
 
+const defaultButtonProperties: ButtonProperties = {
+  skin: "primary",
+  width: "contentWidth",
+  shape: "regular",
+  size: "medium"
+}
+
 export class Button extends ComponentBase<ButtonProperties, ButtonState> {
 
-  state: ButtonState = {
-   
-  }
+  static defaultProps = defaultButtonProperties;
 
   public render() {
-    const skinClass = styles[this.props.skin ? this.props.skin : ""];
-    const widthClass = styles[this.props.width ? this.props.width : ""];
-    const darkThemeClass = styles.darkTheme;
-   
-    const disabledBtnStyles = this.props.disabled ? styles[this.props.skin + 'Disabled'] : "";
+    const { skin, width, size, shape, disabled, darkContainer, icon, children } = this.props;
 
-    let buttonClass = "";
+    const skinClass = skin && styles[skin];
+    const widthClass = width && styles[width];
+    const shapeClass = shape && styles[shape];
+    const sizeClass = size && styles[size];
 
-      buttonClass = classNames(styles.component, widthClass, skinClass,  darkThemeClass);
-  
-    if (this.props.disabled) {
-      buttonClass = classNames(styles.component, widthClass, skinClass, disabledBtnStyles, darkThemeClass);
-    }
+    const buttonClass = classNames(styles.component,
+                          this.props.componentClasses,
+                          skinClass,
+                          widthClass,
+                          shapeClass,
+                          sizeClass,{
+                           [styles.title]: children,
+                           [styles.disabled]: disabled,
+                           [styles.darkContainer]: darkContainer
+                         });
 
     return (
-      <button className={buttonClass} >{this.props.children}</button>
+      <button className={buttonClass} onClick={this.props.onClick}>
+        {icon && <Icon icon={icon} componentClasses={styles.icon}/>}
+        {this.props.children}
+      </button>
     );
   }
 }

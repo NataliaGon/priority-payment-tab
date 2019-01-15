@@ -61,7 +61,7 @@
     border-radius: $input-border-radius;
     width:100%;
     position: absolute;
-    @include withRTL;
+
     &:focus{
         box-shadow: 0 0 0 1px $blue;
         z-index: 6;

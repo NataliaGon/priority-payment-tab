@@ -36,15 +36,10 @@ export class Icon extends ComponentBase<IconProperties, IconState> {
 
   public render() {
 
-    let iconColorClass = GlobalStyles["text-color-grey"];
-
-    if (this.props.iconColor) {
-      iconColorClass = GlobalStyles["text-color-" + this.props.iconColor];
-    }
-
     const iconVisibilityClass = this.props.visible? styles.visible:'';
-    const iconClass = classNames(styles.component, this.props.icon, iconColorClass, iconVisibilityClass, this.props.componentClasses,this.props.textSize);
-    const iconCounter =  (this.props.counterValue) ? <IconCounter count={this.props.counterValue} /> : null;
+    const iconColorClass = this.props.iconColor ? "text-color-" + this.props.iconColor : "";//default "text-color-grey" ?
+    const iconClass = classNames(styles.component, this.props.icon, this.props.componentClasses, iconColorClass, iconVisibilityClass, this.props.textSize);
+    const iconCounter = this.props.counterValue ? <IconCounter count={this.props.counterValue} /> : null;
 
     return (
       <div className={iconClass}>{iconCounter}</div>

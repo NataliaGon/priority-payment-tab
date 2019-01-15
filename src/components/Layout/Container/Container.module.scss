@@ -13,7 +13,7 @@
     padding: 17px 20px 15px;
     cursor: pointer;
     &:hover {
-        background-color: $lightBlue;
+        background-color: $light-blue;
         border: 1px solid $blue;
     }
     &:hover  .closeContainerIcon{
@@ -29,7 +29,7 @@
 
 .active {
     border: 1px solid $blue;
-    background-color: $lightBlue; 
+    background-color: $light-blue; 
 }
 
 .regular {

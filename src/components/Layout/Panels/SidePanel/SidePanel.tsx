@@ -2,7 +2,7 @@ import * as React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import classNames from 'classnames';
 
-import { ComponentBaseState, ComponentAnimatedProperties, ComponentBase, keyCodes } from '../../../core';
+import { ComponentBaseState, ComponentAnimatedProperties, ComponentBase, keyCodes } from '../../../../core';
 
 import styles from './SidePanel.module.scss';
 
@@ -13,7 +13,7 @@ interface SidePanelState extends ComponentBaseState {
 interface SidePanelProperties extends ComponentAnimatedProperties {
 	onOpen?(): boolean,
 	onClose?(closeCallback: Function): boolean,
-	content?(props: InjectedSidePanelProps): JSX.Element
+	content?(props: InjectedSidePanelProps): JSX.Element,
 }
 
 export interface InjectedSidePanelProps {
@@ -33,7 +33,7 @@ export class SidePanel extends ComponentBase<SidePanelProperties, SidePanelState
 		super(properties);
 
 		this.state = {
-			open: true
+			open: false
 		}
 
 		this.open = this.open.bind(this);
@@ -81,6 +81,7 @@ export class SidePanel extends ComponentBase<SidePanelProperties, SidePanelState
 			return;
 		}
 		this.setState({ open: true })
+		this.focus();
 	}
 
 	public focus() {
@@ -91,7 +92,7 @@ export class SidePanel extends ComponentBase<SidePanelProperties, SidePanelState
 		const { content: Content } = this.props;
 		const { transitionName = styles.SidePanel, transitionEnterTimeout = 500, transitionLeaveTimeout = 500 } = this.props;
 		const { open } = this.state;
-		const classes = classNames(styles.component, this.props.componentClasses);
+		const classes = classNames(styles.component,styles.opacity, this.props.componentClasses);
 		return (
 			<CSSTransition in={open} key='SidePanel' classNames={{
 				enter: styles.enter,
@@ -102,14 +103,16 @@ export class SidePanel extends ComponentBase<SidePanelProperties, SidePanelState
 				{() => (
 					<div className={styles.blocker}>
 						<div className={classes}>
-							{
-								Content && <Content open={open}
-									openPanel={this.open}
-									closePanel={this.close}
-									hidePanel={this.hide}
-									{...this.props} />
-							}
-							{this.props.children}
+							<div className={styles.opacity}>
+								{
+									Content && <Content open={open}
+										openPanel={this.open}
+										closePanel={this.close}
+										hidePanel={this.hide}
+										{...this.props} />
+								}
+								{this.props.children}
+							</div>
 						</div>
 					</div>
 				)}

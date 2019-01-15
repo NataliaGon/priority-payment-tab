@@ -27,7 +27,7 @@ export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState>
   }
   isButton(button){
     if(button){
-      return(<Button width="small">{button}</Button>)
+      return(<Button size="small">{button}</Button>)
     }else{
       return null
     }
