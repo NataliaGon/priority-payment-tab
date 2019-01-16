@@ -18,13 +18,13 @@
     background-color: $white;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
     transition: width 0.8s;
+
     @include position-horizontal(0);
 
     .opacity {
         height: 100%;
     }
 }
-
 
 .enter {
     &.blocker {
@@ -45,7 +45,6 @@
 }
 
 .enterActive {
-
     &.blocker {
         background-color: $backdrop;
         transition: background-color 0.5s;
@@ -67,7 +66,7 @@
 }
 
 .leave {
-     &.blocker {
+    &.blocker {
         background-color: $backdrop;
     }
 
@@ -85,7 +84,6 @@
 }
 
 .leaveActive {
-
     &.blocker {
         background-color: transparent;
         transition: background-color 0.5s;

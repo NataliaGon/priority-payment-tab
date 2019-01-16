@@ -2,6 +2,7 @@
  * Global styles.
  */
 @import "icons";
+
 // Reset CSS
 @import "reset";
 
@@ -14,7 +15,7 @@
 // Element Skins
 @import "./layout";
 
-@import "./animations.scss";
+@import "./animations";
 
 .header {
     padding-top: 15px;

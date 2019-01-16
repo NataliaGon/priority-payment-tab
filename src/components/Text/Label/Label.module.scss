@@ -10,6 +10,10 @@
     padding: 0 1rem;
 }
 
+div[class^="icon-"], div[class*=" icon-"] {
+    padding-right: 3rem;
+}
+
 .href {
     text-decoration: underline !important;
     color: $grey !important;

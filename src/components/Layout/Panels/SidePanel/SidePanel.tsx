@@ -92,7 +92,7 @@ export class SidePanel extends ComponentBase<SidePanelProperties, SidePanelState
 		const { content: Content } = this.props;
 		const { transitionName = styles.SidePanel, transitionEnterTimeout = 500, transitionLeaveTimeout = 500 } = this.props;
 		const { open } = this.state;
-		const classes = classNames(styles.component,styles.opacity, this.props.componentClasses);
+		const classes = classNames(styles.component, styles.opacity, this.props.componentClasses, "reset-css");
 		return (
 			<CSSTransition in={open} key='SidePanel' classNames={{
 				enter: styles.enter,
