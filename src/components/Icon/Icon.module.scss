@@ -2,12 +2,14 @@
 
 .component {
     @include priority-icon;
+
     position: relative;
 }
 
 .visible {
     display: block;
 }
-.large{
+
+.large {
     font-size: 49px;
 }

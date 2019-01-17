@@ -12,6 +12,11 @@
 
 div[class^="icon-"], div[class*=" icon-"] {
     padding-right: 3rem;
+
+    @include rtl {
+        padding-right: 0;
+        padding-left: 3rem;
+    }
 }
 
 .href {

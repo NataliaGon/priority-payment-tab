@@ -26,7 +26,18 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
   render() {
     const inputComponent = (this.state.withInput) ?
 
-      <Input skin="line" label="New Search">
+      // <Input skin="line" label="New Search">
+      //   <div style={{ display: "flex" }}>
+      //     <button className={styles.iconDoneWrapper} onClick={this.clickHandler}>
+      //       <Icon iconColor="white" icon={PriorityIcon.done} />
+      //     </button>
+      //     <button onClick={this.clickHandler}>
+      //       <Icon icon={PriorityIcon.closeSmall} />
+      //     </button>
+      //   </div>
+      // </Input>
+
+      <Input skin="line" label="חיפוש חדש">
         <div style={{ display: "flex" }}>
           <button className={styles.iconDoneWrapper} onClick={this.clickHandler}>
             <Icon iconColor="white" icon={PriorityIcon.done} />
@@ -39,13 +50,16 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
 
       : '';
 
-    const labelComponent = (this.state.withInput) ? '' : <Label icon={PriorityIcon.filterBig} iconCounter={5} size="large">New Search</Label>;
+    // const labelComponent = (this.state.withInput) ? '' : <Label icon={PriorityIcon.filterBig} iconCounter={5} size="large">New Search</Label>;
+    const labelComponent = (this.state.withInput) ? '' : <Label icon={PriorityIcon.filterBig} iconCounter={5} size="large">חיפוש חדש</Label>;
+
 
     return (
       <StackPanel skin="light" >
         <div className={styles.componentWrapper}>
           <RowPanel>
-            <Title>Advanced Search</Title>
+            {/* <Title>Advanced Search</Title> */}
+            <Title>חיפוש מתקדם</Title>
             <Button skin="stroke" shape="round" icon={PriorityIcon.arrowLeftLong} />
           </RowPanel>
           <RowPanel >

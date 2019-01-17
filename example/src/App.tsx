@@ -9,7 +9,7 @@ import {
 import { DateQueryBlock, FooterBlock, TextQueryBlock, Header } from './side-panel-components';
 
 
-class App extends Component { 
+class App extends Component {
 
   panelRef;
 
