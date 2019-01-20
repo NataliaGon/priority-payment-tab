@@ -42,7 +42,7 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
           <button className={styles.iconDoneWrapper} onClick={this.clickHandler}>
             <Icon iconColor="white" icon={PriorityIcon.done} />
           </button>
-          <button onClick={this.clickHandler}>
+          <button onClick={this.clickHandler} >
             <Icon icon={PriorityIcon.closeSmall} />
           </button>
         </div>

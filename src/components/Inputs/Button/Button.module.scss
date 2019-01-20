@@ -18,6 +18,10 @@
     outline: none;
     border: 0;
 
+    div[class*=" icon-"] {
+        padding-left: 0;
+    }
+
     @include rtl {
         font-family: $font-family-main-hebrew;
     }
@@ -60,7 +64,7 @@
 
 .stroke {
     background-color: $white;
-    border: solid 1px $blue;
+    border: solid 1px $blue !important;
     color: $blue;
 
     &:hover {

@@ -1,9 +1,6 @@
 @import "../../../styles/vars.scss";
 
-.component {
-
-
-}
+.component {}
 
 .dropDownElements {
     height: 30px;
@@ -13,11 +10,14 @@
 .inputSmall {
     height: 30px;
     border-radius: $input-border-radius;
+
     @include border($input-border-grey);
+
     z-index: 3;
     position: absolute;
     box-sizing: border-box;
-    &:hover{
+
+    &:hover {
         border-color: $blue;
     }
 }
@@ -29,7 +29,7 @@
 
 .dropDownResult {
     height: 30px;
-    background:$tag-background-grey;
+    background: $tag-background-grey;
     color: $white;
     display: inline-block;
     line-height: 30px;
@@ -37,6 +37,7 @@
     border-radius: $input-border-radius;
     position: relative;
 }
+
 .dropDownHide {
     overflow: hidden;
     height: 30px;
@@ -54,17 +55,15 @@
     box-sizing: content-box;
 }
 
-.drop-down_icon-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: $white;
-}
-
 .dropDownIconWrapper {
     position: absolute;
     top: 2px;
     right: 0;
+
+    @include rtl {
+        right: unset;
+        left: 0;
+    }
 }
 
 .borderColorBlue {
@@ -72,10 +71,11 @@
 }
 
 .ul li {
-    color:$blue;
+    color: $blue;
+
     &:hover {
         background-color: $background-color-blue;
-        border-radius: $input-border-radius
+        border-radius: $input-border-radius;
     }
 }
 
@@ -92,14 +92,17 @@
 }
 
 .active {
-    color:$blue;
+    color: $blue;
 }
-.small{
-    width:$inputSizeSmall;
+
+.small {
+    width: $inputSizeSmall;
 }
-.medium{
-    width:$inputSizeMedium;
+
+.medium {
+    width: $inputSizeMedium;
 }
-.large{
-    width:$inputSizeLarge;
+
+.large {
+    width: $inputSizeLarge;
 }

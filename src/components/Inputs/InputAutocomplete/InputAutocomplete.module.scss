@@ -7,7 +7,6 @@
     @include border($input-border-grey);
 
     border-radius: $input-border-radius;
-    box-sizing: border-box;
     position: relative;
 
     &:hover {

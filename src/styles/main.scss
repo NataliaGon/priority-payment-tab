@@ -22,3 +22,36 @@
     padding-bottom: 15px;
     height: 114px;
 }
+
+// additional reset css for selected components
+.reset-css {
+    *, *:before, *:after {
+        line-height: normal;
+        vertical-align: baseline;
+        box-sizing: border-box;
+        direction: inherit;
+    }
+
+    a, a:visited, a:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+    }
+
+    button {
+        background-color: transparent;
+        outline: none;
+        border: 0;
+        cursor: pointer;
+    }
+
+    ol, ul, li {
+        list-style: none;
+    }
+}
+
+// end reset css for selected components

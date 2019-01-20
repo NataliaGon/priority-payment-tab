@@ -16,4 +16,8 @@
     &:hover {
         box-shadow: $tag-box-shadow;
     }
+
+    @include rtl {
+        padding: 5px 10px 5px 0;
+    }
 }

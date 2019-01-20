@@ -12,7 +12,7 @@ interface ScrollPanelProperties extends ComponentBaseProperties {
     autoHeightMax?: number,
     autoHeightMin?: number,
     className?: string,
- 
+
 }
 
 interface ScrollPanelState extends ComponentBaseState {
