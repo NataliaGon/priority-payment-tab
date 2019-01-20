@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, AutoFill} from 'priority-style-react';
-import { Label, StackPanel, Container, RowPanel, WrapPanel, Select, Tag, Button } from 'priority-style-react';
+import { Label, StackPanel, Container, RowPanel, WrapPanel, Select, Tag, Button, Input, Icon, PriorityIcon } from 'priority-style-react';
 import { optionDropDown } from './../../optionDropDown';
 
 
@@ -19,13 +19,16 @@ export class TextQueryBlock extends ComponentBase<TextQueryBlockBlockProperties,
           <Container roundConer > 
                 <RowPanel>
                   <div style={{marginLeft:"-10px"}}>
-                  <Label size="regular-hight-contrast">Customer No.</Label>
+                  <Label size="regular-hight-contrast">Customer No. <Icon icon={PriorityIcon.closeSmall}/></Label>
                   </div>
                 </RowPanel>
                 <RowPanel paddingTop paddingBottom>
                   <Select options={optionDropDown} isBlue/>
-                  <AutoFill isMultiselect >
-                  </AutoFill>
+                  <Input skin="line" size="large">
+                   
+                    <Button shape="round" size="small" elevated={false} icon={PriorityIcon.done}/>
+                    <Icon icon={PriorityIcon.closeSmall}/>
+                  </Input>
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />

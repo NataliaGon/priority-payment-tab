@@ -42,7 +42,7 @@ export class Icon extends ComponentBase<IconProperties, IconState> {
     const iconCounter = this.props.counterValue ? <IconCounter count={this.props.counterValue} /> : null;
 
     return (
-      <div className={iconClass}>{iconCounter}</div>
+      <div className={iconClass}>{iconCounter}{this.props.children}</div>
     )
   }
 }

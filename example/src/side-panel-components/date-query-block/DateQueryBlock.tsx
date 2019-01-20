@@ -38,11 +38,11 @@ export class DateQueryBlock extends ComponentBase<DateQueryBlockProperties, Date
                     <RowPanel paddingBottom={true} paddingTop={true} >
                         <div className={styles.spaceHolderBig}></div>
                         <div className={styles.spaceHolder}></div>
-                        <Input inputWidth="small" label="03/02/19" >
+                        <Input size="small" label="03/02/19" >
                             <Icon icon={PriorityIcon.calendar} iconColor="grey" />
                         </Input>
                         <div className={styles.spaceHolder}></div>
-                        <Input inputWidth="small" label="03/02/19">
+                        <Input size="small" label="03/02/19">
                             <Icon icon={PriorityIcon.calendar} iconColor="grey" />
                         </Input>
                     </RowPanel>

@@ -8,6 +8,7 @@
     font-size: 2rem;
     border: 1px solid $boxShadow-brown-light;
     border-radius: 0.2rem;
+    line-height: normal;
 
     &.checked {
         &:before {

@@ -7,6 +7,7 @@
     font-size: $font-size-regular;
     font-weight: $font-weight-regular;
     display: flex;
+    align-items: center;
     border: 1px solid $grey;
     border-radius: $general-border-radius;
     background: $white;
@@ -25,14 +26,17 @@
 .large {
     width: $inputSizeLarge;
     height: 30px;
-    border: 1px solid #bfd0d7;
-    border-radius: 3px;
-    box-sizing: border-box;
+
+    .input {
+        font-size: 2.2rem;
+    }
 }
-.input{
-    width: 80%;
+
+.input {
     outline: none;
+    width: 100%;
 }
+
 .medium {
     width: $inputSizeMedium;
 }
@@ -41,40 +45,20 @@
     width: $inputSizeSmall;
 }
 
-.icon {
-    position: absolute;
-    right: 10px;
-    top: 3px;
-}
-
-.btn {
-    position: absolute;
-    right: 40px;
-    top: 5px;
-}
-
-.iconOptinal {
-    position: absolute;
-    right: 5px;
-    top: 2px;
-}
-.focusBorder{
+.focusBorder {
     border: 1px solid $blue;
 }
-.line{
+
+.line {
     border:none;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px dashed $blue;
     padding-bottom: 5px;
-    width: 450px;
-    position: absolute;
-    left: 62px;
     background: transparent;
    
-    .input{
-        background: $silver;
-        font-size: 2.2rem;
+    .input {
+        background: transparent;
         color: #788e97;
     }
 }

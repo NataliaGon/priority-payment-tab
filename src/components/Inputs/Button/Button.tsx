@@ -18,6 +18,7 @@ interface ButtonProperties extends ComponentBaseProperties {
   size?: ButtonSize;
   disabled?: boolean;
   darkContainer?: boolean;
+  elevated?:boolean;
   icon?: PriorityIcon;
   onClick?: () => void;
 }
@@ -30,7 +31,8 @@ const defaultButtonProperties: ButtonProperties = {
   skin: "primary",
   width: "contentWidth",
   shape: "regular",
-  size: "medium"
+  size: "medium",
+  elevated: true
 }
 
 export class Button extends ComponentBase<ButtonProperties, ButtonState> {
@@ -38,7 +40,7 @@ export class Button extends ComponentBase<ButtonProperties, ButtonState> {
   static defaultProps = defaultButtonProperties;
 
   public render() {
-    const { skin, width, size, shape, disabled, darkContainer, icon, children } = this.props;
+    const { skin, width, size, shape, disabled, darkContainer, elevated, icon, children } = this.props;
 
     const skinClass = skin && styles[skin];
     const widthClass = width && styles[width];
@@ -53,7 +55,8 @@ export class Button extends ComponentBase<ButtonProperties, ButtonState> {
                           sizeClass,{
                            [styles.title]: children,
                            [styles.disabled]: disabled,
-                           [styles.darkContainer]: darkContainer
+                           [styles.darkContainer]: darkContainer,
+                           [styles.elevated]: elevated
                          });
 
     return (
