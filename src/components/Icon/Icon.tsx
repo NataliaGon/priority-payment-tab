@@ -2,7 +2,6 @@ import * as React from "react";
 import classNames from 'classnames';
 
 import { ComponentBaseProperties, ComponentBaseState, ComponentBase, IconColor, PriorityIcon, TextColor } from "../../core";
-import { GlobalStyles } from '../../core/global-styles';
 import styles from "./Icon.module.scss";
 import IconCounter from "./IconCounter/IconCounter";
 
@@ -36,7 +35,7 @@ export class Icon extends ComponentBase<IconProperties, IconState> {
 
   public render() {
 
-    const iconVisibilityClass = this.props.visible? styles.visible:'';
+    const iconVisibilityClass = this.props.visible ? styles.visible : '';
     const iconColorClass = this.props.iconColor ? "text-color-" + this.props.iconColor : "";//default "text-color-grey" ?
     const iconClass = classNames(styles.component, this.props.icon, this.props.componentClasses, iconColorClass, iconVisibilityClass, this.props.textSize);
     const iconCounter = this.props.counterValue ? <IconCounter count={this.props.counterValue} /> : null;
