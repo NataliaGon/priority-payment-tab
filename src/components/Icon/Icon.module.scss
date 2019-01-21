@@ -3,6 +3,9 @@
 .component {
     @include priority-icon;
     position: relative;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 .visible {

@@ -19,10 +19,12 @@ class InputProperties extends ComponentBaseProperties {
     size?: any;
     label?: string;
     skin?:InputSkin="box";
+    onChange?:(value: string) => void
 }
 
 interface InputState extends ComponentBaseState {
-    isFocus?: boolean
+    isFocus?: boolean,
+    value?: string
 }
 
 export class Input extends ComponentBase<
@@ -31,7 +33,23 @@ export class Input extends ComponentBase<
     > {
 
     state: InputState = {
-        isFocus: false
+        isFocus: false,
+        value: ""
+    }
+
+    textInput;
+    constructor(props) {
+        super(props);
+        this.state={ isFocus: false, value: this.props.text};
+    }
+
+    componentDidMount(){
+        this.textInput.focus();
+      }
+
+    handleChange = (event) => {
+        this.setState({value: event.target.value});
+        this.props.onChange && this.props.onChange(event.target.value);
     }
 
     handlerFocus = () => {
@@ -43,7 +61,6 @@ export class Input extends ComponentBase<
     }
 
     public render() {
-        //const clearIcon = this.props.clearable ? <Icon icon={PriorityIcon.closeSmall} iconColor="grey" /> : '';
         const hasBorder= this.state.isFocus? styles.focusBorder : '';
         const skinClass =(this.props.skin=="line")? styles.line: '';
         const componentClassNames = classNames(styles.component, styles[this.props.size], hasBorder ,this.props.componentClasses, skinClass);
@@ -51,7 +68,14 @@ export class Input extends ComponentBase<
 
         return (
             <div className={componentClassNames}>
-                <input className={styles.input} type="text" onBlur={this.handleOnBlur} onFocus={this.handlerFocus} />
+                <input ref={input => this.textInput = input}
+                        className={styles.input} 
+                        type="text" 
+                        onBlur={this.handleOnBlur}
+                        onFocus={this.handlerFocus} 
+                        onChange={this.handleChange}
+                        value={this.state.value}
+                        />
                 {this.props.children}
             </div>
         )

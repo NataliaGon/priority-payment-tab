@@ -10,6 +10,7 @@ import IconCounter from "./IconCounter/IconCounter";
 interface IconProperties extends ComponentBaseProperties {
   icon?: PriorityIcon;
   iconColor?: TextColor;
+  hoverColor?: TextColor;
   counterValue?: number;
   visible?: boolean;
   onClick?: () => void;
@@ -37,12 +38,13 @@ export class Icon extends ComponentBase<IconProperties, IconState> {
   public render() {
 
     const iconVisibilityClass = this.props.visible? styles.visible:'';
+    /* why is it text-color- and not icon-color- ?*/
     const iconColorClass = this.props.iconColor ? "text-color-" + this.props.iconColor : "";//default "text-color-grey" ?
-    const iconClass = classNames(styles.component, this.props.icon, this.props.componentClasses, iconColorClass, iconVisibilityClass, this.props.textSize);
+    const hoverColorClass = this.props.hoverColor ? "hover-color-" + this.props.hoverColor : "";
+    const iconClass = classNames(styles.component, this.props.icon, this.props.componentClasses, iconColorClass, hoverColorClass, iconVisibilityClass, this.props.textSize);
     const iconCounter = this.props.counterValue ? <IconCounter count={this.props.counterValue} /> : null;
-
     return (
-      <div className={iconClass}>{iconCounter}{this.props.children}</div>
+      <div className={iconClass} onClick={this.props.onClick}>{iconCounter}{this.props.children}</div>
     )
   }
 }
