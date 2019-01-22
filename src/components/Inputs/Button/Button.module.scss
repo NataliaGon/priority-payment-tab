@@ -3,8 +3,8 @@
 
 .component {
     height: 30px;
-    border-radius: 3px;
-    font-size: 14px;
+    border-radius: $general-border-radius;
+    font-size: $font-size-regular;
     padding: 0 13px;
     display: flex;
     flex-flow: row nowrap;
@@ -36,7 +36,7 @@
 
     &:hover {
         background-color: $white;
-        background-image: linear-gradient(250deg, #00adee, rgba(0, 173, 238, 0.7));
+        background-image: linear-gradient(250deg, $blue, rgba(0, 173, 238, 0.7));
     }
 
     &:active {
@@ -51,14 +51,14 @@
 
     &:hover {
         background-color: $white;
-        background-image: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8));
+        background-image: linear-gradient(253deg, $green, $light-green);
     }
 
     &:active {
         border: 1px solid #B2E4E0;
-        box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);
+        box-shadow: $tag-box-shadow;
         background-color: $white;
-        background-image: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8));
+        background-image: linear-gradient(253deg, $green, $light-green);
     }
 }
 
@@ -69,7 +69,7 @@
 
     &:hover {
         color: $white;
-        background-image: linear-gradient(250deg, #00adee, rgba(0, 173, 238, 0.7));
+        background-image: linear-gradient(250deg, $blue, rgba(0, 173, 238, 0.7));
     }
 
     &:active {
@@ -180,7 +180,7 @@
 
 .small {
     height: 20px;
-    font-size: 13px;
+    font-size: $font-size-smaller;
 
     &.square, &.round {
         width: 20px;
@@ -190,7 +190,7 @@
 
 .medium {
     height: 30px;
-    font-size: 14px;
+    font-size: $font-size-regular;
 
     &.square, &.round {
         width: 30px;
@@ -200,7 +200,7 @@
 
 .large {
     height: 40px;
-    font-size: 14px;
+    font-size: $font-size-regular;
 
     &.square, &.round {
         width: 40px;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from 'classnames';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, IconColor, PriorityIcon, TextColor } from "../../core";
+import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon, TextColor } from "../../core";
 import styles from "./Icon.module.scss";
 import IconCounter from "./IconCounter/IconCounter";
 

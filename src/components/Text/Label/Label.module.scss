@@ -8,6 +8,8 @@
     font-size: $font-size-regular;
     color: $grey;
     padding: 0 1rem;
+    @include rtl {
+    }
 }
 
 div[class^="icon-"], div[class*=" icon-"] {
@@ -73,7 +75,7 @@ div[class^="icon-"], div[class*=" icon-"] {
 
 .bold {
     color: $black;
-    font-size: 14px;
+    font-size: $font-size-regular;
     font-family: Roboto;
     font-weight: 500;
     font-style: normal;
@@ -86,7 +88,7 @@ div[class^="icon-"], div[class*=" icon-"] {
     color: $black;
     opacity: 0.7;
     font-family: Roboto;
-    font-size: 12px;
+    font-size: $font-size-small;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;

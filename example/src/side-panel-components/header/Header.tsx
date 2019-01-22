@@ -4,7 +4,7 @@ import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIco
 import { StackPanel, RowPanel, Label, Input, Icon, Title, Button } from 'priority-style-react';
 
 import styles from './Header.module.scss';
-
+import stylesMain from '../../AppStyles.module.scss';
 
 
 class HeaderBlockProperties extends ComponentBaseProperties {
@@ -55,15 +55,15 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
 
 
     return (
-      <StackPanel skin="light" >
+      <div className={stylesMain.stackPanel} style={{backgroundColor:"#ebedee", border:"1px solid #e2eaf1"}}>
         <div className={styles.componentWrapper}>
-          <RowPanel>
+        <div className={stylesMain.rowPanel}>
             {/* <Title>Advanced Search</Title> */}
             <Title>חיפוש מתקדם</Title>
             <Button skin="stroke" shape="round" icon={PriorityIcon.arrowLeftLong} />
-          </RowPanel>
-          <RowPanel >
-            <div style={{ display: "flex" }}>
+          </div>
+          <div className={stylesMain.rowPanel} >
+            <div className={styles.secondRowWrapper} >
               {/* <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon> */}
               <div onClick={this.clickHandler}>
                 {labelComponent}
@@ -74,10 +74,10 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
               {/* <Icon icon={PriorityIcon.questionCircle}></Icon> */}
               <Label icon={PriorityIcon.questionCircle} textHref="#">Help</Label>
             </div>
-
-          </RowPanel>
+          </div>
         </div>
-      </StackPanel>
+  
+      </div>
     )
   }
 }

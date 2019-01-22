@@ -2,8 +2,6 @@
 
 .component {
     position: absolute;
-    top: -5px;
-    left: -5px;
     border-radius: 50px;
     min-width: 15px;
     height: 15px;
@@ -14,13 +12,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
-    @include rtl {
-        left: unset;
-        right: -5px;
-    }
+    
+    top: -5px;
+    
+    @include position-horizontal(-5px);
 }
-
 .component span {
     padding: 2.5px;
 }

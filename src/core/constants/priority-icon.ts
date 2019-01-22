@@ -3,6 +3,7 @@ export enum PriorityIcon {
     clear = "icon-icon---clear-search",
     edit = "icon-icon-edit",
     arrowLeftLong = "icon-icon-long-arrow-left",
+    arrowRightLong = "icon-icon-long-arrow-right",
     questionCircle = "icon-question-circle",
     operatorSearchBetween = "icon-search-between-v4",
     done = "icon-icon-done",

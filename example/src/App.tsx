@@ -7,7 +7,7 @@ import {
 } from 'priority-style-react';
 
 import { DateQueryBlock, FooterBlock, TextQueryBlock, Header } from './side-panel-components';
-
+import stylesMain from './AppStyles.module.scss';
 
 class App extends Component {
 
@@ -24,15 +24,15 @@ class App extends Component {
           <ScrollPanel>
             <Header />
 
-            <StackPanel>
-              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
+            <div className={stylesMain.stackPanel}>
+            <div className={stylesMain.rowPanel} style={{paddingBottom:"10px", paddingTop:"10px", alignItems:"space-between" }}>
                 <div style={{ display: "flex" }}>
                   <CheckBox />
                   <Label size="regular-hight-contrast">Case Sensitive</Label>
                 </div>
                 <Label size="small-bold">Sort table by rearranging filter order with drag and drop</Label>
-              </RowPanel>
-            </StackPanel>
+              </div>
+            </div>
 
             <TextQueryBlock />
             <TextQueryBlock />
