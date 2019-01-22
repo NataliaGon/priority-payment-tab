@@ -22,8 +22,8 @@ class App extends Component {
       <div className="App">
         <SidePanel ref={p => this.panelRef = p}>
           <ScrollPanel>
+            <div>
             <Header />
-
             <div className={stylesMain.stackPanel}>
             <div className={stylesMain.rowPanel} style={{paddingBottom:"10px", paddingTop:"10px", alignItems:"space-between" }}>
                 <div style={{ display: "flex" }}>
@@ -33,13 +33,14 @@ class App extends Component {
                 <Label size="small-bold">Sort table by rearranging filter order with drag and drop</Label>
               </div>
             </div>
-
             <TextQueryBlock />
             <TextQueryBlock />
             <DateQueryBlock />
-
-          </ScrollPanel>
+            
+            </div>
+         
           <FooterBlock />
+          </ScrollPanel>
         </SidePanel>
       </div>
     );

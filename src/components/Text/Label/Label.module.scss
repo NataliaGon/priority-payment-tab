@@ -9,15 +9,15 @@
     color: $grey;
     padding: 0 1rem;
     @include rtl {
+        font-family: $font-family-main-hebrew;
     }
-}
-
-div[class^="icon-"], div[class*=" icon-"] {
-    padding-right: 3rem;
-
-    @include rtl {
-        padding-right: 0;
-        padding-left: 3rem;
+ &div[class^="icon-"], div[class*=" icon-"] {
+        padding-right: 3rem;
+    
+        @include rtl {
+            padding-right: 0;
+            padding-left: 3rem;
+        }
     }
 }
 
@@ -49,6 +49,7 @@ div[class^="icon-"], div[class*=" icon-"] {
 .small {
     font-size: $font-size-small;
     color: $black;
+
 }
 
 .darkTheme {

@@ -10,9 +10,10 @@ import styles from "./OptionItem.module.scss";
 interface OptionItemProperties extends ComponentBaseProperties {
   iconName?: string;
   value?: any;
-  displayValue?: boolean;
+  // displayValue?: boolean;
   onClick?: (e: any) => void;
   isBlue?: boolean;
+  width?:any;
 }
 
 interface OptionItemState extends ComponentBaseState {
@@ -27,8 +28,8 @@ export class OptionItem extends ComponentBase<OptionItemProperties, OptionItemSt
     return (
       <li className={elementClasses} onClick={this.props.onClick}>
         <Icon icon={PriorityIcon.operatorSearchBetween} iconColor={this.props.isBlue ? "blue" : "grey"} />
-        <Label textColor={this.props.isBlue ? "blue" : "grey"} size="regular">{this.props.children}</Label>
-        {this.props.displayValue ? <Label size="small">{this.props.value}</Label> : ""}
+        <Label textColor={this.props.isBlue ? "blue" : "grey"}  size="regular">{this.props.children}</Label>
+        {/* {this.props.displayValue ? <Label size="small">{this.props.value}</Label> : ""} */}
       </li>
     );
   }

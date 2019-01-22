@@ -6,4 +6,7 @@
     height: 40px;
     align-items: center;
     padding-left: 10px;
+    @include rtl{
+        @include padding-horizontal(null, 10px)
+    }
 }

@@ -52,15 +52,15 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
 
     // const labelComponent = (this.state.withInput) ? '' : <Label icon={PriorityIcon.filterBig} iconCounter={5} size="large">New Search</Label>;
     const labelComponent = (this.state.withInput) ? '' : <Label icon={PriorityIcon.filterBig} iconCounter={5} size="large">חיפוש חדש</Label>;
-
-
+    const root:any =document.getElementById("root");
+    const iconCloseSideBar =(root.getAttribute("dir"))=="rtl"?PriorityIcon.arrowRightLong:PriorityIcon.arrowLeftLong; 
     return (
       <div className={stylesMain.stackPanel} style={{backgroundColor:"#ebedee", border:"1px solid #e2eaf1"}}>
         <div className={styles.componentWrapper}>
         <div className={stylesMain.rowPanel}>
             {/* <Title>Advanced Search</Title> */}
             <Title>חיפוש מתקדם</Title>
-            <Button skin="stroke" shape="round" icon={PriorityIcon.arrowLeftLong} />
+            <Button skin="stroke" shape="round" icon={iconCloseSideBar} />
           </div>
           <div className={stylesMain.rowPanel} >
             <div className={styles.secondRowWrapper} >

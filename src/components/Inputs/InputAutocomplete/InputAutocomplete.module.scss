@@ -117,10 +117,5 @@
     position: absolute;
     
     @include position-horizontal(null, 10px);
-    //right: 10px;
-    //
-    //@include rtl {
-    //    right: unset;
-    //    left: 10px;
-    //}
+
 }

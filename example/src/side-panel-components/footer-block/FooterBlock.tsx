@@ -28,7 +28,7 @@ export class FooterBlock extends ComponentBase<FooterBlockProperties, FooterBloc
                         <div style={{ display: "flex" }}>
                             <WrapPanel>
                                 <Button width="regularFixed" skin="stroke"  darkContainer size="large">Save as new</Button>
-                                <Button width="regularFixed" skin="secondary" darkContainer size="large" >Save & Apply</Button>
+                                <Button width="regularFixed" skin="secondary" size="large" >Save & Apply</Button>
                                 <Button width="regularFixed" darkContainer size="large">Apply</Button>
                             </WrapPanel>
                         </div>

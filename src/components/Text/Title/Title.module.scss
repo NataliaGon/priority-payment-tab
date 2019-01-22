@@ -9,4 +9,8 @@
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
+    @include rtl {
+        font-family: $font-family-main-hebrew;
+        font-weight: bold;
+    }
 }
