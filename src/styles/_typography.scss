@@ -31,29 +31,6 @@ body {
     }
 }
 
-[class^="icon-"], [class*=" icon-"] {
-    &:hover {
-        &.hover-color {
-            &-grey, &-grey:before {
-                color: $grey;
-            }
-
-            &-blue, &-blue:before {
-                color: $blue !important;
-            }
-
-            &-black, &-black:before {
-                color: $black;
-            }
-
-            &-white, &-white:before {
-                color: $white;
-            }
-        }
-    }
-}
-
-
 .text-size {
     &-large {
         font-size: $font-size-large;

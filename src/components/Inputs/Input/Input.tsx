@@ -45,7 +45,14 @@ export class Input extends ComponentBase<
 
     componentDidMount(){
         this.textInput.focus();
-      }
+    }
+
+    componentDidUpdate() {
+        if(this.props.text !== this.state.value) {
+            this.setState({value : this.props.text});
+            this.textInput.focus();
+        }
+    }
 
     handleChange = (event) => {
         this.setState({value: event.target.value});
@@ -61,11 +68,10 @@ export class Input extends ComponentBase<
     }
 
     public render() {
-        const hasBorder= this.state.isFocus? styles.focusBorder : '';
-        const skinClass =(this.props.skin=="line")? styles.line: '';
+        const hasBorder= this.state.isFocus ? styles.focusBorder : '';
+        const skinClass =(this.props.skin=="line") ? styles.line: '';
         const componentClassNames = classNames(styles.component, styles[this.props.size], hasBorder ,this.props.componentClasses, skinClass);
         const label = this.props.label ? this.props.label : '';
-
         return (
             <div className={componentClassNames}>
                 <input ref={input => this.textInput = input}

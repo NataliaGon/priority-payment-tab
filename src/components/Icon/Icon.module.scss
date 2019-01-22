@@ -3,14 +3,30 @@
 .component {
     @include priority-icon;
     position: relative;
-    &:hover {
+}
+
+.hoverable {
+	&:hover {
         cursor: pointer;
     }
 }
 
-.visible {
-    display: block;
+.invisible {
+    visibility: hidden
 }
 .large{
     font-size: 49px;
+}
+
+.standart {
+	&:before {
+        color: $grey;
+    }
+    &.hoverable {
+    	&:hover {
+	    	&:before {
+	    		color: $blue;
+	    	}
+	    }
+    }    
 }
