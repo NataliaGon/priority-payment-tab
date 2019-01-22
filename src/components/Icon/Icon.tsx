@@ -6,13 +6,16 @@ import { GlobalStyles } from '../../core/global-styles';
 import styles from "./Icon.module.scss";
 import IconCounter from "./IconCounter/IconCounter";
 
+type IconSkin = "standart" | "primary" | "danger"
 
 interface IconProperties extends ComponentBaseProperties {
   icon?: PriorityIcon;
   iconColor?: TextColor;
+  hoverColor?: TextColor;
   counterValue?: number;
-  visible?: boolean;
+  invisible?: boolean;
   onClick?: () => void;
+  skin?:IconSkin;
 }
 
 interface IconState extends ComponentBaseState {
@@ -35,14 +38,13 @@ export class Icon extends ComponentBase<IconProperties, IconState> {
   };
 
   public render() {
-
-    const iconVisibilityClass = this.props.visible? styles.visible:'';
-    const iconColorClass = this.props.iconColor ? "text-color-" + this.props.iconColor : "";//default "text-color-grey" ?
-    const iconClass = classNames(styles.component, this.props.icon, this.props.componentClasses, iconColorClass, iconVisibilityClass, this.props.textSize);
+    const iconVisibilityClass = this.props.invisible && styles.invisible;
+    const skinClass = this.props.skin && styles[this.props.skin];
+    const hoverClass = this.props.onClick && styles.hoverable;
+    const iconClass = classNames(styles.component, this.props.icon, this.props.componentClasses, skinClass, hoverClass, iconVisibilityClass, this.props.textSize);
     const iconCounter = this.props.counterValue ? <IconCounter count={this.props.counterValue} /> : null;
-
     return (
-      <div className={iconClass}>{iconCounter}{this.props.children}</div>
+      <div className={iconClass} onClick={this.props.onClick}>{iconCounter}{this.props.children}</div>
     )
   }
 }

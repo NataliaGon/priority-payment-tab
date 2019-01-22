@@ -5,9 +5,28 @@
     position: relative;
 }
 
-.visible {
-    display: block;
+.hoverable {
+	&:hover {
+        cursor: pointer;
+    }
+}
+
+.invisible {
+    visibility: hidden
 }
 .large{
     font-size: 49px;
+}
+
+.standart {
+	&:before {
+        color: $grey;
+    }
+    &.hoverable {
+    	&:hover {
+	    	&:before {
+	    		color: $blue;
+	    	}
+	    }
+    }    
 }
