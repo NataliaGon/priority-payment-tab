@@ -26,7 +26,7 @@ clickHandler=()=>{
     render() {
         const inputComponent = (this.state.withInput) ? 
         
-        <Input skin="line" label="New Search">
+        <Input skin="line" placeholder="New Search">
         <div style={{display:"flex"}}>
         <button className={styles.iconDoneWrapper} onClick={this.clickHandler}>
           <Icon iconColor="white" icon={PriorityIcon.done} />

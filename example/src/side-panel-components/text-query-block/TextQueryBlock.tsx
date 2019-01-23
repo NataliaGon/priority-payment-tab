@@ -24,11 +24,7 @@ export class TextQueryBlock extends ComponentBase<TextQueryBlockBlockProperties,
                 </RowPanel>
                 <RowPanel paddingTop paddingBottom>
                   <Select options={optionDropDown} isBlue/>
-                  <Input skin="line" size="large">
-                   
-                    <Button shape="round" size="small" elevated={false} icon={PriorityIcon.done}/>
-                    <Icon icon={PriorityIcon.closeSmall}/>
-                  </Input>
+                 <AutoFill />
                 </RowPanel>
                 <WrapPanel>
                   <Tag text="test" />

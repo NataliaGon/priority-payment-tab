@@ -23,8 +23,12 @@
     &:focus {}
 }
 
+.fullWidth {
+    width: 100%;
+}
+
 .large {
-    width: $inputSizeLarge;
+    //width: $inputSizeLarge;
     height: 30px;
 
     .input {
@@ -34,6 +38,7 @@
 
 .input {
     outline: none;
+    border: none;
     width: 100%;
 }
 

@@ -13,18 +13,25 @@ import { Icon } from "../../Icon/Icon";
 import styles from "./Input.module.scss";
 
 type InputSkin ="box" | "line"
-type InputSize = "small" | "medium" | "large"
+type InputSize = "small" | "medium" | "large";
+type InputWidth = "regularFixed" | "fullWidth"
 
-class InputProperties extends ComponentBaseProperties {
+export class InputProperties extends ComponentBaseProperties {
     size?: any;
-    label?: string;
+    width?: InputWidth;
+    //label?: string;
     skin?:InputSkin="box";
-    onChange?:(value: string) => void
+    value?: string;
+    inputRef?(ref): void;
+    onChange?(value: string): void;
+    onFocus?(event): void;
+    onBlur?(event): void;
+    placeholder?: string;
 }
 
 interface InputState extends ComponentBaseState {
     isFocus?: boolean,
-    value?: string
+    //value?: string
 }
 
 export class Input extends ComponentBase<
@@ -32,57 +39,65 @@ export class Input extends ComponentBase<
     InputState
     > {
 
-    state: InputState = {
-        isFocus: false,
-        value: ""
+    static defaultProps = {
+        width: "regularFixed"
     }
 
-    textInput;
     constructor(props) {
         super(props);
-        this.state={ isFocus: false, value: this.props.text};
+        this.state={ isFocus: false };
+        console.log('constructor')
     }
 
-    componentDidMount(){
-        this.textInput.focus();
-    }
+    // componentDidMount(){
+    //     this.textInput.focus();
+    // }
 
-    componentDidUpdate() {
-        if(this.props.text !== this.state.value) {
-            this.setState({value : this.props.text});
-            this.textInput.focus();
-        }
-    }
+    // componentDidUpdate() {
+    //     if(this.props.text !== this.state.value) {
+    //         this.setState({value : this.props.text});
+    //         this.textInput.focus();
+    //     }
+    // }
 
     handleChange = (event) => {
-        this.setState({value: event.target.value});
-        this.props.onChange && this.props.onChange(event.target.value);
+        const { onChange } = this.props;
+        onChange && onChange(event);
     }
 
-    handlerFocus = () => {
-        this.setState({isFocus:!this.state.isFocus});
+    handlerFocus = (event) => {
+        const { onFocus } = this.props;
+         console.log('focus')
+        this.setState({isFocus: true});
+        onFocus && onFocus(event);
     }
 
-    handleOnBlur = () => {
-        this.setState({isFocus:!this.state.isFocus });
+    handleOnBlur = (event) => {
+        const { onBlur } = this.props;
+        console.log('blur')
+        this.setState({isFocus: false });
+        onBlur && onBlur(event);
     }
 
     public render() {
-        const hasBorder= this.state.isFocus ? styles.focusBorder : '';
-        const skinClass =(this.props.skin=="line") ? styles.line: '';
-        const componentClassNames = classNames(styles.component, styles[this.props.size], hasBorder ,this.props.componentClasses, skinClass);
-        const label = this.props.label ? this.props.label : '';
+        const { onBlur, onFocus, onChange, inputRef, skin, size, width = "fullWidth", children, componentClasses, ...restInputProps } = this.props;
+
+        const hasBorder= this.state.isFocus? styles.focusBorder : '';
+        const skinClass =(skin=="line")? styles.line: '';
+        const componentClassNames = classNames(styles.component, styles[size],styles[width], hasBorder ,componentClasses, skinClass);
+
+
         return (
             <div className={componentClassNames}>
-                <input ref={input => this.textInput = input}
-                        className={styles.input} 
-                        type="text" 
+                <input ref={inputRef}
+                        className={styles.input}
+                        type="text"
                         onBlur={this.handleOnBlur}
-                        onFocus={this.handlerFocus} 
+                        onFocus={this.handlerFocus}
                         onChange={this.handleChange}
-                        value={this.state.value}
+                        {...restInputProps}
                         />
-                {this.props.children}
+                {children}
             </div>
         )
     }
