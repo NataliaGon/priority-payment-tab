@@ -43,7 +43,7 @@
         @include linear-gradient(250deg, $blue, $lighter-blue);
     }
 
-    &:active {
+    &:active, &.active {
         background-color: $background-color-dark-grey;
         background-image: none;
 
@@ -67,12 +67,13 @@
         @include linear-gradient(250deg, $green, $light-green);
     }
 
-    &:active {
-        border: 1px solid #B2E4E0;
-        box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);
-        background-color: $white;
+    &:active, &.active {
+        background-color: $background-color-dark-grey;
+        background-image: none; 
 
-        @include linear-gradient(253deg, $green, $light-green);
+        &.elevated {
+            box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);	
+        }
     }
 }
 
@@ -85,11 +86,14 @@
         color: $white;
 
         @include linear-gradient(250deg, $blue, $lighter-blue);
+        border: none;
     }
 
-    &:active {
+    &:active, &.active {
         color: $white;
+        border-color: $background-color-dark-grey;
         background-color: $background-color-dark-grey;
+        background-image: none;
     }
 }
 
@@ -98,7 +102,7 @@
     border: solid 1px $light-gray-stroke;
     color: $grey;
 
-    .icon {
+    .suffixIcon {
         color: $blue;
     }
 
@@ -107,9 +111,14 @@
         color: $blue;
     }
 
-    &:active {
+    &:active, &.active {
+        border-color: $blue;
         background-color: $blue;
         color: $white;
+
+        .suffixIcon {
+            color: $white;
+        }
     }
 }
 
@@ -117,17 +126,17 @@
 
 .darkContainer {
     &.primary, &.secondary {
-        &:active {
+        &:active, &.active {
             border: 1px solid #B2E4E0;
             background-color: $white;
         }
     }
 
-    &.primary:active {
+    &.primary:active, &.active {
         background-image: linear-gradient(250deg, #00adee, rgba(0, 173, 238, 0.7));
     }
 
-    &.secondary:active {
+    &.secondary:active, &.active {
         background-image: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8));
     }
 
@@ -141,7 +150,7 @@
             box-shadow: 0 5px 15px 0 $boxShadow-brown;
         }
 
-        &:active {
+        &:active, &.active {
             background: $white;
             color: $blue;
             box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
@@ -211,7 +220,7 @@
         min-width: 20px;
     }
 
-    .icon {
+    .prefixIcon, .suffixIcon {
         @include priority-icon($priority-icon-size-small);
     }
 }
@@ -249,6 +258,10 @@
 
 // icon
 
-.title .icon {
+.title .prefixIcon {
     @include margin-horizontal(0, 7px);
+}
+
+.title .suffixIcon {
+    @include margin-horizontal(7px, 0);
 }

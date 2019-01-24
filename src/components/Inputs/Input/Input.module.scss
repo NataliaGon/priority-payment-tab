@@ -27,20 +27,34 @@
 
 .large {
     //width: $inputSizeLarge;
-    height: 30px;
-    // border: 1px solid $input-border-grey;
-    // border-radius: $input-border-radius;
-    // box-sizing: border-box;
+    height: 40px;
 
-    .input {
-        font-size: $font-size-medium;
+    &.line {
+        .input {
+            font-size: 2.2rem;
+        }
     }
+    
 }
 
 .input {
     width: 100%;
     outline: none;
     border: none;
+    width: 100%;
+
+    &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+        @include input-placeholder;
+    }
+    &::-moz-placeholder { /* Firefox 19+ */
+        @include input-placeholder;
+    }
+    &:-ms-input-placeholder { /* IE 10+ */
+        @include input-placeholder;
+    }
+    &:-moz-placeholder { /* Firefox 18- */
+        @include input-placeholder;
+    }
 }
 
 .medium {

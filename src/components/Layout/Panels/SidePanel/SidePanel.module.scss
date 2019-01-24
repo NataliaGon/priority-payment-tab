@@ -13,6 +13,7 @@
 
 .component {
     position: fixed;
+    z-index: 1000002;
     bottom: 0;
     width: 620px;
     height: calc(100% - 46px);
@@ -96,7 +97,7 @@
 
         .opacity {
             opacity: 0;
-            transition: opacity 0.3s;
+            transition: opacity 0.2s;
         }
 
         &.wide {

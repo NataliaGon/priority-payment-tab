@@ -26,10 +26,16 @@
     }
 
     &.hoverable {
-        &:hover {
-            &:before {
-                color: $blue;
-            }
+    	&:hover {
+	    	&:before {
+	    		color: $blue;
+	    	}
+	    }
+    }
+
+    &.active {
+        &:before {
+            color: $blue;
         }
     }
 }

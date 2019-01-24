@@ -12,6 +12,11 @@
     font-size: $size;
 }
 
+@mixin input-placeholder {
+    color: $grey;
+    font-style: italic;
+}
+
 // rtl
 
 $include-rtl: true !default;
