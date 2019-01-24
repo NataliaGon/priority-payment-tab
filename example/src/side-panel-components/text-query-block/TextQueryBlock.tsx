@@ -19,7 +19,7 @@ export class TextQueryBlock extends ComponentBase<TextQueryBlockBlockProperties,
           <Container roundConer > 
           <div className={stylesMain.rowPanel}>
                   <div style={{marginLeft:"-10px"}}>
-                  <Label size="regular-hight-contrast">Customer No.</Label>
+                  <Label skin="regular-hight-contrast">Customer No.</Label>
                   </div>
                 </div>
                 <div className={stylesMain.rowPanel} style={{paddingBottom:"10px", paddingTop:"10px" }}>

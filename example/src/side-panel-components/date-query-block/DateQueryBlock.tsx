@@ -7,9 +7,8 @@ import {
   PriorityIcon
 } from "priority-style-react";
 import {
-  StackPanel,
+  SwitchExample,
   Container,
-  RowPanel,
   Label,
   Input,
   Select,
@@ -33,7 +32,7 @@ export class DateQueryBlock extends ComponentBase<
       <div className={stylesMain.stackPanel}>
         <Container roundConer>
           <div className={stylesMain.rowPanel} style={{ marginLeft: "-10px" }}>
-            <Label size="regular-hight-contrast">Due Date</Label>
+            <Label skin="regular-hight-contrast">Due Date</Label>
           </div>
           <div
             className={stylesMain.rowPanel}
@@ -67,6 +66,7 @@ export class DateQueryBlock extends ComponentBase<
             className={stylesMain.rowPanel}
             style={{ justifyContent: "flex-end" }}
           >
+          <SwitchExample/>
             <Label>Sort</Label>
           </div>
         </Container>

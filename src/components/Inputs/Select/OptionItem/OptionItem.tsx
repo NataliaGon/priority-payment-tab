@@ -28,7 +28,7 @@ export class OptionItem extends ComponentBase<OptionItemProperties, OptionItemSt
     return (
       <li className={elementClasses} onClick={this.props.onClick}>
         <Icon icon={PriorityIcon.operatorSearchBetween} iconColor={this.props.isBlue ? "blue" : "grey"} />
-        <Label textColor={this.props.isBlue ? "blue" : "grey"}  size="regular">{this.props.children}</Label>
+        <Label textColor={this.props.isBlue ? "blue" : "grey"} skin="regular">{this.props.children}</Label>
         {/* {this.props.displayValue ? <Label size="small">{this.props.value}</Label> : ""} */}
       </li>
     );

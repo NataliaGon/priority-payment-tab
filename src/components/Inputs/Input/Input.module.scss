@@ -72,6 +72,9 @@
   position: absolute;
   left: 62px;
   background: transparent;
+  @include rtl{
+    right: 25px;
+  }
 
   .input {
     background: $silver;
