@@ -7,20 +7,23 @@
   font-weight: $font-weight-regular;
   display: flex;
   background: $white;
-  padding-left: 10px;
   height: 30px;
   border: 1px solid $input-border-grey;
   border-radius: $input-border-radius;
   box-sizing: border-box;
-  @include rtl{
-    @include padding-horizontal(0, 10px);
-  }
+  
+  @include padding-horizontal(0, 10px);
+  
 
   &:hover {
   }
 
   &:focus {
   }
+}
+
+.fullWidth {
+    width: 100%;
 }
 
 .large {
@@ -34,6 +37,7 @@
   width: 80%;
   outline: none;
 }
+
 .medium {
   width: $inputSizeMedium;
 }

@@ -1,7 +1,6 @@
 @import "../../../styles/vars";
-
-.component {
-    width: 356px;
+.component{
+    width:356px;
     height: 30px;
 
     @include border($input-border-grey);
@@ -104,7 +103,7 @@
     }
 }
 
-.itemLabel {
+.itemLabel { //ToDo:replace with mixin
     margin-left: 10px;
 
     @include rtl {

@@ -1,7 +1,15 @@
+@import './vars';
+
 // mixins
 
 @mixin border($color) {
     border: 1px solid $color;
+}
+
+@mixin priority-icon($size: $priority-icon-size) {
+    width: $size;
+    height: $size;
+    font-size: $size;
 }
 
 // rtl

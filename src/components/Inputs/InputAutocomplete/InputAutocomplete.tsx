@@ -7,8 +7,10 @@ import {
 } from "../../../core";
 import {Icon} from "../../Icon/Icon"
 import styles from "./InputAutocomplete.module.scss";
-import {CheckBox} from "../CheckBox/CheckBox"
+import {CheckBox} from "../CheckBox/CheckBox";
+import {Input} from "../Input/Input";
 import { Button } from "../Button/Button";
+import { ScrollPanel } from '../../Layout/Panels/ScrollPanel/ScrollPanel';
 import { isDeepStrictEqual } from "util";
 
 class InputAutoProperties extends ComponentBaseProperties {
@@ -40,26 +42,27 @@ export class AutoFill extends ComponentBase<InputAutoProperties> {
     const Autocomplete = require("react-autocomplete") as any;
 
     const menuStyle: any = {
-      borderRadius: '3px',
+      //borderRadius: '3px',
       background: 'rgba(255, 255, 255)',
       padding: '44px 5px 5px',
-      fontSize: '90%',
-      overflow: 'auto',
+      //fontSize: '90%',
+      //overflow: 'auto',
       height: 'auto',
-      position: 'absolute',
-      left: '-5px',
-      top: '-5px',
-      zIndex: '5',
+      maxHeight: '200px',
+      //position: 'absolute',
+      //left: '-5px',
+      //top: '-5px',
+      //zIndex: '5',
       boxSizing: 'content-box',
       boxShadow: '0 10px 20px 0 rgba(0, 0, 0, 0.2)'
     }
   const checkBox = (this.props.isMultiselect)? <CheckBox />:'';
   
     return (
-      <div className={styles.component}>
+    
         <Autocomplete
           className={styles.inputComponent}
-
+          //open={true}
           items={[
             { id: 'foo', label: 'foo', btn:'Apply' },
             { id: 'bar', label: 'bar', icon:'done' },
@@ -77,7 +80,7 @@ export class AutoFill extends ComponentBase<InputAutoProperties> {
 
           renderItem={(item: any, highlighted: any) =>
          
-            <div className={styles.item} key={item.id} style={{ backgroundColor: highlighted ? 'transparent' : 'transparent' }}>
+            <div className={styles.item} key={item.id} style={{ backgroundColor: highlighted ? 'lightblue' : 'white' }}>
               {checkBox}
               <span className={styles.itemLabel}>{item.label}</span>
               <span className={styles.itemButton}> {this.isButton(item.btn)}</span>
@@ -86,19 +89,21 @@ export class AutoFill extends ComponentBase<InputAutoProperties> {
           }
 
           renderMenu={(items: any) =>
-            <div style={menuStyle} children={items} />
+            <div style={menuStyle}>
+        
+            {items}
+                        </div>
           }
+
+          renderInput={({ref, ...props}) => {
+            console.log(props);
+            return <Input inputRef={ref} {...props}><Icon icon={PriorityIcon.closeSmall} /></Input>
+          }}
 
           value={this.state.value}
           onChange={(e: any) => this.setState({ value: e.target.value })}
           onSelect={(value: any) => this.setState({ value })}
         />
-        <div className={styles.btnIconWrapper}>
-     
-        <Icon icon={PriorityIcon.closeSmall} textSize="large" />
-        </div>
-        
-      </div>
     );
   }
 }

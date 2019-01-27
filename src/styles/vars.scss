@@ -62,16 +62,5 @@ $inputSizeLarge: 360px;
 // End Inputs
 
 // Icons
-$priority-icon-width: 2.4rem;
-$priority-icon-height: 2.4rem;
-$priority-icon-font-size: 2.4rem;
-
-@mixin priority-icon {
-    width: $priority-icon-width;
-    height: $priority-icon-height;
-    font-size: $priority-icon-font-size;
-}
-
-// End Icons
-
-@import "./mixins";
+$priority-icon-size: 2.4rem;
+$priority-icon-size-small: 1.6rem;

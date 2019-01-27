@@ -32,7 +32,10 @@
 .primary {
     background: $blue;
     color: $white;
-    box-shadow: 0 5px 15px 0 $boxShadow-brown;
+
+    &.elevated {
+        box-shadow: 0 5px 15px 0 $boxShadow-brown;
+    }
 
     &:hover {
         background-color: $white;
@@ -41,22 +44,29 @@
 
     &:active {
         background-color: $background-color-dark-grey;
+        background-image: none;
+
+        &.elevated {
+            box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);
+        }
     }
 }
 
 .secondary {
     background: $green;
     color: $white;
-    box-shadow: 0 5px 15px 0 $boxShadow-brown;
+
+    &.elevated {
+        box-shadow: 0 5px 15px 0 $boxShadow-brown;
+    }
 
     &:hover {
         background-color: $white;
         @include linear-gradient(250deg, $green, $light-green);
     }
-
-    &:active {
+    &:active{
         border: 1px solid #B2E4E0;
-        box-shadow: $tag-box-shadow;
+        box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);
         background-color: $white;
         @include linear-gradient(253deg, $green, $light-green);
     }
@@ -103,8 +113,17 @@
 .darkContainer {
     &.primary, &.secondary {
         &:active {
-            border: 1px solid $white;
+            border: 1px solid #B2E4E0;
+            background-color: $white;
         }
+    }
+
+    &.primary:active {
+        background-image: linear-gradient(250deg, #00adee, rgba(0, 173, 238, 0.7));
+    }
+
+    &.secondary:active {
+        background-image: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8));
     }
 
     &.stroke, &.strokeLight {
@@ -185,6 +204,10 @@
     &.square, &.round {
         width: 20px;
         min-width: 20px;
+    }
+
+    .icon {
+        @include priority-icon($priority-icon-size-small);
     }
 }
 

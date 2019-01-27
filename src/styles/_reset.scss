@@ -7,3 +7,14 @@
     font-stretch: normal;
     letter-spacing: normal;
 }
+
+@mixin reset-css($reset-selector: null) {
+    @if $is-reset-css == true {
+        @include reset('*')
+    }
+    @else if $reset-selector != null {
+        @include reset($reset-selector);
+    }
+}
+
+@include reset-css();

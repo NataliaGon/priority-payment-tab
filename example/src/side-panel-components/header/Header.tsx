@@ -11,40 +11,21 @@ interface HeaderBlockProperties extends ComponentBaseProperties {
   withInput: any
 }
 
-// interface HeaderBlockState extends ComponentBaseState {
-//   withInput: boolean
-// }
-
-export function Header (props:HeaderBlockProperties) {
-  // state {
-  //   withInput: false
-  // }
-  function clickHandler (){
-    // this.setState({ withInput: !this.state.withInput });
-  }
 
 
     const inputComponent = (props.withInput) ?
 
-      // <Input skin="line" label="New Search">
-      //   <div style={{ display: "flex" }}>
-      //     <button className={styles.iconDoneWrapper} onClick={this.clickHandler}>
-      //       <Icon iconColor="white" icon={PriorityIcon.done} />
-      //     </button>
-      //     <button onClick={this.clickHandler}>
-      //       <Icon icon={PriorityIcon.closeSmall} />
-      //     </button>
-      //   </div>
-      // </Input>
-
-      <Input skin="line" label="חיפוש חדש">
-        <div style={{ display: "flex" }}>
-          <button className={styles.iconDoneWrapper} onClick={clickHandler}>
-            <Icon iconColor="white" icon={PriorityIcon.done} />
-          </button>
-          <button onClick={clickHandler} >
-            <Icon icon={PriorityIcon.closeSmall} />
-          </button>
+    render() {
+        const inputComponent = (this.state.withInput) ? 
+        
+        <Input skin="line" label="New Search">
+        <div style={{display:"flex"}}>
+        <button className={styles.iconDoneWrapper} onClick={this.clickHandler}>
+          <Icon iconColor="white" icon={PriorityIcon.done} />
+        </button>
+        <button onClick={this.clickHandler}>
+        <Icon icon={PriorityIcon.closeSmall} />
+        </button>
         </div>
       </Input>
 
@@ -63,14 +44,12 @@ export function Header (props:HeaderBlockProperties) {
           </div>
           <div className={stylesMain.rowPanel} >
             <div className={styles.secondRowWrapper} >
-              {/* <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon> */}
               <div onClick={clickHandler}>
                 {labelComponent}
               </div>
             </div>
             {inputComponent}
             <div style={{ display: "flex" }}>
-              {/* <Icon icon={PriorityIcon.questionCircle}></Icon> */}
               <Label icon={PriorityIcon.questionCircle} textHref="#">Help</Label>
             </div>
           </div>
