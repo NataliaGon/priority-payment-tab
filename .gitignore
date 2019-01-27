@@ -1,4 +1,5 @@
-
+.vscosde
+.idea
 node_modules
 dist
 example/node_modules/
