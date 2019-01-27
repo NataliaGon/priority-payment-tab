@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from 'classnames';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon, TextColor } from "../../core";
+import { ComponentBaseProperties,  PriorityIcon, TextColor } from "../../core";
 import styles from "./Icon.module.scss";
 import IconCounter from "./IconCounter/IconCounter";
 
@@ -14,34 +14,16 @@ interface IconProperties extends ComponentBaseProperties {
   onClick?: () => void;
 }
 
-interface IconState extends ComponentBaseState {
 
-}
+export  function Icon (props:IconProperties) {
 
-export class Icon extends ComponentBase<IconProperties, IconState> {
 
-  constructor(properties: IconProperties, state: IconState) {
-    super(properties, state);
-
-    if (this.props.counterValue) {
-      this.setState({ counterValue: this.props.counterValue });
-    }
-  }
-
-  static defaultProps = {
-    visibility: false,
-    position: false
-  };
-
-  public render() {
-
-    const iconVisibilityClass = this.props.visible ? styles.visible : '';
-    const iconColorClass = this.props.iconColor ? "text-color-" + this.props.iconColor : "";//default "text-color-grey" ?
-    const iconClass = classNames(styles.component, this.props.icon, this.props.componentClasses, iconColorClass, iconVisibilityClass, this.props.textSize);
-    const iconCounter = this.props.counterValue ? <IconCounter count={this.props.counterValue} /> : null;
+    const iconVisibilityClass = props.visible ? styles.visible : '';
+    const iconColorClass = props.iconColor ? "text-color-" + props.iconColor : "";//default "text-color-grey" ?
+    const iconClass = classNames(styles.component, props.icon, props.componentClasses, iconColorClass, iconVisibilityClass, props.textSize);
+    const iconCounter = props.counterValue ? <IconCounter count={props.counterValue} /> : null;
 
     return (
       <div className={iconClass}>{iconCounter}</div>
     )
   }
-}

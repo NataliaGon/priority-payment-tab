@@ -1,30 +1,30 @@
 import * as React from "react";
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from 'priority-style-react';
+import { ComponentBaseProperties,ComponentBase, PriorityIcon } from 'priority-style-react';
 import { StackPanel, RowPanel, Label, Input, Icon, Title, Button } from 'priority-style-react';
 
 import styles from './Header.module.scss';
 import stylesMain from '../../AppStyles.module.scss';
 
 
-class HeaderBlockProperties extends ComponentBaseProperties {
-
+interface HeaderBlockProperties extends ComponentBaseProperties {
+  withInput: any
 }
 
-interface HeaderBlockState extends ComponentBaseState {
-  withInput: boolean
-}
+// interface HeaderBlockState extends ComponentBaseState {
+//   withInput: boolean
+// }
 
-export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockState> {
-  state: HeaderBlockState = {
-    withInput: false
-  }
-  clickHandler = () => {
-    this.setState({ withInput: !this.state.withInput });
+export function Header (props:HeaderBlockProperties) {
+  // state {
+  //   withInput: false
+  // }
+  function clickHandler (){
+    // this.setState({ withInput: !this.state.withInput });
   }
 
-  render() {
-    const inputComponent = (this.state.withInput) ?
+
+    const inputComponent = (props.withInput) ?
 
       // <Input skin="line" label="New Search">
       //   <div style={{ display: "flex" }}>
@@ -39,10 +39,10 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
 
       <Input skin="line" label="חיפוש חדש">
         <div style={{ display: "flex" }}>
-          <button className={styles.iconDoneWrapper} onClick={this.clickHandler}>
+          <button className={styles.iconDoneWrapper} onClick={clickHandler}>
             <Icon iconColor="white" icon={PriorityIcon.done} />
           </button>
-          <button onClick={this.clickHandler} >
+          <button onClick={clickHandler} >
             <Icon icon={PriorityIcon.closeSmall} />
           </button>
         </div>
@@ -51,7 +51,7 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
       : '';
 
     // const labelComponent = (this.state.withInput) ? '' : <Label icon={PriorityIcon.filterBig} iconCounter={5} skin="large">New Search</Label>;
-    const labelComponent = (this.state.withInput) ? '' : <Label icon={PriorityIcon.filterBig} iconCounter={5} skin="large">חיפוש חדש</Label>;
+    const labelComponent = (props.withInput) ? '' : <Label icon={PriorityIcon.filterBig} iconCounter={5} skin="large">חיפוש חדש</Label>;
     
     return (
       <div className={stylesMain.stackPanel} style={{backgroundColor:"#ebedee", border:"1px solid #e2eaf1"}}>
@@ -64,7 +64,7 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
           <div className={stylesMain.rowPanel} >
             <div className={styles.secondRowWrapper} >
               {/* <Icon icon={PriorityIcon.filterBig} counterValue={5}></Icon> */}
-              <div onClick={this.clickHandler}>
+              <div onClick={clickHandler}>
                 {labelComponent}
               </div>
             </div>
@@ -79,4 +79,4 @@ export class Header extends ComponentBase<HeaderBlockProperties, HeaderBlockStat
       </div>
     )
   }
-}
+

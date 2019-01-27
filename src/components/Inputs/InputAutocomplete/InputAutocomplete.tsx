@@ -3,7 +3,6 @@ import classNames from "classnames";
 
 import {
   ComponentBaseProperties,
-  ComponentBaseState,
   ComponentBase, PriorityIcon
 } from "../../../core";
 import {Icon} from "../../Icon/Icon"
@@ -16,13 +15,11 @@ class InputAutoProperties extends ComponentBaseProperties {
  isMultiselect?:boolean
 }
 
-interface InputAutoState extends ComponentBaseState {
-  value?: any;
-}
 
-export class AutoFill extends ComponentBase<InputAutoProperties, InputAutoState> {
 
-  state: InputAutoState = {
+export class AutoFill extends ComponentBase<InputAutoProperties> {
+
+  state = {
     value: "bar"
   }
   isButton(button){

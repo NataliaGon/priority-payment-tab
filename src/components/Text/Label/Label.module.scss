@@ -7,17 +7,16 @@
     align-items: center;
     font-size: $font-size-regular;
     color: $grey;
-    padding: 0 1rem;
+
+    @include padding-horizontal(1rem, null);
+
     @include rtl {
         font-family: $font-family-main-hebrew;
     }
- &div[class^="icon-"], div[class*=" icon-"] {
-        padding-right: 3rem;
-    
-        @include rtl {
-            padding-right: 0;
-            padding-left: 3rem;
-        }
+
+
+    div[class^="Icon-module"] {
+        @include margin-horizontal(1rem, null);
     }
 }
 
@@ -49,7 +48,6 @@
 .small {
     font-size: $font-size-small;
     color: $black;
-
 }
 
 .darkTheme {

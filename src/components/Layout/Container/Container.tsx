@@ -1,9 +1,7 @@
 import * as React from "react";
-import classNames from 'classnames';
-
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from "../../../core";
+import { ComponentBaseProperties,  ComponentBase, PriorityIcon } from "../../../core";
 import { Icon } from '../../Icon/Icon';
-
+import { Draggable } from '../Draggable/Draggable';
 import styles from "./Container.module.scss";
 
 
@@ -13,35 +11,32 @@ type ContainerPanelSkin = "default" | "silver" | "light" | "dark" | "snow";
 class ContainerProperties extends ComponentBaseProperties {
   skin?: ContainerPanelSkin;
   roundConer?: boolean;
+  disabled?: boolean;
+  activeHover?: boolean;
+  activeClick?: boolean;
 }
 
-interface ContainerState extends ComponentBaseState {
-  active?: boolean;
-}
 
-export class Container extends ComponentBase<ContainerProperties, ContainerState> {
 
-  state: ContainerState = {
-    active: false
+export class Container extends ComponentBase<ContainerProperties> {
+
+ 
+  clickHandler = () => {
+    
   }
-
-
-  ClickHandler = () => {
-    this.setState({ active: !this.state.active });
+  hoverHandler = () => {
+   
   }
   public render() {
-
     let classNames = require('classnames/bind');
     let cx = classNames.bind(styles);
-    const componentClassNames = cx('component', { 'active': this.state.active }, { 'roundConer': this.props.roundConer });
-    const iconCloseClassNames = cx('closeContainerIcon', { 'displayBlock': this.state.active });
-    const iconDraggableClassNames = cx('dragIcon', { 'displayBlock': this.state.active });
-
+    const componentClassNames = cx('component', { 'active': this.props.activeClick || this.props.activeHover }, { 'roundConer': this.props.roundConer });
+    const iconCloseClassNames = cx('closeContainerIcon', { 'displayBlock': this.props.activeClick || this.props.activeHover});
 
     return (
-      <div className={componentClassNames} onClick={this.ClickHandler}>
+      <div className={componentClassNames} onClick={this.clickHandler} onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverHandler}>
         <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} />
-        <Icon icon={PriorityIcon.iconReorder} componentClasses={iconDraggableClassNames} iconColor="blue" />
+        <Draggable activeHover={this.props.activeHover} activeClick={this.props.activeClick} />
         {this.props.children}
       </div>
     );

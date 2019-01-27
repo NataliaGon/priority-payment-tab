@@ -1,6 +1,6 @@
 import * as React from "react";
 import classNames from 'classnames';
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, ComponentBaseSkin } from "../../../core";
+import { ComponentBaseProperties,  ComponentBase, ComponentBaseSkin } from "../../../core";
 import { PriorityIcon } from "../../../core";
 import { Icon } from "../../Icon";
 
@@ -22,9 +22,7 @@ interface ButtonProperties extends ComponentBaseProperties {
   onClick?: () => void;
 }
 
-interface ButtonState extends ComponentBaseState {
 
-}
 
 const defaultButtonProperties: ButtonProperties = {
   skin: "primary",
@@ -33,7 +31,7 @@ const defaultButtonProperties: ButtonProperties = {
   size: "medium"
 }
 
-export class Button extends ComponentBase<ButtonProperties, ButtonState> {
+export class Button extends ComponentBase<ButtonProperties> {
 
   static defaultProps = defaultButtonProperties;
 

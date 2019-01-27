@@ -23,7 +23,7 @@ class App extends Component {
         <SidePanel ref={p => this.panelRef = p}>
           <ScrollPanel>
             <div>
-            <Header />
+            <Header withInput />
             <div className={stylesMain.stackPanel}>
             <div className={stylesMain.rowPanel} style={{paddingBottom:"10px", paddingTop:"10px", alignItems:"space-between" }}>
                 <div style={{ display: "flex" }}>

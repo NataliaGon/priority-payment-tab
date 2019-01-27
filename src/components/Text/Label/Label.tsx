@@ -3,7 +3,6 @@ import classNames from "classnames";
 
 import {
   ComponentBaseProperties,
-  ComponentBaseState,
   ComponentBase,
   PriorityIcon
 } from "../../../core";
@@ -27,9 +26,7 @@ interface LabelProperties extends ComponentBaseProperties {
   textHref?: string;
 }
 
-interface LabelState extends ComponentBaseState {}
-
-export class Label extends ComponentBase<LabelProperties, LabelState> {
+export class Label extends ComponentBase<LabelProperties> {
   private renderIcon() {
     if (this.props.icon) {
       return (
@@ -46,8 +43,8 @@ export class Label extends ComponentBase<LabelProperties, LabelState> {
         {this.props.text ? this.props.text : this.props.children}
       </a>
     ) : (
-      <span>{this.props.text ? this.props.text : this.props.children}</span>
-    );
+        <span>{this.props.text ? this.props.text : this.props.children}</span>
+      );
   }
   public render() {
     let classNames = require("classnames/bind");
@@ -60,7 +57,7 @@ export class Label extends ComponentBase<LabelProperties, LabelState> {
 
     return (
       <div className={elementClasses}>
-        {this.renderIcon()} {this.renderLabelText()}
+        {this.renderLabelText()} {this.renderIcon()}
       </div>
     );
   }

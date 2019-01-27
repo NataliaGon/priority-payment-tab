@@ -1,22 +1,12 @@
 import * as React from 'react';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, PriorityIcon } from 'priority-style-react';
+import { ComponentBaseProperties,  ComponentBase, PriorityIcon } from 'priority-style-react';
 import { Label, Icon, Button, StackPanel,  RowPanel, WrapPanel } from 'priority-style-react';
 import styles from "./FooterBlock.module.scss";
 
 
 
-interface FooterBlockProperties extends ComponentBaseProperties {
-
-}
-
-interface FooterBlockState extends ComponentBaseState {
-
-}
-
-export class FooterBlock extends ComponentBase<FooterBlockProperties, FooterBlockState> {
-
-    render() {
+export function FooterBlock(){
         return (
             <div className={styles.component}>
                 <StackPanel skin="dark" >
@@ -37,4 +27,4 @@ export class FooterBlock extends ComponentBase<FooterBlockProperties, FooterBloc
             </div>
         )
     }
-}
+

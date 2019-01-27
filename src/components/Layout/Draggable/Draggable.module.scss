@@ -1,0 +1,7 @@
+@import "../../../styles/vars";
+.component{
+    display: none;
+    position: absolute;
+    top: 20%; 
+    @include position-horizontal(-12px );
+}

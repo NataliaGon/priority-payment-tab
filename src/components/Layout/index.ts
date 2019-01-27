@@ -4,3 +4,4 @@ export * from './Panels/RowPanel/RowPanel';
 export * from './Panels/ScrollPanel/ScrollPanel';
 export * from './Panels/SidePanel/SidePanel';
 export * from './Container/Container';
+export * from './Draggable/Draggable';

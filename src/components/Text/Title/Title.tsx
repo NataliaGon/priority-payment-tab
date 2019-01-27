@@ -1,27 +1,17 @@
 import * as React from "react";
-import classNames from 'classnames';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../core";
+
+import { ComponentBaseProperties} from "../../../core";
 
 import styles from "./Title.module.scss";
 
 interface TitleProperties extends ComponentBaseProperties {
-
+children:any;
 }
 
-interface TitleState extends ComponentBaseState {
 
-}
-
-export class Title extends ComponentBase<TitleProperties, TitleState> {
-
-
-
-  public render() {
- 
-
+export function Title(props:TitleProperties) {
     return (
-      <h1 className={styles.component}>{this.props.text ? this.props.text : this.props.children}</h1>
+      <h1 className={styles.component}>{props.text ? props.text : props.children}</h1>
     );
   }
-}

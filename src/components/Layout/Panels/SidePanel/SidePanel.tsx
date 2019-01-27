@@ -2,13 +2,10 @@ import * as React from 'react';
 import { CSSTransition } from 'react-transition-group';
 import classNames from 'classnames';
 
-import { ComponentBaseState, ComponentAnimatedProperties, ComponentBase, keyCodes } from '../../../../core';
+import {  ComponentAnimatedProperties, ComponentBase, keyCodes } from '../../../../core';
 
 import styles from './SidePanel.module.scss';
 
-interface SidePanelState extends ComponentBaseState {
-	open: boolean
-}
 
 interface SidePanelProperties extends ComponentAnimatedProperties {
 	onOpen?(): boolean,
@@ -23,7 +20,7 @@ export interface InjectedSidePanelProps {
 	hidePanel(): void
 }
 
-export class SidePanel extends ComponentBase<SidePanelProperties, SidePanelState> {
+export class SidePanel extends ComponentBase<SidePanelProperties> {
 
 	focusRef: {
 		focus: () => void;

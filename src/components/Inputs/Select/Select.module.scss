@@ -1,45 +1,50 @@
 @import "../../../styles/vars.scss";
-.component{
+
+.component {
     position: relative;
 }
+
 .input {
     height: 30px;
     border-radius: $input-border-radius;
+
     @include border($input-border-grey);
+
     z-index: 3;
     position: absolute;
     box-sizing: border-box;
-    &:hover{
+
+    &:hover {
         border-color: $blue;
     }
 }
 
-.allOptionsBlock{
+.allOptionsBlock {
     position: absolute;
     background: $white;
-    z-index:50;
-    display:none;
+    z-index: 50;
+    display: none;
     box-shadow: 0 10px 20px 0 $boxShadow-brown-dark;
-    border-bottom-left-radius:$input-border-radius;
-    border-bottom-right-radius:$input-border-radius;
+    border-bottom-left-radius: $input-border-radius;
+    border-bottom-right-radius: $input-border-radius;
     padding: 0px 5px;
-    box-sizing: content-box!important;
-    margin-left: -5px;
-    @include rtl{
-        @include margin-horizontal(-5px);
+    box-sizing: content-box !important;
+
+    @include margin-horizontal(-5px);
+
+    li:first-child {
+        margin: 10px 0 5px;
     }
-    li:first-child{
-        margin:10px 0 5px;
-    }
-    li{
+
+    li {
         height: 30px;
         line-height: 30px;
         margin: 5px 0;
+
         &:hover {
-        background-color: $background-color-blue;
-        border-radius: $input-border-radius
+            background-color: $background-color-blue;
+            border-radius: $input-border-radius;
         }
-    
     }
 }
 
@@ -47,53 +52,64 @@
     position: absolute;
     top: 2px;
     right: 0;
+
     @include rtl {
         left: 0;
         right: auto;
     }
 }
-.firstOptionBlock{
+
+.firstOptionBlock {
     background: $white;
     height: 30px;
     display: flex;
     align-items: center;
     border-radius: $input-border-radius;
 }
-.firstOptionBlockActive{
+
+.firstOptionBlockActive {
     box-shadow: 0 10px 20px 0 $boxShadow-brown-dark;
     padding: 5px 5px 0;
-    box-sizing: content-box!important;
+    box-sizing: content-box !important;
     margin-left: -5px;
     margin-top: -5px;
-    border-top-left-radius:$input-border-radius;
-    border-top-right-radius:$input-border-radius;
-    border-bottom-left-radius:0;
-    border-bottom-right-radius:0;
-    @include rtl{
+    border-top-left-radius: $input-border-radius;
+    border-top-right-radius: $input-border-radius;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    @include rtl {
         @include margin-horizontal(-5px);
     }
 }
 
-.display{
+.display {
     display: flex;
     flex-direction: column;
 }
+
 .active {
-    color:$blue;
+    color: $blue;
 }
+
 .borderColorBlue {
     border: 1px solid $blue;
 }
-.small{
-    width:$inputSizeSmall;
+
+.small {
+    width: $inputSizeSmall;
+
     // height: 30px;
 }
-.medium{
-    width:$inputSizeMedium;
+
+.medium {
+    width: $inputSizeMedium;
 }
-.large{
-    width:$inputSizeLarge;
+
+.large {
+    width: $inputSizeLarge;
 }
+
 // .minWidthSmall{
 //     min-width:$inputSizeSmall;
 // }
@@ -103,10 +119,10 @@
 // .minWidthLarge{
 //     min-width:$inputSizeLarge;
 // }
-.height{
+.height {
     height: 30px;
-
 }
-.heightAuto{
+
+.heightAuto {
     height: auto;
 }

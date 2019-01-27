@@ -21,12 +21,12 @@ export class ComponentBaseProperties {
     draggable?: boolean;
 }
 
-export class ComponentBaseState {
-}
+// export class ComponentBaseState {
+// }
 
-export class ComponentBase<ComponentBaseProperties, ComponentBaseState> extends React.Component<ComponentBaseProperties, ComponentBaseState, any> {
+export class ComponentBase<ComponentBaseProperties> extends React.Component<ComponentBaseProperties, any> {
 
-    constructor(properties: ComponentBaseProperties, state?: ComponentBaseState) {
+    constructor(properties: ComponentBaseProperties, state?: any) {
         super(properties, state);
     }
 
@@ -43,4 +43,8 @@ export class ComponentAnimatedProperties extends ComponentBaseProperties {
     transitionName?: string;
     transitionEnterTimeout?: number;
     transitionLeaveTimeout?: number;
+}
+
+export class ActiveProperty{
+    active?:boolean
 }
