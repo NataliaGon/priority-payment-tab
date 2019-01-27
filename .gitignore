@@ -1,5 +1,5 @@
-/.vscode/
-/node_modules/
-/dist/
-/example/node_modules/
-/example/build/
+
+node_modules
+dist
+example/node_modules/
+example/build/
