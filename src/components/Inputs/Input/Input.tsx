@@ -1,8 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { ComponentBaseProperties, PriorityIcon } from '../../../core';
-import { Icon } from '../../Icon/Icon';
+import { ComponentBaseProperties } from '../../../core';
 import styles from './Input.module.scss';
 
 type InputSkin = "box" | "line"
@@ -15,7 +14,6 @@ export class InputProperties extends ComponentBaseProperties {
     skin?: InputSkin = "box";
     value?: string;
     placeholder?: string;
-    clearable?: boolean;
     inputRef?(ref): void;
     onChange?(value: string): void;
     onFocus?(event): void;
@@ -53,9 +51,6 @@ export class Input extends React.Component<InputProperties, InputState> {
         const hasBorder = (this.state && this.state.isFocus) ? styles.focusBorder : '';
         const skinClass = (skin == "line") ? styles.line : '';
         const componentClassNames = classNames(styles.component, styles[size], styles[width], hasBorder, componentClasses, skinClass);
-
-        const clearIcon = this.props.clearable ? <Icon icon={PriorityIcon.closeSmall} iconColor="grey" /> : '';
-        const placeholder = this.props.placeholder ? this.props.placeholder : '';
 
         return (
             <div className={componentClassNames}>

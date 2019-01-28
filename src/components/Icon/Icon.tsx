@@ -17,11 +17,13 @@ interface IconProperties extends ComponentBaseProperties {
   skin?: IconSkin;
 }
 
-export const Icon = (props) => {
+export const Icon = function (props: IconProperties | any) {
 
   const iconVisibilityClass = props.invisible ? styles.invisible : '';
+  const skinClass = props.skin && styles[props.skin];
+  const hoverClass = props.onClick && styles.hoverable;
   const iconColorClass = props.iconColor ? "text-color-" + props.iconColor : "";
-  const iconClass = classNames(styles.component, props.icon, props.componentClasses, iconColorClass, iconVisibilityClass, props.textSize);
+  const iconClass = classNames(styles.component, props.icon, props.componentClasses, iconColorClass, skinClass, hoverClass, iconVisibilityClass, props.textSize);
   const iconCounter = props.counterValue ? <IconCounter count={props.counterValue} /> : null;
 
   return (

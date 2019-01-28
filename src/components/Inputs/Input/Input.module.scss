@@ -12,7 +12,7 @@
     border-radius: $input-border-radius;
     box-sizing: border-box;
 
-    @include padding-horizontal(0, 10px);
+    @include padding-horizontal(10px, null);
 
     &:hover {}
 
@@ -34,6 +34,7 @@
 .input {
     width: 80%;
     outline: none;
+    border: none;
 }
 
 .medium {
@@ -42,24 +43,6 @@
 
 .small {
     width: $inputSizeSmall;
-}
-
-.icon {
-    position: absolute;
-    right: 10px;
-    top: 3px;
-}
-
-.btn {
-    position: absolute;
-    right: 40px;
-    top: 5px;
-}
-
-.iconOptinal {
-    position: absolute;
-    right: 5px;
-    top: 2px;
 }
 
 .focusBorder {
@@ -72,7 +55,6 @@
     justify-content: space-between;
     border-bottom: 1px dashed $blue;
     padding-bottom: 5px;
-    width: 450px;
     position: absolute;
     left: 62px;
     background: transparent;

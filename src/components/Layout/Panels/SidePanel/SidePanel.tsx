@@ -1,9 +1,8 @@
+import classNames from 'classnames';
 import * as React from 'react';
 import { CSSTransition } from 'react-transition-group';
-import classNames from 'classnames';
 
-import {  ComponentAnimatedProperties, ComponentBase, keyCodes } from '../../../../core';
-
+import { ComponentAnimatedProperties, ComponentBase, keyCodes } from '../../../../core';
 import styles from './SidePanel.module.scss';
 
 
@@ -89,7 +88,7 @@ export class SidePanel extends ComponentBase<SidePanelProperties> {
 		const { content: Content } = this.props;
 		const { transitionName = styles.SidePanel, transitionEnterTimeout = 500, transitionLeaveTimeout = 500 } = this.props;
 		const { open } = this.state;
-		const classes = classNames(styles.component, styles.opacity, this.props.componentClasses, "reset-css");
+		const classes = classNames(styles.component, styles.opacity, this.props.componentClasses);
 		return (
 			<CSSTransition in={open} key='SidePanel' classNames={{
 				enter: styles.enter,

@@ -8,21 +8,10 @@
     align-items: center;
 
     & > * {
-        margin-right: 5px;
+        @include margin-horizontal(null, 5px);
     }
 
     & > *:last-child {
-        margin-right: 0;
-    }
-
-    @include rtl {
-        & > * {
-            margin-right: 0;
-            margin-left: 5px;
-        }
-
-        & > *:last-child {
-            margin-left: 0;
-        }
+        @include margin-horizontal(null, 0);
     }
 }

@@ -39,6 +39,7 @@
 
     &:hover {
         background-color: $white;
+
         @include linear-gradient(250deg, $blue, $lighter-blue);
     }
 
@@ -62,23 +63,27 @@
 
     &:hover {
         background-color: $white;
+
         @include linear-gradient(250deg, $green, $light-green);
     }
-    &:active{
+
+    &:active {
         border: 1px solid #B2E4E0;
         box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);
         background-color: $white;
+
         @include linear-gradient(253deg, $green, $light-green);
     }
 }
 
 .stroke {
     background-color: $white;
-    border: solid 1px $blue !important;
+    border: solid 1px $blue;
     color: $blue;
 
     &:hover {
         color: $white;
+
         @include linear-gradient(250deg, $blue, $lighter-blue);
     }
 
