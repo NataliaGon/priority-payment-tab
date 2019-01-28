@@ -55,18 +55,11 @@
     justify-content: space-between;
     border-bottom: 1px dashed $blue;
     padding-bottom: 5px;
-    position: absolute;
-    left: 62px;
     background: transparent;
 
-    @include rtl {
-        right: 25px;
-    }
-
-
     .input {
-        background: $silver;
-        font-size: 2.2rem;
-        color: $grey;
+        background: transparent;
+        color: #788e97;
+        border: none;
     }
 }
