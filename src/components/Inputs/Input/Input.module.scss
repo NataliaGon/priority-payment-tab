@@ -1,25 +1,22 @@
-@import "../../../styles/vars";
+@import "../../../styles/mixins";
 
 .component {
-  position: relative;
-  font-family: $font-family-main;
-  font-size: $font-size-regular;
-  font-weight: $font-weight-regular;
-  display: flex;
-  background: $white;
-  height: 30px;
-  border: 1px solid $input-border-grey;
-  border-radius: $input-border-radius;
-  box-sizing: border-box;
-  
-  @include padding-horizontal(0, 10px);
-  
+    position: relative;
+    font-family: $font-family-main;
+    font-size: $font-size-regular;
+    font-weight: $font-weight-regular;
+    display: flex;
+    background: $white;
+    height: 30px;
+    border: 1px solid $input-border-grey;
+    border-radius: $input-border-radius;
+    box-sizing: border-box;
 
-  &:hover {
-  }
+    @include padding-horizontal(0, 10px);
 
-  &:focus {
-  }
+    &:hover {}
+
+    &:focus {}
 }
 
 .fullWidth {
@@ -27,62 +24,67 @@
 }
 
 .large {
-  width: $inputSizeLarge;
-  height: 30px;
-  border: 1px solid $input-border-grey;
-  border-radius: $input-border-radius;
-  box-sizing: border-box;
+    width: $inputSizeLarge;
+    height: 30px;
+    border: 1px solid $input-border-grey;
+    border-radius: $input-border-radius;
+    box-sizing: border-box;
 }
+
 .input {
-  width: 80%;
-  outline: none;
+    width: 80%;
+    outline: none;
 }
 
 .medium {
-  width: $inputSizeMedium;
+    width: $inputSizeMedium;
 }
 
 .small {
-  width: $inputSizeSmall;
+    width: $inputSizeSmall;
 }
 
 .icon {
-  position: absolute;
-  right: 10px;
-  top: 3px;
+    position: absolute;
+    right: 10px;
+    top: 3px;
 }
 
 .btn {
-  position: absolute;
-  right: 40px;
-  top: 5px;
+    position: absolute;
+    right: 40px;
+    top: 5px;
 }
 
 .iconOptinal {
-  position: absolute;
-  right: 5px;
-  top: 2px;
+    position: absolute;
+    right: 5px;
+    top: 2px;
 }
-.focusBorder {
-  border: 1px solid $blue;
-}
-.line {
-  border: none;
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 1px dashed $blue;
-  padding-bottom: 5px;
-  width: 450px;
-  position: absolute;
-  left: 62px;
-  background: transparent;
-  @include rtl{
-    right: 25px;
-  }
 
-  .input {
-    background: $silver;
-    font-size: 2.2rem;
-    color: $grey;
-  }
+.focusBorder {
+    border: 1px solid $blue;
+}
+
+.line {
+    border: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed $blue;
+    padding-bottom: 5px;
+    width: 450px;
+    position: absolute;
+    left: 62px;
+    background: transparent;
+
+    @include rtl {
+        right: 25px;
+    }
+
+
+    .input {
+        background: $silver;
+        font-size: 2.2rem;
+        color: $grey;
+    }
 }

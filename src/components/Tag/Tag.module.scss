@@ -1,10 +1,9 @@
-@import "../../styles/vars";
+@import "../../styles/mixins";
 
 .component {
     display: flex;
     flex-flow: row nowrap;
     justify-content: flex-end;
-    padding: 5px 0 5px 10px;
     height: 30px;
     color: $white;
     background-color: $tag-background-grey;
@@ -13,11 +12,9 @@
     font-size: $font-size-regular;
     align-items: center;
 
+    @include padding(5px, null, 5px, 10px);
+
     &:hover {
         box-shadow: $tag-box-shadow;
-    }
-
-    @include rtl {
-        padding: 5px 10px 5px 0;
     }
 }

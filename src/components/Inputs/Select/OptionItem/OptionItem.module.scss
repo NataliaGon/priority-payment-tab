@@ -1,12 +1,10 @@
-@import "../../../../styles/vars.scss";
+@import "../../../../styles/mixins.scss";
 
 .component {
     margin: 1px 0;
     display: flex;
     height: 40px;
     align-items: center;
-    padding-left: 10px;
-    @include rtl{
-        @include padding-horizontal(null, 10px)
-    }
+
+    @include padding-horizontal(null, 10px);
 }

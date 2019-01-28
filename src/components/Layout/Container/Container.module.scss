@@ -1,4 +1,4 @@
-@import "../../../styles/vars";
+@import "../../../styles/mixins";
 
 .component {
     position: relative;
@@ -39,13 +39,8 @@
 .closeContainerIcon {
     display: none;
     position: absolute;
-    right: 5px;
-    top: 5px;
 
-    @include rtl {
-        right: unset;
-        left: 5px;
-    }
+    @include position(5px, 5px, null, null);
 }
 
 .dragIcon {

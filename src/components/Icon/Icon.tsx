@@ -1,9 +1,9 @@
-import * as React from "react";
 import classNames from 'classnames';
+import * as React from 'react';
 
-import { ComponentBaseProperties,  PriorityIcon, TextColor } from "../../core";
-import styles from "./Icon.module.scss";
-import IconCounter from "./IconCounter/IconCounter";
+import { ComponentBaseProperties, PriorityIcon, TextColor } from '../../core';
+import styles from './Icon.module.scss';
+import IconCounter from './IconCounter/IconCounter';
 
 type IconSkin = "standart" | "primary" | "danger"
 
@@ -14,34 +14,17 @@ interface IconProperties extends ComponentBaseProperties {
   counterValue?: number;
   invisible?: boolean;
   onClick?: () => void;
-  skin?:IconSkin;
+  skin?: IconSkin;
 }
 
+export const Icon = (props) => {
 
-export  function Icon (props:IconProperties) {
+  const iconVisibilityClass = props.invisible ? styles.invisible : '';
+  const iconColorClass = props.iconColor ? "text-color-" + props.iconColor : "";
+  const iconClass = classNames(styles.component, props.icon, props.componentClasses, iconColorClass, iconVisibilityClass, props.textSize);
+  const iconCounter = props.counterValue ? <IconCounter count={props.counterValue} /> : null;
 
-
-  constructor(properties: IconProperties, state: IconState) {
-    super(properties, state);
-
-    if (this.props.counterValue) {
-      this.setState({ counterValue: this.props.counterValue });
-    }
-  }
-
-  static defaultProps = {
-    visibility: false,
-    position: false
-  };
-
-  public render() {
-
-    const iconVisibilityClass = this.props.visible? styles.visible:'';
-    const iconColorClass = this.props.iconColor ? "text-color-" + this.props.iconColor : "";//default "text-color-grey" ?
-    const iconClass = classNames(styles.component, this.props.icon, this.props.componentClasses, iconColorClass, iconVisibilityClass, this.props.textSize);
-    const iconCounter = this.props.counterValue ? <IconCounter count={this.props.counterValue} /> : null;
-
-    return (
-      <div className={iconClass} onClick={this.props.onClick}>{iconCounter}{this.props.children}</div>
-    )
-  }
+  return (
+    <div className={iconClass} onClick={props.onClick}>{iconCounter}{props.children}</div>
+  )
+}

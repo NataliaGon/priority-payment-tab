@@ -1,20 +1,32 @@
-*, *:before, *:after {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: normal;
+$is-reset-css: true !default;
+
+@mixin reset($selector) {
+    *, *:before, *:after {
+        box-sizing: inherit;
+    }
+
+    #{$selector}, #{$selector}:before, #{$selector}:after {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font-size: 100%;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        vertical-align: baseline;
+        box-sizing: border-box;
+        direction: inherit;
+    }
 }
 
 @mixin reset-css($reset-selector: null) {
     @if $is-reset-css == true {
-        @include reset('*')
+        @include reset("*");
     }
     @else if $reset-selector != null {
         @include reset($reset-selector);
     }
 }
 
-@include reset-css();
+@include reset-css;

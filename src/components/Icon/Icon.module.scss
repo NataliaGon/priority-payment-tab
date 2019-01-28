@@ -2,17 +2,18 @@
 
 .component {
     @include priority-icon;
+
     position: relative;
 }
 
 .hoverable {
-	&:hover {
+    &:hover {
         cursor: pointer;
     }
 }
 
 .invisible {
-    visibility: hidden
+    visibility: hidden;
 }
 
 .large {
@@ -20,14 +21,15 @@
 }
 
 .standart {
-	&:before {
+    &:before {
         color: $grey;
     }
+
     &.hoverable {
-    	&:hover {
-	    	&:before {
-	    		color: $blue;
-	    	}
-	    }
-    }    
+        &:hover {
+            &:before {
+                color: $blue;
+            }
+        }
+    }
 }

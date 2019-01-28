@@ -1,6 +1,7 @@
-@import "../../../styles/vars";
-.component{
-    width:356px;
+@import "../../../styles/mixins";
+
+.component {
+    width: 356px;
     height: 30px;
 
     @include border($input-border-grey);
@@ -103,18 +104,12 @@
     }
 }
 
-.itemLabel { //ToDo:replace with mixin
-    margin-left: 10px;
-
-    @include rtl {
-        margin-left: unset;
-        margin-right: 10px;
-    }
+.itemLabel {
+    @include margin-horizontal(10px, null);
 }
 
 .itemButton {
     position: absolute;
-    
-    @include position-horizontal(null, 10px);
 
+    @include position-horizontal(null, 10px);
 }

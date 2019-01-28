@@ -1,4 +1,4 @@
-@import "../../../styles/vars.scss";
+@import "../../../styles/mixins.scss";
 
 .component {
     @include padding-horizontal(1rem, null);
