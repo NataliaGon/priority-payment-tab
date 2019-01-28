@@ -142,14 +142,3 @@ $icon-font-path: "../../fonts" !default;
 .icon-search-not-equal:before {
   content: "\e924";
 }
-
-// Switch icons direction in RTL mode.
-.rtl {
-  .icon-icon-long-arrow-right:before {
-    content: "\e916";
-  }
-
-  .icon-icon-long-arrow-left:before {
-    content: "\e925";
-  }
-}
