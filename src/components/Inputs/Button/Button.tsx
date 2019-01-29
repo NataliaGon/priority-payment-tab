@@ -17,12 +17,8 @@ interface ButtonProperties extends ComponentBaseProperties {
   size?: ButtonSize;
   disabled?: boolean;
   darkContainer?: boolean;
-<<<<<<< HEAD
   elevated?: boolean;
-=======
-  elevated?:boolean;
   active?: boolean;
->>>>>>> support search dropdown
   icon?: PriorityIcon;
   prefixIcon?: PriorityIcon;
   suffixIcon?: PriorityIcon;
@@ -50,38 +46,21 @@ export class Button extends ComponentBase<ButtonProperties> {
     const sizeClass = size && styles[size];
 
     const buttonClass = classNames(styles.component,
-<<<<<<< HEAD
       this.props.componentClasses,
       skinClass,
       widthClass,
       shapeClass,
-      sizeClass, {
+      sizeClass,{
         [styles.title]: children,
         [styles.disabled]: disabled,
         [styles.darkContainer]: darkContainer,
-        [styles.elevated]: elevated
+        [styles.elevated]: elevated,
+        [styles.active]: active
       });
 
     return (
       <button className={buttonClass} onClick={this.props.onClick}>
-        {icon && <Icon icon={icon} componentClasses={styles.icon} />}
-=======
-                          this.props.componentClasses,
-                          skinClass,
-                          widthClass,
-                          shapeClass,
-                          sizeClass,{
-                           [styles.title]: children,
-                           [styles.disabled]: disabled,
-                           [styles.darkContainer]: darkContainer,
-                           [styles.elevated]: elevated,
-                           [styles.active]: active
-                         });
-
-    return (
-      <button className={buttonClass} onClick={this.props.onClick}>
         {prefixIcon && <Icon icon={prefixIcon} componentClasses={styles.prefixIcon}/>}
->>>>>>> support search dropdown
         {this.props.children}
         {suffixIcon && <Icon icon={suffixIcon} componentClasses={styles.suffixIcon}/>}
       </button>
