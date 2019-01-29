@@ -11,7 +11,7 @@ type InputWidth = "regularFixed" | "fullWidth"
 export class InputProperties extends ComponentBaseProperties {
     size?: any;
     width?: InputWidth;
-    skin?: InputSkin = "box";
+    skin?: InputSkin;
     value?: string;
     placeholder?: string;
     inputRef?(ref): void;
@@ -27,17 +27,21 @@ interface InputState extends React.ComponentState {
 export class Input extends React.Component<InputProperties, InputState> {
 
     static defaultProps = {
-        width: "regularFixed"
+        width: "regularFixed",
+        skin: "box"
     }
+
     handleChange = (event) => {
         const { onChange } = this.props;
         onChange && onChange(event);
     }
+
     handleFocus = (event) => {
         const { onFocus } = this.props;
         this.setState({ isFocus: true });
         onFocus && onFocus(event);
     }
+
     handleOnBlur = (event) => {
         const { onBlur } = this.props;
         console.log('blur')
@@ -49,8 +53,7 @@ export class Input extends React.Component<InputProperties, InputState> {
         const { onBlur, onFocus, onChange, inputRef, skin, size, width = "fullWidth", children, componentClasses, ...restInputProps } = this.props;
 
         const hasBorder = (this.state && this.state.isFocus) ? styles.focusBorder : '';
-        const skinClass = (skin == "line") ? styles.line : '';
-        const componentClassNames = classNames(styles.component, styles[size], styles[width], hasBorder, componentClasses, skinClass);
+        const componentClassNames = classNames(styles.component, skin && styles[skin], styles[size], styles[width], hasBorder, componentClasses);
 
         return (
             <div className={componentClassNames}>

@@ -12,11 +12,13 @@
     border-radius: $input-border-radius;
     box-sizing: border-box;
 
-    @include padding-horizontal(10px, null);
-
     &:hover {}
 
     &:focus {}
+}
+
+.box {
+    @include padding-horizontal(10px, null);
 }
 
 .fullWidth {
@@ -24,15 +26,19 @@
 }
 
 .large {
-    width: $inputSizeLarge;
+    //width: $inputSizeLarge;
     height: 30px;
-    border: 1px solid $input-border-grey;
-    border-radius: $input-border-radius;
-    box-sizing: border-box;
+    // border: 1px solid $input-border-grey;
+    // border-radius: $input-border-radius;
+    // box-sizing: border-box;
+
+    .input {
+        font-size: $font-size-medium;
+    }
 }
 
 .input {
-    width: 80%;
+    width: 100%;
     outline: none;
     border: none;
 }
@@ -52,7 +58,6 @@
 .line {
     border: none;
     display: flex;
-    justify-content: space-between;
     border-bottom: 1px dashed $blue;
     padding-bottom: 5px;
     background: transparent;
