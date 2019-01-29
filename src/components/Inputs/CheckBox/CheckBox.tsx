@@ -1,36 +1,23 @@
 import * as React from "react";
 import classNames from 'classnames';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../core";
+import { ComponentBaseProperties,  ComponentBase, ActiveProperty } from "../../../core";
 
 import styles from "./CheckBox.module.scss";
 
-class CheckBoxProperties extends ComponentBaseProperties {
+interface CheckBoxProperties extends ComponentBaseProperties, ActiveProperty {
 
 }
 
-interface CheckBoxState extends ComponentBaseState {
-  checked?: boolean;
-}
 
-export class CheckBox extends ComponentBase<CheckBoxProperties, CheckBoxState> {
+export function CheckBox (props:CheckBoxProperties){
 
-  state = {
-    checked: true
-  }
+    const propsClass = props.active? styles.checked: ''; 
 
-  public render() {
-
-    let stateClass = "";
-
-    if (this.state.checked) {
-      stateClass = styles.checked;
-    }
-
-    const elementClasses = classNames(styles.component, this.props.componentClasses, stateClass);
+    const elementClasses = classNames(styles.component,  propsClass);
 
     return (
       <span className={elementClasses}></span>
     );
   }
-}
+

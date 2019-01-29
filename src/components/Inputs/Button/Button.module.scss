@@ -3,8 +3,8 @@
 
 .component {
     height: 30px;
-    border-radius: 3px;
-    font-size: 14px;
+    border-radius: $general-border-radius;
+    font-size: $font-size-regular;
     padding: 0 13px;
     display: flex;
     flex-flow: row nowrap;
@@ -18,7 +18,11 @@
     outline: none;
     border: 0;
 
-    @include rtl() {
+    div[class*=" icon-"] {
+        padding-left: 0;
+    }
+
+    @include rtl {
         font-family: $font-family-main-hebrew;
     }
 }
@@ -35,7 +39,8 @@
 
     &:hover {
         background-color: $white;
-        background-image: linear-gradient(250deg, #00adee, rgba(0, 173, 238, 0.7))
+
+        @include linear-gradient(250deg, $blue, $lighter-blue);
     }
 
     &:active {
@@ -58,16 +63,16 @@
 
     &:hover {
         background-color: $white;
-        background-image: linear-gradient(253deg, #60c5bb, rgba(96, 197, 187, 0.8));
+
+        @include linear-gradient(250deg, $green, $light-green);
     }
 
     &:active {
-        background-color: $background-color-dark-grey;
-        background-image: none;
+        border: 1px solid #B2E4E0;
+        box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);
+        background-color: $white;
 
-        &.elevated {
-            box-shadow: 0 5px 10px 0 rgba(11, 56, 51, 0.5);
-        }
+        @include linear-gradient(253deg, $green, $light-green);
     }
 }
 
@@ -78,7 +83,8 @@
 
     &:hover {
         color: $white;
-        background-image: linear-gradient(250deg, #00adee, rgba(0, 173, 238, 0.7));
+
+        @include linear-gradient(250deg, $blue, $lighter-blue);
     }
 
     &:active {
@@ -110,7 +116,6 @@
 // darkContainer
 
 .darkContainer {
-
     &.primary, &.secondary {
         &:active {
             border: 1px solid #B2E4E0;
@@ -139,7 +144,7 @@
         &:active {
             background: $white;
             color: $blue;
-            box-shadow: 0 5px 10px 0 rgba(0,0,0,0.20);
+            box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.2);
         }
     }
 }
@@ -199,9 +204,9 @@
 
 .small {
     height: 20px;
-    font-size: 13px;
+    font-size: $font-size-smaller;
 
-    &.square,&.round {
+    &.square, &.round {
         width: 20px;
         min-width: 20px;
     }
@@ -213,9 +218,9 @@
 
 .medium {
     height: 30px;
-    font-size: 14px;
+    font-size: $font-size-regular;
 
-    &.square,&.round {
+    &.square, &.round {
         width: 30px;
         min-width: 30px;
     }
@@ -223,9 +228,9 @@
 
 .large {
     height: 40px;
-    font-size: 14px;
+    font-size: $font-size-regular;
 
-    &.square,&.round {
+    &.square, &.round {
         width: 40px;
         min-width: 40px;
     }
@@ -245,5 +250,5 @@
 // icon
 
 .title .icon {
-    @include margin-horizontal(0,7px);
+    @include margin-horizontal(0, 7px);
 }

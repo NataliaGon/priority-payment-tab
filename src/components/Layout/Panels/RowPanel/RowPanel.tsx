@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from 'classnames';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../core";
+import { ComponentBaseProperties, ComponentBase } from "../../../../core";
 
 import styles from "./RowPanel.module.scss";
 
@@ -13,11 +13,9 @@ interface RowPanelProperties extends ComponentBaseProperties {
   paddingBottom?: boolean;
 }
 
-interface RowPanelState extends ComponentBaseState {
 
-}
 
-export class RowPanel extends ComponentBase<RowPanelProperties, RowPanelState> {
+export class RowPanel extends ComponentBase<RowPanelProperties> {
 
   public render() {
 

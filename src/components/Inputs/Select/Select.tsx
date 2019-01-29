@@ -1,120 +1,99 @@
 import * as React from "react";
-import classNames from "classnames";
 
 import {
   ComponentBaseProperties,
-  ComponentBaseState,
   ComponentBase,
-  PriorityIcon
+  PriorityIcon,
+  ActiveProperty
 } from "../../../core";
 
 import { Icon } from "../../Icon";
-import { OptionItem } from "./OptionItem/OptionItem";
+import { OptionItem } from "../Select/OptionItem/OptionItem";
 
 import styles from "./Select.module.scss";
 
 type selectWidth = "small" | "medium" | "large";
 
-export interface SelectProperties extends ComponentBaseProperties {
+export interface SelectProperties extends ComponentBaseProperties, ActiveProperty {
   multiSelect?: boolean;
   IconTextColor?: string;
   options: any[];
-  width?: selectWidth;
-  isBlue?:boolean;
+  width?: selectWidth
+  isBlue?: boolean;
+  onMouse?: (e: any) => void;
 }
 
-export interface SelectState extends ComponentBaseState {
-  isOpen: boolean;
-  results: string[];
-}
+export class Select extends ComponentBase<SelectProperties> {
 
-export class Select extends ComponentBase<SelectProperties, SelectState> {
-
-  state: SelectState = {
+  static defaultProps = {
+    width: "medium"
+  }
+  state = {
     isOpen: false,
     results: []
   };
+  mouseOut = () => {
+    if (this.state.isOpen) {
+      this.dropDownToggle();
+    }
+  }
 
   dropDownToggle = () => {
     this.setState({ isOpen: !(this.state && this.state.isOpen) });
   };
 
-  renderOptions = () => {
+  firstBlockRender = (firstElem) => {
+    return (
+      <React.Fragment>
+        <OptionItem
+          iconName={firstElem.iconName}
+          isBlue={this.props.isBlue}
+        >
+          {firstElem.name}
+        </OptionItem>
+      </React.Fragment>)
+  }
 
-    const [firstElem, ...restElems] = this.props.options;
-
-
-    if (this.props.options && Array.isArray(this.props.options)) {
-      return (
-        <ul className={styles.ul}>
-          <OptionItem
-            iconName={firstElem.iconName}
-            isBlue={this.props.isBlue}
-          >
-            {firstElem.name}
-          </OptionItem>
-          {restElems.map(option => (
-            <OptionItem
-              iconName={option.iconName}
-            >
-              {option.name}
-            </OptionItem>
-          ))}
-        </ul>
-      );
-    } else {
-      return null
-    }
-  };
+  secondBlockRender = (restElems) => {
+    return (restElems.map(option => (
+      <React.Fragment>
+        <OptionItem
+          iconName={option.iconName}
+        >
+          {option.name}
+        </OptionItem>
+      </React.Fragment>
+    )))
+  }
 
   optionSelected() {
     this.dropDownToggle();
   }
 
   public render() {
-    let classForDropDownIcon;
-    let iconTextColor;
-    let iconOptionsClass;
-    if (this.state && this.state.isOpen) {
-      iconOptionsClass = styles.active;
-      classForDropDownIcon = PriorityIcon.arrowDropUp; //"icon-icon-arrow_drop_up";
-      iconTextColor = "grey"
-      const iconClasses = classNames(
-        classForDropDownIcon,
-        iconOptionsClass
-      );
-    } else {
-      classForDropDownIcon = PriorityIcon.arrowDropDown; //"icon-icon-arrow_drop_down";
-      iconTextColor = "blue"
-    }
-    const dropDownVisibilityClass = this.state && this.state.isOpen ? styles.boxShadow : styles.dropDownHide;
-    const smallInputVisibilityClass = this.state && this.state.isOpen ? styles.borderColorBlue : '';
-    const dropDownOptionsClass = styles.optionsWrapper;
-    const smallInputOptionsClass = styles.inputSmall;
-    const sizeSelectClass = this.props.width ? styles[this.props.width] : styles["medium"];
-    const dropDownOptionsClasses = classNames(
-      dropDownVisibilityClass,
-      dropDownOptionsClass,
-      sizeSelectClass
-    );
-    const smallInputOptionsClasses = classNames(
-      smallInputVisibilityClass,
-      smallInputOptionsClass,
-      sizeSelectClass
-    );
-    const dropDownElementsStyles = classNames(
-      styles.dropDownElements, sizeSelectClass
-    );
+
+    const classForDropDownIcon = this.state && this.state.isOpen ? PriorityIcon.arrowDropUp : PriorityIcon.arrowDropDown;
+    const [firstElem, ...restElems] = this.props.options;
+    let classNames = require('classnames/bind');
+    let cx = classNames.bind(styles);
+    const allOptionsBlock = cx('allOptionsBlock', this.props.width, { 'display': this.state.isOpen });
+    const inputClasses = cx({ 'borderColorBlue': this.state.isOpen }, this.props.width, 'input');
+    const firstOptionBlock = cx('firstOptionBlock', this.props.width, { 'firstOptionBlockActive': this.state.isOpen });
+    const componentStyles = cx('component', this.props.width);
 
     return (
-
-      <div className={dropDownElementsStyles}>
-        <div className={smallInputOptionsClasses} onClick={this.dropDownToggle}>
+      <div className={componentStyles} onMouseLeave={this.mouseOut} onMouseOut={this.props.onMouse} onMouseOver={this.props.onMouse}>
+        <div className={inputClasses} onClick={this.dropDownToggle}>
           <div className={styles.dropDownIconWrapper}>
             <Icon iconColor={this.state.isOpen ? "blue" : "grey"} icon={classForDropDownIcon} />
           </div>
         </div>
-        <div className={dropDownOptionsClasses}>{this.renderOptions()}</div>
+        <ul className={firstOptionBlock}>
+          {this.firstBlockRender(firstElem)}
+        </ul>
+        <ul className={allOptionsBlock}>
+          {this.secondBlockRender(restElems)}
+        </ul>
       </div>
     );
   }

@@ -1,4 +1,4 @@
-@import "../../../styles/vars";
+@import "../../../styles/mixins";
 
 .component {
     display: inline-flex;
@@ -7,7 +7,17 @@
     align-items: center;
     font-size: $font-size-regular;
     color: $grey;
-    padding: 0 1rem;
+
+    @include padding-horizontal(1rem, null);
+
+    @include rtl {
+        font-family: $font-family-main-hebrew;
+    }
+
+
+    div[class^="Icon-module"] {
+        @include margin-horizontal(1rem, null);
+    }
 }
 
 .href {
@@ -64,7 +74,7 @@
 
 .bold {
     color: $black;
-    font-size: 14px;
+    font-size: $font-size-regular;
     font-family: Roboto;
     font-weight: 500;
     font-style: normal;
@@ -77,7 +87,7 @@
     color: $black;
     opacity: 0.7;
     font-family: Roboto;
-    font-size: 12px;
+    font-size: $font-size-small;
     font-weight: bold;
     font-style: normal;
     font-stretch: normal;

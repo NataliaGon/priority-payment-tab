@@ -1,19 +1,21 @@
 $icon-font-path: "../../fonts" !default;
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('#{$icon-font-path}/icomoon.eot?gulf9n');
-  src:  url('#{$icon-font-path}/icomoon.eot?gulf9n#iefix') format('embedded-opentype'),
-    url('#{$icon-font-path}/icomoon.ttf?gulf9n') format('truetype'),
-    url('#{$icon-font-path}/icomoon.woff?gulf9n') format('woff'),
-    url('#{$icon-font-path}/icomoon.svg?gulf9n#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("#{$icon-font-path}/icomoon.eot?gulf9n");
+  src: url("#{$icon-font-path}/icomoon.eot?gulf9n#iefix")
+      format("embedded-opentype"),
+    url("#{$icon-font-path}/icomoon.ttf?gulf9n") format("truetype"),
+    url("#{$icon-font-path}/icomoon.woff?gulf9n") format("woff"),
+    url("#{$icon-font-path}/icomoon.svg?gulf9n#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: none;
   font-style: normal;
   font-weight: normal;

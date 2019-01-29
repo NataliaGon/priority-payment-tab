@@ -2,105 +2,128 @@
 @import "../../../styles/mixins.scss";
 
 .component {
-
-
-}
-
-.dropDownElements {
-    height: 30px;
     position: relative;
 }
 
-.inputSmall {
+.input {
     height: 30px;
     border-radius: $input-border-radius;
+
     @include border($input-border-grey);
+
     z-index: 3;
     position: absolute;
     box-sizing: border-box;
-    &:hover{
+
+    &:hover {
         border-color: $blue;
     }
 }
 
-.optionsWrapper {
-    background: $white;
+.allOptionsBlock {
     position: absolute;
-}
-
-.dropDownResult {
-    height: 30px;
-    background:$tag-background-grey;
-    color: $white;
-    display: inline-block;
-    line-height: 30px;
-    padding: 0 10px;
-    border-radius: $input-border-radius;
-    position: relative;
-}
-.dropDownHide {
-    overflow: hidden;
-    height: 30px;
-    border-radius: $input-border-radius;
-}
-
-.boxShadow {
+    background: $white;
+    z-index: 50;
+    display: none;
     box-shadow: 0 10px 20px 0 $boxShadow-brown-dark;
-    width: 100%;
-    margin-left: -5px;
-    margin-top: -5px;
-    padding: 5px;
-    border-radius: $input-border-radius;
-    z-index: 2;
-    box-sizing: content-box;
-}
+    border-bottom-left-radius: $input-border-radius;
+    border-bottom-right-radius: $input-border-radius;
+    padding: 0px 5px;
+    box-sizing: content-box !important;
 
-.drop-down_icon-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: $white;
+    @include margin-horizontal(-5px);
+
+    li:first-child {
+        margin: 10px 0 5px;
+    }
+
+    li {
+        height: 30px;
+        line-height: 30px;
+        margin: 5px 0;
+
+        &:hover {
+            background-color: $background-color-blue;
+            border-radius: $input-border-radius;
+        }
+    }
 }
 
 .dropDownIconWrapper {
     position: absolute;
     top: 2px;
     right: 0;
+
+    @include rtl {
+        left: 0;
+        right: auto;
+    }
+}
+
+.firstOptionBlock {
+    background: $white;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    border-radius: $input-border-radius;
+}
+
+.firstOptionBlockActive {
+    box-shadow: 0 10px 20px 0 $boxShadow-brown-dark;
+    padding: 5px 5px 0;
+    box-sizing: content-box !important;
+    margin-left: -5px;
+    margin-top: -5px;
+    border-top-left-radius: $input-border-radius;
+    border-top-right-radius: $input-border-radius;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+
+    @include rtl {
+        @include margin-horizontal(-5px);
+    }
+}
+
+.display {
+    display: flex;
+    flex-direction: column;
+}
+
+.active {
+    color: $blue;
 }
 
 .borderColorBlue {
     border: 1px solid $blue;
 }
 
-.ul li {
-    color:$blue;
-    &:hover {
-        background-color: $background-color-blue;
-        border-radius: $input-border-radius
-    }
+.small {
+    width: $inputSizeSmall;
+
+    // height: 30px;
 }
 
-.ul li:first-child {
-    height: 27px;
-
-    &:hover {
-        background-color: $white;
-    }
+.medium {
+    width: $inputSizeMedium;
 }
 
-.ul li:nth-child(2) {
-    margin-top: 11px;
+.large {
+    width: $inputSizeLarge;
 }
 
-.active {
-    color:$blue;
+// .minWidthSmall{
+//     min-width:$inputSizeSmall;
+// }
+// .minWidthMedium{
+//     min-width:$inputSizeMedium;
+// }
+// .minWidthLarge{
+//     min-width:$inputSizeLarge;
+// }
+.height {
+    height: 30px;
 }
-.small{
-    width:$inputSizeSmall;
-}
-.medium{
-    width:$inputSizeMedium;
-}
-.large{
-    width:$inputSizeLarge;
+
+.heightAuto {
+    height: auto;
 }

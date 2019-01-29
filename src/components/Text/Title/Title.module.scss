@@ -1,4 +1,4 @@
-@import "../../../styles/vars";
+@import "../../../styles/mixins";
 
 .component {
     font-family: $font-family-serif;
@@ -9,4 +9,9 @@
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
+
+    @include rtl {
+        font-family: $font-family-titles-hebrew;
+        font-weight: $font-weight-bold;
+    }
 }

@@ -1,14 +1,10 @@
+import classNames from 'classnames';
 import * as React from 'react';
 import { CSSTransition } from 'react-transition-group';
-import classNames from 'classnames';
 
-import { ComponentBaseState, ComponentAnimatedProperties, ComponentBase, keyCodes } from '../../../../core';
-
+import { ComponentAnimatedProperties, ComponentBase, keyCodes } from '../../../../core';
 import styles from './SidePanel.module.scss';
 
-interface SidePanelState extends ComponentBaseState {
-	open: boolean
-}
 
 interface SidePanelProperties extends ComponentAnimatedProperties {
 	onOpen?(): boolean,
@@ -23,7 +19,7 @@ export interface InjectedSidePanelProps {
 	hidePanel(): void
 }
 
-export class SidePanel extends ComponentBase<SidePanelProperties, SidePanelState> {
+export class SidePanel extends ComponentBase<SidePanelProperties> {
 
 	focusRef: {
 		focus: () => void;
@@ -92,7 +88,7 @@ export class SidePanel extends ComponentBase<SidePanelProperties, SidePanelState
 		const { content: Content } = this.props;
 		const { transitionName = styles.SidePanel, transitionEnterTimeout = 500, transitionLeaveTimeout = 500 } = this.props;
 		const { open } = this.state;
-		const classes = classNames(styles.component,styles.opacity, this.props.componentClasses);
+		const classes = classNames(styles.component, styles.opacity, this.props.componentClasses);
 		return (
 			<CSSTransition in={open} key='SidePanel' classNames={{
 				enter: styles.enter,

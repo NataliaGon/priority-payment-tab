@@ -5,12 +5,14 @@ $white: #fff;
 $snow: #f4f6f8;
 $silver: #ebedee;
 $dark-blue: #004163;
+$lighter-blue: rgba(0, 173, 238, 0.7);
 $blue: #00adee;
 $green: #60c5bb;
+$light-green: rgba(96, 197, 187, 0.8);
 $peach: #F37C70;
 $purple: #9773B3;
 
-$light-blue:rgba(0, 173, 238, 0.03);
+$light-blue: rgba(0, 173, 238, 0.03);
 
 $backdrop: rgba(33, 37, 41, 0.15);
 
@@ -33,11 +35,13 @@ $boxShadow-brown: rgba(0, 173, 238, 0.15);
 $font-family-main: "Roboto", sans-serif;
 $font-family-serif: "Bree Serif", serif;
 $font-family-main-hebrew: "Arimo", sans-serif;
+$font-family-titles-hebrew: "Heebo";
 $font-family-icons: "icomoon" !important;
 
 $font-size-base: 62.5%;
 $font-size-large: 2.8rem;
 $font-size-medium: 2.2rem;
+$font-size-bigger: 2rem;
 $font-size-regular: 1.4rem;
 $font-size-smaller: 1.3rem;
 $font-size-small: 1.2rem;

@@ -1,4 +1,4 @@
-@import "../../../../styles/vars";
+@import "../../../../styles/mixins";
 
 .component {
     width: 100%;
@@ -6,13 +6,12 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
-    
+
     & > * {
-        margin-right: 5px;
+        @include margin-horizontal(null, 5px);
     }
 
     & > *:last-child {
-        margin-right: 0;
+        @include margin-horizontal(null, 0);
     }
 }
-

@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from 'classnames';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../core";
+import { ComponentBaseProperties,  ComponentBase } from "../../../../core";
 
 import styles from "./WrapPanel.module.scss";
 
@@ -9,11 +9,9 @@ interface WrapPanelProperties extends ComponentBaseProperties {
 
 }
 
-interface WrapPanelState extends ComponentBaseState {
 
-}
 
-export class WrapPanel extends ComponentBase<WrapPanelProperties, WrapPanelState> {
+export class WrapPanel extends ComponentBase<WrapPanelProperties> {
   public render() {
 
   

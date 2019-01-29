@@ -1,35 +1,29 @@
 import * as React from 'react';
-
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase, AutoFill} from 'priority-style-react';
-import { Label, StackPanel, Container, RowPanel, WrapPanel, Select, Tag, Button, Input, Icon, PriorityIcon } from 'priority-style-react';
+import { Label, StackPanel, Container, RowPanel, WrapPanel, Select, Tag, Button } from 'priority-style-react';
 import { optionDropDown } from './../../optionDropDown';
+import stylesMain from '../../AppStyles.module.scss';
 
 
-interface TextQueryBlockBlockProperties extends ComponentBaseProperties {
+export function TextQueryBlock() {
 
-}
-interface TextQueryBlockBlockState extends ComponentBaseState {
-  
-}
-export class TextQueryBlock extends ComponentBase<TextQueryBlockBlockProperties, TextQueryBlockBlockState> {
 
-    render() {
         return (
-          <StackPanel >
-          <Container roundConer > 
-                <RowPanel>
+          <div className={stylesMain.stackPanel}>
+          <Container roundConer activeHover> 
+          <div className={stylesMain.rowPanel}>
                   <div style={{marginLeft:"-10px"}}>
-                  <Label size="regular-hight-contrast">Customer No. <Icon icon={PriorityIcon.closeSmall}/></Label>
+                  <Label skin="regular-hight-contrast">Customer No.</Label>
                   </div>
-                </RowPanel>
-                <RowPanel paddingTop paddingBottom>
+                </div>
+                {/* <div className={stylesMain.rowPanel} style={{paddingBottom:"10px", paddingTop:"10px" }}>
                   <Select options={optionDropDown} isBlue/>
-                 <AutoFill />
-                </RowPanel>
+                  <AutoFill isMultiselect >
+                  </AutoFill>
+                </div>
                 <WrapPanel>
                   <Tag text="test" />
                   <Tag text="test" />
-                </WrapPanel>
+                </WrapPanel> */}
             </Container>
-            </StackPanel>
-        )}}
+            </div>
+        )}

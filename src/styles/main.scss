@@ -2,19 +2,22 @@
  * Global styles.
  */
 @import "icons";
+
+@import "icons.rtl";
+
 // Reset CSS
 @import "reset";
 
 // Variables declarations
-@import "vars";
+@import "mixins";
 
 // Typography configuration
 @import "typography";
 
 // Element Skins
-@import "./layout";
+@import "layout";
 
-@import "./animations.scss";
+@import "animations";
 
 .header {
     padding-top: 15px;

@@ -1,7 +1,7 @@
 import * as React from "react";
 import classNames from 'classnames';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../core";
+import { ComponentBaseProperties,  ComponentBase } from "../../../../core";
 
 import styles from "./StackPanel.module.scss";
 
@@ -14,11 +14,9 @@ class StackPanelProperties extends ComponentBaseProperties {
   skin?:StackPanelSkin;
 }
 
-interface StackPanelState extends ComponentBaseState {
 
-}
 
-export class StackPanel extends ComponentBase<StackPanelProperties, StackPanelState> {
+export class StackPanel extends ComponentBase<StackPanelProperties> {
 
   public render() {
 

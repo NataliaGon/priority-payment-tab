@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 
 export type ComponentBaseSkin = "default";
 export type TextSize = "large" | "medium" | "regular" | "small";
@@ -21,12 +21,9 @@ export class ComponentBaseProperties {
     draggable?: boolean;
 }
 
-export class ComponentBaseState {
-}
+export class ComponentBase<ComponentBaseProperties> extends React.Component<ComponentBaseProperties, any> {
 
-export class ComponentBase<ComponentBaseProperties, ComponentBaseState> extends React.Component<ComponentBaseProperties, ComponentBaseState, any> {
-
-    constructor(properties: ComponentBaseProperties, state?: ComponentBaseState) {
+    constructor(properties: ComponentBaseProperties, state?: any) {
         super(properties, state);
     }
 
@@ -43,4 +40,8 @@ export class ComponentAnimatedProperties extends ComponentBaseProperties {
     transitionName?: string;
     transitionEnterTimeout?: number;
     transitionLeaveTimeout?: number;
+}
+
+export class ActiveProperty {
+    active?: boolean
 }

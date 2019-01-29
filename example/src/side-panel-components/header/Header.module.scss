@@ -1,3 +1,6 @@
+// @import "../../../node_modules/priority-style-react/src/styles/main.scss";
+
+
 .componentWrapper{
     padding: 17px 0 22px;
     width: 100%;
@@ -19,4 +22,7 @@
         font-size: 14px;
         display: inline-block;
     }
+}
+.secondRowWrapper{
+    display: flex;
 }

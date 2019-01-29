@@ -2,7 +2,7 @@ import * as React from "react";
 import classNames from 'classnames';
 import Scrollbars from 'react-custom-scrollbars';
 
-import { ComponentBaseProperties, ComponentBaseState, ComponentBase } from "../../../../core";
+import { ComponentBaseProperties, ComponentBase } from "../../../../core";
 
 import styles from "./ScrollPanel.module.scss";
 
@@ -12,14 +12,12 @@ interface ScrollPanelProperties extends ComponentBaseProperties {
     autoHeightMax?: number,
     autoHeightMin?: number,
     className?: string,
- 
+
 }
 
-interface ScrollPanelState extends ComponentBaseState {
-    scrolledToEnd: boolean
-}
 
-export class ScrollPanel extends ComponentBase<ScrollPanelProperties, ScrollPanelState> {
+
+export class ScrollPanel extends ComponentBase<ScrollPanelProperties> {
 
     scrollbar: Scrollbars | null;
 

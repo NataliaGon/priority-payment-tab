@@ -1,15 +1,10 @@
+import { CheckBox, Label, ScrollPanel, SidePanel } from 'priority-style-react';
 import React, { Component } from 'react';
 
-import {
-  SidePanel, StackPanel, RowPanel, ScrollPanel,
-  CheckBox, Label, Button
+import stylesMain from './AppStyles.module.scss';
+import { DateQueryBlock, FooterBlock, Header, TextQueryBlock } from './side-panel-components';
 
-} from 'priority-style-react';
-
-import { DateQueryBlock, FooterBlock, TextQueryBlock, Header } from './side-panel-components';
-
-
-class App extends Component { 
+class App extends Component {
 
   panelRef;
 
@@ -22,24 +17,23 @@ class App extends Component {
       <div className="App">
         <SidePanel ref={p => this.panelRef = p}>
           <ScrollPanel>
-            <Header />
-
-            <StackPanel>
-              <RowPanel alignItems="space-between" paddingBottom={true} paddingTop={true}>
-                <div style={{ display: "flex" }}>
-                  <CheckBox />
-                  <Label size="regular-hight-contrast">Case Sensitive</Label>
+            <div>
+              <Header withInput />
+              <div className={stylesMain.stackPanel}>
+                <div className={stylesMain.rowPanel} style={{ paddingBottom: "10px", paddingTop: "10px", alignItems: "space-between" }}>
+                  <div style={{ display: "flex" }}>
+                    <CheckBox />
+                    <Label skin="regular-hight-contrast">Case Sensitive</Label>
+                  </div>
+                  <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
                 </div>
-                <Label size="small-bold">Sort table by rearranging filter order with drag and drop</Label>
-              </RowPanel>
-            </StackPanel>
-
-            <TextQueryBlock />
-            <TextQueryBlock />
-            <DateQueryBlock />
-
+              </div>
+              <TextQueryBlock />
+              <TextQueryBlock />
+              <DateQueryBlock />
+            </div>
+            <FooterBlock />
           </ScrollPanel>
-          <FooterBlock />
         </SidePanel>
       </div>
     );
