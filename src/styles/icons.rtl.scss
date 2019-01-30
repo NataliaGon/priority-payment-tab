@@ -1,14 +1,14 @@
 // Switch icons direction in RTL mode.
 @import "./mixins.scss";
 
-#root {
-    @include rtl {
-        .icon-icon-long-arrow-right:before {
-            content: "\e916";
-        }
 
-        .icon-icon-long-arrow-left:before {
-            content: "\e925";
-        }
+@include rtl {
+    .icon-icon-long-arrow-right:before {
+        content: "\e916";
+    }
+
+    .icon-icon-long-arrow-left:before {
+        content: "\e925";
     }
 }
+

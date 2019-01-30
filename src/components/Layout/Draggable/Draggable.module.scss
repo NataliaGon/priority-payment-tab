@@ -3,7 +3,7 @@
 .component {
     display: none;
     position: absolute;
-    top: 20%;
+    top: 10%;
 
     @include position-horizontal(-12px);
 }

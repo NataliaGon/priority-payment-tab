@@ -28,7 +28,8 @@ export class Input extends React.Component<InputProperties, InputState> {
 
     static defaultProps = {
         width: "regularFixed",
-        skin: "box"
+        skin: "box",
+        size: "medium"
     }
 
     handleChange = (event) => {

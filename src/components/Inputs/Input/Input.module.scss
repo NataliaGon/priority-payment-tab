@@ -6,8 +6,9 @@
     font-size: $font-size-regular;
     font-weight: $font-weight-regular;
     display: flex;
+    align-items: center;
     background: $white;
-    height: 30px;
+    //height: 30px;
     border: 1px solid $input-border-grey;
     border-radius: $input-border-radius;
     box-sizing: border-box;
@@ -18,7 +19,7 @@
 }
 
 .box {
-    @include padding-horizontal(10px, null);
+    @include padding-horizontal(10px,0)
 }
 
 .fullWidth {
@@ -41,7 +42,6 @@
     width: 100%;
     outline: none;
     border: none;
-    width: 100%;
 
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         @include input-placeholder;
@@ -58,7 +58,8 @@
 }
 
 .medium {
-    width: $inputSizeMedium;
+    height: 30px;
+    //width: $inputSizeMedium;
 }
 
 .small {
