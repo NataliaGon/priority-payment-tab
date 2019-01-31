@@ -15,6 +15,7 @@ class ContainerProperties extends ComponentBaseProperties {
   activeHover?: boolean;
   activeClick?: boolean;
   onClose?: () => void;
+  closeClick?:Function;
 }
 
 
@@ -28,6 +29,9 @@ export class Container extends ComponentBase<ContainerProperties> {
   hoverHandler = () => {
    
   }
+  closeClick=()=>{
+    this.props.closeClick&&this.props.closeClick()
+  }
   public render() {
     let classNames = require('classnames/bind');
     let cx = classNames.bind(styles);
@@ -35,8 +39,8 @@ export class Container extends ComponentBase<ContainerProperties> {
     const iconCloseClassNames = cx('closeContainerIcon', { 'displayBlock': this.props.activeClick || this.props.activeHover});
 
     return (
-      <div className={componentClassNames} onClick={this.clickHandler} onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverHandler}>
-        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} onClick={this.props.onClose}/>
+      <div className={componentClassNames} onClick={()=>{this.clickHandler()}} onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverHandler}>
+        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} onClick={()=>{this.closeClick()}}/>
         <Draggable activeHover={this.props.activeHover} activeClick={this.props.activeClick} />
         {this.props.children}
       </div>
