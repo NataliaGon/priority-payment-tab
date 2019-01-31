@@ -5,7 +5,7 @@ import { ComponentBase, ComponentBaseProperties, PriorityIcon } from '../../../c
 import { Icon } from '../../Icon';
 import styles from './Button.module.scss';
 
-type ButtonSkin = "primary" | "secondary" | "stroke" | "strokeLight";
+type ButtonSkin = "primary" | "secondary" | "stroke" | "strokeLight" | "strokeTransparent";
 type ButtonWidth = "regularFixed" | "fullWidth" | "contentWidth";
 type ButtonShape = "regular" | "round" | "square";
 type ButtonSize = "small" | "medium" | "large";
