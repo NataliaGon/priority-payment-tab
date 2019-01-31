@@ -6,7 +6,7 @@ import {Icon}  from "../Icon";
 import { Label } from "../Text";
 
 interface TagProperties extends ComponentBaseProperties {
-  onClick:Function
+  onClose:Function
 }
 
 export function Tag (props:TagProperties) {
@@ -14,8 +14,8 @@ export function Tag (props:TagProperties) {
     const elementClasses = classNames(styles.component, props.componentClasses);
 
     return (
-      <div className={elementClasses} onClick={()=>{props.onClick()}}>
-        <Label textColor="white">{props.text}</Label><Icon icon={PriorityIcon.closeSmall} iconColor="white" />
+      <div className={elementClasses}>
+        <Label textColor="white">{props.text}</Label><Icon icon={PriorityIcon.closeSmall} iconColor="white" onClick={()=>{props.onClose()}} />
       </div>
     );
   }
