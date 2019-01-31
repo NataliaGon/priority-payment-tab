@@ -122,6 +122,31 @@
     }
 }
 
+.strokeTransparent {
+    background-color: $white;
+    border: solid 1px $light-gray-stroke;
+    color: $blue;
+
+    .suffixIcon {
+        color: $grey;
+    }
+
+    &:hover {
+        border-color: $blue;
+        .suffixIcon {
+            color: $blue;
+        }
+    }
+
+    &:active, &.active {
+        border-color: $blue;
+        color: $blue;
+        .suffixIcon {
+            color: $blue;
+        }
+    }
+}
+
 // darkContainer
 
 .darkContainer {

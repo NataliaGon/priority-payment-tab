@@ -14,6 +14,7 @@ class ContainerProperties extends ComponentBaseProperties {
   disabled?: boolean;
   activeHover?: boolean;
   activeClick?: boolean;
+  onClose?: () => void;
 }
 
 
@@ -35,7 +36,7 @@ export class Container extends ComponentBase<ContainerProperties> {
 
     return (
       <div className={componentClassNames} onClick={this.clickHandler} onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverHandler}>
-        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} />
+        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} onClick={this.props.onClose}/>
         <Draggable activeHover={this.props.activeHover} activeClick={this.props.activeClick} />
         {this.props.children}
       </div>
