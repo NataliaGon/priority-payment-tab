@@ -9,13 +9,15 @@ interface TagProperties extends ComponentBaseProperties {
   onClose?:Function
 }
 
+
 export function Tag (props:TagProperties) {
 
     const elementClasses = classNames(styles.component, props.componentClasses);
 
+  
     return (
       <div className={elementClasses}>
-        <Label textColor="white">{props.text}</Label><Icon icon={PriorityIcon.closeSmall} iconColor="white" onClick={()=>{props.onClose()}} />
+        <Label textColor="white">{props.text}</Label><Icon icon={PriorityIcon.closeSmall} iconColor="white" onClick={()=>{props.onClose&&props.onClose()}} />
       </div>
     );
   }
