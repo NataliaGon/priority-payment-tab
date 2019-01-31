@@ -6,7 +6,7 @@ import {Icon}  from "../Icon";
 import { Label } from "../Text";
 
 interface TagProperties extends ComponentBaseProperties {
-  onClose:Function
+  onClose?:Function
 }
 
 export function Tag (props:TagProperties) {
