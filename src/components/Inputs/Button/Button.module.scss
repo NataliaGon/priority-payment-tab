@@ -102,7 +102,7 @@
     border: solid 1px $light-gray-stroke;
     color: $grey;
 
-    .suffixIcon {
+    .suffixIcon,.prefixIcon {
         color: $blue;
     }
 
@@ -116,7 +116,7 @@
         background-color: $blue;
         color: $white;
 
-        .suffixIcon {
+        .suffixIcon,.prefixIcon {
             color: $white;
         }
     }
