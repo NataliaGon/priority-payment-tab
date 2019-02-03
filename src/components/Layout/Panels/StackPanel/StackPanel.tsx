@@ -26,7 +26,7 @@ export class StackPanel extends ComponentBase<StackPanelProperties> {
     }
 
 
-    const componentClasses = classNames(styles.component, skinClass);
+    const componentClasses = classNames(this.props.componentClasses, styles.component, skinClass);
 
     return (
       <div className={componentClasses} >
