@@ -9,8 +9,7 @@
     color: $grey;
     font-weight: 500;
     white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;    
+        
     @include padding-horizontal(1rem, null);
 
     @include rtl {
