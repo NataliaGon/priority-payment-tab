@@ -53,6 +53,7 @@ export class Label extends ComponentBase<LabelProperties> {
     let cx = classNames.bind(styles);
     const elementClasses = cx(
       "component",
+      this.props.componentClasses,
       this.props.skin,
       this.props.textColor,
       {clickable: this.props.onClick}
