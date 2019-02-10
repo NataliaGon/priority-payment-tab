@@ -1,7 +1,23 @@
 @import "../../../styles/vars";
 
 .component {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &.disabled {
+        cursor: default;
+
+        .checkbox {
+            background-color: $disabled-grey;
+            border-color: $disabled-grey;
+        }
+    }
+}
+
+.checkbox {
     font-family: $font-family-icons;
+    font-weight: normal;
     color: $grey;
     height: 2rem;
     width: 2rem;
@@ -19,10 +35,5 @@
     &:hover {
         color: $blue;
         border-color: $blue;
-    }
-
-    &.disabled {
-        background-color: $disabled-grey;
-        border-color: $disabled-grey;
     }
 }

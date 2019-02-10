@@ -31,7 +31,11 @@ export class Container extends ComponentBase<ContainerProperties> {
   public render() {
     let classNames = require('classnames/bind');
     let cx = classNames.bind(styles);
-    const componentClassNames = cx('component', { 'active': this.props.activeClick || this.props.activeHover }, { 'roundConer': this.props.roundConer });
+    const componentClassNames = cx('component', { 
+      'active': this.props.activeClick || this.props.activeHover,
+      'roundConer': this.props.roundConer 
+  },
+  this.props.componentClasses);
     const iconCloseClassNames = cx('closeContainerIcon', { 'displayBlock': this.props.activeClick || this.props.activeHover});
 
     return (

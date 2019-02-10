@@ -32,6 +32,10 @@ export class Input extends React.Component<InputProperties, InputState> {
         size: "medium"
     }
 
+    componentDidMount() {
+        console.log('mount')
+    }
+
     handleChange = (event) => {
         const { onChange } = this.props;
         onChange && onChange(event);

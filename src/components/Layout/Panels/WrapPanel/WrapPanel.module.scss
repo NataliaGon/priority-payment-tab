@@ -6,6 +6,10 @@
     flex-flow: row wrap;
     justify-content: flex-start;
     align-items: center;
+    
+    & > * {
+        margin-bottom: 5px;
+    }
 
     & > * {
         @include margin-horizontal(null, 5px);

@@ -7,13 +7,13 @@
     align-items: center;
     font-size: $font-size-regular;
     color: $grey;
+    font-weight: 500;
 
     @include padding-horizontal(1rem, null);
 
     @include rtl {
         font-family: $font-family-main-hebrew;
     }
-
 
     div[class^="Icon-module"] {
         @include margin-horizontal(1rem, null);
@@ -22,7 +22,16 @@
 
 .href {
     text-decoration: underline !important;
-    color: $grey !important;
+    //color: $grey;
+}
+
+.underline {
+    text-decoration: underline !important;
+    font-weight: bold;
+}
+
+.clickable {
+    cursor: pointer;
 }
 
 .large {
@@ -73,14 +82,8 @@
 }
 
 .bold {
-    color: $black;
     font-size: $font-size-regular;
-    font-family: Roboto;
-    font-weight: 500;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: normal;
-    letter-spacing: normal;
+    font-weight: bold;
 }
 
 .small-bold {

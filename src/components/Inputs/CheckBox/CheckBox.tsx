@@ -5,19 +5,24 @@ import { ComponentBaseProperties,  ComponentBase, ActiveProperty } from "../../.
 
 import styles from "./CheckBox.module.scss";
 
-interface CheckBoxProperties extends ComponentBaseProperties, ActiveProperty {
-
+interface CheckBoxProperties extends ComponentBaseProperties {
+  checked?: boolean,
+  disabled?: boolean,
+  onChange?(): void,
+  children?: JSX.Element
 }
 
 
-export function CheckBox (props:CheckBoxProperties){
+export function CheckBox(props: CheckBoxProperties){
 
-    const propsClass = props.active? styles.checked: ''; 
-
-    const elementClasses = classNames(styles.component,  propsClass);
+    const elementClasses = classNames(styles.component, props.componentClasses, {[styles.disabled]: props.disabled});
+    const checkboxClasses = classNames(styles.checkbox, {[styles.checked]: props.checked});
 
     return (
-      <span className={elementClasses}></span>
+      <div className={elementClasses} onClick={props.onChange}>
+        <span className={checkboxClasses} ></span>
+        {props.children}
+      </div>
     );
   }
 

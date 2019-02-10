@@ -8,14 +8,9 @@
     display: flex;
     align-items: center;
     background: $white;
-    //height: 30px;
     border: 1px solid $input-border-grey;
     border-radius: $input-border-radius;
     box-sizing: border-box;
-
-    &:hover {}
-
-    &:focus {}
 }
 
 .box {
@@ -42,6 +37,11 @@
     width: 100%;
     outline: none;
     border: none;
+    font-family: $font-family-main;
+
+    @include rtl {
+        font-family: $font-family-main-hebrew;
+    }
 
     &::-webkit-input-placeholder { /* Chrome/Opera/Safari */
         @include input-placeholder;
@@ -74,7 +74,6 @@
     border: none;
     display: flex;
     border-bottom: 1px dashed $blue;
-    padding-bottom: 5px;
     background: transparent;
 
     .input {

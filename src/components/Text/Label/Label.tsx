@@ -17,6 +17,7 @@ type LabelSkin =
   | "regular-hight-contrast"
   | "small"
   | "bold"
+  | "underline"
   | "small-bold";
 
 interface LabelProperties extends ComponentBaseProperties {
@@ -24,6 +25,7 @@ interface LabelProperties extends ComponentBaseProperties {
   iconCounter?: number;
   skin?: LabelSkin;
   textHref?: string;
+  onClick?(): void;
 }
 
 export class Label extends ComponentBase<LabelProperties> {
@@ -43,7 +45,7 @@ export class Label extends ComponentBase<LabelProperties> {
         {this.props.text ? this.props.text : this.props.children}
       </a>
     ) : (
-        <span>{this.props.text ? this.props.text : this.props.children}</span>
+        this.props.text ? this.props.text : this.props.children
       );
   }
   public render() {
@@ -52,11 +54,12 @@ export class Label extends ComponentBase<LabelProperties> {
     const elementClasses = cx(
       "component",
       this.props.skin,
-      this.props.textColor
+      this.props.textColor,
+      {clickable: this.props.onClick}
     );
 
     return (
-      <div className={elementClasses}>
+      <div className={elementClasses} onClick={this.props.onClick}>
         {this.renderLabelText()} {this.renderIcon()}
       </div>
     );
