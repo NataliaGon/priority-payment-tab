@@ -16,5 +16,8 @@ export enum PriorityIcon {
     iconReorder = "icon-icon-reorder",
     tabsArrow = "icon-icon-tabs-arrow-reg",
     calendar = "icon-icon--calendar",
-    add = "icon-icon-add-new"
+    add = "icon-icon-add-new",
+    more = "icon-more-dots",
+    addSmall = "icon-icon-add-small",
+    search = "icon-header-search"
 }

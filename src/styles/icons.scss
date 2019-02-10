@@ -12,10 +12,9 @@ $icon-font-path: "../../fonts" !default;
   font-style: normal;
 }
 
-[class^="icon-"],
-[class*=" icon-"] {
+[class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: "icomoon" !important;
+  font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
   font-weight: normal;
@@ -28,6 +27,30 @@ $icon-font-path: "../../fonts" !default;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-header-search:before {
+  content: "\e926";
+}
+.icon-greater-then-or-equal:before {
+  content: "\e927";
+}
+.icon-less-then-or-equal:before {
+  content: "\e928";
+}
+.icon-ends-with:before {
+  content: "\e929";
+}
+.icon-greater-then:before {
+  content: "\e92a";
+}
+.icon-less-then:before {
+  content: "\e92b";
+}
+.icon-more-dots:before {
+  content: "\e92c";
+}
+.icon-starts-with:before {
+  content: "\e92d";
+}
 .icon-icon-filter-big:before {
   content: "\e900";
 }
@@ -141,4 +164,22 @@ $icon-font-path: "../../fonts" !default;
 }
 .icon-search-not-equal:before {
   content: "\e924";
+}
+.icon-three_dots:before {
+  content: "\e92e";
+}
+.icon-alert:before {
+  content: "\e92f";
+}
+.icon-check_green:before {
+  content: "\e930";
+}
+.icon-upload_green:before {
+  content: "\e931";
+}
+.icon-del:before {
+  content: "\e932";
+}
+.icon-note:before {
+  content: "\e933";
 }
