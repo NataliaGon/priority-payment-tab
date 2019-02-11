@@ -8,7 +8,8 @@
     font-size: $font-size-regular;
     color: $grey;
     font-weight: 500;
-
+    white-space: nowrap;
+        
     @include padding-horizontal(1rem, null);
 
     @include rtl {
