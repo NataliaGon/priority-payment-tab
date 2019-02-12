@@ -5,7 +5,7 @@
     height: 30px;
     border-radius: $general-border-radius;
     font-size: $font-size-regular;
-    padding: 0 13px;
+    padding: 0 10px;
     display: flex;
     flex-flow: row nowrap;
     align-items: center;
@@ -124,7 +124,7 @@
 
 .strokeTransparent {
     background-color: $white;
-    border: solid 1px $light-gray-stroke;
+    border: solid 1px $input-border-grey;
     color: $blue;
 
     .suffixIcon {

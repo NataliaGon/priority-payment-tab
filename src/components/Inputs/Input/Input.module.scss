@@ -13,8 +13,24 @@
     box-sizing: border-box;
 }
 
+.rtl {
+    direction: rtl;
+}
+
+.ltr {
+    direction: ltr;
+}
+
 .box {
-    @include padding-horizontal(10px,0)
+    @include padding-horizontal(10px,0);
+
+    &.ltr {
+        padding: 0 10px;
+    }
+
+    &.rtl {
+        padding: 10px 0;
+    }
 }
 
 .fullWidth {

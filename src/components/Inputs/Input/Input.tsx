@@ -9,13 +9,15 @@ type InputSize = "small" | "medium" | "large";
 type InputWidth = "regularFixed" | "fullWidth"
 
 export class InputProperties extends ComponentBaseProperties {
-    size?: any;
+    size?: InputSize;
     width?: InputWidth;
     skin?: InputSkin;
     value?: string;
     placeholder?: string;
+    /** use to force a different direction that the inherited one */
+    direction?: 'ltr' | 'rtl';
     inputRef?(ref): void;
-    onChange?(value: string): void;
+    onChange?(event): void;
     onFocus?(event): void;
     onBlur?(event): void;
 }
@@ -32,10 +34,6 @@ export class Input extends React.Component<InputProperties, InputState> {
         size: "medium"
     }
 
-    componentDidMount() {
-        console.log('mount')
-    }
-
     handleChange = (event) => {
         const { onChange } = this.props;
         onChange && onChange(event);
@@ -49,16 +47,15 @@ export class Input extends React.Component<InputProperties, InputState> {
 
     handleOnBlur = (event) => {
         const { onBlur } = this.props;
-        console.log('blur')
         this.setState({ isFocus: false });
         onBlur && onBlur(event);
     }
 
     public render() {
-        const { onBlur, onFocus, onChange, inputRef, skin, size, width = "fullWidth", children, componentClasses, ...restInputProps } = this.props;
+        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, ...restInputProps } = this.props;
 
         const hasBorder = (this.state && this.state.isFocus) ? styles.focusBorder : '';
-        const componentClassNames = classNames(styles.component, skin && styles[skin], styles[size], styles[width], hasBorder, componentClasses);
+        const componentClassNames = classNames(styles.component, skin && styles[skin], size && styles[size], width && styles[width], direction && styles[direction], hasBorder, componentClasses);
 
         return (
             <div className={componentClassNames}>

@@ -9,6 +9,7 @@
     font-stretch: normal;
     line-height: normal;
     letter-spacing: normal;
+    margin: 0;
 
     @include rtl {
         font-family: $font-family-titles-hebrew;

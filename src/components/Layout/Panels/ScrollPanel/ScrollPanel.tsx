@@ -49,15 +49,15 @@ export class ScrollPanel extends ComponentBase<ScrollPanelProperties> {
 
     render() {
         const { className, autoHeight, autoHeightMax, autoHeightMin, gradient, children } = this.props;
-        const scrollClass = classNames(styles.scrollArea, className);
+        const componentClasses = classNames(styles.component, className);
 
         return (
-            <div className={styles.component}>
+            <div className={componentClasses}>
                 <Scrollbars ref={s => this.scrollbar = s}
                     autoHeight={autoHeight}
                     autoHeightMax={autoHeightMax}
                     autoHeightMin={autoHeightMin}
-                    className={scrollClass}
+                    className={styles.scrollArea}
                     renderThumbVertical={(props) => <div {...props} className={styles.thumbVertical} />}
                     autoHide>
                     {children}

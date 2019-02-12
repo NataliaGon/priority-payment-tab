@@ -2,7 +2,7 @@ import * as React from 'react';
 
 export type ComponentBaseSkin = "default";
 export type TextSize = "large" | "medium" | "regular" | "small";
-export type TextColor = "black" | "grey" | "blue" | "white";
+export type TextColor = "black" | "grey" | "blue" | "white" | "dark";
 export type IconColor = TextColor | "";
 export type FontFamily = "regular" | "serif" | "icons";
 

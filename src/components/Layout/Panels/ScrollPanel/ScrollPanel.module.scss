@@ -17,12 +17,16 @@
     direction: ltr;
 
     @include rtl {
-        direction: rtl;
+        direction: ltr;
+
+        > * {
+            direction: rtl;
+        }
     }
 }
 
 .thumbVertical {
-    background-color: $silver;
+    background-color: #d6dddf;
     width: 6px !important;
     border-radius: 3px;
 }
