@@ -12,36 +12,36 @@ class ContainerProperties extends ComponentBaseProperties {
   skin?: ContainerPanelSkin;
   roundConer?: boolean;
   disabled?: boolean;
-  activeHover?: boolean;
-  activeClick?: boolean;
+  active?: boolean;
   onClose?: () => void;
+ // dragHandleProps?: any;
+ // elementRef?: any;
+ // draggableProps?: any
 }
 
 
 
 export class Container extends ComponentBase<ContainerProperties> {
 
- 
-  clickHandler = () => {
-    
-  }
-  hoverHandler = () => {
-   
-  }
   public render() {
     let classNames = require('classnames/bind');
     let cx = classNames.bind(styles);
     const componentClassNames = cx('component', { 
-      'active': this.props.activeClick || this.props.activeHover,
-      'roundConer': this.props.roundConer 
+      'active': this.props.active,
+      'roundConer': this.props.roundConer
   },
   this.props.componentClasses);
-    const iconCloseClassNames = cx('closeContainerIcon', { 'displayBlock': this.props.activeClick || this.props.activeHover});
+    const iconCloseClassNames = cx('closeContainerIcon', { 'displayBlock': this.props.active});
 
     return (
-      <div className={componentClassNames} onClick={this.clickHandler} onMouseEnter={this.hoverHandler} onMouseLeave={this.hoverHandler}>
-        <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} onClick={this.props.onClose}/>
-        <Draggable activeHover={this.props.activeHover} activeClick={this.props.activeClick} />
+      <div className={componentClassNames}
+          // ref={this.props.elementRef}
+          //{...this.props.draggableProps} 
+          >
+          <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} onClick={this.props.onClose}/>
+          { 
+          //  this.props.dragHandleProps && <Draggable active={this.props.active} dragHandleProps={this.props.dragHandleProps}/> 
+            }
         {this.props.children}
       </div>
     );

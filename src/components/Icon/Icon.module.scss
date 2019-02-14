@@ -39,3 +39,28 @@
         }
     }
 }
+
+.white {
+    color: $white;
+}
+
+.blue {
+    color: $blue;
+}
+
+.grey {
+    color: $grey;
+}
+
+.black {
+    color: $black;
+}
+
+.dark {
+    color: $dark;
+}
+
+.disabled {
+    color: $disabled-grey;
+    cursor: default;
+}

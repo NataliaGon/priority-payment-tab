@@ -4,23 +4,24 @@
     position: relative;
     box-sizing: border-box;
     width: 100%;
+    background-image: $white;
     background-color: $snow;
     border: 1px solid $light-stroke;
     padding: 17px 20px 15px;
     cursor: pointer;
 
-    &:hover {
-        background-color: $light-blue;
-        border: 1px solid $blue;
-    }
+    // &:hover {
+    //     background-color: $light-blue;
+    //     border: 1px solid $blue;
+    // }
 
-    &:hover .closeContainerIcon {
-        display: block;
-    }
+    // &:hover .closeContainerIcon {
+    //     display: block;
+    // }
 
-    &:hover .dragIcon {
-        display: block;
-    }
+    // &:hover .dragIcon {
+    //     display: block;
+    // }
 }
 
 .roundConer {

@@ -1,9 +1,36 @@
 @import "../../../styles/mixins";
 
 .component {
+    position: relative;
+    background-color: $white;
+    cursor: pointer !important;
+
+    &:hover {
+        .dragIconContainer {
+            display: block;
+        }
+    }
+
+    &.inDrag {
+        .dragIconContainer {
+            display: none;
+        }
+    }
+
+    &.dragged {
+        box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2);
+        .dragIconContainer {
+            display: block;
+        }
+    }
+}
+
+.dragIconContainer {
     display: none;
     position: absolute;
     top: 10%;
+    cursor: move !important;
+    z-index: 10;
 
     @include position-horizontal(-12px);
 }

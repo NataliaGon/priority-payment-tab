@@ -6,25 +6,18 @@ import { ComponentBaseProperties, ComponentBase, ComponentBaseSkin } from "../..
 import styles from './ToggleSwitch.module.scss';
 
 interface SwitchProperties extends ComponentBaseProperties {
+  onChange(value: boolean): void,
+  checked: boolean
 }
 
 export class ToggleSwitch extends ComponentBase<SwitchProperties> {
-
-  state = {
-    checked: false,
-    isRTL: false
-  };
-
-  handleChange = (checked) => {
-    this.setState({ checked });
-  }
 
   render() {
     return (
       <label htmlFor="material-switch" className={styles.component} style={{ direction: "ltr", paddingTop: "4px" }}>
         <Switch
-          checked={this.state.checked}
-          onChange={this.handleChange}
+          checked={this.props.checked}
+          onChange={this.props.onChange}
           onColor="#00adee"
           handleDiameter={10}
           uncheckedIcon={false}

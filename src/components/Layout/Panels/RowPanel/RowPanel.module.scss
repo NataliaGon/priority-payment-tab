@@ -1,7 +1,7 @@
 @import "../../../../styles/vars";
 
 .component {
-    width: 100%;
+    //width: 100%;
     line-height: 100%;
     display: flex;
     flex-flow: row nowrap;
@@ -10,15 +10,15 @@
 }
 
 .flex-start {
-    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .flex-end {
-    justify-content: flex-end;
+    align-items: flex-end;
 }
 
 .center {
-    justify-content: center;
+    align-items: center;
 }
 
 .space-between {

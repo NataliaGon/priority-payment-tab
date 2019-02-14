@@ -13,11 +13,9 @@ interface WrapPanelProperties extends ComponentBaseProperties {
 
 export class WrapPanel extends ComponentBase<WrapPanelProperties> {
   public render() {
-
-  
-
+    const componentClass = classNames(styles.component,this.props.componentClasses)
     return (
-      <div className={styles.component} >{this.props.children}</div>
+      <div className={componentClass} >{this.props.children}</div>
     );
   }
 }

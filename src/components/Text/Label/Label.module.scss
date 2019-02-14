@@ -10,15 +10,15 @@
     font-weight: 500;
     white-space: nowrap;
         
-    @include padding-horizontal(1rem, null);
+    @include padding-horizontal(0, 1rem);
 
     @include rtl {
         font-family: $font-family-main-hebrew;
     }
 
-    div[class^="Icon-module"] {
-        @include margin-horizontal(1rem, null);
-    }
+    // div[class^="Icon-module"] {
+    //     @include margin-horizontal(1rem, 0);
+    // }
 }
 
 .href {
