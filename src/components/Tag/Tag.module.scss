@@ -12,7 +12,7 @@
     font-size: $font-size-regular;
     align-items: center;
 
-    @include padding(5px, null, 5px, null);
+    @include padding(5px, null, 5px, 10px);
 
     &:hover {
         box-shadow: $tag-box-shadow;

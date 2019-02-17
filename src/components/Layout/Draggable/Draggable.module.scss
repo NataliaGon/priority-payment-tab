@@ -31,6 +31,7 @@
     top: 10%;
     cursor: move !important;
     z-index: 10;
+    outline: none !important;
 
     @include position-horizontal(-12px);
 }
