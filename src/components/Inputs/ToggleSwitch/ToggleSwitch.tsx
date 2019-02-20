@@ -7,7 +7,8 @@ import styles from './ToggleSwitch.module.scss';
 
 interface SwitchProperties extends ComponentBaseProperties {
   onChange(value: boolean): void,
-  checked: boolean
+  checked: boolean,
+  tabIndex?: number;
 }
 
 export class ToggleSwitch extends ComponentBase<SwitchProperties> {
@@ -18,6 +19,7 @@ export class ToggleSwitch extends ComponentBase<SwitchProperties> {
         <Switch
           checked={this.props.checked}
           onChange={this.props.onChange}
+          tabIndex={this.props.tabIndex}
           onColor="#00adee"
           handleDiameter={10}
           uncheckedIcon={false}

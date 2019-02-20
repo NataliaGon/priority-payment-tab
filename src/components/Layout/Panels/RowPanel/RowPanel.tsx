@@ -5,7 +5,7 @@ import { ComponentBaseProperties, ComponentBase } from "../../../../core";
 
 import styles from "./RowPanel.module.scss";
 
-type AlignItems = "flex-start" | "flex-end" | "space-between" | "center";
+type AlignItems = "flex-start" | "flex-end" | "center";
 
 interface RowPanelProperties extends ComponentBaseProperties {
   alignItems?: AlignItems;

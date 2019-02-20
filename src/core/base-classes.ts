@@ -12,13 +12,19 @@ export class DefaultTextProperties {
     fontFamily: FontFamily = "regular";
 }
 
-export class ComponentBaseProperties {
+export interface ComponentBaseProperties {
     componentClasses?: string[] | string;
     text?: string;
     textSize?: TextSize;
     textColor?: TextColor;
-    fontFamily?: FontFamily;
-    draggable?: boolean;
+    //fontFamily?: FontFamily;
+    //draggable?: boolean;
+}
+
+export interface InputBaseProperties extends ComponentBaseProperties {
+    onFocus?(event?): void;
+    onBlur?(event?): void;
+    tabIndex?: number;
 }
 
 export class ComponentBase<ComponentBaseProperties> extends React.Component<ComponentBaseProperties, any> {

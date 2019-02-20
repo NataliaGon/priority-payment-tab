@@ -3,3 +3,11 @@
 .component {
     //@include padding-horizontal(1rem, null);
 }
+
+:global(.react-switch-handle):focus {
+    border: 1px solid $blue !important;
+    top: 2px !important;
+    width: 12px !important;
+    height: 12px !important;
+    @include position-horizontal(0,-1px);
+}

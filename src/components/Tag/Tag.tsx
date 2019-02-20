@@ -6,18 +6,18 @@ import {Icon}  from "../Icon";
 import { Label } from "../Text";
 
 interface TagProperties extends ComponentBaseProperties {
-  onClose?:Function
+  onClose?:Function,
+  active?: boolean;
 }
 
 
-export function Tag (props:TagProperties) {
+export function Tag ({onClose, active = true, componentClasses, text}: TagProperties) {
 
-    const elementClasses = classNames(styles.component, props.componentClasses);
+    const elementClasses = classNames(styles.component, componentClasses, {[styles.active]: active});
 
-  
     return (
       <div className={elementClasses}>
-        <Label textColor="white">{props.text}</Label><Icon icon={PriorityIcon.closeSmall} iconColor="white" onClick={()=>{props.onClose&&props.onClose()}} />
+        <Label textColor="white">{text}</Label><Icon icon={PriorityIcon.closeSmall} iconColor="white" onClick={()=>{onClose && onClose()}} />
       </div>
     );
   }
