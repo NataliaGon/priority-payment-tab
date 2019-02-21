@@ -26,7 +26,7 @@
     "classnames": "^2.2.6",
     "react-autocomplete": "^1.8.1",
     "react-custom-scrollbars": "^4.2.1",
-    "react-switch": "^3.0.4",
+    "react-switch": "^4.1.0",
     "react-transition-group": "^2.5.2"
   },
   "peerDependencies": {

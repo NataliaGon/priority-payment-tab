@@ -1,14 +1,14 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { ComponentBaseProperties } from '../../../core';
+import { InputBaseProperties } from '../../../core';
 import styles from './Input.module.scss';
 
 type InputSkin = "box" | "line"
 type InputSize = "small" | "medium" | "large";
 type InputWidth = "regularFixed" | "fullWidth"
 
-export class InputProperties extends ComponentBaseProperties {
+export interface InputProperties extends InputBaseProperties {
     size?: InputSize;
     width?: InputWidth;
     skin?: InputSkin;
@@ -18,8 +18,8 @@ export class InputProperties extends ComponentBaseProperties {
     direction?: 'ltr' | 'rtl';
     inputRef?(ref): void;
     onChange?(event): void;
-    onFocus?(event): void;
-    onBlur?(event): void;
+    /** use to return focus to input after clicking on children */
+    keepFocus?: boolean;
 }
 
 interface InputState extends React.ComponentState {
@@ -28,10 +28,24 @@ interface InputState extends React.ComponentState {
 
 export class Input extends React.Component<InputProperties, InputState> {
 
+    input;
+
     static defaultProps = {
         width: "regularFixed",
         skin: "box",
-        size: "medium"
+        size: "medium",
+        keepFocus: true
+    }
+
+    handleMouseUp = () => {
+        const { keepFocus } = this.props; 
+        !this.input.isFocused && keepFocus && this.input.focus();
+    }
+
+    handleRef = (ref) => {
+        this.input = ref;
+        const { inputRef } = this.props;
+        inputRef && inputRef(ref);
     }
 
     handleChange = (event) => {
@@ -52,14 +66,14 @@ export class Input extends React.Component<InputProperties, InputState> {
     }
 
     public render() {
-        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, ...restInputProps } = this.props;
+        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, keepFocus ...restInputProps } = this.props;
 
         const hasBorder = (this.state && this.state.isFocus) ? styles.focusBorder : '';
         const componentClassNames = classNames(styles.component, skin && styles[skin], size && styles[size], width && styles[width], direction && styles[direction], hasBorder, componentClasses);
 
         return (
-            <div className={componentClassNames}>
-                <input ref={inputRef}
+            <div className={componentClassNames} onMouseUp={this.handleMouseUp}>
+                <input ref={this.handleRef}
                     className={styles.input}
                     type="text"
                     onBlur={this.handleOnBlur}

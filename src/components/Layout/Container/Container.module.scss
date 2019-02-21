@@ -9,19 +9,16 @@
     border: 1px solid $light-stroke;
     padding: 17px 20px 15px;
     cursor: pointer;
+    outline: none;
 
-    // &:hover {
-    //     background-color: $light-blue;
-    //     border: 1px solid $blue;
-    // }
+    &.hoverable:hover {
+        background-color: $light-blue;
+        border: 1px solid $blue;
 
-    // &:hover .closeContainerIcon {
-    //     display: block;
-    // }
-
-    // &:hover .dragIcon {
-    //     display: block;
-    // }
+        .closeContainerIcon {
+            display: block;
+        }
+    }
 }
 
 .roundConer {

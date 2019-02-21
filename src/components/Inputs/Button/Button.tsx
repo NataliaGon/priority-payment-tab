@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { ComponentBase, ComponentBaseProperties, PriorityIcon } from '../../../core';
+import { ComponentBase, InputBaseProperties, PriorityIcon } from '../../../core';
 import { Icon } from '../../Icon';
 import styles from './Button.module.scss';
 
@@ -10,7 +10,7 @@ type ButtonWidth = "regularFixed" | "fullWidth" | "contentWidth";
 type ButtonShape = "regular" | "round" | "square";
 type ButtonSize = "small" | "medium" | "large";
 
-interface ButtonProperties extends ComponentBaseProperties {
+export interface ButtonProperties extends InputBaseProperties {
   skin?: ButtonSkin;
   width?: ButtonWidth;
   shape?: ButtonShape;
@@ -22,7 +22,8 @@ interface ButtonProperties extends ComponentBaseProperties {
   icon?: PriorityIcon;
   prefixIcon?: PriorityIcon;
   suffixIcon?: PriorityIcon;
-  onClick?: () => void;
+  buttonRef?: any;
+  onClick?: (event?) => void;
 }
 
 const defaultButtonProperties: ButtonProperties = {
@@ -30,7 +31,8 @@ const defaultButtonProperties: ButtonProperties = {
   width: "contentWidth",
   shape: "regular",
   size: "medium",
-  elevated: true
+  elevated: true,
+  tabIndex: 0
 }
 
 export class Button extends ComponentBase<ButtonProperties> {
@@ -38,7 +40,7 @@ export class Button extends ComponentBase<ButtonProperties> {
   static defaultProps = defaultButtonProperties;
 
   public render() {
-    const { skin, width, size, shape, disabled, active, darkContainer, elevated, icon, prefixIcon = icon, suffixIcon, children } = this.props;
+    const { skin, width, size, shape, disabled, active, darkContainer, elevated, icon, prefixIcon = icon, suffixIcon, children, buttonRef, tabIndex } = this.props;
 
     const skinClass = skin && styles[skin];
     const widthClass = width && styles[width];
@@ -59,7 +61,7 @@ export class Button extends ComponentBase<ButtonProperties> {
       });
 
     return (
-      <button className={buttonClass} onClick={this.props.onClick}>
+      <button ref={buttonRef} tabIndex={tabIndex} className={buttonClass} onClick={this.props.onClick} onFocus={this.props.onFocus} onBlur={this.props.onBlur}>
         {prefixIcon && <Icon icon={prefixIcon} componentClasses={styles.prefixIcon}/>}
         {this.props.children}
         {suffixIcon && <Icon icon={suffixIcon} componentClasses={styles.suffixIcon}/>}

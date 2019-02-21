@@ -14,9 +14,8 @@ class ContainerProperties extends ComponentBaseProperties {
   disabled?: boolean;
   active?: boolean;
   onClose?: () => void;
- // dragHandleProps?: any;
- // elementRef?: any;
- // draggableProps?: any
+  tabIndex?: number;
+  containerRef?: any;
 }
 
 
@@ -35,13 +34,10 @@ export class Container extends ComponentBase<ContainerProperties> {
 
     return (
       <div className={componentClassNames}
-          // ref={this.props.elementRef}
-          //{...this.props.draggableProps} 
+           ref={this.props.containerRef}
+           tabIndex={this.props.tabIndex}
           >
-          <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} onClick={this.props.onClose}/>
-          { 
-          //  this.props.dragHandleProps && <Draggable active={this.props.active} dragHandleProps={this.props.dragHandleProps}/> 
-            }
+          { this.props.onClose && <Icon icon={PriorityIcon.closeSmall} componentClasses={iconCloseClassNames} onClick={this.props.onClose}/>}
         {this.props.children}
       </div>
     );

@@ -1,11 +1,11 @@
 import * as React from "react";
 import classNames from 'classnames';
 
-import { ComponentBaseProperties,  ComponentBase, ActiveProperty } from "../../../core";
+import { InputBaseProperties,  ComponentBase, ActiveProperty } from "../../../core";
 
 import styles from "./CheckBox.module.scss";
 
-interface CheckBoxProperties extends ComponentBaseProperties {
+interface CheckBoxProperties extends InputBaseProperties {
   checked?: boolean,
   disabled?: boolean,
   onChange?(): void,
@@ -20,7 +20,17 @@ export function CheckBox(props: CheckBoxProperties){
 
     return (
       <div className={elementClasses} onClick={props.onChange}>
-        <span className={checkboxClasses} ></span>
+        <input
+          type="checkbox"
+          className={styles.input}
+          checked={props.checked}
+          disabled={props.disabled}
+          onChange={props.onChange}
+          onClick={props.onChange}
+          onFocus={props.onFocus}
+          onBlur={props.onBlur}
+        />
+        <span className={checkboxClasses}></span>
         {props.children}
       </div>
     );
