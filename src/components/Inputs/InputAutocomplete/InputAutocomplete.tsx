@@ -7,7 +7,7 @@ import { CheckBox } from '../CheckBox/CheckBox';
 import { Input } from '../Input/Input';
 import styles from './InputAutocomplete.module.scss';
 
-class InputAutoProperties extends ComponentBaseProperties {
+class InputAutoProperties {
   isMultiselect?: boolean
 }
 

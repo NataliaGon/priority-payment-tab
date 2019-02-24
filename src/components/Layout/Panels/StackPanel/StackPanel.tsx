@@ -9,7 +9,7 @@ import styles from "./StackPanel.module.scss";
 type AlignItems = "flexStart" | "flexEnd" | "spaceBetween";
 type StackPanelSkin = "default" | "silver" | "light" | "dark" | "snow";
 
-class StackPanelProperties extends ComponentBaseProperties {
+interface StackPanelProperties extends ComponentBaseProperties {
   alignItems?: AlignItems;
   skin?:StackPanelSkin;
 }

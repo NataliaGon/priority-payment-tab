@@ -66,7 +66,7 @@ export class Input extends React.Component<InputProperties, InputState> {
     }
 
     public render() {
-        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, keepFocus ...restInputProps } = this.props;
+        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, keepFocus, ...restInputProps } = this.props;
 
         const hasBorder = (this.state && this.state.isFocus) ? styles.focusBorder : '';
         const componentClassNames = classNames(styles.component, skin && styles[skin], size && styles[size], width && styles[width], direction && styles[direction], hasBorder, componentClasses);

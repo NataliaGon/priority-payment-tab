@@ -6,10 +6,10 @@ export type TextColor = "black" | "grey" | "blue" | "white" | "dark";
 export type IconColor = TextColor | "";
 export type FontFamily = "regular" | "serif" | "icons";
 
-export class DefaultTextProperties {
-    textSize: TextSize = "regular";
-    textColor: TextColor = "grey";
-    fontFamily: FontFamily = "regular";
+export interface DefaultTextProperties {
+    textSize: TextSize;
+    textColor: TextColor;
+    fontFamily: FontFamily;
 }
 
 export interface ComponentBaseProperties {
@@ -36,18 +36,14 @@ export class ComponentBase<ComponentBaseProperties> extends React.Component<Comp
     focusRef: {
         focus: () => void;
     } | undefined;
-
-    protected defaultProperties = function (): any {
-        return new DefaultTextProperties();
-    }
 }
 
-export class ComponentAnimatedProperties extends ComponentBaseProperties {
+export interface ComponentAnimatedProperties extends ComponentBaseProperties {
     transitionName?: string;
     transitionEnterTimeout?: number;
     transitionLeaveTimeout?: number;
 }
 
-export class ActiveProperty {
+export interface ActiveProperty {
     active?: boolean
 }

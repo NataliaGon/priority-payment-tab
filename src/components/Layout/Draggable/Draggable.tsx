@@ -4,7 +4,7 @@ import { Icon } from '../../Icon/Icon';
 import classNames from 'classnames';
 import styles from "./Draggable.module.scss";
 
-class DraggableProperties extends ComponentBaseProperties {
+interface DraggableProperties extends ComponentBaseProperties {
     dragHandleProps: any;
     draggableProps: any;
     innerRef: any;

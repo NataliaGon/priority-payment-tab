@@ -8,7 +8,7 @@ import styles from "./Container.module.scss";
 type ContainerPanelSkin = "default" | "silver" | "light" | "dark" | "snow";
 
 
-class ContainerProperties extends ComponentBaseProperties {
+interface ContainerProperties extends ComponentBaseProperties {
   skin?: ContainerPanelSkin;
   roundConer?: boolean;
   disabled?: boolean;
@@ -17,8 +17,6 @@ class ContainerProperties extends ComponentBaseProperties {
   tabIndex?: number;
   containerRef?: any;
 }
-
-
 
 export class Container extends ComponentBase<ContainerProperties> {
 
