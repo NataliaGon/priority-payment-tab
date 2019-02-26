@@ -20,6 +20,7 @@ export interface InputProperties extends InputBaseProperties {
     onChange?(event): void;
     /** use to return focus to input after clicking on children */
     keepFocus?: boolean;
+    focusOnMount?: boolean;
 }
 
 interface InputState extends React.ComponentState {
@@ -35,6 +36,11 @@ export class Input extends React.Component<InputProperties, InputState> {
         skin: "box",
         size: "medium",
         keepFocus: true
+    }
+
+    componentDidMount() {
+        const { focusOnMount } = this.props;
+        focusOnMount && this.input.focus();
     }
 
     handleMouseUp = () => {
@@ -66,7 +72,7 @@ export class Input extends React.Component<InputProperties, InputState> {
     }
 
     public render() {
-        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, keepFocus, ...restInputProps } = this.props;
+        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, keepFocus, focusOnMount, ...restInputProps } = this.props;
 
         const hasBorder = (this.state && this.state.isFocus) ? styles.focusBorder : '';
         const componentClassNames = classNames(styles.component, skin && styles[skin], size && styles[size], width && styles[width], direction && styles[direction], hasBorder, componentClasses);
