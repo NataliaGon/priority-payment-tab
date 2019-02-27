@@ -61,7 +61,7 @@ export class Button extends ComponentBase<ButtonProperties> {
       });
 
     return (
-      <button ref={buttonRef} tabIndex={tabIndex} className={buttonClass} onClick={this.props.onClick} onFocus={this.props.onFocus} onBlur={this.props.onBlur}>
+      <button disabled={disabled} ref={buttonRef} tabIndex={tabIndex} className={buttonClass} onClick={this.props.onClick} onFocus={this.props.onFocus} onBlur={this.props.onBlur}>
         {prefixIcon && <Icon icon={prefixIcon} componentClasses={styles.prefixIcon}/>}
         {this.props.children}
         {suffixIcon && <Icon icon={suffixIcon} componentClasses={styles.suffixIcon}/>}
