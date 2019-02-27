@@ -21,9 +21,7 @@ export interface InjectedSidePanelProps {
 
 export class SidePanel extends ComponentBase<SidePanelProperties> {
 
-	focusRef: {
-		focus: () => void;
-	} | undefined;
+	focusRef;
 
 	constructor(properties: SidePanelProperties) {
 		super(properties);
@@ -77,7 +75,6 @@ export class SidePanel extends ComponentBase<SidePanelProperties> {
 			return;
 		}
 		this.setState({ open: true })
-		this.focus();
 	}
 
 	public focus() {
@@ -98,7 +95,7 @@ export class SidePanel extends ComponentBase<SidePanelProperties> {
 			}} timeout={500} unmountOnExit>
 				{() => (
 					<div className={styles.blocker}>
-						<div className={classes}>
+						<div tabIndex={-1} className={classes} ref = {ref => this.focusRef = ref}>
 							<div className={styles.opacity}>
 								{
 									Content && <Content open={open}
