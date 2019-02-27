@@ -27,6 +27,15 @@ $icon-font-path: "../../fonts" !default;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ends-with:before {
+  content: "\e922";
+}
+.icon-search-contains-v2:before {
+  content: "\e929";
+}
+.icon-starts-with:before {
+  content: "\e92d";
+}
 .icon-header-search:before {
   content: "\e926";
 }
@@ -36,9 +45,6 @@ $icon-font-path: "../../fonts" !default;
 .icon-less-then-or-equal:before {
   content: "\e928";
 }
-.icon-ends-with:before {
-  content: "\e929";
-}
 .icon-greater-then:before {
   content: "\e92a";
 }
@@ -47,9 +53,6 @@ $icon-font-path: "../../fonts" !default;
 }
 .icon-more-dots:before {
   content: "\e92c";
-}
-.icon-starts-with:before {
-  content: "\e92d";
 }
 .icon-icon-filter-big:before {
   content: "\e900";
@@ -155,9 +158,6 @@ $icon-font-path: "../../fonts" !default;
 }
 .icon-search-between-v4:before {
   content: "\e921";
-}
-.icon-search-contains-v2:before {
-  content: "\e922";
 }
 .icon-search-equal:before {
   content: "\e923";
