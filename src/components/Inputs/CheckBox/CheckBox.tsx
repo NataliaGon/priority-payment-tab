@@ -9,7 +9,8 @@ interface CheckBoxProperties extends InputBaseProperties {
   checked?: boolean,
   disabled?: boolean,
   onChange?(): void,
-  children?: JSX.Element
+  children?: JSX.Element,
+  inputRef?(ref): void
 }
 
 
@@ -22,6 +23,7 @@ export function CheckBox(props: CheckBoxProperties){
       <div className={elementClasses} onClick={props.onChange}>
         <input
           type="checkbox"
+          ref={props.inputRef}
           className={styles.input}
           checked={props.checked}
           disabled={props.disabled}

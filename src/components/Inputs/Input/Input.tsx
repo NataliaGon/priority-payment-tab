@@ -6,7 +6,7 @@ import styles from './Input.module.scss';
 
 type InputSkin = "box" | "line"
 type InputSize = "small" | "medium" | "large";
-type InputWidth = "regularFixed" | "fullWidth"
+type InputWidth = "regularFixed" | "fullWidth";
 
 export interface InputProperties extends InputBaseProperties {
     size?: InputSize;
@@ -19,7 +19,7 @@ export interface InputProperties extends InputBaseProperties {
     inputRef?(ref): void;
     onChange?(event): void;
     /** use to return focus to input after clicking on children */
-    keepFocus?: boolean;
+    returnFocus?: boolean;
     focusOnMount?: boolean;
 }
 
@@ -35,7 +35,7 @@ export class Input extends React.Component<InputProperties, InputState> {
         width: "regularFixed",
         skin: "box",
         size: "medium",
-        keepFocus: true
+        returnFocus: true
     }
 
     componentDidMount() {
@@ -44,8 +44,8 @@ export class Input extends React.Component<InputProperties, InputState> {
     }
 
     handleMouseUp = () => {
-        const { keepFocus } = this.props; 
-        !this.input.isFocused && keepFocus && this.input.focus();
+        const { returnFocus } = this.props; 
+        !this.input.isFocused && returnFocus && this.input.focus();
     }
 
     handleRef = (ref) => {
@@ -72,7 +72,7 @@ export class Input extends React.Component<InputProperties, InputState> {
     }
 
     public render() {
-        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, keepFocus, focusOnMount, ...restInputProps } = this.props;
+        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, returnFocus, focusOnMount, ...restInputProps } = this.props;
 
         const hasBorder = (this.state && this.state.isFocus) ? styles.focusBorder : '';
         const componentClassNames = classNames(styles.component, skin && styles[skin], size && styles[size], width && styles[width], direction && styles[direction], hasBorder, componentClasses);

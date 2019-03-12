@@ -23,7 +23,7 @@ export class Container extends ComponentBase<ContainerProperties> {
   public render() {
     let classNames = require('classnames/bind');
     let cx = classNames.bind(styles);
-    const componentClassNames = cx('component', { 
+    const componentClassNames = cx('component', this.props.skin, { 
       'active': this.props.active,
       'roundConer': this.props.roundConer
   },

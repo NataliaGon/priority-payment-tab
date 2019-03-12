@@ -20,6 +20,7 @@
     background-color: $white;
     box-shadow: 0 0 50px 0 rgba(0, 0, 0, 0.2);
     transition: width 0.8s;
+    outline: none;
 
     @include position-horizontal(0);
 

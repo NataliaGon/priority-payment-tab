@@ -41,10 +41,6 @@ export class SidePanel extends ComponentBase<SidePanelProperties> {
 		document.addEventListener("keydown", this.escFunction, false);
 	}
 
-	componentDidUpdate() {
-		this.focus();
-	}
-
 	componentWillUnmount() {
 		//remove event listener for esc button
 		document.removeEventListener("keydown", this.escFunction, false);
