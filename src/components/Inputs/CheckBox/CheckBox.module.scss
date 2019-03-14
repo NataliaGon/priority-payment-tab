@@ -35,17 +35,25 @@
     line-height: normal;
     @include margin-horizontal(0,10px);
 
-
-    &.checked {
-        &:before {
-            content: "\e94b";
-        }
-    }
+    
 
     &:hover {
-        color: $blue;
         border-color: $blue;
     }
+}
+
+.checkIcon {
+    height: 2rem;
+    width: 2rem;
+    font-size: $font-size-bigger; 
+    visibility: hidden;
+    &:hover {
+        color: $blue;
+    }
+}
+
+.checked {
+    visibility: visible;
 }
 
 .input {
