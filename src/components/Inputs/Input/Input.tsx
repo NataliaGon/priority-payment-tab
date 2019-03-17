@@ -16,11 +16,10 @@ export interface InputProperties extends InputBaseProperties {
     placeholder?: string;
     /** use to force a different direction that the inherited one */
     direction?: 'ltr' | 'rtl';
-    inputRef?(ref): void;
     onChange?(event): void;
     /** use to return focus to input after clicking on children */
     returnFocus?: boolean;
-    focusOnMount?: boolean;
+    inputRef?: React.RefObject<HTMLInputElement>
 }
 
 interface InputState extends React.ComponentState {
@@ -29,7 +28,7 @@ interface InputState extends React.ComponentState {
 
 export class Input extends React.Component<InputProperties, InputState> {
 
-    input;
+    inputRef;
 
     static defaultProps = {
         width: "regularFixed",
@@ -38,20 +37,14 @@ export class Input extends React.Component<InputProperties, InputState> {
         returnFocus: true
     }
 
-    componentDidMount() {
-        const { focusOnMount } = this.props;
-        focusOnMount && this.input.focus();
+    constructor(props) {
+        super(props);
+        this.inputRef = props.inputRef || React.createRef();
     }
 
     handleMouseUp = () => {
         const { returnFocus } = this.props; 
-        !this.input.isFocused && returnFocus && this.input.focus();
-    }
-
-    handleRef = (ref) => {
-        this.input = ref;
-        const { inputRef } = this.props;
-        inputRef && inputRef(ref);
+        !this.inputRef.current.isFocused && returnFocus && this.inputRef.current.focus();
     }
 
     handleChange = (event) => {
@@ -72,14 +65,14 @@ export class Input extends React.Component<InputProperties, InputState> {
     }
 
     public render() {
-        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, returnFocus, focusOnMount, ...restInputProps } = this.props;
+        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, returnFocus, ...restInputProps } = this.props;
 
         const hasBorder = (this.state && this.state.isFocus) ? styles.focusBorder : '';
         const componentClassNames = classNames(styles.component, skin && styles[skin], size && styles[size], width && styles[width], direction && styles[direction], hasBorder, componentClasses);
 
         return (
             <div className={componentClassNames} onMouseUp={this.handleMouseUp}>
-                <input ref={this.handleRef}
+                <input ref={this.inputRef}
                     className={styles.input}
                     type="text"
                     onBlur={this.handleOnBlur}
