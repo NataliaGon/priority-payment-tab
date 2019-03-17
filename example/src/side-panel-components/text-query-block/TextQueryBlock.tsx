@@ -9,10 +9,10 @@ export function TextQueryBlock() {
 
         return (
           <div className={stylesMain.stackPanel}>
-          <Container roundConer activeHover> 
+          <Container roundConer> 
           <div className={stylesMain.rowPanel}>
                   <div style={{marginLeft:"-10px"}}>
-                  <Label skin="regular-hight-contrast">Customer No.</Label>
+                  <Label skin="bold">Customer No.</Label>
                   </div>
                 </div>
                 {/* <div className={stylesMain.rowPanel} style={{paddingBottom:"10px", paddingTop:"10px" }}>
