@@ -32,7 +32,7 @@ export const CheckBox = (props: CheckBoxProperties) => {
           onBlur={props.onBlur}
         />
         <div className={checkboxClasses}>
-          <Icon hoverable skin="standart" icon={PriorityIcon.done} componentClasses={iconClasses}/>
+          <Icon skin="standart" icon={PriorityIcon.done} componentClasses={iconClasses}/>
         </div>
         
         {props.children}
