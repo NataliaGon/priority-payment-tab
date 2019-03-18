@@ -34,19 +34,26 @@
     border: 1px solid $boxShadow-brown-light;
     border-radius: 0.2rem;
     line-height: normal;
-    @include margin-horizontal(0,10px);
-
-
-    &.checked {
-        &:before {
-            content: "\e94b";
-        }
-    }
-
+    @include margin-horizontal(0,10px);  
     &:hover {
-        color: $blue;
         border-color: $blue;
     }
+}
+
+.checkIcon {
+    height: 2rem;
+    width: 2rem;
+    font-size: $font-size-bigger; 
+    visibility: hidden;
+    &:hover {
+        &:before {
+            color: $blue;
+        }
+    }
+}
+
+.checked {
+    visibility: visible;
 }
 
 .input {

@@ -1,6 +1,7 @@
 import * as React from "react";
 import classNames from 'classnames';
-import { InputBaseProperties,  ComponentBase, ActiveProperty } from "../../../core";
+import { InputBaseProperties,  ComponentBase, ActiveProperty, PriorityIcon } from "../../../core";
+import { Icon } from "../../Icon";
 
 import styles from "./CheckBox.module.scss";
 
@@ -15,8 +16,8 @@ interface CheckBoxProperties extends InputBaseProperties {
 export const CheckBox = (props: CheckBoxProperties) => {
 
     const elementClasses = classNames(styles.component, props.componentClasses, {[styles.disabled]: props.disabled});
-    const checkboxClasses = classNames(styles.checkbox, {[styles.checked]: props.checked});
-
+    const checkboxClasses = classNames(styles.checkbox);
+    const iconClasses = classNames(styles.checkIcon, {[styles.checked]: props.checked});
     return (
       <div className={elementClasses} onClick={props.onChange}>
         <input
@@ -30,7 +31,10 @@ export const CheckBox = (props: CheckBoxProperties) => {
           onFocus={props.onFocus}
           onBlur={props.onBlur}
         />
-        <span className={checkboxClasses}></span>
+        <div className={checkboxClasses}>
+          <Icon hoverable skin="standart" icon={PriorityIcon.done} componentClasses={iconClasses}/>
+        </div>
+        
         {props.children}
       </div>
     );
