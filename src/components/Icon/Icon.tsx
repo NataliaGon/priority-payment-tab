@@ -20,7 +20,6 @@ interface IconProperties extends ComponentBaseProperties {
   disabled?: boolean;
   // do we realy need it?
   children?;
-  hoverable?:boolean;
 }
 
 export const Icon = function (props: IconProperties) {
@@ -32,7 +31,7 @@ export const Icon = function (props: IconProperties) {
       props.skin,
       {
         'active': props.active,
-        'hoverable': props.hoverable || props.onClick,
+        'hoverable': props.onClick,
         'invisible': props.invisible,
         'disabled': props.disabled
       },

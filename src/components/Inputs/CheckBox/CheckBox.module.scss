@@ -33,10 +33,7 @@
     border: 1px solid $boxShadow-brown-light;
     border-radius: 0.2rem;
     line-height: normal;
-    @include margin-horizontal(0,10px);
-
-    
-
+    @include margin-horizontal(0,10px);  
     &:hover {
         border-color: $blue;
     }
@@ -48,7 +45,9 @@
     font-size: $font-size-bigger; 
     visibility: hidden;
     &:hover {
-        color: $blue;
+        &:before {
+            color: $blue;
+        }
     }
 }
 
