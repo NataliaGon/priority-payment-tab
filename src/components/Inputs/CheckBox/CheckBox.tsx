@@ -1,6 +1,5 @@
 import * as React from "react";
 import classNames from 'classnames';
-
 import { InputBaseProperties,  ComponentBase, ActiveProperty, PriorityIcon } from "../../../core";
 import { Icon } from "../../Icon";
 
@@ -11,11 +10,10 @@ interface CheckBoxProperties extends InputBaseProperties {
   disabled?: boolean,
   onChange?(): void,
   children?: JSX.Element,
-  inputRef?(ref): void
+  inputRef?: React.RefObject<HTMLInputElement>
 }
 
-
-export function CheckBox(props: CheckBoxProperties){
+export const CheckBox = (props: CheckBoxProperties) => {
 
     const elementClasses = classNames(styles.component, props.componentClasses, {[styles.disabled]: props.disabled});
     const checkboxClasses = classNames(styles.checkbox);
