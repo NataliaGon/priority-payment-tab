@@ -11,7 +11,7 @@ export function DateQueryBlock() {
         <div className={stylesMain.stackPanel}>
             <Container roundConer>
                 <div className={stylesMain.rowPanel} style={{ marginLeft: "-10px" }}>
-                    <Label skin="regular-hight-contrast">Due Date</Label>
+                    <Label skin="bold">Due Date</Label>
                 </div>
                 <div className={stylesMain.rowPanel} style={{ paddingBottom: "10px", paddingTop: "10px" }}>
                     <Select options={optionDropDown} width="medium" isBlue />
@@ -37,7 +37,7 @@ export function DateQueryBlock() {
                 </div>
                 <div className={stylesMain.rowPanel} style={{ justifyContent: "flex-end" }}>
                     <Label>Sort</Label>
-                    <ToggleSwitch />
+                    <ToggleSwitch checked={true} onChange={(value) => {}}/>
                 </div>
             </Container>
         </div>

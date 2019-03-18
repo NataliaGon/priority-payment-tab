@@ -10,10 +10,10 @@ export function FooterBlock(){
         return (
             <div className={styles.component}>
                 <StackPanel skin="dark" >
-                    <RowPanel alignItems="space-between" >
+                    <RowPanel>
                         <div style={{ display: "flex",  cursor: "pointer"}}>
                             <Icon icon={PriorityIcon.clear} iconColor="white" />
-                            <Label skin="regular-hight-contrast" textColor="white">Clear Search</Label>
+                            <Label skin="bold" textColor="white">Clear Search</Label>
                         </div>
                         <div style={{ display: "flex" }}>
                             <WrapPanel>
