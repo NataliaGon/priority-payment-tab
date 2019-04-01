@@ -9,7 +9,7 @@ interface CheckBoxProperties extends InputBaseProperties {
   checked?: boolean,
   disabled?: boolean,
   onChange?(): void,
-  children?: JSX.Element,
+  children?: any,
   inputRef?: React.RefObject<HTMLInputElement>
 }
 
