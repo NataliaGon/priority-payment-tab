@@ -25,7 +25,7 @@ interface IconProperties extends ComponentBaseProperties {
 export const Icon = function (props: IconProperties) {
 
     const iconClass = cx('component',
-      props.icon,
+      `icon-${props.icon}`,
       props.textColor,
       props.componentClasses,
       props.skin,

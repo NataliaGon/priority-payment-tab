@@ -3,12 +3,21 @@
 
 
 @include rtl {
-    .icon-icon-long-arrow-right:before {
-        content: "\e916";
+
+    .icon-arrow-left-big {
+        transform: scaleX(-1);
     }
 
-    .icon-icon-long-arrow-left:before {
-        content: "\e925";
+    .icon-arrow-right-big {
+        transform: scaleX(-1);
+    }
+
+    .icon-icon-long-arrow-right {
+        transform: scaleX(-1);
+    }
+
+    .icon-icon-long-arrow-left {
+        transform: scaleX(-1);
     }
 }
 

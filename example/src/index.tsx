@@ -6,4 +6,4 @@ import Buttons from './Buttons';
 
 import "./styles.scss";
 
-ReactDOM.render(<Buttons />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById('root'))
