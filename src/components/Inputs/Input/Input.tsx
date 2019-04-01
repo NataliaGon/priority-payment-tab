@@ -15,7 +15,7 @@ export interface InputProperties extends InputBaseProperties {
     value?: string;
     placeholder?: string;
     /** use to force a different direction that the inherited one */
-    direction?: 'ltr' | 'rtl';
+    direction?: 'ltr' | 'rtl' | 'auto';
     onChange?(event): void;
     /** use to return focus to input after clicking on children */
     returnFocus?: boolean;
@@ -39,6 +39,9 @@ export class Input extends React.Component<InputProperties, InputState> {
 
     constructor(props) {
         super(props);
+        this.state = {
+            isFocus: false
+        }
         this.inputRef = props.inputRef || React.createRef();
     }
 
@@ -65,14 +68,23 @@ export class Input extends React.Component<InputProperties, InputState> {
     }
 
     public render() {
-        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, returnFocus, ...restInputProps } = this.props;
+        const { onBlur, onFocus, onChange, inputRef, skin, size, width, direction, children, componentClasses, returnFocus, value, ...restInputProps } = this.props;
 
-        const hasBorder = (this.state && this.state.isFocus) ? styles.focusBorder : '';
-        const componentClassNames = classNames(styles.component, skin && styles[skin], size && styles[size], width && styles[width], direction && styles[direction], hasBorder, componentClasses);
+        const componentClassNames = classNames(styles.component,
+            skin && styles[skin],
+            size && styles[size],
+            width && styles[width],
+            direction && styles[direction], {
+                [styles.focusBorder]: this.state.isFocus,
+                [styles.noValue]: value === ''
+            },
+            componentClasses);
 
         return (
             <div className={componentClassNames} onMouseUp={this.handleMouseUp}>
                 <input ref={this.inputRef}
+                    dir={direction}
+                    value={value}
                     className={styles.input}
                     type="text"
                     onBlur={this.handleOnBlur}

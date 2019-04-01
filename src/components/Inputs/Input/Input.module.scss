@@ -21,6 +21,12 @@
     direction: ltr;
 }
 
+.auto.noValue .input {
+    @include rtl {
+        text-align: right;
+    }
+}
+
 .box {
     @include padding-horizontal(10px,0);
 
@@ -32,6 +38,7 @@
         padding: 10px 0;
     }
 }
+
 
 .fullWidth {
     width: 100%;
