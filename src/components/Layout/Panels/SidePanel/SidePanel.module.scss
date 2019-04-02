@@ -22,7 +22,7 @@
     transition: width 0.8s;
     outline: none;
 
-    @include position-horizontal(0,null);
+    @include position-horizontal(null,0);
 
     .opacity {
         height: 100%;
@@ -35,14 +35,14 @@
     }
 
     .component {
-        width: 0;
-
+        
+        right:-620px;
         .opacity {
             opacity: 0;
         }
 
         &.wide {
-            width: 0;
+            right:-800px
         }
     }
 }
@@ -54,16 +54,12 @@
     }
 
     .component {
-        width: 620px;
-        transition: width 0.5s;
+        right: 0px;
+        transition: right 0.5s;
 
         .opacity {
             opacity: 1;
             transition: opacity 0.5s linear 0.2s;
-        }
-
-        &.wide {
-            width: 800px;
         }
     }
 }
