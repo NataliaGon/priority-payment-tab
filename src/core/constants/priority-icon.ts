@@ -26,7 +26,7 @@ export enum PriorityIcon {
     more = "more-dots",
     addSmall = "icon-add-small",
     search = "header-search",
-    F11 = "icon-F11-search",
+    F11 = "quary",
     singleRecordView = "single-record-view",
     tableView = "table-view",
     arrowLeft = "arrow-left-big",
