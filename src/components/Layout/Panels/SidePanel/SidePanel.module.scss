@@ -22,7 +22,7 @@
     transition: width 0.8s;
     outline: none;
 
-    @include position-horizontal(0);
+    @include position-horizontal(0,null);
 
     .opacity {
         height: 100%;
