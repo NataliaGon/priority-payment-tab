@@ -35,14 +35,14 @@
     }
 
     .component {
-        
-        right:-620px;
+        width: 0;
+
         .opacity {
             opacity: 0;
         }
 
         &.wide {
-            right:-800px
+            width: 0;
         }
     }
 }
@@ -54,12 +54,16 @@
     }
 
     .component {
-        right: 0px;
-        transition: right 0.5s;
+        width: 620px;
+        transition: width 0.5s;
 
         .opacity {
             opacity: 1;
             transition: opacity 0.5s linear 0.2s;
+        }
+
+        &.wide {
+            width: 800px;
         }
     }
 }
@@ -102,3 +106,5 @@
         }
     }
 }
+
+// @include animation1();
