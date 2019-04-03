@@ -2,11 +2,11 @@ $icon-font-path: "../../fonts" !default;
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('#{$icon-font-path}/icomoon.eot?4bwnkq');
-  src:  url('#{$icon-font-path}/icomoon.eot?4bwnkq#iefix') format('embedded-opentype'),
-    url('#{$icon-font-path}/icomoon.ttf?4bwnkq') format('truetype'),
-    url('#{$icon-font-path}/icomoon.woff?4bwnkq') format('woff'),
-    url('#{$icon-font-path}/icomoon.svg?4bwnkq#icomoon') format('svg');
+  src:  url('#{$icon-font-path}/icomoon.eot?z8f5k6');
+  src:  url('#{$icon-font-path}/icomoon.eot?z8f5k6#iefix') format('embedded-opentype'),
+    url('#{$icon-font-path}/icomoon.ttf?z8f5k6') format('truetype'),
+    url('#{$icon-font-path}/icomoon.woff?z8f5k6') format('woff'),
+    url('#{$icon-font-path}/icomoon.svg?z8f5k6#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,12 @@ $icon-font-path: "../../fonts" !default;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-local_pin:before {
+  content: "\e939";
+}
+.icon-local_pin-pinned:before {
+  content: "\e93a";
+}
 .icon-arrow-left-big:before {
   content: "\e934";
 }
