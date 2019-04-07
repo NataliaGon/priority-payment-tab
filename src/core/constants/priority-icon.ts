@@ -33,5 +33,6 @@ export enum PriorityIcon {
     tableView = "table-view",
     arrowLeft = "arrow-left-big",
     arrowRight = "arrow-right-big",
-    closeBig = "icon-close-big"
+    closeBig = "icon-close-big",
+    delete="icon-delete"
 }
