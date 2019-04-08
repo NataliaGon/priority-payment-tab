@@ -29,6 +29,7 @@ export const Icon = function (props: IconProperties) {
       props.textColor,
       props.componentClasses,
       props.skin,
+      props.iconColor,
       {
         'active': props.active,
         'hoverable': props.onClick,
