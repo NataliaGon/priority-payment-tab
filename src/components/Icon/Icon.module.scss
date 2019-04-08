@@ -35,7 +35,27 @@
 
     &.active {
         &:before {
-            color: $blue;
+            color: $dark-blue;
+        }
+    }
+}
+
+.primary {
+    &:before {
+        color: $blue;
+    }
+
+    &.hoverable {
+    	&:hover {
+	    	&:before {
+	    		color: $dark-blue;
+	    	}
+	    }
+    }
+
+    &.active {
+        &:before {
+            color: $dark-blue;
         }
     }
 }
