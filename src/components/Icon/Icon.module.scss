@@ -20,6 +20,14 @@
     font-size: 49px;
 }
 
+.darkContainer {
+    &.standart {
+        &:before {
+            color: $white;
+        }
+    }
+}
+
 .standart {
     &:before {
         color: $grey;

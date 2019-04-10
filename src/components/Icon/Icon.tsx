@@ -20,6 +20,8 @@ interface IconProperties extends ComponentBaseProperties {
   disabled?: boolean;
   // do we realy need it?
   children?;
+  darkContainer?: boolean;
+  onContextMenu?: (event: any) => void;
 }
 
 export const Icon = function (props: IconProperties) {
@@ -36,10 +38,11 @@ export const Icon = function (props: IconProperties) {
         'invisible': props.invisible,
         'disabled': props.disabled
       },
-      props.textSize);
+      props.textSize,
+      props.darkContainer && [styles.darkContainer]);
     const iconCounter = props.counterValue ? <IconCounter count={props.counterValue} /> : null;
 
     return (
-      <div className={iconClass} onClick={props.onClick}>{iconCounter}{props.children}</div>
+      <div className={iconClass} onClick={props.onClick} onContextMenu={props.onContextMenu}>{iconCounter}{props.children}</div>
     )
 }
