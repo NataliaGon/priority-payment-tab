@@ -1,9 +1,6 @@
 $is-reset-css: true !default;
 
 @mixin reset($selector) {
-    *, *:before, *:after {
-        box-sizing: inherit;
-    }
 
     #{$selector}, #{$selector}:before, #{$selector}:after {
         margin: 0;
