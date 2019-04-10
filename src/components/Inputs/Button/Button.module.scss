@@ -301,13 +301,22 @@
         @include margin-horizontal(0,1px);
     }
 
-    > *:first-child.component, > *:first-child .component {
+    > *:first-child.component {
         @include border-radius(3px, 0, 0 ,3px);
     }
 
-    > *:last-child.component, *:last-child .component  {
+    > *:first-child .component {
+        @include border-radius(3px, 0, 0 ,3px);
+    }
+
+    > *:last-child.component {
         @include border-radius(0, 3px, 3px, 0);
     }
+
+    > *:last-child .component  {
+        @include border-radius(0, 3px, 3px, 0);
+    }
+
 
     > *:not(:first-child):not(:last-child).component, *:not(:first-child):not(:last-child) .component {
         border-radius: 0;
