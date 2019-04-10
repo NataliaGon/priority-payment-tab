@@ -35,12 +35,31 @@ const defaultButtonProperties: ButtonProperties = {
   tabIndex: 0
 }
 
+export const Buttons = ({children}) => {
+  return <div className={styles.buttons}>
+    { children }
+  </div>
+}
+
 export class Button extends React.Component<ButtonProperties> {
 
   static defaultProps = defaultButtonProperties;
 
   public render() {
-    const { skin, width, size, shape, disabled, active, darkContainer, elevated, icon, prefixIcon = icon, suffixIcon, children, inputRef, tabIndex } = this.props;
+    const { skin,
+            width,
+            size,
+            shape,
+            disabled,
+            active,
+            darkContainer,
+            elevated,
+            icon,
+            prefixIcon = icon,
+            suffixIcon,
+            children,
+            inputRef,
+            tabIndex } = this.props;
 
     const skinClass = skin && styles[skin];
     const widthClass = width && styles[width];
