@@ -2,11 +2,11 @@ $icon-font-path: "../../fonts" !default;
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('#{$icon-font-path}/icomoon.eot?z8f5k6');
-  src:  url('#{$icon-font-path}/icomoon.eot?z8f5k6#iefix') format('embedded-opentype'),
-    url('#{$icon-font-path}/icomoon.ttf?z8f5k6') format('truetype'),
-    url('#{$icon-font-path}/icomoon.woff?z8f5k6') format('woff'),
-    url('#{$icon-font-path}/icomoon.svg?z8f5k6#icomoon') format('svg');
+  src:  url('#{$icon-font-path}/icomoon.eot?mimjg5');
+  src:  url('#{$icon-font-path}/icomoon.eot?mimjg5#iefix') format('embedded-opentype'),
+    url('#{$icon-font-path}/icomoon.ttf?mimjg5') format('truetype'),
+    url('#{$icon-font-path}/icomoon.woff?mimjg5') format('woff'),
+    url('#{$icon-font-path}/icomoon.svg?mimjg5#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,36 @@ $icon-font-path: "../../fonts" !default;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mail:before {
+  content: "\e941";
+}
+.icon-icon-emtpyfile:before {
+  content: "\e942";
+}
+.icon-icon-folder:before {
+  content: "\e943";
+}
+.icon-icon-sort-small:before {
+  content: "\e944";
+}
+.icon-attachment:before {
+  content: "\e93b";
+}
+.icon-icon-excel:before {
+  content: "\e93c";
+}
+.icon-icon-pdf:before {
+  content: "\e93d";
+}
+.icon-icon-ppt:before {
+  content: "\e93e";
+}
+.icon-icon-txt:before {
+  content: "\e93f";
+}
+.icon-icon-word:before {
+  content: "\e940";
+}
 .icon-local_pin:before {
   content: "\e939";
 }

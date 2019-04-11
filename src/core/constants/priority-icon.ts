@@ -34,5 +34,13 @@ export enum PriorityIcon {
     arrowLeft = "arrow-left-big",
     arrowRight = "arrow-right-big",
     closeBig = "icon-close-big",
-    delete="icon-delete"
+    delete = "icon-delete",
+    attachment = "attachment",
+    doc = "icon-word",
+    excel = "icon-excel",
+    ppt = "icon-ppt",
+    txt = "icon-txt",
+    pdf = "icon-pdf",
+    msg = "mail",
+    emptyFile = "icon-emtpyfile"
 }
