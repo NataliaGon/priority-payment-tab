@@ -37,7 +37,7 @@
         box-shadow: 0 5px 15px 0 $boxShadow-brown;
     }
 
-    &:hover:not(.disabled), &:focus {
+    &:hover, &:focus {
         background-color: $white;
         @include linear-gradient(250deg, $blue, $lighter-blue);
     }
@@ -60,7 +60,7 @@
         box-shadow: 0 5px 15px 0 $boxShadow-brown;
     }
 
-    &:hover:not(.disabled), &:focus {
+    &:hover, &:focus {
         background-color: $white;
 
         @include linear-gradient(250deg, $green, $light-green);
@@ -81,14 +81,14 @@
     border: solid 1px $blue;
     color: $blue;
 
-    &:hover:not(.disabled), &:focus {
+    &:hover, &:focus {
         color: $white;
 
         @include linear-gradient(250deg, $blue, $lighter-blue);
         border: none;
     }
 
-    &:active, &.active {
+    &:active, &:active:hover, &.active {
         color: $white;
         border-color: $background-color-dark-grey;
         background-color: $background-color-dark-grey;
@@ -105,12 +105,12 @@
         color: $blue;
     }
 
-    &:hover:not(.disabled), &:focus {
+    &:hover, &:focus {
         border-color: $blue;
         color: $blue;
     }
 
-    &:active, &.active {
+    &:active, &:active:hover, &.active {
         border-color: $blue;
         background-color: $blue;
         color: $white;
@@ -130,7 +130,7 @@
         color: $grey;
     }
 
-    &:hover:not(.disabled), &:focus {
+    &:hover, &:focus {
         border-color: $blue;
         .suffixIcon {
             color: $blue;
@@ -170,7 +170,7 @@
         border: solid 1px $white;
         color: $white;
 
-        &:hover:not(.disabled), &:focus {
+        &:hover, &:focus {
             border: solid 1px $blue;
             box-shadow: 0 5px 15px 0 $boxShadow-brown;
         }
@@ -190,6 +190,7 @@
     color: $white;
     opacity: 0.3;
     cursor: default;
+    pointer-events: none;
 
     &.strokeLight {
         color: $disabled-grey;
