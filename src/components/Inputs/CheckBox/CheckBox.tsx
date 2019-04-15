@@ -10,7 +10,8 @@ interface CheckBoxProperties extends InputBaseProperties {
   disabled?: boolean,
   onChange?(): void,
   children?: any,
-  inputRef?: React.RefObject<HTMLInputElement>
+  inputRef?: React.RefObject<HTMLInputElement>,
+  autoFocus?:boolean;
 }
 
 export const CheckBox = (props: CheckBoxProperties) => {
@@ -30,6 +31,7 @@ export const CheckBox = (props: CheckBoxProperties) => {
           onClick={props.onChange}
           onFocus={props.onFocus}
           onBlur={props.onBlur}
+          autoFocus={props.autoFocus}
         />
         <div className={checkboxClasses}>
           <Icon skin="standart" icon={PriorityIcon.done} componentClasses={iconClasses}/>
