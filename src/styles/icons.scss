@@ -2,11 +2,11 @@ $icon-font-path: "../../fonts" !default;
 
 @font-face {
   font-family: 'icomoon';
-  src:  url('#{$icon-font-path}/icomoon.eot?mimjg5');
-  src:  url('#{$icon-font-path}/icomoon.eot?mimjg5#iefix') format('embedded-opentype'),
-    url('#{$icon-font-path}/icomoon.ttf?mimjg5') format('truetype'),
-    url('#{$icon-font-path}/icomoon.woff?mimjg5') format('woff'),
-    url('#{$icon-font-path}/icomoon.svg?mimjg5#icomoon') format('svg');
+  src:  url('#{$icon-font-path}/icomoon.eot?rgd3pj');
+  src:  url('#{$icon-font-path}/icomoon.eot?rgd3pj#iefix') format('embedded-opentype'),
+    url('#{$icon-font-path}/icomoon.ttf?rgd3pj') format('truetype'),
+    url('#{$icon-font-path}/icomoon.woff?rgd3pj') format('woff'),
+    url('#{$icon-font-path}/icomoon.svg?rgd3pj#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -26,6 +26,21 @@ $icon-font-path: "../../fonts" !default;
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-sorted .path1:before {
+  content: "\e947";
+  color: rgb(0, 0, 0);
+}
+.icon-sorted .path2:before {
+  content: "\e948";
+  margin-left: -1em;
+  color: rgb(110, 129, 138);
+}
+.icon-sort:before {
+  content: "\e946";
+}
+.icon-bi:before {
+  content: "\e945";
+}
 .icon-mail:before {
   content: "\e941";
 }

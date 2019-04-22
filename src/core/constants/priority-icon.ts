@@ -1,4 +1,7 @@
 export enum PriorityIcon {
+    sorted = "sorted",
+    sort = "sort",
+    bi = "bi",
     pin = "local_pin",
     pinPinned = "local_pin-pinned",
     filterBig = "icon-filter-big",
