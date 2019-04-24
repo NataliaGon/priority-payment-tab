@@ -45,5 +45,6 @@ export enum PriorityIcon {
     txt = "icon-txt",
     pdf = "icon-pdf",
     msg = "mail",
-    emptyFile = "icon-emtpyfile"
+    emptyFile = "icon-emtpyfile",
+    filterFill = "icon-sort-small"
 }
