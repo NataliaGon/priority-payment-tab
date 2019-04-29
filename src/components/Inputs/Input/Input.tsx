@@ -20,6 +20,7 @@ export interface InputProperties extends InputBaseProperties {
     /** use to return focus to input after clicking on children */
     returnFocus?: boolean;
     inputRef?: React.RefObject<HTMLInputElement>
+    autoFocus?:boolean;
 }
 
 interface InputState extends React.ComponentState {
@@ -34,7 +35,8 @@ export class Input extends React.Component<InputProperties, InputState> {
         width: "regularFixed",
         skin: "box",
         size: "medium",
-        returnFocus: true
+        returnFocus: true,
+        autoFocus:false
     }
 
     constructor(props) {

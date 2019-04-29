@@ -23,7 +23,8 @@ export interface ButtonProperties extends InputBaseProperties {
   prefixIcon?: PriorityIcon;
   suffixIcon?: PriorityIcon;
   onClick?: (event?) => void;
-  inputRef?: React.RefObject<HTMLButtonElement>
+  inputRef?: React.RefObject<HTMLButtonElement>;
+  autoFocus?:boolean;
 }
 
 const defaultButtonProperties: ButtonProperties = {
@@ -32,7 +33,8 @@ const defaultButtonProperties: ButtonProperties = {
   shape: "regular",
   size: "medium",
   elevated: true,
-  tabIndex: 0
+  tabIndex: 0,
+  autoFocus:false
 }
 
 export const Buttons = ({children}) => {
@@ -59,7 +61,8 @@ export class Button extends React.Component<ButtonProperties> {
             suffixIcon,
             children,
             inputRef,
-            tabIndex } = this.props;
+            tabIndex,
+          autoFocus } = this.props;
 
     const skinClass = skin && styles[skin];
     const widthClass = width && styles[width];
@@ -80,7 +83,7 @@ export class Button extends React.Component<ButtonProperties> {
       });
 
     return (
-      <button disabled={disabled} ref={inputRef} tabIndex={tabIndex} className={buttonClass} onClick={this.props.onClick} onFocus={this.props.onFocus} onBlur={this.props.onBlur}>
+      <button disabled={disabled} autoFocus={autoFocus} ref={inputRef} tabIndex={tabIndex} className={buttonClass} onClick={this.props.onClick} onFocus={this.props.onFocus} onBlur={this.props.onBlur}>
         {prefixIcon && <Icon icon={prefixIcon} componentClasses={styles.prefixIcon}/>}
         {this.props.children}
         {suffixIcon && <Icon icon={suffixIcon} componentClasses={styles.suffixIcon}/>}
