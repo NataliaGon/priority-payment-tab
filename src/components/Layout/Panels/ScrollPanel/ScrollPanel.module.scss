@@ -13,11 +13,11 @@
     background-image: linear-gradient(to bottom, transparent, $white);
 }
 
-.scrollArea {
+.scrollArea > div {
     direction: ltr;
 
     @include rtl {
-        direction: ltr;
+        direction: ltr !important;
 
         > * {
             direction: rtl;
