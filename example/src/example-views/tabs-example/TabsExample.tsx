@@ -32,7 +32,7 @@ const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
             </div>
             <h1>Tabs Example RTL</h1>
             <div dir="rtl">
-                <div className={styles.tabsContainer}>
+                <div className={styles.tabsContainer} dir="rtl">
                     <Tabs
                         defaultActiveKey="0"
                      >

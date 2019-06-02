@@ -201,6 +201,9 @@
                 height: 100%;
                 margin-right: 10px;
                 // border-right: 1px solid #f3f3f3;
+                @include rtl {
+                    float: right!important;
+                }
 
             }
 
@@ -505,6 +508,7 @@
                 float: left;
                 height: 100%;
                 margin-right: 30px;
+
             }
 
             .rc-tabs-tabpane-inactive {
