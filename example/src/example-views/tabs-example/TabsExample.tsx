@@ -30,12 +30,13 @@ const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
                     </TabPane>
                 </Tabs>
             </div>
-            <h1>Tabs Example RTL</h1>
+
             <div dir="rtl">
-                <div className={styles.tabsContainer} dir="rtl">
+                <h1>Tabs Example RTL</h1>
+                <div className={styles.tabsContainer}>
                     <Tabs
                         defaultActiveKey="0"
-                     >
+                    >
                         <TabPane tab={'החשבוניות הפתוחות שלי (3)'} key="0" >
                             <PanelContent id='1' />
                         </TabPane>
@@ -45,7 +46,7 @@ const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
                     </Tabs>
                 </div>
             </div>
-            
+
         </div>
     );
 }
