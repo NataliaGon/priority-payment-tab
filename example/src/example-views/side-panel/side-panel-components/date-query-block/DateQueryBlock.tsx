@@ -1,8 +1,8 @@
-import { Container, Icon, Input, Label, PriorityIcon, Select, ToggleSwitch } from 'priority-style-react';
 import * as React from 'react';
+import { Container, Icon, Input, Label, PriorityIcon, Select, ToggleSwitch } from 'priority-style-react';
+import { optionDropDown } from '../optionDropDown';
 
-import stylesMain from '../../AppStyles.module.scss';
-import { optionDropDown } from './../../optionDropDown';
+import stylesMain from '../../SidePanelExample.module.scss';
 import styles from './DateQueryBlock.module.scss';
 
 export function DateQueryBlock() {

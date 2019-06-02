@@ -7,7 +7,11 @@ declare module '*.scss' {
   export default content;
 }
 
-declare module 'classnames'
+declare module 'classnames';
+
+declare module 'classnames/bind';
+
+declare module 'rc-tabs';
 
 interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> { }
 

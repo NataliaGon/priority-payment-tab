@@ -11,6 +11,28 @@
     letter-spacing: normal;
     margin: 0;
 
+    .h1 {
+        font-size: $title-font-size-large;
+        color: $blue;
+    }
+
+    .h2{
+        font-size: $title-font-size-medium;
+        color: $blue;
+    }
+
+    .h4{
+        font-family: $font-family-main;
+        font-size: $title-font-size-regular;
+        color:$grey;
+    }
+
+    .NavText{
+        font-family: $font-family-main;
+        font-size: $title-font-size-small;
+        font-weight: $font-weight-bold;
+    }
+
     @include rtl {
         font-family: $font-family-titles-hebrew;
         font-weight: $font-weight-bold;
