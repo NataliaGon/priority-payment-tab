@@ -31,14 +31,14 @@ interface TabsProperties extends ComponentBaseProperties {
 }
 
 const Tabs: (props: TabsProperties) => React.ReactElement<TabsProperties> = (props: TabsProperties) => {
- console.log(props)
+
   return (
     <div className={ cx('component', props.layout, props.componentClasses) }>
       <RcTabs
         tabBarPosition={ props.tabBarPosition }
         defaultActiveKey={ props.defaultActiveKey }
         onChange={ props.onChange }
-        renderTabBar={ () => <InkTabBar onTabClick={ props.onTabClick } /> }
+        renderTabBar={ () => <InkTabBar onTabClick={props.onTabClick} /> }
         renderTabContent={ () => <TabContent /> }
       >
         { props.children }

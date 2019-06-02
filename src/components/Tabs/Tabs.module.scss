@@ -116,14 +116,6 @@
       font-weight: $font-weight-regular;
       color: #778e97;
       cursor: pointer;
-      // font-family: 'Roboto';
-      // font-size: 14px;
-      // font-weight: 500;
-      // font-style: normal;
-      // font-stretch: normal;
-      // line-height: normal;
-      // letter-spacing: normal;
-      // text-align: center;
       @media screen and (max-width: 801px) {
         width: 50%;
         margin-right: 0 !important;
@@ -159,12 +151,7 @@
       overflow: auto;
     }
 
-    .rc-tabs-content-animated {
-      // transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1), margin-left 0.3s cubic-bezier(0.35, 0, 0.25, 1), margin-top 0.3s cubic-bezier(0.35, 0, 0.25, 1);
-      // display: -ms-flexbox;
-      // display: flex;
-      // will-change: transform;
-    }
+
 
     .rc-tabs-content-animated .rc-tabs-tabpane {
       -ms-flex-negative: 0;
@@ -307,8 +294,6 @@
         float: right;
         height: 100%;
         margin-left: 10px;
-
-        //border-left: 1px solid #f3f3f3;
       }
 
       .rc-tabs-nav-container {
@@ -505,7 +490,8 @@
 
       .rc-tabs-tabpane-inactive {
         height: 0;
-        overflow: visible;
+        // overflow: visible;
+        // overflow: hidden;
       }
     }
 
@@ -566,6 +552,7 @@
       .rc-tabs-content-animated {
         -ms-flex-direction: row;
         flex-direction: row;
+      
       }
 
       .rc-tabs-content-animated .rc-tabs-tabpane {
@@ -620,14 +607,13 @@
         height: 100%;
         margin-right: 30px;
         @include rtl {
-          float: right !important;
+          float: right;
         }
-        // border-bottom: 3px solid #d6dddf;
       }
 
       .rc-tabs-tabpane-inactive {
         height: 0;
-        overflow: visible;
+        overflow: hidden;
       }
     }
   }

@@ -1,6 +1,5 @@
 import React, { ComponentElement } from 'react';
 import styles from './TabsExample.module.scss';
-
 import { Tabs, TabPane } from 'priority-style-react';
 
 type PanelContentProperties = {
