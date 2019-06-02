@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames/bind';
-import RcTabs, { TabPane } from 'rc-tabs';
+import RcTabs, { TabPane } from 'rc-tabs-rtl';
 import TabContent from 'rc-tabs/lib/TabContent';
 import InkTabBar from 'rc-tabs/lib/InkTabBar';
 
@@ -31,6 +31,7 @@ interface TabsProperties extends ComponentBaseProperties {
 }
 
 const Tabs: (props: TabsProperties) => React.ReactElement<TabsProperties> = (props: TabsProperties) => {
+ console.log(props)
   return (
     <div className={ cx('component', props.layout, props.componentClasses) }>
       <RcTabs

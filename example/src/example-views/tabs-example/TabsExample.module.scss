@@ -1,5 +1,31 @@
+$include-rtl: true !default;
+
+@mixin rtl {
+  @if $include-rtl {
+    @at-root [dir="rtl"] #{&} {
+      @content;
+    }
+  }
+}
+
 .exampleContent {
-    h1 {
-        margin-bottom: 30px;
+  h1 {
+    margin-bottom: 30px;
+  }
+}
+.tabsContainer{
+    @media screen and (max-width: 801px) {
+        margin: 0 20px; 
     }
 }
+// .tabsContainer{
+//     @include rtl {
+//        color: red!important
+//     }
+// }
+
+// .rc-tabs-bar {
+//   display: flex;
+//   justify-content: flex-end;
+// }
+
