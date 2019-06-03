@@ -18,6 +18,6 @@
     "noUnusedLocals": false,
     "noUnusedParameters": false
   },
-  "include": ["src"],
+  "include": ["src", "example/src/example-views/tabs-example/tab.tsx"],
   "exclude": ["node_modules", "build", "dist", "example", "rollup.config.js"]
 }

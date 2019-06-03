@@ -1,6 +1,6 @@
 import * as React from 'react';
 import classNames from 'classnames/bind';
-import RcTabs, { TabPane } from 'rc-tabs-rtl';
+import RcTabs, { TabPane } from 'rc-tabs';
 import TabContent from 'rc-tabs/lib/TabContent';
 import InkTabBar from 'rc-tabs/lib/InkTabBar';
 
