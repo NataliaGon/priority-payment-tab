@@ -103,6 +103,10 @@
       padding: 8px 20px;
       font-weight: 500;
       cursor: pointer;
+      @media screen and (max-width: 801px) {
+        width: 50%;
+        margin-right: 0 !important;
+      }
     }
     .rc-tabs-tab:hover {
       color: #23c0fa;
@@ -419,7 +423,7 @@
       overflow: visible;
     }
     .rc-tabs-top {
-      border-bottom: 2px solid #f3f3f3;
+      //   border-bottom: 2px solid #f3f3f3;
     }
     .rc-tabs-top .rc-tabs-content {
       width: 100%;
