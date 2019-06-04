@@ -2,7 +2,7 @@ import React, { ComponentElement } from 'react';
 import styles from './TabsExample.module.scss';
 import { Tabs, TabPane } from 'priority-style-react';
 import { Title } from 'priority-style-react';
-import GridContainer  from 'priority-style-react';
+import {GridContainer}  from 'priority-style-react';
 
 type PanelContentProperties = {
     id?: Object;
@@ -61,7 +61,7 @@ const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
             <div style={{ background: '#000000' }}>
                 <Title text='title h2' skin='h2-grey' background='dark-container' />
             </div>
-            <GridContainer />
+            <GridContainer columnsDesktop='12' gutterWidthDesktop='30px' paddingDesktop='30px' mobileBreakpoint='800'>GridContainer</GridContainer>
         </div>
     );
 }
