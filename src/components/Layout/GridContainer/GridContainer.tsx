@@ -21,26 +21,27 @@ interface GridContainerProperties extends ComponentBaseProperties {
 
 export class GridContainer extends ComponentBase<GridContainerProperties> {
     public render() {
-
+        const defaultGutterWidth = '20px'
         const GridContainer = cx(styles.component);
-        const desktopBreakpoint = parseInt(this.props.mobileBreakpoint)+1;
-        console.log(desktopBreakpoint);
 
         return (
             <React.Fragment>
-                <MediaQuery minDeviceWidth={desktopBreakpoint}>
+                <MediaQuery minDeviceWidth={parseInt(this.props.mobileBreakpoint) + 1}>
                     <div className={GridContainer} style={{
                         gridTemplateColumns: `repeat(${this.props.columnsDesktop}, calc(calc(100% - calc(calc(${this.props.columnsDesktop} - 1)*${this.props.gutterWidthDesktop}))/ ${this.props.columnsDesktop}))`,
                         columnGap: this.props.gutterWidthDesktop,
                         height: '500px',
                         padding: this.props.paddingDesktop
                     }}>{this.props.children}</div>
-                    
+
                 </MediaQuery>
                 <MediaQuery maxDeviceWidth={parseInt(this.props.mobileBreakpoint)}>
-                        <div>
-                            {this.props.children}
-                        </div>
+                    <div className={GridContainer} style={{
+                        gridTemplateColumns: `repeat(${this.props.columnsMobile}, calc(calc(100% - calc(calc(${this.props.columnsMobile} - 1)*${this.props.gutterWidthMobile ? this.props.gutterWidthMobile : defaultGutterWidth}))/ ${this.props.columnsMobile}))`,
+                        columnGap: this.props.gutterWidthMobile ? this.props.gutterWidthMobile : defaultGutterWidth,
+                        height: '500px',
+                        padding: this.props.paddingMobile
+                    }}>{this.props.children}</div>
                 </MediaQuery>
             </React.Fragment>
         );
