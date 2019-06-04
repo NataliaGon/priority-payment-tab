@@ -69,5 +69,3 @@ const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
 export { TabsExample };
 export default TabsExample;
 
-// const dir = document.getElementById('dir');
-// console.log(dir);
