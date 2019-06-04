@@ -1,7 +1,7 @@
 import React, { ComponentElement } from 'react';
 import styles from './TabsExample.module.scss';
 import { Tabs, TabPane } from 'priority-style-react';
-import {Title} from 'priority-style-react';
+import { Title } from 'priority-style-react';
 
 
 type PanelContentProperties = {
@@ -18,6 +18,7 @@ const PanelContent: (props: PanelContentProperties) => ComponentElement<PanelCon
 const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
 
     return (
+
         <div className={styles.exampleContent}>
             <h1>Tabs Example</h1>
             <div className={styles.tabsContainer}>
@@ -47,11 +48,20 @@ const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
                     </Tabs>
                 </div>
             </div>
-            <Title text='title h1' skin='h1-blue'/>
-            <Title text='title h1' skin='h1-grey'/>
-            <Title text='title h2' skin='h2-blue'/>
-            <Title text='title h2' skin='h2-grey'/>
-            <Title text='title h4' skin='h4'/>
+            <Title skin='h1-blue'>Title's Example </Title>
+            <Title text='title h1' skin='h1-blue' />
+            <Title text='title h1' skin='h1-grey' />
+            <Title text='title h2' skin='h2-blue' />
+            <Title text='title h2' skin='h2-grey' />
+            <Title text='title h4' skin='h4' />
+            <Title skin='h1-blue'>Dark Background Title's Example </Title>
+            <div style={{ background: '#000000' }}>
+                <Title text='title h1' skin='h1-grey' background='dark-container' />
+            </div>
+            <div style={{ background: '#000000' }}>
+                <Title text='title h2' skin='h2-grey' background='dark-container' />
+            </div>
+
         </div>
     );
 }

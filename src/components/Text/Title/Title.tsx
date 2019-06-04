@@ -6,18 +6,18 @@ import styles from "./Title.module.scss";
 const cx = classNames.bind(styles);
 
 type TitleTag = 'h1-blue' | 'h1-grey' | 'h2-blue' | 'h2-grey' | 'h4';
-type TitleBackground = 'white-bg' | 'blue-bg';
+type TitleDarkContainer = 'dark-container'
 
 interface TitleProperties extends ComponentBaseProperties {
   skin?: TitleTag,
   children?: any,
-  background?: TitleBackground
+  background?: TitleDarkContainer
 }
 
 
 export class Title extends ComponentBase<TitleProperties> {
  private renderTitles(){
-    const titleClass = cx(styles.component, this.props.skin);
+    const titleClass = cx(styles.component, this.props.skin, this.props.background);
     if (this.props.skin == 'h1-blue' || this.props.skin == 'h1-grey') {
       return <h1 className={titleClass}>{this.props.text ? this.props.text : this.props.children}</h1>
     }
