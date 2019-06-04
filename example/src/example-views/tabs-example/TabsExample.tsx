@@ -1,6 +1,7 @@
 import React, { ComponentElement } from 'react';
 import styles from './TabsExample.module.scss';
 import { Tabs, TabPane } from 'priority-style-react';
+import {Title} from 'priority-style-react';
 
 
 type PanelContentProperties = {
@@ -46,7 +47,11 @@ const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
                     </Tabs>
                 </div>
             </div>
-
+            <Title text='title h1' skin='h1-blue'/>
+            <Title text='title h1' skin='h1-grey'/>
+            <Title text='title h2' skin='h2-blue'/>
+            <Title text='title h2' skin='h2-grey'/>
+            <Title text='title h4' skin='h4'/>
         </div>
     );
 }
