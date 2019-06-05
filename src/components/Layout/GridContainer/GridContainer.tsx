@@ -29,7 +29,7 @@ export class GridContainer extends ComponentBase<GridContainerProperties> {
                 <MediaQuery minDeviceWidth={parseInt(this.props.mobileBreakpoint) + 1}>
                     <div className={GridContainer} style={{
                         gridTemplateColumns: `repeat(${this.props.columnsDesktop}, calc(calc(100% - calc(calc(${this.props.columnsDesktop} - 1)*${this.props.gutterWidthDesktop}))/ ${this.props.columnsDesktop}))`,
-                        columnGap: this.props.gutterWidthDesktop,
+                        columnGap: this.props.gutterWidthDesktop?this.props.gutterWidthDesktop: defaultGutterWidth,
                         height: '500px',
                         padding: this.props.paddingDesktop
                     }}>{this.props.children}</div>

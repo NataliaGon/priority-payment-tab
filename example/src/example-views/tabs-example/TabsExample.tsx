@@ -68,7 +68,7 @@ const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
             <GridContainer columnsDesktop='12' gutterWidthDesktop='30px' paddingDesktop='30px' mobileBreakpoint='800' columnsMobile='6' paddingMobile="10px">
                 <div style={{ gridColumn: '2/5' }}><Title skin='h2-blue' >I am a grid container. To see my columns use dev tools. This tittle took 2,3,4 columns
                 </Title></div>
-                <GridItem offset='1' columns='3' gutterWidthDesktop='30px' smallR  /> </GridContainer>
+                <GridItem offset='1' columns='3' gutterWidthDesktop='30px' smallR mobileBreakpoint='800' gutterWidthMob="20px" columnsMob='4' smallRMob /> </GridContainer>
         </div>
     );
 }
