@@ -1,40 +1,27 @@
-import { CheckBox, Label, ScrollPanel, SidePanel } from 'priority-style-react';
 import React, { Component } from 'react';
+import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 
-import stylesMain from './AppStyles.module.scss';
-import { DateQueryBlock, FooterBlock, Header, TextQueryBlock } from './side-panel-components';
+import * as views from './example-views';
+
+
+const NavBar = () => {
+  return (
+    <Router >
+      <Switch>
+        <Route exact path='/' component={ views.Home } />
+        <Route exact path='/Buttons' component={ views.ButtonsExample } />
+        <Route exact path='/Side-Panel' component={ views.SidePanelExample } />
+      </Switch>
+    </Router>
+  )
+}
 
 class App extends Component {
-
-  panelRef;
-
-  componentDidMount() {
-    this.panelRef.open();
-  }
 
   render() {
     return (
       <div className="App">
-        <SidePanel ref={p => this.panelRef = p}>
-          <ScrollPanel>
-            <div>
-              <Header withInput />
-              <div className={stylesMain.stackPanel}>
-                <div className={stylesMain.rowPanel} style={{ paddingBottom: "10px", paddingTop: "10px", alignItems: "space-between" }}>
-                  <div style={{ display: "flex" }}>
-                    <CheckBox />
-                    <Label skin="bold">Case Sensitive</Label>
-                  </div>
-                  <Label skin="small-bold">Sort table by rearranging filter order with drag and drop</Label>
-                </div>
-              </div>
-              <TextQueryBlock />
-              <TextQueryBlock />
-              <DateQueryBlock />
-            </div>
-            <FooterBlock />
-          </ScrollPanel>
-        </SidePanel>
+        <NavBar />
       </div>
     );
   }

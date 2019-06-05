@@ -1,0 +1,24 @@
+.buttonsExampleView {
+    margin: 50px;
+
+    > * {
+        margin-bottom: 10px;
+    }
+}
+
+.buttonsContainer {
+    width: 250px;
+
+    > * {
+        margin-bottom: 10px;
+    }
+}
+
+.row {
+    justify-content: flex-start;
+    align-items: stretch;
+
+    > * {
+        margin-right: 10px;
+    }
+}

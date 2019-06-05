@@ -10,7 +10,7 @@ import {
 } from 'priority-style-react';
 import * as React from 'react';
 
-import stylesMain from '../../AppStyles.module.scss';
+import stylesMain from '../../SidePanelExample.module.scss';
 import styles from './Header.module.scss';
 
 
