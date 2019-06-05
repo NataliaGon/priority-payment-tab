@@ -31,5 +31,4 @@ class TitlesExample extends Component {
   }
 }
 
-export { TitlesExample };
 export default TitlesExample;
