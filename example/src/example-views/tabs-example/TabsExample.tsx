@@ -3,6 +3,8 @@ import styles from './TabsExample.module.scss';
 import { Tabs, TabPane } from 'priority-style-react';
 import { Title } from 'priority-style-react';
 import { GridContainer } from 'priority-style-react';
+import { GridItem } from 'priority-style-react';
+
 
 type PanelContentProperties = {
     id?: Object;
@@ -16,9 +18,9 @@ const PanelContent: (props: PanelContentProperties) => ComponentElement<PanelCon
 }
 
 const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
- const grid = {
-    gridColumn: 2/5
- }
+    const grid = {
+        gridColumn: 2 / 5
+    }
     return (
 
         <div className={styles.exampleContent}>
@@ -64,8 +66,9 @@ const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
                 <Title text='title h2' skin='h2-grey' background='dark-container' />
             </div>
             <GridContainer columnsDesktop='12' gutterWidthDesktop='30px' paddingDesktop='30px' mobileBreakpoint='800' columnsMobile='6' paddingMobile="10px">
-               <div style={{gridColumn: '2/5'}}><Title skin='h2-blue' >I am a grid container. To see my columns use dev tools. This tittle took 2,3,4 columns
-                </Title></div> </GridContainer>
+                <div style={{ gridColumn: '2/5' }}><Title skin='h2-blue' >I am a grid container. To see my columns use dev tools. This tittle took 2,3,4 columns
+                </Title></div>
+                <GridItem offset='1' columns='3' gutterWidthDesktop='30px' smallR  /> </GridContainer>
         </div>
     );
 }
