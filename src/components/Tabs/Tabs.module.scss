@@ -4,67 +4,82 @@
     :global {
         .rc-tabs-bar,
         .rc-tabs-nav-container {
-            font-size: 14px;
-            line-height: 1.5;
-            box-sizing: border-box;
-            overflow: hidden;
-            position: relative;
-            white-space: nowrap;
-            outline: none;
-            zoom: 1;
-            transition: padding .45s;
+            position: unset;
+            transition: padding 0.45s;
         }
 
         .rc-tabs-ink-bar {
-            z-index: 1;
-            position: absolute;
-            box-sizing: border-box;
-            margin-top: -3px;
-            background-color: #108ee9;
-            transform-origin: 0 0;
-            width: 0;
-            height: 0;
-            top: unset;
+            top: 35px;
+        }
+
+        .rc-tabs-ink-bar-animated {
+            transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1), top 0.3s cubic-bezier(0.35, 0, 0.25, 1), height 0.3s cubic-bezier(0.35, 0, 0.25, 1), width 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+        }
+
+        .rc-tabs-tab {
+            @media screen and (max-width: 801px) {
+                width: 50%;
+                margin-right: 0 !important;
+            }
         }
 
         .rc-tabs-tab:hover {
             color: #23c0fa;
         }
 
-        .rc-tabs-left {
-            color: #108ee9;
+        .rc-tabs-tab-active,
+        .rc-tabs-tab-active:hover {
+            color: #2e4049;
+            font-weight: bold;
         }
 
-        .rc-tabs-left .rc-tabs-tab-prev,
-        .rc-tabs-left .rc-tabs-tab-next {
-            transition: width .3s, height .3s, opacity .3s;
+        .rc-tabs-content-animated {
+            transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1), margin-left 0.3s cubic-bezier(0.35, 0, 0.25, 1), margin-top 0.3s cubic-bezier(0.35, 0, 0.25, 1);
         }
 
         .rc-tabs-nav-scroll {
             transition: width .3s, height .3s, opacity .3s;
         }
 
-        .rc-tabs-bottom .rc-tabs-ink-bar {
-            height: 2px;
-        }
-
         .rc-tabs-top {
-            border-bottom: 2px solid #f3f3f3;
+            border-bottom: unset;
         }
 
         .rc-tabs-top .rc-tabs-bar {
-            border-bottom: 1px solid #f3f3f3;
+            //border-bottom: unset;
         }
 
-        transition: width .3s, height .3s, opacity .3s;
-    }
+        .rc-tabs-bar {
+            border-bottom: 3px solid #d6dddf;
+        }
 
-    .rc-tabs-top .rc-tabs-ink-bar {
-        height: 2px;
-    }
+        .rc-tabs-top .rc-tabs-tab-prev,
+        .rc-tabs-top .rc-tabs-tab-next {
+            transition: width 0.3s, height 0.3s, opacity 0.3s;
+        }
 
-    [dir="rtl"] .rc-tabs-top .rc-tabs-ink-bar {
-        right: 0;
-        left: unset;
+        .rc-tabs-top .rc-tabs-tab {
+            float: left;
+            height: 100%;
+            margin-right: 30px;
+
+            @include rtl {
+                float: right;
+            }
+        }
+
+        .rc-tabs-top .rc-tabs-ink-bar {
+            height: 3px;
+
+            @include rtl {
+                right: 0;
+                left: unset;
+            }
+        }
+
+        [dir="rtl"] .rc-tabs-top .rc-tabs-ink-bar {
+            right: 0;
+            left: unset;
+        }
     }
 }
