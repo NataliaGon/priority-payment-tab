@@ -10,7 +10,7 @@ const cx = classNames.bind(styles);
 
 interface GridItemProperties extends ComponentBaseProperties {
     columns?: any;
-    columnsMob?:any
+    columnsMob?: any
     smallR?: boolean;
     smallL?: boolean;
     smallRMob?: boolean;
@@ -24,9 +24,8 @@ interface GridItemProperties extends ComponentBaseProperties {
 }
 
 export class GridItem extends ComponentBase<GridItemProperties> {
+ 
     public render() {
-
-
         const defaultGutterWidth = '20px'
         const gridItemStyleDesktop = {
             gridColumn: `${this.props.offset}/${parseInt(this.props.offset) + parseInt(this.props.columns)}`,
@@ -35,16 +34,15 @@ export class GridItem extends ComponentBase<GridItemProperties> {
             marginRight: this.props.smallR || this.props.large ? -parseInt(this.props.gutterWidthDesktop ? this.props.gutterWidthDesktop : defaultGutterWidth) : '',
             marginLeft: this.props.smallL || this.props.large ? -parseInt(this.props.gutterWidthDesktop ? this.props.gutterWidthDesktop : defaultGutterWidth) : ''
         }
-        const gridItemStyleMobile={
+        const gridItemStyleMobile = {
             gridColumn: `${this.props.offset}/${parseInt(this.props.offset) + parseInt(this.props.columnsMob)}`,
             backgroundColor: '#ff0045',
             height: '300px',
             marginRight: this.props.smallRMob || this.props.largeMob ? -parseInt(this.props.gutterWidthMob ? this.props.gutterWidthMob : defaultGutterWidth) : '',
-            marginLeft: this.props.smallLMob || this.props.largeMob ? -parseInt(this.props.gutterWidthMob? this.props.gutterWidthMob : defaultGutterWidth) : ''
+            marginLeft: this.props.smallLMob || this.props.largeMob ? -parseInt(this.props.gutterWidthMob ? this.props.gutterWidthMob : defaultGutterWidth) : ''
         }
         return (
             <React.Fragment>
-
                 <MediaQuery minDeviceWidth={parseInt(this.props.mobileBreakpoint) + 1}>
                     <div style={gridItemStyleDesktop}>
 
