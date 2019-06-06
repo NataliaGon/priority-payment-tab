@@ -1,21 +1,27 @@
-import * as React from 'react';
+import * as React from "react";
 import classNames from 'classnames/bind';
-import { ComponentBaseProperties } from '../../core';
-import styles from './Tabel.module.scss';
+import { ComponentBaseProperties, ComponentBase, PriorityIcon } from "../../core";
+import styles from "./Table.module.scss";
 
 const cx = classNames.bind(styles);
 
 
-interface Tabel extends  ComponentBaseProperties {
 
+
+interface TableProperties extends ComponentBaseProperties {
+  
 }
 
-export  class Tabel extends Component {
-  render() {
-    return (
-      <div></div>
-    );
-  }
+export class Table extends ComponentBase<TableProperties> {
+    public render() {
+      
 
+        return (
+            <React.Fragment>
+                
+            </React.Fragment>
+        );
+    }
 }
+
 
