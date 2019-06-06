@@ -2,16 +2,13 @@
  * Default CSS definition for typescript,
  * will be overridden with file-specific definitions by rollup
  */
+
 declare module '*.scss' {
   const content: { [className: string]: string };
   export default content;
 }
 
 declare module 'classnames';
-
-declare module 'classnames/bind';
-
-declare module 'rc-tabs';
 
 interface SvgrComponent extends React.StatelessComponent<React.SVGAttributes<SVGElement>> { }
 
