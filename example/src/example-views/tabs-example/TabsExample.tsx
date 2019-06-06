@@ -32,7 +32,7 @@ const TabsExample: () => ComponentElement<PanelContentProperties, any> = () => {
             <div id="dir" dir="rtl">
                 <h1>Tabs Example RTL</h1>
                 <div className={ styles.tabsContainer }>
-                    <Tabs
+                    <Tabs textDirection="rtl"
                         defaultActiveKey="1"
                     >
                         <TabPane tab={ 'החשבוניות הפתוחות שלי (3)' } key="0" >
