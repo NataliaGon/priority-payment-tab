@@ -1,8 +1,8 @@
 import * as React from "react";
 import classNames from 'classnames/bind';
 import { ComponentBaseProperties, ComponentBase, PriorityIcon } from "../../core";
-import styles from "./Table.module.scss";
-const cx = classNames.bind(styles);
+// import styles from "./Table.module.css";
+// const cx = classNames.bind(styles);
 
 
 
