@@ -33,22 +33,19 @@ export default class TabelExample extends Component {
         const renderMobileInfoCell = (data: any,row:any , index:any) => {
             return (
                     <div className={styles.mobileCell}>
-                        <div className="table-header">
-                            Uinvoice
-                    </div>
-                        <div className="table-cell">
+                        <div className={styles.tableCell}>
                             {data.unvoice}
                         </div>
-                        <div className="table-header">
+                        <div className={styles.tableHeader}>
                             Details
                     </div>
-                        <div className="table-cell">
+                        <div className={styles.tableCell}>
                             {data.details}
                         </div>
-                        <div className="table-header">
+                        <div className={styles.tableHeader}>
                             Amount
                     </div>
-                        <div className="table-cell">
+                        <div className={styles.tableCell}>
                             {data.amount}
                         </div>
                     </div>
