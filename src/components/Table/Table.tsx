@@ -17,11 +17,10 @@ export interface TableColumn extends ComponentBaseProperties {
 }
 
 export interface TableProperties extends ComponentBaseProperties {
-  rtl?: boolean,
   containerId?: string,
   scroll?: TableScrollOptions,
   rowKey?: string | ((record: any) => string),
-  data?: Object[],
+  data?: any[],
   onRow?: (record: any, index: any) => void,
   onHeaderRow: (record: any, index: any) => void,
   columns: TableColumn[]
