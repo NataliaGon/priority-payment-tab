@@ -13,11 +13,11 @@ export interface TableScrollOptions {
 }
 
 export interface TableColumn extends ComponentBaseProperties {
-  key?: string,
-  title?: string,
-  dataIndex?: string
+  key: string,
+  title: string,
+  dataIndex: string
 }
-type TableColu = {
+type TableCol = {
   key?: string,
   title?: string,
   dataIndex?: string
@@ -30,7 +30,6 @@ export interface TableProperties extends ComponentBaseProperties {
   onRow?: (record: any, index: any) => void,
   onHeaderRow?: (record: any, index: any) => void,
   columns?:any
- 
 }
 
 export class TableComponent extends ComponentBase<TableProperties> {
