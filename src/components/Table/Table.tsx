@@ -2,8 +2,8 @@ import * as React from "react";
 import classNames from 'classnames/bind';
 import Table from 'rc-table';
 import { ComponentBaseProperties, ComponentBase, PriorityIcon } from "../../core";
-import styles from "./Table.module.scss";
-const cx = classNames.bind(styles);
+import  "./Table.scss";
+// const cx = classNames.bind(styles);
 
 
 interface TableState {
@@ -17,7 +17,6 @@ interface TableProperties extends ComponentBaseProperties {
 export class TableComponent extends ComponentBase<TableProperties> {
 
   componentDidMount(){
-    console.log('yep');
     var elem:any;
      elem = document.getElementById('root');
     var cs:any;
@@ -50,7 +49,7 @@ export class TableComponent extends ComponentBase<TableProperties> {
 
         return (
             <React.Fragment>
-              {this.state.rtl? <Table columns={columns.reverse()} data={data} ></Table>:<Table columns={columns} data={data} ></Table>}       
+              {this.state.rtl? <Table columns={columns.reverse()} data={data} onRow={()=>console.log('mouse enter')} ></Table>:<Table columns={columns} data={data} ></Table>}       
             </React.Fragment>
         );
     }
