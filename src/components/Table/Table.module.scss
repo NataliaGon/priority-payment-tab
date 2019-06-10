@@ -1,11 +1,10 @@
 @import "../../styles/mixins";
+@import "../../styles/vars";
+
 .component {
   :global {
-    .rc-table-row {
-      background-color: yellow;
-    }
     .rc-table-row:hover {
-      background-color: aquamarine;
+      background-color: rgba(0, 173, 238, 0.1);
     }
   }
 }

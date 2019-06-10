@@ -2,7 +2,7 @@ import * as React from "react";
 import classNames from 'classnames/bind';
 import Table from 'rc-table';
 import { ComponentBaseProperties, ComponentBase, PriorityIcon } from "../../core";
-import styles from "./Table.scss";
+import styles from "./Table.module.scss";
 const cx = classNames.bind(styles);
 
 
@@ -48,11 +48,11 @@ export class TableComponent extends ComponentBase<TableProperties> {
           ];
 
         return (
-            <React.Fragment>
-              <div className={cx.component}>
+      
+              <div className={cx('component')}>
               {this.state.rtl? <Table columns={columns.reverse()} data={data} onRow={()=>console.log('mouse enter')} ></Table>:<Table columns={columns} data={data} ></Table>}       
               </div>
-            </React.Fragment>
+           
         );
     }
 }
