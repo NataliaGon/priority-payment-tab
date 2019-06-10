@@ -3,14 +3,25 @@
 
 .component {
   :global {
+    .rc-table-body{
+      @media screen and (max-width: 800px) {
+        padding:30px
+       }
+    }
     table{
       width:100%;
       padding: 30px;
       border-collapse: collapse;
+      @media screen and (max-width: 800px) {
+        width:auto;
+       }
     }
     .rc-table-thead {
       color: $grey;
       font-size: $font-size-regular;
+      @media screen and (max-width: 800px) {
+       display: none;
+      }
     }
     .rc-table-thead tr {
       height: 60px;
@@ -28,10 +39,23 @@
     }
     .rc-table-row td {
       vertical-align: middle;
-      padding: 15px
+      padding: 15px;
+      @media screen and (max-width: 800px) {
+        padding: 0;
+      }
     }
     .rc-table-row:hover {
       background-color: rgba(0, 173, 238, 0.1);
     }
+    @media screen and (max-width: 800px) {
+      .rc-table-row {
+       border: 2px solid rgba(120, 142, 151, 0.1);
+       border-radius: 3px;
+       display: block;
+       margin-bottom: 14px;
+       padding: 20px;
+      }
+    }
   }
+
 }

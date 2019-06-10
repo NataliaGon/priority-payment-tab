@@ -17,7 +17,7 @@ export interface ComponentBaseProperties {
     text?: string;
     textSize?: TextSize;
     textColor?: TextColor;
-    rtl?: boolean,
+    rtl?: boolean
 }
 
 export interface InputBaseProperties extends ComponentBaseProperties {

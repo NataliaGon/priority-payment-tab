@@ -13,11 +13,16 @@ export interface TableScrollOptions {
 }
 
 export interface TableColumn extends ComponentBaseProperties {
-  key: string
+  key?: string,
+  title?: string,
+  dataIndex?: string
 }
-
+type TableColu = {
+  key?: string,
+  title?: string,
+  dataIndex?: string
+}
 export interface TableProperties extends ComponentBaseProperties {
-  rtl?:any
   containerId?: string,
   scroll?: TableScrollOptions,
   rowKey?: string | ((record: any) => string),
@@ -25,7 +30,7 @@ export interface TableProperties extends ComponentBaseProperties {
   onRow?: (record: any, index: any) => void,
   onHeaderRow?: (record: any, index: any) => void,
   columns?:any
-  // columns?: TableColumn[]
+ 
 }
 
 export class TableComponent extends ComponentBase<TableProperties> {
