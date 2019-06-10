@@ -15,7 +15,8 @@ export interface TableScrollOptions {
 export interface TableColumn extends ComponentBaseProperties {
   key: string,
   title: string,
-  dataIndex: string
+  dataIndex: string,
+  render:(value: any, row: any, index:any) => void,
 }
 type TableCol = {
   key?: string,
@@ -29,7 +30,7 @@ export interface TableProperties extends ComponentBaseProperties {
   data?: any[],
   onRow?: (record: any, index: any) => void,
   onHeaderRow?: (record: any, index: any) => void,
-  columns?:any
+  columns?: any
 }
 
 export class TableComponent extends ComponentBase<TableProperties> {
@@ -38,16 +39,14 @@ export class TableComponent extends ComponentBase<TableProperties> {
     let providedProperties = this.props;
   }
 
-
   public render() {
-
     const columns = this.props.rtl ? this.props.columns.reverse() : this.props.columns;
-
     return (
       <Table
         className={cx ('component') } 
         columns={ columns }
-        data={ this.props.data }>
+        data={ this.props.data }  
+       >
       </Table>
     );
   }
