@@ -32,6 +32,7 @@ export class TableComponent extends ComponentBase<TableProperties> {
     rtl:true
   }
     public render() {
+
         const columns = [{
             title: 'Name', dataIndex: 'name', key:'name', width: 100,
           }, {
