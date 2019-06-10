@@ -3,6 +3,33 @@
 
 .component {
   :global {
+    table{
+      width:100%;
+      padding: 30px;
+      border-collapse: collapse;
+    }
+    .rc-table-thead {
+      color: $grey;
+      font-size: $font-size-regular;
+    }
+    .rc-table-thead tr {
+      height: 60px;
+    }
+    .rc-table-thead tr th {
+      vertical-align: middle;
+      text-align: left;
+      padding: 15px
+    }
+    .rc-table-row {
+      color: $black;
+      font-size: 1.6rem;
+      font-weight: 500;
+      height: 60px;
+    }
+    .rc-table-row td {
+      vertical-align: middle;
+      padding: 15px
+    }
     .rc-table-row:hover {
       background-color: rgba(0, 173, 238, 0.1);
     }

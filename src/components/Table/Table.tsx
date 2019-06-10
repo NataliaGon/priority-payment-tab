@@ -1,61 +1,50 @@
-import * as React from "react";
 import classNames from 'classnames/bind';
 import Table from 'rc-table';
-import { ComponentBaseProperties, ComponentBase, PriorityIcon } from "../../core";
+import * as React from "react";
+import { ComponentBase, ComponentBaseProperties } from "../../core";
 import styles from "./Table.module.scss";
+import { Container } from '../Layout/Container/Container';
+
 const cx = classNames.bind(styles);
 
-
-interface TableState {
-  rtl?:boolean
+export interface TableScrollOptions {
+  x: boolean,
+  y: boolean
 }
 
-interface TableProperties extends ComponentBaseProperties {
-  
+export interface TableColumn extends ComponentBaseProperties {
+  key: string
+}
+
+export interface TableProperties extends ComponentBaseProperties {
+  rtl?:any
+  containerId?: string,
+  scroll?: TableScrollOptions,
+  rowKey?: string | ((record: any) => string),
+  data?: any[],
+  onRow?: (record: any, index: any) => void,
+  onHeaderRow?: (record: any, index: any) => void,
+  columns?:any
+  // columns?: TableColumn[]
 }
 
 export class TableComponent extends ComponentBase<TableProperties> {
 
-  componentDidMount(){
-    var elem:any;
-     elem = document.getElementById('root');
-    var cs:any;
-    if (window.getComputedStyle) { // all browsers
-        cs = window.getComputedStyle(elem, null).getPropertyValue('direction');
-    } else {
-        cs = elem.currentStyle.direction; // IE5-8
-    }
-    console.log(cs);
+  initDefaults() {
+    let providedProperties = this.props;
   }
 
-  state={
-    rtl:true
+
+  public render() {
+
+    const columns = this.props.rtl ? this.props.columns.reverse() : this.props.columns;
+
+    return (
+      <Table
+        className={cx ('component') } 
+        columns={ columns }
+        data={ this.props.data }>
+      </Table>
+    );
   }
-    public render() {
-
-        const columns = [{
-            title: 'Name', dataIndex: 'name', key:'name', width: 100,
-          }, {
-            title: 'Age', dataIndex: 'age', key:'age', width: 100,
-          }, {
-            title: 'Address', dataIndex: 'address', key:'address', width: 200,
-          }, {
-            title: 'Operations', dataIndex: '', key:'operations', render: () => <a href="#">Delete</a>,
-          }];
-           
-          const data = [
-            { name: 'Jack', age: 28, address: 'some where', key:'1' },
-            { name: 'Rose', age: 36, address: 'some where', key:'2' },
-          ];
-
-        return (
-      
-              <div className={cx('component')}>
-              {this.state.rtl? <Table columns={columns.reverse()} data={data} onRow={()=>console.log('mouse enter')} ></Table>:<Table columns={columns} data={data} ></Table>}       
-              </div>
-           
-        );
-    }
 }
-
-
