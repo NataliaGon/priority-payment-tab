@@ -52,9 +52,19 @@ export default class TabelExample extends Component {
              
             )
         }
+        const renderMobileDataCell = (data: any,row:any , index:any) => {
+            return (
+                    <div className={styles.mobileCell}>
+                        {data.payByDate}
+                    </div>
+             
+            )
+        }
 
         const columnsMob: any = [
-            { dataIndex: 'check-box', key: 'check-box',render:()=> renderMobileInfoCell(data[0],'1','check-box' ) }
+            { dataIndex: 'checkbox', key: 'checkbox',render:()=> <input type="checkbox"></input> },
+            { dataIndex: 'info', key: 'info',render:()=> renderMobileInfoCell(data[0],'2','info' ) },
+            { dataIndex: 'data', key: 'data',render:()=> renderMobileDataCell(data[0],'3','data' )}
         ]
         return (
             <TableComponent columns={columnsMob} data={data} />
