@@ -1,8 +1,11 @@
 @import "../../styles/mixins";
-
-.rc-table-row:hover{
-background-color: aquamarine;
-}
-.rc-table-row{
-    background-color: aquamarine;
+.component {
+  :global {
+    .rc-table-row {
+      background-color: yellow;
+    }
+    .rc-table-row:hover {
+      background-color: aquamarine;
+    }
+  }
 }
