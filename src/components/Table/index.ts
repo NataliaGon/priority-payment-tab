@@ -1,3 +1,3 @@
 
-export {TableComponent} from './Table'
+export { TableComponent, TableColumn, TableScrollOptions } from './Table'
 

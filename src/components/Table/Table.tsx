@@ -12,17 +12,13 @@ export interface TableScrollOptions {
   y: boolean
 }
 
-export interface TableColumn extends ComponentBaseProperties {
-  key: string,
-  title: string,
-  dataIndex: string,
-  render:(value: any, row: any, index:any) => void,
+export class TableColumn {
+  key: string;
+  title: string;
+  dataIndex: string;
+  render: (value: any, row: any, index: any) => void
 }
-type TableCol = {
-  key?: string,
-  title?: string,
-  dataIndex?: string
-}
+
 export interface TableProperties extends ComponentBaseProperties {
   containerId?: string,
   scroll?: TableScrollOptions,
@@ -30,7 +26,7 @@ export interface TableProperties extends ComponentBaseProperties {
   data?: any[],
   onRow?: (record: any, index: any) => void,
   onHeaderRow?: (record: any, index: any) => void,
-  columns?: any
+  columns: TableColumn[]
 }
 
 export class TableComponent extends ComponentBase<TableProperties> {
@@ -43,10 +39,10 @@ export class TableComponent extends ComponentBase<TableProperties> {
     const columns = this.props.rtl ? this.props.columns.reverse() : this.props.columns;
     return (
       <Table
-        className={cx ('component') } 
-        columns={ columns }
-        data={ this.props.data }  
-       >
+        className={cx('component')}
+        columns={columns}
+        data={this.props.data}
+      >
       </Table>
     );
   }
