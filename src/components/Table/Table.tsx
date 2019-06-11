@@ -26,7 +26,8 @@ export interface TableProperties extends ComponentBaseProperties {
   data?: any[],
   onRow?: (record: any, index: any) => void,
   onHeaderRow?: (record: any, index: any) => void,
-  columns: TableColumn[]
+  // columns: TableColumn[]
+  columns:any
 }
 
 export class TableComponent extends ComponentBase<TableProperties> {

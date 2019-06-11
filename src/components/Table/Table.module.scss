@@ -24,9 +24,7 @@
        display: none;
       }
     }
-    .rc-table-thead tr {
-      height: 60px;
-    }
+  
     .rc-table-thead tr th {
       vertical-align: middle;
       text-align: left;
@@ -36,7 +34,7 @@
       color: $black;
       font-size: 1.6rem;
       font-weight: 500;
-      height: 60px;
+
     }
     .rc-table-row td {
       vertical-align: middle;

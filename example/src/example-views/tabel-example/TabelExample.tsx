@@ -2,7 +2,9 @@ import React, { ComponentElement } from 'react';
 import styles from './TabelExample.module.scss';
 import { Component } from 'react';
 import { TableComponent, TableColumn } from 'priority-style-react';
+import classNames from 'classnames/bind';
 
+const cx = classNames.bind(styles);
 
 
 export default class TabelExample extends Component {
@@ -11,7 +13,11 @@ export default class TabelExample extends Component {
         { unvoice: 'IN1234567890', payByDate: '12/03/20', details: 'First month subscription for', amount: '1000' },
         { unvoice: 'IN1234567891', payByDate: '29/07/19', details: 'First month subscription for', amount: '2000' },
     ];
-
+    dataMob = [
+        { info:{unvoice:'IN1234567890',details: 'First month subscription for', amount: '1000'} ,payByDate: '12/03/20'  },
+        
+        { info:{unvoice:'IN1234567891',details: 'First month subscription for', amount: '1000'} ,payByDate: '05/11/19'  }
+    ];
 
     renderDesktopExample(data) {
         const columns: any = [{
@@ -30,44 +36,59 @@ export default class TabelExample extends Component {
     }
 
     renderMobileExample(data) {
-        const renderMobileInfoCell = (data: any,row:any , index:any) => {
+        const renderMobileInfoCell = (data: any, row: any, index: any) => {
             return (
-                    <div className={styles.mobileCell}>
-                        <div className={styles.tableCell}>
-                            {data.unvoice}
-                        </div>
-                        <div className={styles.tableHeader}>
-                            Details
+                <div className={styles.mobileCell}>
+                    <div className={styles.tableCell}>
+                        {data.info.unvoice}
                     </div>
-                        <div className={styles.tableCell}>
-                            {data.details}
-                        </div>
-                        <div className={styles.tableHeader}>
-                            Amount
+                    <div className={styles.tableHeader}>
+                        Details
                     </div>
-                        <div className={styles.tableCell}>
-                            {data.amount}
-                        </div>
+                    <div className={styles.tableCell}>
+                        {data.info.details}
                     </div>
-             
+                    <div className={styles.tableHeader}>
+                        Amount
+                    </div>
+                    <div className={styles.tableCell}>
+                        {data.info.amount}
+                    </div>
+                </div>
+
             )
         }
-        const renderMobileDataCell = (data: any,row:any , index:any) => {
+        const renderMobileDataCell = (data: any, row: any, index: any) => {
             return (
-                    <div className={styles.mobileCell}>
-                        {data.payByDate}
-                    </div>
-             
+                <div className={styles.mobileCell}>
+                    {data.payByDate}
+                </div>
             )
         }
 
-        const columnsMob: any = [
-            { dataIndex: 'checkbox', key: 'checkbox',render:()=> <input type="checkbox"></input> },
-            { dataIndex: 'info', key: 'info',render:()=> renderMobileInfoCell(data[0],'2','info' ) },
-            { dataIndex: 'data', key: 'data',render:()=> renderMobileDataCell(data[0],'3','data' )}
-        ]
+        const renderMobileRow = (data: any) => {
+            let col
+            for (let i in data) {
+                col =
+                    [{ dataIndex: 'checkbox', key: 'checkbox', render: () => <input type="checkbox"></input> },
+                    { dataIndex: 'info', key: 'info', render: () => renderMobileInfoCell(data[i], '0', 'info') },
+                    { dataIndex: 'data', key: 'data', render: () => renderMobileDataCell(data[i], '1', 'data') }]
+
+            }
+            return col
+            // return data.map((i) => {
+            //     return (
+            //         [{ dataIndex: 'checkbox', key: 'checkbox', render: () => <input type="checkbox"></input> },
+            //         { dataIndex: 'info', key: 'info', render: () => renderMobileInfoCell(data[i], '2', 'info') },
+            //         { dataIndex: 'data', key: 'data', render: () => renderMobileDataCell(data[i], '3', 'data') }]
+            //     )
+            // })
+
+        }
+
+
         return (
-            <TableComponent columns={columnsMob} data={data} />
+            <TableComponent columns={renderMobileRow(data)} data={data} />
         )
     };
 
@@ -75,7 +96,7 @@ export default class TabelExample extends Component {
         return (
             <React.Fragment>
                 {this.renderDesktopExample(this.data)}
-                {this.renderMobileExample(this.data)}
+                {this.renderMobileExample(this.dataMob)}
             </React.Fragment>
         )
     }
