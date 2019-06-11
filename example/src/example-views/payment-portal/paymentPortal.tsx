@@ -80,21 +80,22 @@ export default class PaymentPortal extends Component {
 
     render() {
         return (
-            <GridContainer columnsDesktop={12} gutterWidthDesktop={30} paddingDesktop={30}>
-                <div>
-                    <Title skin="h1" textColor="grey">Payment for</Title>
-                    <Title skin="h1" textColor="blue">Electra ltd.</Title>
-                </div>
-                <Tabs
-                    defaultActiveKey="1">
-                    <TabPane tab={'My open invoces (3)'} key="1" >
-                        <PanelContent id='1'><div>{this.renderDesktopExample(this.data)}</div></PanelContent>
-                    </TabPane>
-                    <TabPane tab={'Payments Made (3)'} key="2" >
-                        <PanelContent id='2'><div>{this.renderMobileExample(this.data)}</div></PanelContent>
-                    </TabPane>
-                </Tabs>
-
+            <GridContainer columnsDesktop={ 12 } gutterWidthDesktop={ 30 } paddingDesktop={ 30 }>
+                <GridItem columns={6} offset={4}>
+                    <div>
+                        <Title skin="h1" textColor="grey">Payment for</Title>
+                        <Title skin="h1" textColor="blue">Electra ltd.</Title>
+                    </div>
+                    <Tabs
+                        defaultActiveKey="1">
+                        <TabPane tab={'My open invoces (3)'} key="1" >
+                            <PanelContent id='1'><div>{this.renderDesktopExample(this.data)}</div></PanelContent>
+                        </TabPane>
+                        <TabPane tab={'Payments Made (3)'} key="2" >
+                            <PanelContent id='2'><div>{this.renderMobileExample(this.data)}</div></PanelContent>
+                        </TabPane>
+                    </Tabs>
+                </GridItem>
             </GridContainer>
         )
     }

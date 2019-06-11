@@ -15,7 +15,6 @@ interface GridItemProperties extends ComponentBaseProperties {
     gutterWidthDesktop?: number;
     gutterWidthMob?: number;
     smallBreakpoint?: number;
-
     children?: any;
 }
 
