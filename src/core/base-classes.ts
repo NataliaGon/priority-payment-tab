@@ -5,6 +5,7 @@ export type TextSize = "large" | "medium" | "regular" | "small";
 export type TextColor = "black" | "grey" | "blue" | "white" | "dark";
 export type IconColor = TextColor | "";
 export type FontFamily = "regular" | "serif" | "icons";
+export type TextDirection = "ltr" | "rtl";
 
 export interface DefaultTextProperties {
     textSize: TextSize;

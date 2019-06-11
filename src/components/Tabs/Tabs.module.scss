@@ -1,0 +1,82 @@
+@import "../../styles/mixins";
+
+.component {
+    :global {
+        .rc-tabs-bar,
+        .rc-tabs-nav-container {
+            position: unset;
+            transition: padding 0.45s;
+        }
+
+        .rc-tabs-ink-bar {
+            top: 29px;
+        }
+
+        .rc-tabs-ink-bar-animated {
+            transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1), left 0.3s cubic-bezier(0.35, 0, 0.25, 1), top 0.3s cubic-bezier(0.35, 0, 0.25, 1), height 0.3s cubic-bezier(0.35, 0, 0.25, 1), width 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+        }
+
+        .rc-tabs-tab {
+            &:hover {
+                color: #23c0fa;
+            }
+
+            @media screen and (max-width: 801px) {
+                width: 50%;
+            }
+        }
+
+        .rc-tabs-tab-active,
+        .rc-tabs-tab-active:hover {
+            color: #2e4049;
+        }
+
+        .rc-tabs-content {
+            padding-top: 10px;
+        }
+
+        .rc-tabs-nav-scroll {
+            transition: width .3s, height .3s, opacity .3s;
+        }
+
+        .rc-tabs-top {
+            border-bottom: unset;
+
+            .rc-tabs-bar {
+                height: 29px;
+                line-height: 1.21;
+                color: $grey;
+                border-bottom: 3px solid $disabled-grey;
+                font-weight: $font-weight-medium;
+            }
+
+            .rc-tabs-tab {
+                float: left;
+                margin: unset;
+                height: 100%;
+                padding: 0 20px 12px;
+
+                @include rtl {
+                    float: right;
+                }
+            }
+
+            .rc-tabs-ink-bar {
+                height: 3px;
+
+                @include rtl {
+                    right: 0;
+                    left: unset;
+                }
+            }
+
+            .rc-tabs-tab-prev, .rc-tabs-tab-next {
+                transition: width 0.3s, height 0.3s, opacity 0.3s;
+            }
+        }
+    }
+
+    @include rtl {
+        font-family: $font-family-main-hebrew;
+    }
+}

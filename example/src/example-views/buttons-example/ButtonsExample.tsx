@@ -1,9 +1,5 @@
+import { Button, Container, Label, PriorityIcon, RowPanel } from 'priority-style-react';
 import React, { Component } from 'react';
-import {
-  SidePanel,
-  StackPanel, RowPanel, Container, WrapPanel, ScrollPanel, CheckBox, Label, Button, Icon, Tag, Select, OptionItem,
-  PriorityIcon
-} from 'priority-style-react';
 import styles from './ButtonsExample.module.scss';
 
 
