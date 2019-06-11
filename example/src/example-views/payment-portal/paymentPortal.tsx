@@ -80,7 +80,7 @@ export default class PaymentPortal extends Component {
 
     render() {
         return (
-            <GridContainer columnsDesktop={ 12 } gutterWidthDesktop={ 30 } paddingDesktop={ 30 }>
+            <GridContainer columnsDesktop='12'  gutterWidthDesktop='30px' paddingDesktop='30px'>
                 <GridItem columns={6} offset={4}>
                     <div>
                         <Title skin="h1" textColor="grey">Payment for</Title>
