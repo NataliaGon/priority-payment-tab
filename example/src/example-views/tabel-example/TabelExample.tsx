@@ -1,8 +1,5 @@
-import React, { ComponentElement } from 'react';
-import styles from './TabelExample.module.scss';
-import { Component } from 'react';
-import { TableComponent, TableColumn } from 'priority-style-react';
-import classNames from 'classnames/bind';
+import React, { Component } from 'react';
+import { TableComponent, TableColumn, CheckBox } from 'priority-style-react';
 
 const cx = classNames.bind(styles);
 
@@ -10,49 +7,51 @@ const cx = classNames.bind(styles);
 export default class TabelExample extends Component {
 
     data = [
-        { unvoice: 'IN1234567890', payByDate: '12/03/20', details: 'First month subscription for', amount: '1000' },
-        { unvoice: 'IN1234567891', payByDate: '29/07/19', details: 'First month subscription for', amount: '2000' },
+        { invoice: 'IN1234567890', payByDate: '12/03/20', details: 'First month subscription for', amount: '1000' },
+        { invoice: 'IN1234567891', payByDate: '29/07/19', details: 'First month subscription for', amount: '2000' },
     ];
-    dataMob = [
-        { info:{unvoice:'IN1234567890',details: 'First month subscription for', amount: '1000'} ,payByDate: '12/03/20'  },
-        
-        { info:{unvoice:'IN1234567891',details: 'First month subscription for', amount: '1000'} ,payByDate: '05/11/19'  }
-    ];
+
+    renderCheckBoxCell(record) {
+        return (
+            <CheckBox onChange={ () => {
+                console.log(`invoice #${record.invoice} checked`);
+            } } />
+        )
+    }
+
 
     renderDesktopExample(data) {
-        const columns: any = [{
-            title: 'Unvoice', dataIndex: 'unvoice', key: 'unvoice'
-        }, {
-            title: 'Pay by Date', dataIndex: 'payByDate', key: 'payByDate'
-        }, {
-            title: 'Details', dataIndex: 'details', key: 'details'
-        }, {
-            title: 'Amount', dataIndex: 'amount', key: 'amount'
-        }]
+        const columns: TableColumn[] = [
+            { dataIndex: 'check-box', key: 'check-box', render: (value, row) => this.renderCheckBoxCell(row), width: 1, align: 'top' },
+            { title: 'Invoice', dataIndex: 'invoice', key: 'invoice' },
+            { title: 'Pay by Date', dataIndex: 'payByDate', key: 'payByDate' },
+            { title: 'Details', dataIndex: 'details', key: 'details' },
+            { title: 'Amount', dataIndex: 'amount', key: 'amount' }];
 
         return (
-            <TableComponent columns={columns} data={data} />
+            <TableComponent columns={ columns } data={ data } scroll={ { x: true } } />
         )
     }
 
     renderMobileExample(data) {
-        const renderMobileInfoCell = (data: any, row: any, index: any) => {
+
+        const renderMobileInfoCell = (record: any) => {
             return (
-                <div className={styles.mobileCell}>
-                    <div className={styles.tableCell}>
-                        {data.info.unvoice}
+                <div>
+                    <div>
+                        { record.invoice }
                     </div>
-                    <div className={styles.tableHeader}>
+                    <div className='rc-table-thead'>
                         Details
                     </div>
-                    <div className={styles.tableCell}>
-                        {data.info.details}
+                    <div>
+                        { record.details }
                     </div>
-                    <div className={styles.tableHeader}>
+                    <div className='rc-table-thead'>
                         Amount
                     </div>
-                    <div className={styles.tableCell}>
-                        {data.info.amount}
+                    <div>
+                        { record.amount }
                     </div>
                 </div>
 
@@ -87,21 +86,24 @@ export default class TabelExample extends Component {
         }
 
 
+        const columnsMob: TableColumn[] = [
+            { dataIndex: 'check-box', key: 'check-box', render: (value, row) => this.renderCheckBoxCell(row), width: 1 },
+            { dataIndex: 'info', key: 'info', render: (value, record) => renderMobileInfoCell(record) },
+            { dataIndex: 'payByDate', key: 'payByDate', width: 1 }
+        ];
+
         return (
-            <TableComponent columns={renderMobileRow(data)} data={data} />
+            <TableComponent columns={ columnsMob } data={ data } showHeader={ false } />
         )
     };
 
     render() {
         return (
             <React.Fragment>
-                {this.renderDesktopExample(this.data)}
-                {this.renderMobileExample(this.dataMob)}
+                { this.renderDesktopExample(this.data) }
+                { this.renderMobileExample(this.data) }
             </React.Fragment>
         )
     }
 
 }
-
-
-
