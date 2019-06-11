@@ -3,4 +3,4 @@ export * from './Inputs';
 export * from './Layout';
 export * from './Tag';
 export * from './Text';
-export * from './Tabs';
+export * from './Table';

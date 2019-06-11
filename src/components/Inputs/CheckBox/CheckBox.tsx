@@ -36,9 +36,8 @@ export const CheckBox = (props: CheckBoxProperties) => {
         <div className={checkboxClasses}>
           <Icon skin="standart" icon={PriorityIcon.done} componentClasses={iconClasses}/>
         </div>
-        
+
         {props.children}
       </div>
     );
   }
-

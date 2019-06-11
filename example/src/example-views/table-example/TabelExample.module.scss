@@ -1,0 +1,20 @@
+.mobileCell {
+  margin-bottom: 14px;
+  padding: 20px;
+}
+.tableHeader{
+    font-weight: bold;
+    font-size: 1.3rem;
+    color:#7e959e;
+    margin-top:20px
+}
+.tableCell{
+    font-size: 1.4rem;
+    font-weight: 500;
+    color: #212529;
+    margin-top: 5px
+}
+.component {
+    :global {
+    }
+}
