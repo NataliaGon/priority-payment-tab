@@ -1,6 +1,6 @@
-import * as React from 'react';
 import classnames from 'classnames';
-import { setTransform, isTransform3dSupported, getLeft, getTop, getActiveIndex } from 'rc-tabs/lib/utils';
+import { getActiveIndex, getLeft, getTop, isTransform3dSupported, setTransform } from 'rc-tabs/lib/utils';
+import * as React from 'react';
 import { TextDirection } from '../../../core';
 
 function componentDidUpdate(component: InkTabBarNode, init?) {

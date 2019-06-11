@@ -1,7 +1,7 @@
-import * as React from 'react';
 import classNames from 'classnames/bind';
 import RcTabs from 'rc-tabs';
 import TabContent from 'rc-tabs/lib/TabContent';
+import * as React from 'react';
 import { ComponentBaseProperties, TextDirection } from '../../core';
 import InkTabBar from './components/InkTabBar';
 import styles from './Tabs.module.scss';

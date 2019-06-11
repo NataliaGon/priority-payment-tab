@@ -1,10 +1,6 @@
 import * as React from "react";
-import classNames from 'classnames/bind';
-import { ComponentBaseProperties, ComponentBase, PriorityIcon, configuration } from "../../../../core";
-import styles from "./GridItem.module.scss";
 import MediaQuery from 'react-responsive';
-
-const cx = classNames.bind(styles);
+import { ComponentBase, ComponentBaseProperties, configuration } from "../../../../core";
 
 interface GridItemProperties extends ComponentBaseProperties {
     columns?: number;

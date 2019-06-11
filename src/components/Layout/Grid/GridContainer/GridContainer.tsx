@@ -1,9 +1,9 @@
-import * as React from "react";
 import classNames from 'classnames/bind';
-import { ComponentBaseProperties, ComponentBase, PriorityIcon } from "../../../../core";
-import styles from "./GridContainer.module.scss";
+import * as React from "react";
 import MediaQuery from 'react-responsive';
+import { ComponentBase, ComponentBaseProperties } from "../../../../core";
 import { configuration } from '../../../../core/constants/index';
+import styles from "./GridContainer.module.scss";
 
 const cx = classNames.bind(styles);
 

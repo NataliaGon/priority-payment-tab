@@ -1,11 +1,11 @@
 /* eslint-disable react/prefer-stateless-function */
-import * as React from 'react';
-
-import TabBarTabsNode from 'rc-tabs/lib/TabBarTabsNode';
-import TabBarRootNode from 'rc-tabs/lib/TabBarRootNode';
 import SaveRef from 'rc-tabs/lib/SaveRef';
-import InkTabBarNode from './InkTabBarNode';
+import TabBarRootNode from 'rc-tabs/lib/TabBarRootNode';
+import TabBarTabsNode from 'rc-tabs/lib/TabBarTabsNode';
+import * as React from 'react';
 import { TextDirection } from '../../../core';
+import InkTabBarNode from './InkTabBarNode';
+
 
 export class InkTabBarProperties {
   onTabClick?: (key: string) => void = () => { };

@@ -1,4 +1,4 @@
-import { Container, Label, RowPanel, Title } from 'priority-style-react';
+import { Container, RowPanel, Title } from 'priority-style-react';
 import React, { Component } from 'react';
 import styles from './TitlesExample.module.scss';
 

@@ -1,5 +1,5 @@
+import { CheckBox, TableColumn, TableComponent } from 'priority-style-react';
 import React, { Component } from 'react';
-import { TableComponent, TableColumn, CheckBox } from 'priority-style-react';
 
 export default class TableExample extends Component {
 

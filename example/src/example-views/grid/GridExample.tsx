@@ -1,9 +1,6 @@
+import { GridContainer, GridItem, Title } from 'priority-style-react';
 import React, { ComponentElement } from 'react';
-import styles from './TabsExample.module.scss';
 
-import { Title } from 'priority-style-react';
-import { GridContainer } from 'priority-style-react';
-import { GridItem } from 'priority-style-react';
 
 type PanelContentProperties = {
     id?: Object;
