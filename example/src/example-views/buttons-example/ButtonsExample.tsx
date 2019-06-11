@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import {
   SidePanel,
-  StackPanel, RowPanel, Container, WrapPanel, ScrollPanel,
-  Title, CheckBox, Label, Button, Icon, Tag, Select, OptionItem,
+  StackPanel, RowPanel, Container, WrapPanel, ScrollPanel, CheckBox, Label, Button, Icon, Tag, Select, OptionItem,
   PriorityIcon
 } from 'priority-style-react';
 import styles from './ButtonsExample.module.scss';
@@ -12,7 +11,7 @@ class ButtonsExample extends Component {
   render() {
     return (
       <div className={ styles.buttonsExampleView }>
-        <Title>Buttons</Title>
+        <h1>Buttons</h1>
         <RowPanel componentClasses={ styles.row }>
           <Container componentClasses={ styles.buttonsContainer }>
             <Label skin="bold">Skin</Label>
