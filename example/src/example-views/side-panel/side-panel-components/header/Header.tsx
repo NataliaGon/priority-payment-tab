@@ -5,8 +5,7 @@ import {
    Icon,
    Input,
    Label,
-   PriorityIcon,
-   Title,
+   PriorityIcon
 } from 'priority-style-react';
 import * as React from 'react';
 
@@ -45,7 +44,7 @@ export class Header extends ComponentBase<HeaderBlockProperties> {
             <div className={styles.componentWrapper}>
                <div className={stylesMain.rowPanel}>
                   {/* <Title>Advanced Search</Title> */}
-                  <Title>חיפוש מתקדם</Title>
+                  <h1>חיפוש מתקדם</h1>
                   <Button skin="stroke" shape="round" icon={PriorityIcon.arrowRightLong} />
                </div>
                <div className={stylesMain.rowPanel} >

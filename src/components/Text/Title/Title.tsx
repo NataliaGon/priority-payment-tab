@@ -1,39 +1,37 @@
-import * as React from "react";
 import classNames from 'classnames/bind';
-import { ComponentBaseProperties, ComponentBase } from "../../../core";
+import * as React from "react";
+import { ComponentBaseProperties } from "../../../core";
 import styles from "./Title.module.scss";
 
 const cx = classNames.bind(styles);
 
-type TitleTag = 'h1-blue' | 'h1-grey' | 'h2-blue' | 'h2-grey' | 'h4';
-type TitleDarkContainer = 'dark-container'
+type TitleSkin = 'h1' | 'h2' | 'h4';
 
 interface TitleProperties extends ComponentBaseProperties {
-  skin?: TitleTag,
-  children?: any,
-  background?: TitleDarkContainer
+  skin?: TitleSkin,
+  darkContainer?: boolean,
+  children?: any
 }
 
+export function Title(props: TitleProperties) {
 
-export class Title extends ComponentBase<TitleProperties> {
- private renderTitles(){
-    const titleClass = cx(styles.component, this.props.skin, this.props.background);
-    if (this.props.skin == 'h1-blue' || this.props.skin == 'h1-grey') {
-      return <h1 className={titleClass}>{this.props.text ? this.props.text : this.props.children}</h1>
-    }
-    if(this.props.skin == 'h2-blue' || this.props.skin == 'h2-grey'){
-      return <h2 className={titleClass}>{this.props.text ? this.props.text : this.props.children}</h2>
-    }
-    if (this.props.skin == 'h4'){
-      return <h4 className={titleClass}>{this.props.text ? this.props.text : this.props.children}</h4>
-    }
-    else {return ''}
-  }
-  public render() {
-    return (
-      <React.Fragment>
-        {this.renderTitles()}
-      </React.Fragment>
-    );
+  const titleClass = cx(
+    styles.component,
+    props.textColor,
+    props.componentClasses,
+    props.skin + '-styles',
+    props.darkContainer && [styles.darkContainer]);
+
+  const content = props.text ? props.text : props.children;
+
+  switch (props.skin) {
+    case 'h1':
+      return <h1 className={ titleClass }>{ content }</h1>
+    case 'h2':
+      return <h2 className={ titleClass }>{ content }</h2>
+    case 'h4':
+      return <h4 className={ titleClass }>{ content }</h4>
+    default:
+      return <h1 className={ titleClass + styles.compatibility }>{ content }</h1>
   }
 }
