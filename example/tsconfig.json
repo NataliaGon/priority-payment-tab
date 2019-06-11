@@ -30,7 +30,7 @@
     "noEmit": true
   },
   "include": [
-    "src"
+    "src", "src/example-views/tabs-example/tab.tsx"
   ],
   "exclude": [
     "node_modules",

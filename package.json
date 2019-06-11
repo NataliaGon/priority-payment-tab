@@ -24,8 +24,11 @@
   "dependencies": {
     "@types/react-custom-scrollbars": "^4.0.5",
     "classnames": "^2.2.6",
+    "rc-tabs": "^9.6.4",
+    "rc-tabs-rtl": "^9.5.7",
     "react-autocomplete": "^1.8.1",
     "react-custom-scrollbars": "^4.2.1",
+    "react-responsive": "^6.1.2",
     "react-switch": "^4.1.0",
     "react-transition-group": "^2.5.2"
   },

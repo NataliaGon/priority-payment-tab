@@ -11,6 +11,7 @@ const NavBar = () => {
         <Route exact path='/' component={ views.Home } />
         <Route exact path='/Buttons' component={ views.ButtonsExample } />
         <Route exact path='/Side-Panel' component={ views.SidePanelExample } />
+        <Route exact path='/Grid' component={ views.GridExample } />
       </Switch>
     </Router>
   )

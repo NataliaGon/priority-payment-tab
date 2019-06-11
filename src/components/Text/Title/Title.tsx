@@ -1,21 +1,39 @@
 import * as React from "react";
 import classNames from 'classnames/bind';
-
-import { ComponentBaseProperties} from "../../../core";
-
+import { ComponentBaseProperties, ComponentBase } from "../../../core";
 import styles from "./Title.module.scss";
 
 const cx = classNames.bind(styles);
 
+type TitleTag = 'h1-blue' | 'h1-grey' | 'h2-blue' | 'h2-grey' | 'h4';
+type TitleDarkContainer = 'dark-container'
+
 interface TitleProperties extends ComponentBaseProperties {
-children:any;
+  skin?: TitleTag,
+  children?: any,
+  background?: TitleDarkContainer
 }
 
 
-export function Title(props:TitleProperties) {
-
-   const titleClass = cx(styles.component, props.componentClasses)
+export class Title extends ComponentBase<TitleProperties> {
+ private renderTitles(){
+    const titleClass = cx(styles.component, this.props.skin, this.props.background);
+    if (this.props.skin == 'h1-blue' || this.props.skin == 'h1-grey') {
+      return <h1 className={titleClass}>{this.props.text ? this.props.text : this.props.children}</h1>
+    }
+    if(this.props.skin == 'h2-blue' || this.props.skin == 'h2-grey'){
+      return <h2 className={titleClass}>{this.props.text ? this.props.text : this.props.children}</h2>
+    }
+    if (this.props.skin == 'h4'){
+      return <h4 className={titleClass}>{this.props.text ? this.props.text : this.props.children}</h4>
+    }
+    else {return ''}
+  }
+  public render() {
     return (
-      <h1 className={titleClass}>{props.text ? props.text : props.children}</h1>
+      <React.Fragment>
+        {this.renderTitles()}
+      </React.Fragment>
     );
   }
+}
