@@ -25,7 +25,7 @@ $tag-active-background: rgb(110,129,138);
 $tag-box-shadow: 0 5px 10px 0 rgba(6, 32, 42, 0.2);
 
 $background-color-blue: #D9F6F9;
-$background-color-dark-grey: #2E4049;
+$background-color-dark-grey: #2E4049; //duplicate of "$dark"
 
 $clickable-hover-active: $purple;
 
@@ -49,6 +49,7 @@ $font-size-small: 1.2rem;
 
 $font-weight-light: 300;
 $font-weight-regular: 400;
+$font-weight-medium: 500;
 $font-weight-bold: 700;
 
 $general-border-radius: 3px;

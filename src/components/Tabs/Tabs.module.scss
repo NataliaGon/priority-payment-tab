@@ -9,7 +9,7 @@
         }
 
         .rc-tabs-ink-bar {
-            top: 35px;
+            top: 29px;
         }
 
         .rc-tabs-ink-bar-animated {
@@ -17,24 +17,22 @@
         }
 
         .rc-tabs-tab {
+            &:hover {
+                color: #23c0fa;
+            }
+
             @media screen and (max-width: 801px) {
                 width: 50%;
-                margin-right: 0 !important;
             }
-        }
-
-        .rc-tabs-tab:hover {
-            color: #23c0fa;
         }
 
         .rc-tabs-tab-active,
         .rc-tabs-tab-active:hover {
             color: #2e4049;
-            font-weight: bold;
         }
 
-        .rc-tabs-content-animated {
-            transition: transform 0.3s cubic-bezier(0.35, 0, 0.25, 1), margin-left 0.3s cubic-bezier(0.35, 0, 0.25, 1), margin-top 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+        .rc-tabs-content {
+            padding-top: 10px;
         }
 
         .rc-tabs-nav-scroll {
@@ -43,43 +41,42 @@
 
         .rc-tabs-top {
             border-bottom: unset;
-        }
 
-        .rc-tabs-top .rc-tabs-bar {
-            //border-bottom: unset;
-        }
+            .rc-tabs-bar {
+                height: 29px;
+                line-height: 1.21;
+                color: $grey;
+                border-bottom: 3px solid $disabled-grey;
+                font-weight: $font-weight-medium;
+            }
 
-        .rc-tabs-bar {
-            border-bottom: 3px solid #d6dddf;
-        }
+            .rc-tabs-tab {
+                float: left;
+                margin: unset;
+                height: 100%;
+                padding: 0 20px 12px;
 
-        .rc-tabs-top .rc-tabs-tab-prev,
-        .rc-tabs-top .rc-tabs-tab-next {
-            transition: width 0.3s, height 0.3s, opacity 0.3s;
-        }
+                @include rtl {
+                    float: right;
+                }
+            }
 
-        .rc-tabs-top .rc-tabs-tab {
-            float: left;
-            height: 100%;
-            margin-right: 30px;
+            .rc-tabs-ink-bar {
+                height: 3px;
 
-            @include rtl {
-                float: right;
+                @include rtl {
+                    right: 0;
+                    left: unset;
+                }
+            }
+
+            .rc-tabs-tab-prev, .rc-tabs-tab-next {
+                transition: width 0.3s, height 0.3s, opacity 0.3s;
             }
         }
+    }
 
-        .rc-tabs-top .rc-tabs-ink-bar {
-            height: 3px;
-
-            @include rtl {
-                right: 0;
-                left: unset;
-            }
-        }
-
-        [dir="rtl"] .rc-tabs-top .rc-tabs-ink-bar {
-            right: 0;
-            left: unset;
-        }
+    @include rtl {
+        font-family: $font-family-main-hebrew;
     }
 }
