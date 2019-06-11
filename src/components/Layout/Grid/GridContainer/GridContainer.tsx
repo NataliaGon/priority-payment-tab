@@ -9,8 +9,8 @@ const cx = classNames.bind(styles);
 
 
 interface GridContainerProperties extends ComponentBaseProperties {
-    columnsMobile?: number;
     columnsDesktop?: number;
+    columnsMobile?: number;
     gutterWidthDesktop?: number
     gutterWidthMobile?: number;
     paddingDesktop?: number;

@@ -5,6 +5,7 @@ import TableExample from './table-example/TableExample';
 import GridExample from './grid/GridExample';
 import TitlesExample from './title-example/TitlesExample';
 import TabsExample from './tabs-example/TabsExample';
+import PaymentPortal from './payment-portal/paymentPortal';
 
 
-export { Home, SidePanelExample, ButtonsExample, TableExample, GridExample, TitlesExample,TabsExample }
+export { Home, SidePanelExample, ButtonsExample, TableExample, GridExample, TitlesExample,TabsExample, PaymentPortal }
