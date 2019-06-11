@@ -30,18 +30,13 @@ export interface TableProperties extends ComponentBaseProperties {
 }
 
 export class TableComponent extends ComponentBase<TableProperties> {
-
-  initDefaults() {
-    let providedProperties = this.props;
-  }
-
   public render() {
     const columns = this.props.rtl ? this.props.columns.reverse() : this.props.columns;
     return (
       <Table
-        className={cx('component')}
-        columns={columns}
-        data={this.props.data}
+        className={ cx('component') }
+        columns={ columns }
+        data={ this.props.data }
       >
       </Table>
     );
