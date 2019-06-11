@@ -3,6 +3,10 @@
 
 .component {
     :global {
+        .rc-table {
+            width: 100%;
+        }
+
         .rc-table-body {
             @media screen and (max-width: 800px) {
                 padding: 30px;
@@ -10,7 +14,6 @@
         }
 
         table {
-            width: 100%;
             padding: 30px;
             border-collapse: collapse;
 
@@ -26,7 +29,7 @@
 
             //TODO: move to vars
             @media screen and (max-width: 800px) {
-                padding:5px 0;
+                padding: 5px 0;
             }
         }
 

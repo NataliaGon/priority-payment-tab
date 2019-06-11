@@ -1,6 +1,4 @@
-import React, { ComponentElement } from 'react';
-import styles from './TabelExample.module.scss';
-import { Component } from 'react';
+import React, { Component } from 'react';
 import { TableComponent, TableColumn, CheckBox } from 'priority-style-react';
 
 
@@ -8,61 +6,65 @@ import { TableComponent, TableColumn, CheckBox } from 'priority-style-react';
 export default class TabelExample extends Component {
 
     data = [
-        { unvoice: 'IN1234567890', payByDate: '12/03/20', details: 'First month subscription for', amount: '1000' },
-        { unvoice: 'IN1234567891', payByDate: '29/07/19', details: 'First month subscription for', amount: '2000' },
+        { invoice: 'IN1234567890', payByDate: '12/03/20', details: 'First month subscription for', amount: '1000' },
+        { invoice: 'IN1234567891', payByDate: '29/07/19', details: 'First month subscription for', amount: '2000' },
     ];
 
-    renderCheckBoxCell() {
+    renderCheckBoxCell(record) {
         return (
-            <CheckBox />
+            <CheckBox onChange={ () => {
+                console.log(`invoice #${record.invoice} checked`);
+            } } />
         )
     }
 
 
     renderDesktopExample(data) {
-        const columns: any = [
-            { dataIndex: 'check-box', key: 'check-box', render: () => this.renderCheckBoxCell() },
-            { title: 'Unvoice', dataIndex: 'unvoice', key: 'unvoice' },
+        const columns: TableColumn[] = [
+            { dataIndex: 'check-box', key: 'check-box', render: (value, row) => this.renderCheckBoxCell(row), width: 1, align: 'top' },
+            { title: 'Invoice', dataIndex: 'invoice', key: 'invoice' },
             { title: 'Pay by Date', dataIndex: 'payByDate', key: 'payByDate' },
             { title: 'Details', dataIndex: 'details', key: 'details' },
             { title: 'Amount', dataIndex: 'amount', key: 'amount' }];
 
         return (
-            <TableComponent columns={ columns } data={ data } />
+            <TableComponent columns={ columns } data={ data } scroll={ { x: true } } />
         )
     }
 
     renderMobileExample(data) {
-        const renderMobileInfoCell = (data: any, row: any, index: any) => {
+
+        const renderMobileInfoCell = (record: any) => {
             return (
                 <div>
                     <div>
-                        { data.unvoice }
+                        { record.invoice }
                     </div>
                     <div className='rc-table-thead'>
                         Details
                     </div>
                     <div>
-                        { data.details }
+                        { record.details }
                     </div>
                     <div className='rc-table-thead'>
                         Amount
                     </div>
                     <div>
-                        { data.amount }
+                        { record.amount }
                     </div>
                 </div>
 
             )
         }
 
-        const columnsMob: any = [
-            { dataIndex: 'check-box', key: 'check-box', render: () => this.renderCheckBoxCell() },
-            { dataIndex: 'info', key: 'info', render: () => renderMobileInfoCell(data[0], '1', 'check-box') },
-            { dataIndex: 'payByDate', key: 'payByDate' }
-        ]
+        const columnsMob: TableColumn[] = [
+            { dataIndex: 'check-box', key: 'check-box', render: (value, row) => this.renderCheckBoxCell(row), width: 1 },
+            { dataIndex: 'info', key: 'info', render: (value, record) => renderMobileInfoCell(record) },
+            { dataIndex: 'payByDate', key: 'payByDate', width: 1 }
+        ];
+
         return (
-            <TableComponent columns={ columnsMob } data={ data } />
+            <TableComponent columns={ columnsMob } data={ data } showHeader={ false } />
         )
     };
 
