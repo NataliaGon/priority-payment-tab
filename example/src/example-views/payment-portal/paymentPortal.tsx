@@ -94,7 +94,9 @@ export default class PaymentPortal extends Component {
                             <PanelContent id='1'><div>{this.renderDesktopExample(this.data)}</div></PanelContent>
                         </TabPane>
                         <TabPane tab={'Payments Made (3)'} key="2" >
+                        <div style={{marginTop:'25px'}}> 
                             <PanelContent id='2'><div>{this.renderMobileExample(this.data)}</div></PanelContent>
+                            </div> 
                         </TabPane>
                     </Tabs>
                     </div>
