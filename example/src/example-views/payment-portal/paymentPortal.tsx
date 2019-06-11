@@ -1,6 +1,7 @@
 import React, { ComponentElement, Component } from 'react';
 import { GridContainer, GridItem, Title, TabPane, Tabs, CheckBox, TableColumn, TableComponent } from 'priority-style-react';
 
+
 type PanelContentProperties = {
     id?: Object;
     children?: any
@@ -80,12 +81,13 @@ export default class PaymentPortal extends Component {
 
     render() {
         return (
-            <GridContainer columnsDesktop='12'  gutterWidthDesktop='30px' paddingDesktop='30px' columnsMobile='6' gutterWidthMobile='20px' paddingMobile='20px' smallBreakpoint={800}>
-                <GridItem columns={6} offset={4} columnsMob={6} offsetMobile={1} >
-                    <div>
-                        <Title skin="h1" textColor="grey">Payment for</Title>
-                        <Title skin="h1" textColor="blue">Electra ltd.</Title>
-                    </div>
+            <GridContainer columnsDesktop='12'  gutterWidthDesktop='30px' paddingDesktop='30px' columnsMobile='6' gutterWidthMobile='20px' paddingMobile='20px' smallBreakpoint={1100}>
+                <GridItem columns={6} offset={4} columnsMob={6} offsetMobile={1} smallBreakpoint={1100}>
+                     <div style={{marginRight:'12px', display:'inline'}}> 
+                     <Title skin="h1" textColor="grey" >Payment for</Title>
+                      </div> 
+                      <Title skin="h1" textColor="blue">Electra ltd.</Title>    
+                    <div style={{marginTop:'40px'}} >
                     <Tabs
                         defaultActiveKey="1">
                         <TabPane tab={'My open invoces (3)'} key="1" >
@@ -95,6 +97,7 @@ export default class PaymentPortal extends Component {
                             <PanelContent id='2'><div>{this.renderMobileExample(this.data)}</div></PanelContent>
                         </TabPane>
                     </Tabs>
+                    </div>
                 </GridItem>
             </GridContainer>
         )

@@ -10,6 +10,7 @@
     line-height: normal;
     letter-spacing: normal;
     margin: 0;
+    display: inline;
 
     @include rtl {
         font-family: $font-family-titles-hebrew;
