@@ -16,11 +16,6 @@
         table {
             padding: 30px;
             border-collapse: collapse;
-
-            @media screen and (max-width: 800px) {
-                width: auto;
-                margin: auto;
-            }
         }
 
         .rc-table-thead {
@@ -35,10 +30,6 @@
 
         .rc-table-thead tr {
             height: 60px;
-
-            @media screen and (max-width: 800px) {
-                display: none;
-            }
         }
 
         .rc-table-thead tr th {

@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 import { TableComponent, TableColumn, CheckBox } from 'priority-style-react';
 
-
-
-export default class TabelExample extends Component {
+export default class TableExample extends Component {
 
     data = [
         { invoice: 'IN1234567890', payByDate: '12/03/20', details: 'First month subscription for', amount: '1000' },
@@ -75,5 +73,4 @@ export default class TabelExample extends Component {
             </React.Fragment>
         )
     }
-
 }
