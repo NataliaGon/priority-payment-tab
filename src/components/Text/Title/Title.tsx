@@ -32,6 +32,6 @@ export function Title(props: TitleProperties) {
     case 'h4':
       return <h4 className={ titleClass }>{ content }</h4>
     default:
-      return <h6 className={ titleClass }>{ content }</h6>
+      return <h1 className={ titleClass + styles.compatibility }>{ content }</h1>
   }
 }

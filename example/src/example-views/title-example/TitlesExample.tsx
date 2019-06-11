@@ -26,6 +26,11 @@ class TitlesExample extends Component {
             <Title skin="h4" textColor="grey">Grey H4 Title</Title>
           </Container>
         </RowPanel>
+        <RowPanel componentClasses={ styles.row }>
+          <Container componentClasses={ styles.buttonsContainer }>
+            <Title textColor="blue">Previous H4 Title</Title>
+          </Container>
+        </RowPanel>
       </div>
     );
   }
