@@ -12,6 +12,7 @@ interface GridItemProperties extends ComponentBaseProperties {
     large?: boolean;
     largeMob?: boolean;
     offset?: number;
+    offsetMobile?: number;
     gutterWidthDesktop?: number;
     gutterWidthMob?: number;
     smallBreakpoint?: number;
@@ -23,6 +24,7 @@ export class GridItem extends ComponentBase<GridItemProperties> {
     public render() {
 
         const offset = this.props.offset ? this.props.offset : 0;
+        const offsetMobile = this.props.offsetMobile ? this.props.offsetMobile : 0;
         const columns = this.props.columns ? this.props.columns : 0;
         const mobileColumns = this.props.columnsMob ? this.props.columnsMob : 0;
         const smallBreakpoint = this.props.smallBreakpoint ? this.props.smallBreakpoint : configuration.smallScreenBreakPoint;
@@ -34,7 +36,7 @@ export class GridItem extends ComponentBase<GridItemProperties> {
             marginLeft: this.props.smallL || this.props.large ? -(this.props.gutterWidthDesktop ? this.props.gutterWidthDesktop : defaultGutterWidth) + 'px' : ''
         }
         const gridItemStyleMobile = {
-            gridColumn: `${this.props.offset}/${offset + mobileColumns}`,
+            gridColumn: `${this.props.offsetMobile}/${offsetMobile + mobileColumns}`,
             marginRight: this.props.smallRMob || this.props.largeMob ? -(this.props.gutterWidthMob ? this.props.gutterWidthMob : defaultGutterWidth) + 'px' : '',
             marginLeft: this.props.smallLMob || this.props.largeMob ? -(this.props.gutterWidthMob ? this.props.gutterWidthMob : defaultGutterWidth) + 'px' : ''
         }

@@ -80,8 +80,8 @@ export default class PaymentPortal extends Component {
 
     render() {
         return (
-            <GridContainer columnsDesktop='12'  gutterWidthDesktop='30px' paddingDesktop='30px'>
-                <GridItem columns={6} offset={4}>
+            <GridContainer columnsDesktop='12'  gutterWidthDesktop='30px' paddingDesktop='30px' columnsMobile='6' gutterWidthMobile='20px' paddingMobile='20px' smallBreakpoint={800}>
+                <GridItem columns={6} offset={4} columnsMob={6} offsetMobile={1} >
                     <div>
                         <Title skin="h1" textColor="grey">Payment for</Title>
                         <Title skin="h1" textColor="blue">Electra ltd.</Title>
