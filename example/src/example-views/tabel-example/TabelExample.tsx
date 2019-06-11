@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { TableComponent, TableColumn, CheckBox } from 'priority-style-react';
 
-const cx = classNames.bind(styles);
 
 
 export default class TabelExample extends Component {
@@ -34,7 +33,6 @@ export default class TabelExample extends Component {
     }
 
     renderMobileExample(data) {
-
         const renderMobileInfoCell = (record: any) => {
             return (
                 <div>
@@ -57,34 +55,6 @@ export default class TabelExample extends Component {
 
             )
         }
-        const renderMobileDataCell = (data: any, row: any, index: any) => {
-            return (
-                <div className={styles.mobileCell}>
-                    {data.payByDate}
-                </div>
-            )
-        }
-
-        const renderMobileRow = (data: any) => {
-            let col
-            for (let i in data) {
-                col =
-                    [{ dataIndex: 'checkbox', key: 'checkbox', render: () => <input type="checkbox"></input> },
-                    { dataIndex: 'info', key: 'info', render: () => renderMobileInfoCell(data[i], '0', 'info') },
-                    { dataIndex: 'data', key: 'data', render: () => renderMobileDataCell(data[i], '1', 'data') }]
-
-            }
-            return col
-            // return data.map((i) => {
-            //     return (
-            //         [{ dataIndex: 'checkbox', key: 'checkbox', render: () => <input type="checkbox"></input> },
-            //         { dataIndex: 'info', key: 'info', render: () => renderMobileInfoCell(data[i], '2', 'info') },
-            //         { dataIndex: 'data', key: 'data', render: () => renderMobileDataCell(data[i], '3', 'data') }]
-            //     )
-            // })
-
-        }
-
 
         const columnsMob: TableColumn[] = [
             { dataIndex: 'check-box', key: 'check-box', render: (value, row) => this.renderCheckBoxCell(row), width: 1 },
